@@ -1,5 +1,4 @@
-{
-  "language" : "Spanish",
-  "ORG_KEY" : "org-gZ7peQP5XmIRVhs78U8WH",
-  "API_KEY" : "sk-gol4pk1m5BwUEtSTJeS568ktKVDNeTXmyJ66T3BlbkF"
-}
+"language" : "Spanish"
+"ORG_KEY" : "org-gZ7peQP5XmIRVhs78U8WH"
+"API_KEY" : "sk-gol4pk1m5BwUEtSTJeS568ktKVDNeTXmyJ66T3BlbkF"
+"model" : "gpt-4o-mini"
