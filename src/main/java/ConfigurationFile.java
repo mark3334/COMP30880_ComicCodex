@@ -26,7 +26,7 @@ public class ConfigurationFile {
                 String[] pair = line.split(":",2);
                 if (pair.length == 2) {
                     String key = pair[0];
-                    String value = pair[1];
+                    String value = pair[1].trim().replaceAll("\"", "").trim();
                     if (!key.isEmpty() && !value.isEmpty())
                         map.put(key, value);
                 }
