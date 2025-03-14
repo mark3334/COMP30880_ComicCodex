@@ -12,13 +12,16 @@ public class OpenAIClient {
     private String model;
     private String url;
     //public ConfigurationFile configFile = new ConfigurationFile();
-
+    private ConfigurationFile config;
     public OpenAIClient() {
-        this.apiKey = ConfigurationFile.getValueByKey("API_KEY");
-        this.model = ConfigurationFile.getValueByKey("MODEL");
-        this.url = ConfigurationFile.getValueByKey("COMPLETIONS_URL");
+        this.config = new ConfigurationFile();
+        this.apiKey = config.getValueByKey("API_KEY");
+        this.model = config.getValueByKey("MODEL");
+        this.url = config.getValueByKey("COMPLETIONS_URL");
     }
-
+    public ConfigurationFile getconfig(){
+        return this.config;
+    }
     public String getChatCompletion(String prompt) {
         try {
             URL endpoint = new URL(url);
@@ -78,7 +81,7 @@ public class OpenAIClient {
         System.out.println("| Welcome to ComicCodex project|");
         System.out.println("| Press 'exit' to exit.        |");
         System.out.println("--------------------------------");
-        String mode_string = ConfigurationFile.getValueByKey("USER_MODE");
+        String mode_string = client.getconfig().getValueByKey("USER_MODE");
         boolean userMode = Boolean.parseBoolean(mode_string.toLowerCase());
         ArrayList<String> prompts = new ArrayList<>();
         prompts.add("What's the weather");

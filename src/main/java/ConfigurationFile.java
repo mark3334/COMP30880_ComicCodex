@@ -55,9 +55,8 @@ public class ConfigurationFile {
         return configMap;
     }
 
-    public static int findIndexByKey(String keyName) {
-        ConfigurationFile configFile = new ConfigurationFile();
-        List<Map.Entry<String, String>> entryList = new ArrayList<>(configFile.getConfigMap().entrySet());
+    public  int findIndexByKey(String keyName) {
+        List<Map.Entry<String, String>> entryList = new ArrayList<>(this.getConfigMap().entrySet());
         for (int i = 0; i < entryList.size(); i++) {
             String cleanedKey = entryList.get(i).getKey().replace("\"", "").trim();
             if (cleanedKey.equalsIgnoreCase(keyName)) {
@@ -67,9 +66,8 @@ public class ConfigurationFile {
         return -1;
     }
 
-    public static String getValueByKey(String keyName) {
-        ConfigurationFile configFile = new ConfigurationFile();
-        List<Map.Entry<String, String>> entryList = new ArrayList<>(configFile.getConfigMap().entrySet());
+    public String getValueByKey(String keyName) {
+        List<Map.Entry<String, String>> entryList = new ArrayList<>(this.getConfigMap().entrySet());
         int index = findIndexByKey(keyName);
         if (index != -1) {
             return entryList.get(index).getValue();
@@ -82,9 +80,9 @@ public class ConfigurationFile {
 
         System.out.println("ConfigMap Content: " + configFile.getConfigMap());
 
-        String apiKey = getValueByKey("API_KEY");
-        String model = getValueByKey("MODEL");
-        String completionUrl = getValueByKey("COMPLETIONS_URL");
+        String apiKey = configFile.getValueByKey("API_KEY");
+        String model = configFile.getValueByKey("MODEL");
+        String completionUrl = configFile.getValueByKey("COMPLETIONS_URL");
 
         System.out.println("API Key: [" + apiKey + "]");
         System.out.println("Model: [" + model + "]");
