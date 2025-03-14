@@ -2,7 +2,8 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.Map;
+import java.util.Scanner;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class OpenAIClient {
@@ -10,8 +11,7 @@ public class OpenAIClient {
     private String model;
     private String url;
 
-    public OpenAIClient(ConfigurationFile config) {
-        ConfigurationFile configFile = new ConfigurationFile();
+    public OpenAIClient() {
         this.apiKey = ConfigurationFile.getValueByKey("API_KEY");
         this.model = ConfigurationFile.getValueByKey("MODEL");
         this.url = ConfigurationFile.getValueByKey("COMPLETIONS_URL");
@@ -28,23 +28,27 @@ public class OpenAIClient {
 
             JSONObject requestBody = new JSONObject();
             requestBody.put("model", model);
-            requestBody.put("messages", new JSONObject[] {
-                    new JSONObject().put("role", "user").put("content", prompt)
-            });
 
+            // Using JSONArray to store the user message
+            JSONArray messages = new JSONArray();
+            messages.put(new JSONObject().put("role", "user").put("content", prompt));
+            requestBody.put("messages", messages);
+
+            // try to send the request
             try (OutputStream os = conn.getOutputStream()) {
                 byte[] input = requestBody.toString().getBytes(StandardCharsets.UTF_8);
                 os.write(input, 0, input.length);
             }
 
-            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
-            StringBuilder response = new StringBuilder();
-            String responseLine;
-            while ((responseLine = br.readLine()) != null) {
-                response.append(responseLine.trim());
+            // Get the response
+            try (BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))) {
+                StringBuilder response = new StringBuilder();
+                String responseLine;
+                while ((responseLine = br.readLine()) != null) {
+                    response.append(responseLine.trim());
+                }
+                return parseResponse(response.toString());
             }
-
-            return parseResponse(response.toString());
         } catch (Exception e) {
             e.printStackTrace();
             return "Error fetching response";
@@ -60,10 +64,27 @@ public class OpenAIClient {
     }
 
     public static void main(String[] args) {
-        ConfigurationFile config = new ConfigurationFile();
-        OpenAIClient client = new OpenAIClient(config);
-        String prompt = "Tell me a joke";
-        String response = client.getChatCompletion(prompt);
-        System.out.println("Response: " + response);
+        OpenAIClient client = new OpenAIClient();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("--------------------------------");
+        System.out.println("| Welcome to ComicCodex project|");
+        System.out.println("| Press 'exit' to exit.        |");
+        System.out.println("--------------------------------");
+
+        while (true) {
+            System.out.print("User: ");
+            String prompt = scanner.nextLine();
+
+            if ("exit".equalsIgnoreCase(prompt)) {
+                System.out.println("Goodbye！");
+                break;
+            }
+
+            String response = client.getChatCompletion(prompt);
+            System.out.println("ChatGPT: " + response);
+        }
+
+        scanner.close();
     }
 }
