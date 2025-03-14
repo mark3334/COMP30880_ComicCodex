@@ -3,6 +3,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
+import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -10,6 +11,7 @@ public class OpenAIClient {
     private String apiKey;
     private String model;
     private String url;
+    //public ConfigurationFile configFile = new ConfigurationFile();
 
     public OpenAIClient() {
         this.apiKey = ConfigurationFile.getValueByKey("API_KEY");
@@ -58,7 +60,12 @@ public class OpenAIClient {
     private String parseResponse(String jsonResponse) {
         JSONObject responseObj = new JSONObject(jsonResponse);
         if (responseObj.has("choices")) {
-            return responseObj.getJSONArray("choices").getJSONObject(0).getJSONObject("message").getString("content");
+            String response =  responseObj.getJSONArray("choices").getJSONObject(0).getJSONObject("message").getString("content");
+            if(response.equals("I’m sorry, but I can’t assist with that. "))
+            {
+                System.out.println("Denial of service from OpenAI");
+            }
+            return response;
         }
         return "Invalid response format";
     }
@@ -71,8 +78,12 @@ public class OpenAIClient {
         System.out.println("| Welcome to ComicCodex project|");
         System.out.println("| Press 'exit' to exit.        |");
         System.out.println("--------------------------------");
+        String mode_string = ConfigurationFile.getValueByKey("USER_MODE");
+        boolean userMode = Boolean.parseBoolean(mode_string.toLowerCase());
+        ArrayList<String> prompts = new ArrayList<>();
+        prompts.add("What's the weather");
 
-        while (true) {
+        while (userMode) {
             System.out.print("User: ");
             String prompt = scanner.nextLine();
 
@@ -83,6 +94,15 @@ public class OpenAIClient {
 
             String response = client.getChatCompletion(prompt);
             System.out.println("ChatGPT: " + response);
+        }
+        if(!userMode)
+        {
+            System.out.println("Test start: ");
+            for (String prompt : prompts) {
+                System.out.println("User(test): " + prompt);
+                String response = client.getChatCompletion(prompt);
+                System.out.println("ChatGPT: " + response);
+            }
         }
 
         scanner.close();
