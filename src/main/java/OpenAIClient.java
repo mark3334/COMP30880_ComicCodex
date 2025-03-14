@@ -13,11 +13,21 @@ public class OpenAIClient {
     private String url;
     //public ConfigurationFile configFile = new ConfigurationFile();
     private ConfigurationFile config;
+    private StringBuilder conversationHistory;
     public OpenAIClient() {
+        this.conversationHistory = new StringBuilder();
         this.config = new ConfigurationFile();
         this.apiKey = config.getValueByKey("API_KEY");
         this.model = config.getValueByKey("MODEL");
         this.url = config.getValueByKey("COMPLETIONS_URL");
+    }
+    public void saveContext(String prompt, String response){
+        conversationHistory.append("User: ").append(prompt).append("\n");
+        conversationHistory.append("ChatGPT: ").append(response).append("\n\n");
+    }
+    public String addContext(String prompt){
+        return "This is the previous conversation history:\n" + conversationHistory.toString() +
+                "Current prompt" + prompt;
     }
     public ConfigurationFile getconfig(){
         return this.config;
@@ -89,13 +99,12 @@ public class OpenAIClient {
         while (userMode) {
             System.out.print("User: ");
             String prompt = scanner.nextLine();
-
             if ("exit".equalsIgnoreCase(prompt)) {
                 System.out.println("Goodbye！");
                 break;
             }
-
-            String response = client.getChatCompletion(prompt);
+            String response = client.getChatCompletion(client.addContext(prompt));
+            client.saveContext(prompt, response);
             System.out.println("ChatGPT: " + response);
         }
         if(!userMode)
