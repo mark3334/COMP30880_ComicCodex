@@ -10,13 +10,12 @@ public class ConfigurationFile {
     private Map<String, String> configMap;
 
     public ConfigurationFile() {
-        this.configMap = new HashMap<>();
         createHashMapConfig();
     }
 
     private void createHashMapConfig() {
         String configPath = "Config.txt";
-        Map<String, String> map = new HashMap<>();
+        this.configMap = new HashMap<>();
         BufferedReader fileReader = null;
         try{
             File file = new File(configPath);
@@ -28,7 +27,7 @@ public class ConfigurationFile {
                     String key = pair[0];
                     String value = pair[1].trim().replaceAll("\"", "").trim();
                     if (!key.isEmpty() && !value.isEmpty())
-                        map.put(key, value);
+                        this.configMap.put(key, value);
                 }
                 else{
                     System.out.println("Mistake in config line");
@@ -36,7 +35,6 @@ public class ConfigurationFile {
 
 
             }
-            this.configMap = map;
         }
         catch(Exception e) {
             e.printStackTrace();
