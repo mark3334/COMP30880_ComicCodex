@@ -13,18 +13,15 @@ public class OpenAIClient {
     private String url;
     //public ConfigurationFile configFile = new ConfigurationFile();
     private ConfigurationFile config;
-    private ArrayList<String[]> context;
-    StringBuilder conversationHistory;
+    private StringBuilder conversationHistory;
     public OpenAIClient() {
         this.conversationHistory = new StringBuilder();
-        this.context = new ArrayList<>();
         this.config = new ConfigurationFile();
         this.apiKey = config.getValueByKey("API_KEY");
         this.model = config.getValueByKey("MODEL");
         this.url = config.getValueByKey("COMPLETIONS_URL");
     }
     public void saveContext(String prompt, String response){
-        this.context.add(new String[]{prompt, response});
         conversationHistory.append("User: ").append(prompt).append("\n");
         conversationHistory.append("ChatGPT: ").append(response).append("\n\n");
     }
