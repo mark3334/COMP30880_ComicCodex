@@ -4,7 +4,6 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -17,10 +16,10 @@ public class OpenAIClient {
     /**
      * Initialize variables
      */
-    private String apiKey;
-    private String model;
-    private String url;
-    private final LinkedList<JSONObject> messageHistory = new LinkedList<>();
+    private static String apiKey;
+    private static String model;
+    private static String url;
+    private static final LinkedList<JSONObject> messageHistory = new LinkedList<>();
 
     /**
      * OpenAIClient construct function.
@@ -49,7 +48,7 @@ public class OpenAIClient {
     /**
      * Returns the conversation as JSON
      */
-    public JSONArray getContext() {
+    public static JSONArray getContext() {
         return new JSONArray(messageHistory);
     }
 
@@ -58,7 +57,7 @@ public class OpenAIClient {
      * @param prompt: Add the user input
      * @return: return the body
      */
-    private JSONObject requestBody(String prompt) {
+    private static JSONObject requestBody(String prompt) {
         JSONObject requestBody = new JSONObject();
         requestBody.put("model", model);
 
@@ -73,7 +72,7 @@ public class OpenAIClient {
      * Send the API request and get response from ChatGPT
      * @param prompt: Add the user input
      */
-    public String getChatCompletion(String prompt) {
+    public static String getChatCompletion(String prompt) {
         try {
             URL endpoint = new URL(url);
             HttpURLConnection conn = (HttpURLConnection) endpoint.openConnection();
@@ -103,7 +102,7 @@ public class OpenAIClient {
      * @param conn: HttpURLConnection
      * @throws IOException:
      */
-    private String readResponse(HttpURLConnection conn) throws IOException {
+    private static String readResponse(HttpURLConnection conn) throws IOException {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))) {
             StringBuilder response = new StringBuilder();
             String responseLine;
@@ -116,9 +115,9 @@ public class OpenAIClient {
 
     /**
      * Parsing the JSON data returned by the OpenAI API
-     * @param jsonResponse
+     * @param jsonResponse: Input JSON data
      */
-    private String parseResponse(String jsonResponse) {
+    private static String parseResponse(String jsonResponse) {
         JSONObject responseObj = new JSONObject(jsonResponse);
         if (responseObj.has("choices")) {
             String response =  responseObj.getJSONArray("choices").getJSONObject(0).getJSONObject("message").getString("content");
@@ -131,48 +130,46 @@ public class OpenAIClient {
         return "Invalid response format";
     }
 
-    public static void main(String[] args) {
-        OpenAIClient client = new OpenAIClient();
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("""
-        --------------------------------
-        | Welcome to ComicCodex project |
-        | Press 'exit' to exit.         |
-        --------------------------------
-        """);
-
+    /**
+     * User interaction. Realize the interaction between users and chat
+     * @param client: Input the OpenAIClient
+     * @param scanner: Get the user input
+     */
+    static void runUserInteraction(OpenAIClient client, Scanner scanner) {
         while (true) {
+
             System.out.print("User: ");
-            String prompt = scanner.nextLine();
+            String prompt = scanner.nextLine().trim();
+
+            if (prompt.isEmpty()) {
+                System.out.println("Please enter a message, or please be patient while waiting for a response");
+                continue;
+            }
+
             if ("exit".equalsIgnoreCase(prompt)) {
                 System.out.println("Goodbye！");
                 break;
             }
 
+            System.out.println("(Processing... Please wait)");
+
             String response = client.getChatCompletion(prompt);
-            client.saveContext(prompt, response);
+
             System.out.println("ChatGPT: " + response);
+
+            client.saveContext(prompt, response);
+        }
+    }
+
+    public static void main(String[] args) {
+        OpenAIClient client = new OpenAIClient();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("--------------------------------");
+            System.out.println("| Welcome to ComicCodex project|");
+            System.out.println("| Press 'exit' to exit.        |");
+            System.out.println("--------------------------------");
+
+            runUserInteraction(client, scanner);
         }
     }
 }
-
-        /*
-        if(!userMode)
-        {
-            System.out.println("Test start: ");
-            for (String prompt : prompts) {
-                System.out.println("User(test): " + prompt);
-                String response = client.getChatCompletion(prompt);
-                System.out.println("ChatGPT: " + response);
-            }
-        }
-
-         */
-        /*
-        String mode_string = client.getconfig().getValueByKey("USER_MODE");
-
-        boolean userMode = Boolean.parseBoolean(mode_string.toLowerCase());
-        ArrayList<String> prompts = new ArrayList<>();
-        prompts.add("What's the weather");
-        */

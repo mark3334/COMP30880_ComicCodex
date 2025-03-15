@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class ConfigurationFileTest {
     private ConfigurationFile configFile;
 
-
     /**
      * To initialize the configuration file, that's not the real deal.
      */
