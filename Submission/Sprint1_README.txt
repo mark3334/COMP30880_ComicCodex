@@ -17,17 +17,10 @@ The OpenAIClient class is the main class which is responsible for sending and re
 
 ## command line invocation:
 To run the file do java -jar Sprint1executable.jar
-Type in your prompt and type 'exit' to quit the program..
+Type in your prompt and type 'exit' to quit the program.
 
 ## Notice：
 - Avoid unnecessary keyboard input while waiting
-- You need to provide your own config.txt file. A valid config.txt file should follow the format below:
-  "language" : "Spanish"
-  "API_KEY" : Your API_KEY
-  "ORG_KEY" : Your ORG_KEY
-  "MODEL" : "gpt-4o-mini"
-  "COMPLETIONS_URL" : "https://api.openai.com/v1/chat/completions"
-  "EMBEDDINGS_URL" : "https://api.openai.com/v1/embeddings"
-  "MODELS_URL" : "https://api.openai.com/v1/models"
-  "USER_MODE" : "True"
+- The .jar file must be in a folder called COMP30880_ComicCodex along with a Config.txt file
+
 
