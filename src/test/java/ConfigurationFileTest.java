@@ -38,6 +38,20 @@ class ConfigurationFileTest {
     void testConfigMapLoading() {
         Map<String, String> configMap = configFile.getConfigMap();
         assertNotNull(configMap);
-        assertEquals(8, configMap.size(), "Config map should have 8 entries");
+        assertEquals(9, configMap.size(), "Config map should have 9 entries");
+    }
+
+    @Test
+    void testGetValueByKey_() {
+        assertEquals("Key not found", configFile.getValueByKey("LOLIPOP"));
+        assertEquals("Spanish", configFile.getValueByKey("language"));
+        assertEquals("gpt-4o-mini", configFile.getValueByKey("MODEL"));
+    }
+
+    @Test
+    void testFindIndexByKey() {
+        assertTrue(configFile.findIndexByKey("API_KEY") >= 0);
+        assertTrue(configFile.findIndexByKey("MODEL") >= 0);
+        assertEquals(-1, configFile.findIndexByKey("INVALID_KEY"));
     }
 }

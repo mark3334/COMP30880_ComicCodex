@@ -14,11 +14,18 @@ public class ConfigurationFile {
     }
 
     private void createHashMapConfig() {
-        String configPath = "Config.txt";
+        File current = new File(System.getProperty("user.dir")); // Current working directory
+        // Traverse up to find "COMP30880_ComicCodex"
+        while (current != null && !current.getName().equals("COMP30880_ComicCodex")) {
+            current = current.getParentFile();
+        }
+        if (current == null) {
+            System.out.println("COMP30880_ComicCodex directory not found!");
+        }
         this.configMap = new HashMap<>();
         BufferedReader fileReader = null;
         try{
-            File file = new File(configPath);
+            File file = new File(current, "config.txt");
             fileReader = new BufferedReader(new FileReader(file));
             String line;
             while ((line = fileReader.readLine()) != null) {
