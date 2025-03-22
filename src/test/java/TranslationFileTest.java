@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TranslationFileTest {
@@ -11,14 +14,18 @@ public class TranslationFileTest {
     }
 
     @Test
-    void testLoadTranslationsFile(){
-        //TODO
-
-    }
-
-    @Test
-    void TestAddTranslationMapping(){
-        TranslationFile tFile = new TranslationFile("TranslationFile.txt");
+    void TestAddAndLoadTranslations(){
+        TranslationFile tFile = new TranslationFile("TranslationFileTest.txt");
         tFile.addTranslationMapping("Spanish_Test_Input", "Spanish+Test_Output");
+        tFile.addTranslationMapping("Hello", "Bonjour");
+        tFile.addTranslationMapping("Bye", "Ciao");
+
+         Map<String, String> mappings = tFile.loadTranslationsFile();
+
+        assertEquals("Spanish+Test_Output", mappings.get("Spanish_Test_Input"));
+        assertEquals("Bonjour", mappings.get("Hello"));
+        assertEquals("Ciao", mappings.get("Bye"));
+
+        assertEquals(3, mappings.size());
     }
 }

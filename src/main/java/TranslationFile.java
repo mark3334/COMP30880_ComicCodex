@@ -17,10 +17,20 @@ public class TranslationFile {
     }
 
 
-    //TODO
     public Map<String, String> loadTranslationsFile() { //Loads Translations from the File into Memory (Map).
         Map<String, String> translations = new HashMap<String, String>();
-
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(" : ");
+                if (parts.length == 2) {
+                    translations.put(parts[0].trim(), parts[1].trim());
+                }
+            }
+        }
+        catch (IOException e) {
+            System.err.println("Error reading translation file: " + e.getMessage());
+        }
 
         return translations;
     }
@@ -30,11 +40,11 @@ public class TranslationFile {
             w.write(source + " : " + target);
             w.newLine();
         } catch (IOException e) {
-            System.out.println("Error writing translation: " + e.getMessage());
+            System.err.println("Error writing translation file: " + e.getMessage());
         }
     }
 
-    public static String getTargetLanguage() {
+    public String getTargetLanguage() {
         ConfigurationFile config = new ConfigurationFile();
         return config.getValueByKey("language");
     }
