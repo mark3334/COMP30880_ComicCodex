@@ -25,9 +25,13 @@ public class TranslationFile {
         return translations;
     }
 
-    //TODO
     public void addTranslationMapping(String source, String target) { //Appends this new mapping into the TranslationsFile.
-
+        try (BufferedWriter w = new BufferedWriter(new FileWriter(file, true))) {
+            w.write(source + " : " + target);
+            w.newLine();
+        } catch (IOException e) {
+            System.out.println("Error writing translation: " + e.getMessage());
+        }
     }
 
     public static String getTargetLanguage() {

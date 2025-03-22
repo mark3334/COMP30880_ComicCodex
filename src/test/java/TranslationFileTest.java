@@ -13,10 +13,12 @@ public class TranslationFileTest {
     @Test
     void testLoadTranslationsFile(){
         //TODO
+
     }
 
     @Test
     void TestAddTranslationMapping(){
-        //TODO
+        TranslationFile tFile = new TranslationFile("TranslationFile.txt");
+        tFile.addTranslationMapping("Spanish_Test_Input", "Spanish+Test_Output");
     }
 }
