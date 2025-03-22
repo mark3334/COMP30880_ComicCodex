@@ -14,8 +14,8 @@ public class TranslationFile {
         }
     }
 
-    private static String getTargetLanguage() {
+    public static String getTargetLanguage() {
         ConfigurationFile config = new ConfigurationFile();
-        return config.getValueByKey("TARGET_LANGUAGE");
+        return config.getValueByKey("language");
     }
 }

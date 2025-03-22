@@ -6,7 +6,7 @@ public class TranslationFileTest {
 
     @Test
     void testGetTargetLanguage(){
-        ConfigurationFile config = new ConfigurationFile();
-        assertEquals("Spanish", config.getValueByKey("language"));
+        TranslationFile tFile = new TranslationFile("TranslationFile.txt");
+        assertEquals("Spanish", tFile.getTargetLanguage());
     }
 }
