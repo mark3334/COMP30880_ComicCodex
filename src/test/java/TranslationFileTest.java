@@ -9,4 +9,14 @@ public class TranslationFileTest {
         TranslationFile tFile = new TranslationFile("TranslationFile.txt");
         assertEquals("Spanish", tFile.getTargetLanguage());
     }
+
+    @Test
+    void testLoadTranslationsFile(){
+        //TODO
+    }
+
+    @Test
+    void TestAddTranslationMapping(){
+        //TODO
+    }
 }

@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TranslationFile {
     private final File file;
@@ -12,6 +14,20 @@ public class TranslationFile {
         } catch (IOException e) {
             System.err.println("Error creating translation file: " + e.getMessage());
         }
+    }
+
+
+    //TODO
+    public Map<String, String> loadTranslationsFile() { //Loads Translations from the File into Memory (Map).
+        Map<String, String> translations = new HashMap<String, String>();
+
+
+        return translations;
+    }
+
+    //TODO
+    public void addTranslationMapping(String source, String target) { //Appends this new mapping into the TranslationsFile.
+
     }
 
     public static String getTargetLanguage() {
