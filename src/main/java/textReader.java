@@ -3,11 +3,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class textReader {
-    public static void main(String[] args) {
-        String filePath = "words.tsv";
-        List<sourceText> texts = new ArrayList<>();
+    private String filePath;
+    private List<sourceText> texts;
 
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+    public textReader(String filePath) {
+        this.filePath = filePath;
+        this.texts = new ArrayList<>();
+        readFile();
+    }
+
+    public void readFile(){
+        try (BufferedReader br = new BufferedReader(new FileReader(this.filePath))) {
             String line;
             boolean firstLine = true;
             while ((line = br.readLine()) != null) {
@@ -17,12 +23,6 @@ public class textReader {
                 }
 
                 String[] values = line.split("\t", -1);
-                /*
-                for(int i = 0; i < 5; i++){
-                    System.out.print(values[i] + " | ");
-                }
-                System.out.println();
-                */
                 sourceText text = new sourceText(
                         values[0], // Left Pose
                         values[1], // Combined Text
@@ -30,13 +30,24 @@ public class textReader {
                         values[3], // Right Pose
                         values[4]  // Backgrounds
                 );
-                texts.add(text);
+                this.texts.add(text);
 
             }
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void printTexts() {
         for (sourceText text : texts) {
+            System.out.println(text);
+        }
+    }
+    public static void main(String[] args) {
+        String filePath = "words.tsv";
+        textReader text_reader = new textReader(filePath);
+        List<sourceText> texts = new ArrayList<>();
+        for (sourceText text : text_reader.texts) {
             System.out.println(text);
         }
     }
