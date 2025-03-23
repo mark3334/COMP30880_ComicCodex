@@ -16,6 +16,9 @@ public class TranslationFile {
         }
     }
 
+    /**
+     * Loads Translations from the File into Memory (Map<String, String>) and returns this.
+     */
     public Map<String, String> loadTranslationsFile() { //Loads Translations from the File into Memory (Map).
         Map<String, String> translations = new HashMap<String, String>();
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
@@ -34,7 +37,12 @@ public class TranslationFile {
         return translations;
     }
 
-    public void addTranslationMapping(String source, String target) { //Appends this new mapping into the TranslationsFile.
+    /**
+     * Appends new translations into the Translation File.
+     * @param source: Original Text in English
+     * @param target: Text in Target Language
+     */
+    public void addTranslationMapping(String source, String target) {
         try (BufferedWriter w = new BufferedWriter(new FileWriter(file, true))) {
             w.write(source + " : " + target);
             w.newLine();
@@ -43,6 +51,9 @@ public class TranslationFile {
         }
     }
 
+    /**
+     * Returns the target language set.
+     */
     public String getTargetLanguage() {
         ConfigurationFile config = new ConfigurationFile();
         return config.getValueByKey("language");
