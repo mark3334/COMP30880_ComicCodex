@@ -11,6 +11,10 @@ public class TranslationManager {
         this.client = new OpenAIClient();
     }
 
+    /**
+     * Reads the CombinedText from the sourceText instances and sends to translate method.
+     * @param textEntries: List of sourceText instances having
+     */
     public void readText(List<sourceText> textEntries) {
         for (sourceText entry : textEntries) {
             String combined = String.valueOf(entry.getCombinedText()); // Assuming this returns the full text
@@ -22,6 +26,11 @@ public class TranslationManager {
         }
     }
 
+    /**
+     * Sends a GPT call to translate the text phrase, if the translation doesn't exist already in file.
+     * Extra Note: Doesn't add anything to Translation File is error is received back.
+     * @param text: Original Text in English
+     */
     public String translate(String text) {
         Map<String, String> translations = translationFile.loadTranslationsFile(); // Load existing translations
 
@@ -35,6 +44,13 @@ public class TranslationManager {
         String prompt = "Please translate the following English text to " + targetLanguage + ":\n" + text;
         String translation = OpenAIClient.translateToSpanish(client, prompt);
 
+
+        //If the error starts off with error, then we dont want to include it in the TranslationFile
+        if (translation.startsWith("Error:")) {
+            System.err.println("Translation failed: " + translation);
+            return translation; // Just return the error, do not save it
+        }
+
         //Save new translation
         translationFile.addTranslationMapping(text, translation);
         return translation;
@@ -42,7 +58,7 @@ public class TranslationManager {
 
 
     public static void main(String[] args) {
-        TranslationManager t = new TranslationManager("testing2");
+        TranslationManager t = new TranslationManager("TextFiles/Translations.txt");
         t.readText(helper.readTexts("words.tsv"));
     }
 }
