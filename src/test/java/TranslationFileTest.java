@@ -9,13 +9,13 @@ public class TranslationFileTest {
 
     @Test
     void testGetTargetLanguage(){
-        TranslationFile tFile = new TranslationFile("TranslationFile.txt");
+        TranslationFile tFile = new TranslationFile("Test_Text_Files/TranslationFileTest.txt");
         assertEquals("Spanish", tFile.getTargetLanguage());
     }
 
     @Test
     void TestAddAndLoadTranslations(){
-        TranslationFile tFile = new TranslationFile("TranslationFileTest.txt");
+        TranslationFile tFile = new TranslationFile("Test_Text_Files/TranslationFileTest.txt");
         tFile.addTranslationMapping("Spanish_Test_Input", "Spanish+Test_Output");
         tFile.addTranslationMapping("Hello", "Bonjour");
         tFile.addTranslationMapping("Bye", "Ciao");
