@@ -161,7 +161,26 @@ public class OpenAIClient {
         }
     }
 
+    /**
+     * Translate a given English text to Spanish using OpenAI.
+     * @param englishText: The English input text.
+     * @return The translated Spanish text.
+     */
+    public static String translateToSpanish(OpenAIClient client, String englishText) {
+        String prompt = "Translate the following English word to Spanish:\n" + englishText;
+
+        String response = getChatCompletion(prompt);
+
+        System.out.println("ChatGPT: " + response);
+
+        client.saveContext(prompt, response);
+
+        return response.trim();
+    }
+
+
     public static void main(String[] args) {
+        /*
         OpenAIClient client = new OpenAIClient();
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("--------------------------------");
@@ -171,5 +190,14 @@ public class OpenAIClient {
 
             runUserInteraction(client, scanner);
         }
+        */
+
+        OpenAIClient client = new OpenAIClient();
+        String englishWord = "hello";
+        String spanish = translateToSpanish(client, englishWord);
+
+        System.out.println("English: " + englishWord);
+        System.out.println("Spanish: " + spanish);
+
     }
 }

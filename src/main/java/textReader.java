@@ -1,43 +1,63 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class textReader {
     public static void main(String[] args) {
         String filePath = "words.tsv";
         List<sourceText> texts = new ArrayList<>();
 
+        // Step 1: 读取 words.tsv 内容（直接复制 textReader 的逻辑）
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             boolean firstLine = true;
+
             while ((line = br.readLine()) != null) {
                 if (firstLine) {
                     firstLine = false;
-                    continue; // Skip the header row
+                    continue;
                 }
 
                 String[] values = line.split("\t", -1);
-                /*
-                for(int i = 0; i < 5; i++){
-                    System.out.print(values[i] + " | ");
-                }
-                System.out.println();
-                */
+                if (values.length < 5) continue;
+
                 sourceText text = new sourceText(
-                        values[0], // Left Pose
-                        values[1], // Combined Text
-                        values[2], // Left Text
-                        values[3], // Right Pose
-                        values[4]  // Backgrounds
+                        values[0],
+                        values[1],
+                        values[2],
+                        values[3],
+                        values[4]
                 );
                 texts.add(text);
-
             }
         } catch (IOException e) {
             e.printStackTrace();
+            return;
         }
+
+        OpenAIClient client = new OpenAIClient();
+        TranslationFile translationFile = new TranslationFile("translations.txt");
+
+        Map<String, String> existingTranslations = translationFile.loadTranslationsFile();
+
         for (sourceText text : texts) {
-            System.out.println(text);
+            String source = String.valueOf(text.getCombinedText());
+            String translated;
+
+            if (existingTranslations.containsKey(source)) {
+                translated = existingTranslations.get(source);
+            } else {
+                String prompt = "Please translate the following English text to " + translationFile.getTargetLanguage() + ":\n" + source;
+                translated = OpenAIClient.translateToSpanish(client, prompt);
+
+                translationFile.addTranslationMapping(source, translated);
+                existingTranslations.put(source, translated);
+            }
+
+            System.out.println("Original: " + source);
+            System.out.println("Translate: " + translated);
+            System.out.println("--------------------------");
         }
     }
 }
