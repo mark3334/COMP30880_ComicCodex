@@ -24,7 +24,7 @@ public class TranslationManager {
         }
 
         //otherwise if it down exist, we need to ask OPENAI. INCOMPLETE***
-        String targetLanguage = translationFile.getTargetLanguage();
+        String targetLanguage = helper.getTargetLanguage();
         String prompt;
         String translation = "temp";
 

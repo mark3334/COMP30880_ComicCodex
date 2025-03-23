@@ -43,12 +43,14 @@ public class textReader {
             System.out.println(text);
         }
     }
+    public String make_translation_prompt(){
+
+        String s = "Please translate the following into"
+    }
     public static void main(String[] args) {
         String filePath = "words.tsv";
         textReader text_reader = new textReader(filePath);
         List<sourceText> texts = new ArrayList<>();
-        for (sourceText text : text_reader.texts) {
-            System.out.println(text);
-        }
+        text_reader.printTexts();
     }
 }
