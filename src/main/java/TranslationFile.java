@@ -16,7 +16,6 @@ public class TranslationFile {
         }
     }
 
-
     public Map<String, String> loadTranslationsFile() { //Loads Translations from the File into Memory (Map).
         Map<String, String> translations = new HashMap<String, String>();
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
