@@ -89,6 +89,4 @@ public class ConfigurationFile {
         System.out.println("Completion URL: [" + completionUrl + "]");
     }
 
-
-
 }

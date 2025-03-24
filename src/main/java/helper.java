@@ -27,7 +27,7 @@ public class helper {
     }
 
     public static void create_submission_zip(int sprintNum) throws IOException {
-        //TODO
+        //TODO copy resources folder and .jar file from artifacts
          File root = helper.getRootDirectory();
          File submissionFolder = new File(root, "Submission");
          if (!submissionFolder.exists()) {
@@ -88,7 +88,8 @@ public class helper {
     }
     public static void merge_mp4_files(int sprintNum){
         /*
-            Uses the ffmeg to merge mp4 files into Sprint{sprintNum}Video.mp4
+            You need to have ffmpeg installed for this to work.
+            Uses the ffmpeg to merge mp4 files into Sprint{sprintNum}Video.mp4
             ffmpeg is a command-line tool that processes audio or video formats
             Use ProcessBuilder to execute the command
         */
