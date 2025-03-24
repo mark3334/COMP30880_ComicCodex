@@ -4,7 +4,6 @@ import java.util.Map;
 public class TranslationManager {
     private final TranslationFile translationFile;
 
-
     public TranslationManager(String filePath) {
         this.translationFile = new TranslationFile(filePath);
     }
@@ -14,14 +13,16 @@ public class TranslationManager {
      * @param textEntries: List of sourceText instances having
      */
     public void readText(List<sourceText> textEntries) {
-        String targetLanguage = helper.getTargetLanguage();
-
         for (sourceText entry : textEntries) {
             String combined = String.valueOf(entry.getCombinedText()); // Assuming this returns the full text
-            String translated = translate(combined);
+            String left_text = String.valueOf(entry.getLeftText()); //Assuming this returns the full left_text
+            String combined_translated = translate(combined);
+            String left_translated = translate(left_text);
 
-            System.out.println("Original: " + combined);
-            System.out.println("Translate: " + translated);
+            System.out.println("Original combinedText: " + combined);
+            System.out.println("Translate: " + combined_translated);
+            System.out.println("Original left_text: " + left_text);
+            System.out.println("Translate: " + left_translated);
             System.out.println("--------------------------");
         }
     }
@@ -56,7 +57,6 @@ public class TranslationManager {
         translationFile.addTranslationMapping(text, translation);
         return translation;
     }
-
 
     public static void main(String[] args) {
         TranslationManager t = new TranslationManager("TextFiles/Translations.txt");
