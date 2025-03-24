@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class TextReader {
 //    public static void main(String[] args) {
-//        String filePath = "words.tsv";
+//        String filePath = "Resources/words.tsv";
 //        List<sourceText> texts = new ArrayList<>();
 //
 //        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
