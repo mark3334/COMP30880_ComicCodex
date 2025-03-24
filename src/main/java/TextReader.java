@@ -6,7 +6,6 @@ public class TextReader {
     private String filePath;
     private List<sourceText> texts;
 
-
     public TextReader(String filePath) {
         this.filePath = filePath;
         this.texts = new ArrayList<>();
@@ -36,7 +35,6 @@ public class TextReader {
                         values[4]  // Backgrounds
                 );
                 this.texts.add(text);
-
             }
         }
         catch (IOException e) {

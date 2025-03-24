@@ -40,6 +40,10 @@ public class TranslationManager {
             return translations.get(text);
         }
 
+        if(text.isEmpty()) { //if the input text is empty
+            return "";
+        }
+
         //otherwise if it dont exist in MAP then we ask GPT.
         String targetLanguage = helper.getTargetLanguage();
         String prompt = "Please translate the following English text to " + targetLanguage + ":\n" + text + "Please note, you only need to reply with the translated text. \" +\n" +
@@ -53,16 +57,40 @@ public class TranslationManager {
             return translation; // Just return the error, do not save it
         }
 
-        //Save new translation
-        translationFile.addTranslationMapping(text, translation);
         return translation;
     }
 
+    /**
+     * Full pipeline: read → translate → write
+     */
+    public void processAll(List<sourceText> list) {
+        for (sourceText vignette : list) {
+            String translatedCombined = translate(vignette.getCombinedText().toString());
+            String translatedLeft = translate(vignette.getLeftText().toString());
+
+            System.out.println("Original combinedText: " + vignette.getCombinedText());
+            System.out.println("Translate: " + translatedCombined);
+            System.out.println("Original left_text: " + vignette.getLeftText());
+            System.out.println("Translate: " + translatedLeft);
+            System.out.println("--------------------------");
+
+            translationFile.writeTranslatedVignetteToTSV(vignette, translatedCombined, translatedLeft);
+        }
+        System.out.println("Translation complete.");
+    }
+
     public static void main(String[] args) {
-        TranslationManager t = new TranslationManager("TextFiles/Translations.txt");
-        String filePath = "Resources/words.tsv";
+        /*
+        TranslationManager t = new TranslationManager("Resources/Translations.txt");
+        String filePath = "Resources/test.tsv";
         TextReader text_reader = new TextReader(filePath);
         t.readText(text_reader.getTexts());
         //t.readText(helper.readTexts("words.tsv"));
+
+         */
+        String filePath = "Resources/test.tsv";
+        TextReader text_reader = new TextReader(filePath);
+        TranslationManager t = new TranslationManager("Resources/Translations.txt");
+        t.processAll(text_reader.getTexts());
     }
 }

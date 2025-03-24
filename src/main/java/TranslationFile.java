@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class TranslationFile {
@@ -36,12 +37,11 @@ public class TranslationFile {
 
         return translations;
     }
-
+    /*
     /**
      * Appends new translations into the Translation File.
      * @param source: Original Text in English
      * @param target: Text in Target Language
-     */
     public void addTranslationMapping(String source, String target) {
         try (BufferedWriter w = new BufferedWriter(new FileWriter(file, true))) {
             w.write(source + " : " + target);
@@ -50,8 +50,21 @@ public class TranslationFile {
             System.err.println("Error writing translation file: " + e.getMessage());
         }
     }
+    */
 
-    /**
-     * Returns the target language set.
-     */
+    public void writeTranslatedVignetteToTSV(sourceText original, String translatedCombinedText, String translatedLeftText) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+            String line = String.join("\t",
+                    original.getLeftPose(),
+                    translatedLeftText,
+                    translatedCombinedText,
+                    String.join(", ", original.getRightPose()),
+                    String.join(", ", original.getBackgrounds())
+            );
+            writer.write(line);
+            writer.newLine();
+        } catch (IOException e) {
+            System.err.println("Error writing to TSV: " + e.getMessage());
+        }
+    }
 }

@@ -1,0 +1,9 @@
+attracted		enamorarse, amor	"nude, posing"	"bedroom, red carpet event, locker room"
+bowing		inclinarse	"ruling, commanding, summoning"	iron throne
+catering	una bandeja	servir, una bandeja, un cóctel, pedir una bebida	"eating, drinking, sipping, slurping"	"restaurant, food truck"
+charming	un político, un encantador	ser encantador, encanto, lleno de encanto, ¡Exacto!, ¡Es verdad!	"charmed, high fiving"	"bar, charity event, coffee shop"
+composing	música, un teclado	componiendo música, música, un teclado, un compositor	"singing, listening"	"recording studio, jazz club, recording booth, record label office, music festival"
+drinking	cerveza	bebiendo, una cerveza	"slurping, sipping, catering"	"bar, garden party, sports bar"
+toasting	una bebida	haciendo un brindis, un refresco, una bebida, una bebida	"slurping, sipping, catering"	"bar, garden party, sports bar, charity event"
+embracing		abrazando, un saludo, un abrazo, un abrazo	greeting	"welcome mat, city street, community centre"
+enchanting	una varita mágica	lanzar un hechizo, magia, un mago, un milagro, una varita mágica	"charmed, brainwashed, indicating"	"city of towers, city on a hill, dark city, tower tops, dream world"
