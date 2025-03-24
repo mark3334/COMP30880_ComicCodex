@@ -16,27 +16,25 @@ public class OpenAIClient {
     /**
      * Initialize variables
      */
-    private static String apiKey;
-    private static String model;
-    private static String url;
+    private static final String apiKey;
+    private static final String model;
+    private static final String url;
     private static final LinkedList<JSONObject> messageHistory = new LinkedList<>();
+    private  static String language;
 
-    /**
-     * OpenAIClient construct function.
-     */
-    public OpenAIClient() {
+    static {
         ConfigurationFile config = new ConfigurationFile();
-        this.apiKey = config.getValueByKey("API_KEY");
-        this.model = config.getValueByKey("MODEL");
-        this.url = config.getValueByKey("COMPLETIONS_URL");
+        model = config.getValueByKey("MODEL");
+        url = config.getValueByKey("COMPLETIONS_URL");
+        language = config.getValueByKey("language");
+        apiKey = config.getValueByKey("API_KEY");
     }
-
     /**
      * Save conversation history (maximum conversation history is 5)
      * @param prompt: User input
      * @param response: OpenAI response
      */
-    public void saveContext(String prompt, String response) {
+    public static void saveContext(String prompt, String response) {
         messageHistory.add(new JSONObject().put("role", "user").put("content", prompt));
         messageHistory.add(new JSONObject().put("role", "assistant").put("content", response));
 
@@ -132,10 +130,9 @@ public class OpenAIClient {
 
     /**
      * User interaction. Realize the interaction between users and chat
-     * @param client: Input the OpenAIClient
      * @param scanner: Get the user input
      */
-    static void runUserInteraction(OpenAIClient client, Scanner scanner) {
+    public void runUserInteraction(Scanner scanner) {
         while (true) {
 
             System.out.print("User: ");
@@ -153,11 +150,11 @@ public class OpenAIClient {
 
             System.out.println("(Processing... Please wait)");
 
-            String response = client.getChatCompletion(prompt);
+            String response = OpenAIClient.getChatCompletion(prompt);
 
             System.out.println("ChatGPT: " + response);
 
-            client.saveContext(prompt, response);
+            this.saveContext(prompt, response);
         }
     }
 
@@ -166,37 +163,16 @@ public class OpenAIClient {
      * @param englishText: The English input text.
      * @return The translated Spanish text.
      */
-    public static String translateToSpanish(OpenAIClient client, String englishText) {
-        String prompt = "Translate the following English word to Spanish:\n" + englishText;
-
+    public static String translate(String englishText) {
+        String language = OpenAIClient.language;
+        String prompt = "Translate the following English word to " + language + ":\n" + englishText;
         String response = getChatCompletion(prompt);
 
         System.out.println("ChatGPT: " + response);
 
-        client.saveContext(prompt, response);
+        OpenAIClient.saveContext(prompt, response);
 
         return response.trim();
     }
 
-    public static void main(String[] args) {
-        /*
-        OpenAIClient client = new OpenAIClient();
-        try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println("--------------------------------");
-            System.out.println("| Welcome to ComicCodex project|");
-            System.out.println("| Press 'exit' to exit.        |");
-            System.out.println("--------------------------------");
-
-            runUserInteraction(client, scanner);
-        }
-        */
-
-        OpenAIClient client = new OpenAIClient();
-        String englishWord = "hello";
-        String spanish = translateToSpanish(client, englishWord);
-
-        System.out.println("English: " + englishWord);
-        System.out.println("Spanish: " + spanish);
-
-    }
 }
