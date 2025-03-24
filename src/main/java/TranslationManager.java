@@ -4,7 +4,6 @@ import java.util.Map;
 public class TranslationManager {
     private final TranslationFile translationFile;
 
-
     public TranslationManager(String filePath) {
         this.translationFile = new TranslationFile(filePath);
     }
@@ -60,7 +59,9 @@ public class TranslationManager {
 
     public static void main(String[] args) {
         TranslationManager t = new TranslationManager("TextFiles/Translations.txt");
-        t.readText(helper.readTexts("Resources/test.tsv"));
+        String filePath = "Resources/words.tsv";
+        TextReader text_reader = new TextReader(filePath);
+        t.readText(text_reader.getTexts());
         //t.readText(helper.readTexts("words.tsv"));
     }
 }
