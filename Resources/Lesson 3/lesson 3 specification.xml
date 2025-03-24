@@ -1,0 +1,5483 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<comic>
+   <figures>
+      <figure>
+         <name>Michael Jordan</name>
+         <appearance>male</appearance>
+         <skin>brown</skin>
+         <hair>bald</hair>
+         <beard>dark brown skin</beard>
+         <hairlength>short</hairlength>
+         <hairstyle>bald</hairstyle>
+         <lips>default</lips>
+         <pose>holding ball</pose>
+         <facing>right</facing>
+      </figure>
+      <figure>
+         <name>Billie Jean King</name>
+         <appearance>female</appearance>
+         <hair>black</hair>
+         <hairlength>long</hairlength>
+         <hairstyle>pigtails</hairstyle>
+         <lips>red</lips>
+         <pose>punching</pose>
+         <facing>left</facing>
+      </figure>
+   </figures>
+
+   <scenes>
+      <scene>
+         <rubric>
+            <image>cowboys and idioms</image>
+            <above>엑셀시어 코믹스와 함께 한국어를 연습해보세요
+</above>
+            <below>Practice Korean with Excelsior Comics!</below>
+            <duration>10000</duration>
+            <audio>Korean intro.mp3</audio>
+         </rubric>
+      </scene>
+      <scene>
+         <rubric>
+            <image>learn Korean</image>
+            <above>Our Korean teacher is joined today by ...</above>
+            <below>    Michael Jordan and Billie Jean King.</below>
+            <duration>5000</duration>
+         </rubric>
+         <panel>
+            <above>Featuring Michael Jordan from The Chicago Bulls</above>
+
+            <left>
+               <figure>
+                  <name>Michael Jordan</name>
+                  <appearance>male</appearance>
+                  <skin>brown</skin>
+                  <hair>bald</hair>
+                  <beard>dark brown skin</beard>
+                  <hairlength>short</hairlength>
+                  <hairstyle>bald</hairstyle>
+                  <lips>default</lips>
+                  <pose>holding ball</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>I love playing basketball.</content>
+               </balloon>
+            </left>
+
+            <below>He is quite like LeBron James in this regard  -- Ed.</below>
+
+            <duration>5000</duration>
+         </panel>
+         <panel>
+            <above>And Billie Jean King from California</above>
+
+            <left>
+               <figure>
+                  <name>Billie Jean King</name>
+                  <appearance>female</appearance>
+                  <hair>black</hair>
+                  <hairlength>long</hairlength>
+                  <hairstyle>pigtails</hairstyle>
+                  <lips>red</lips>
+                  <pose>punching</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>I just love delivering forehand slams.</content>
+               </balloon>
+            </left>
+
+            <below>Think of her as a female version of John McEnroe  -- Ed.</below>
+
+            <duration>5000</duration>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>luring</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>luring</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>자금 흐름</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>691.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>bending to see</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>bending to see</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a money trail</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <print>no</print>
+
+            <audio>690.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>luring</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>자금 흐름</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>bending to see</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a money trail</content>
+               </balloon>
+            </right>
+
+            <below>ja-geum heu-reum</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>691.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+
+            <setting>church</setting>
+
+            <duration>62</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>blessing</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>church</setting>
+
+            <duration>125</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>blessing</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a blessing</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>church</setting>
+
+            <duration>1000</duration>
+
+            <audio>2092.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>blessing</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a blessing</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>praying</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>church</setting>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>blessing</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a blessing</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>praying</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>축복</content>
+               </balloon>
+            </right>
+
+            <below>chuk-bok</below>
+
+            <setting>church</setting>
+
+            <duration>2000</duration>
+
+            <audio>2093.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Dr. Seuss explain 축복 (chukbok)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Dr. Seuss</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>25</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Dr. Seuss explain 축복 (chukbok)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Dr. Seuss</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>축복 literally means</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>confident</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4831.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Dr. Seuss explain 축복 (chukbok)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Dr. Seuss</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>put out</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>uh</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <print>no</print>
+
+            <audio>4833.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Dr. Seuss explain 축복 (chukbok)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Dr. Seuss</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>put out</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a blessing?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>2092.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Dr. Seuss explain 축복 (chukbok)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Dr. Seuss</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>put out</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a blessing?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Dr. Seuss explain 축복 (chukbok)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Dr. Seuss</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>Let's dissect 축복 into 축 and 복</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>shrugging</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <audio>4832.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Dr. Seuss explain 축복 (chukbok)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Dr. Seuss</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>축복</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>inspiring</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>celebration (축) and blessing (복).</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>5000</duration>
+
+            <audio>2093.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>clock prop</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>clock prop</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a clock</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>1485.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>destructive</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>destructive</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>시계</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <print>no</print>
+
+            <audio>1486.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>clock prop</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a clock</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>destructive</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>시계</content>
+               </balloon>
+            </right>
+
+            <below>si-gye</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>1485.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Gordon Gekko explain 시계 (sigye)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Gordon Gekko</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>25</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Gordon Gekko explain 시계 (sigye)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Gordon Gekko</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>시계 literally means</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>crossing arms</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4831.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Gordon Gekko explain 시계 (sigye)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Gordon Gekko</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>recollecting</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>uh</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <print>no</print>
+
+            <audio>4833.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Gordon Gekko explain 시계 (sigye)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Gordon Gekko</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>recollecting</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a clock?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>1485.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Gordon Gekko explain 시계 (sigye)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Gordon Gekko</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>recollecting</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a clock?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Gordon Gekko explain 시계 (sigye)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Gordon Gekko</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>Let's dissect 시계 into 시 and 계</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>shrugging</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <audio>4832.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Gordon Gekko explain 시계 (sigye)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Gordon Gekko</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>시계</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>inspiring</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>time (시) instrument (계).</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>5000</duration>
+
+            <audio>1486.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+
+            <setting>balcony</setting>
+
+            <framing>thought panel</framing>
+
+            <duration>31</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>pointing</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>125</duration>
+
+            <print>no</print>
+
+            <embedding>
+                  <panel>
+
+                     <setting>balcony</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>pointing</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a balcony</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4060.mp3</audio>
+
+            <embedding>
+                  <panel>
+
+                     <setting>balcony</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>pointing</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a balcony</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>towering</pose>
+                  <facing>left</facing>
+                  <horizontal>more</horizontal>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+
+            <embedding>
+                  <panel>
+
+                     <setting>balcony</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>pointing</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a balcony</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>towering</pose>
+                  <facing>left</facing>
+                  <horizontal>more</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>발코니</content>
+               </balloon>
+            </right>
+
+            <below>bal-ko-ni</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>4061.mp3</audio>
+
+            <embedding>
+                  <panel>
+
+                     <setting>balcony</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>angelic</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>angelic</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>하늘</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>524.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>saintly</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>saintly</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>heaven</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <print>no</print>
+
+            <audio>2107.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>angelic</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>하늘</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>saintly</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>heaven</content>
+               </balloon>
+            </right>
+
+            <below>ha-neul</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>524.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+
+            <setting>university</setting>
+
+            <duration>62</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>learning</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>university</setting>
+
+            <duration>125</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>learning</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>looking for a solution</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>university</setting>
+
+            <duration>1000</duration>
+
+            <audio>842.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>learning</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>looking for a solution</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>questioning</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>university</setting>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>learning</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>looking for a solution</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>questioning</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>해결책을 찾고 있다</content>
+               </balloon>
+            </right>
+
+            <below>hae-gyeol-chaeg-eul chat-go it-da</below>
+
+            <setting>university</setting>
+
+            <duration>2000</duration>
+
+            <audio>843.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>guiding</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>guiding</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>an umbrella</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>100.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>dispatched</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>dispatched</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>우산</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <print>no</print>
+
+            <audio>101.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>guiding</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>an umbrella</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>dispatched</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>우산</content>
+               </balloon>
+            </right>
+
+            <below>u-san</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>100.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Muhammad Ali explain 우산 (usan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Muhammad Ali</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>25</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Muhammad Ali explain 우산 (usan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Muhammad Ali</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>우산 literally means</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>confident</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4831.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Muhammad Ali explain 우산 (usan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Muhammad Ali</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>put out</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>uh</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <print>no</print>
+
+            <audio>4833.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Muhammad Ali explain 우산 (usan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Muhammad Ali</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>put out</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>an umbrella?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>100.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Muhammad Ali explain 우산 (usan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Muhammad Ali</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>put out</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>an umbrella?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Muhammad Ali explain 우산 (usan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Muhammad Ali</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>Let's dissect 우산 into 우 and 산</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>digging deeper</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <audio>4832.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Muhammad Ali explain 우산 (usan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Muhammad Ali</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>우산</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>inspired</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>rain (우) shield (산).</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>5000</duration>
+
+            <audio>101.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+
+            <setting>california</setting>
+
+            <framing>thought panel</framing>
+
+            <duration>31</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>sipping</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>125</duration>
+
+            <print>no</print>
+
+            <embedding>
+                  <panel>
+
+                     <setting>california</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>sipping</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>바다</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4226.mp3</audio>
+
+            <embedding>
+                  <panel>
+
+                     <setting>california</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>sipping</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>바다</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>catering</pose>
+                  <facing>left</facing>
+                  <horizontal>more</horizontal>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+
+            <embedding>
+                  <panel>
+
+                     <setting>california</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>sipping</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>바다</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>catering</pose>
+                  <facing>left</facing>
+                  <horizontal>more</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>the sea</content>
+               </balloon>
+            </right>
+
+            <below>ba-da</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>4362.mp3</audio>
+
+            <embedding>
+                  <panel>
+
+                     <setting>california</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>infantile</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>infantile</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a diaper</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>2277.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>feeding</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>feeding</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>기저귀</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <print>no</print>
+
+            <audio>2278.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>infantile</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a diaper</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>feeding</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>기저귀</content>
+               </balloon>
+            </right>
+
+            <below>gi-jeo-gwi</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>2277.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a gossip columnist explain 기저귀 (gijeogwi)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a gossip columnist</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>25</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can a gossip columnist explain 기저귀 (gijeogwi)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a gossip columnist</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>기저귀 literally means</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>confident</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4831.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a gossip columnist explain 기저귀 (gijeogwi)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a gossip columnist</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>recollecting</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>uh</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <print>no</print>
+
+            <audio>4833.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a gossip columnist explain 기저귀 (gijeogwi)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a gossip columnist</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>recollecting</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a diaper?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>2277.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a gossip columnist explain 기저귀 (gijeogwi)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a gossip columnist</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>recollecting</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a diaper?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can a gossip columnist explain 기저귀 (gijeogwi)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a gossip columnist</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>Let's dissect 기저귀 into 기 and 저귀</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>condescending</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <audio>4832.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a gossip columnist explain 기저귀 (gijeogwi)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a gossip columnist</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>기저귀</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>inspiring</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>under (기) cloth (저귀).</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>5000</duration>
+
+            <audio>2278.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>uninspired</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>uninspired</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>lost for ideas</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>3738.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>unimpressed</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>unimpressed</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>아이디어가 고갈된</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <print>no</print>
+
+            <audio>3739.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>uninspired</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>lost for ideas</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>unimpressed</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>아이디어가 고갈된</content>
+               </balloon>
+            </right>
+
+            <below>a-i-di-eu-ga go-gal-doen</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>3738.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+
+            <setting>boneyard</setting>
+
+            <duration>62</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>whipping</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>boneyard</setting>
+
+            <duration>125</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>whipping</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>to lash</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>boneyard</setting>
+
+            <duration>1000</duration>
+
+            <audio>2034.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>whipping</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>to lash</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>chained</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>boneyard</setting>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>whipping</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>to lash</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>chained</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>채찍질하다</content>
+               </balloon>
+            </right>
+
+            <below>chae-jjik-jil-ha-da</below>
+
+            <setting>boneyard</setting>
+
+            <duration>2000</duration>
+
+            <audio>2035.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Tarzan explain 채찍질하다 (chaejjigjilhada)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Tarzan</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>25</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Tarzan explain 채찍질하다 (chaejjigjilhada)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Tarzan</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>채찍질하다 literally means</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>confident</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4831.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Tarzan explain 채찍질하다 (chaejjigjilhada)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Tarzan</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>explaining</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>uh</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <print>no</print>
+
+            <audio>4833.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Tarzan explain 채찍질하다 (chaejjigjilhada)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Tarzan</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>explaining</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>to lash?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>2034.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Tarzan explain 채찍질하다 (chaejjigjilhada)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Tarzan</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>explaining</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>to lash?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Tarzan explain 채찍질하다 (chaejjigjilhada)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Tarzan</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>Let's dissect 채찍질하다 into 채찍 and 질하다</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>condescending</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <audio>4832.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Tarzan explain 채찍질하다 (chaejjigjilhada)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Tarzan</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>채찍질하다</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>inspiring</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>to whip (채찍) action (질하다).</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>5000</duration>
+
+            <audio>2035.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>carrying</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>carrying</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>상자들</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>2226.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>building</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>building</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>boxes</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <print>no</print>
+
+            <audio>2225.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>carrying</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>상자들</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>building</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>boxes</content>
+               </balloon>
+            </right>
+
+            <below>sang-ja-deul</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>2226.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Jerry Seinfeld explain 상자들 (sangjadeul)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Jerry Seinfeld</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>25</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Jerry Seinfeld explain 상자들 (sangjadeul)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Jerry Seinfeld</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>상자들 literally means</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>hands on hips</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4831.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Jerry Seinfeld explain 상자들 (sangjadeul)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Jerry Seinfeld</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>explaining</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>uh</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <print>no</print>
+
+            <audio>4833.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Jerry Seinfeld explain 상자들 (sangjadeul)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Jerry Seinfeld</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>explaining</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>boxes?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>2225.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Jerry Seinfeld explain 상자들 (sangjadeul)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Jerry Seinfeld</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>explaining</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>boxes?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Jerry Seinfeld explain 상자들 (sangjadeul)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Jerry Seinfeld</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>Let's dissect 상자들 into 상자 and 들</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>confident</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <audio>4832.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Jerry Seinfeld explain 상자들 (sangjadeul)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Jerry Seinfeld</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>상자들</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>inspired</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>box (상자) plural (들).</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>5000</duration>
+
+            <audio>2226.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+
+            <setting>police station</setting>
+
+            <framing>thought panel</framing>
+
+            <duration>31</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>arresting</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>125</duration>
+
+            <print>no</print>
+
+            <embedding>
+                  <panel>
+
+                     <setting>police station</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>arresting</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a police station</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4260.mp3</audio>
+
+            <embedding>
+                  <panel>
+
+                     <setting>police station</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>arresting</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a police station</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>arrested</pose>
+                  <facing>left</facing>
+                  <horizontal>more</horizontal>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+
+            <embedding>
+                  <panel>
+
+                     <setting>police station</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>arresting</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a police station</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>arrested</pose>
+                  <facing>left</facing>
+                  <horizontal>more</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>경찰서</content>
+               </balloon>
+            </right>
+
+            <below>gyeong-chal-seo</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>4261.mp3</audio>
+
+            <embedding>
+                  <panel>
+
+                     <setting>police station</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <above>Can a trailer for an action movie explain 경찰서 (gyeong-chal-seo)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a trailer for an action movie</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>25</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can a trailer for an action movie explain 경찰서 (gyeong-chal-seo)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a trailer for an action movie</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>경찰서 literally means</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>reading</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4831.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a trailer for an action movie explain 경찰서 (gyeong-chal-seo)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a trailer for an action movie</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>discarding book</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>uh</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <print>no</print>
+
+            <audio>4833.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a trailer for an action movie explain 경찰서 (gyeong-chal-seo)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a trailer for an action movie</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>discarding book</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a police station?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4260.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a trailer for an action movie explain 경찰서 (gyeong-chal-seo)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a trailer for an action movie</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>discarding book</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a police station?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can a trailer for an action movie explain 경찰서 (gyeong-chal-seo)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a trailer for an action movie</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>Let's dissect 경찰서 into 경찰 and 서</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>shrugging</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <audio>4832.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a trailer for an action movie explain 경찰서 (gyeong-chal-seo)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a trailer for an action movie</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>경찰서</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>inspired</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>police (경찰) office/station (서).</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>5000</duration>
+
+            <audio>4261.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>catering</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>catering</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>쟁반</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>11.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>eating</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>eating</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a tray</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <print>no</print>
+
+            <audio>10.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>catering</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>쟁반</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>eating</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a tray</content>
+               </balloon>
+            </right>
+
+            <below>jaeng-ban</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>11.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can H.P. Lovecraft explain 쟁반 (jaengban)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>H.P. Lovecraft</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>25</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can H.P. Lovecraft explain 쟁반 (jaengban)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>H.P. Lovecraft</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>쟁반 literally means</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>hands on hips</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4831.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can H.P. Lovecraft explain 쟁반 (jaengban)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>H.P. Lovecraft</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>explaining</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>uh</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <print>no</print>
+
+            <audio>4833.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can H.P. Lovecraft explain 쟁반 (jaengban)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>H.P. Lovecraft</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>explaining</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a tray?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>10.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can H.P. Lovecraft explain 쟁반 (jaengban)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>H.P. Lovecraft</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>explaining</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a tray?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can H.P. Lovecraft explain 쟁반 (jaengban)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>H.P. Lovecraft</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>Let's dissect 쟁반 into 쟁 and 반</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>condescending</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <audio>4832.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can H.P. Lovecraft explain 쟁반 (jaengban)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>H.P. Lovecraft</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>쟁반</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>inspiring</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a dish (쟁) for holding (반).</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>5000</duration>
+
+            <audio>11.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+
+            <setting>garden</setting>
+
+            <duration>62</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>kissing</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>garden</setting>
+
+            <duration>125</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>kissing</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>blowing a kiss</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>garden</setting>
+
+            <duration>1000</duration>
+
+            <audio>148.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>kissing</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>blowing a kiss</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>embracing</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>garden</setting>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>kissing</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>blowing a kiss</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>embracing</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>키스 날리기</content>
+               </balloon>
+            </right>
+
+            <below>ki-seu nal-li-gi</below>
+
+            <setting>garden</setting>
+
+            <duration>2000</duration>
+
+            <audio>149.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>cooperative</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>cooperative</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a team player</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>3584.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>united</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>united</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>팀 플레이어</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <print>no</print>
+
+            <audio>3585.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>cooperative</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a team player</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>united</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>팀 플레이어</content>
+               </balloon>
+            </right>
+
+            <below>tim peul-le-i-eo</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>3584.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+
+            <setting>checkpoint charlie</setting>
+
+            <framing>thought panel</framing>
+
+            <duration>31</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>examining document</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>125</duration>
+
+            <print>no</print>
+
+            <embedding>
+                  <panel>
+
+                     <setting>checkpoint charlie</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>examining document</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a checkpoint</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4659.mp3</audio>
+
+            <embedding>
+                  <panel>
+
+                     <setting>checkpoint charlie</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>examining document</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a checkpoint</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>arriving</pose>
+                  <facing>left</facing>
+                  <horizontal>more</horizontal>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+
+            <embedding>
+                  <panel>
+
+                     <setting>checkpoint charlie</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>examining document</pose>
+                  <facing>right</facing>
+                  <horizontal>less</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a checkpoint</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>arriving</pose>
+                  <facing>left</facing>
+                  <horizontal>more</horizontal>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>검문소</content>
+               </balloon>
+            </right>
+
+            <below>geom-mun-so</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>4660.mp3</audio>
+
+            <embedding>
+                  <panel>
+
+                     <setting>checkpoint charlie</setting>
+
+                     <framing>thought panel</framing>
+
+                     <duration>31</duration>
+
+                     <print>no</print>
+                  </panel>
+
+            </embedding>
+         </panel>
+         <panel>
+            <above>Can Arnold Scharzenegger explain 검문소 (geommunso)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Arnold Scharzenegger</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>25</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Arnold Scharzenegger explain 검문소 (geommunso)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Arnold Scharzenegger</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>검문소 literally means</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>hands on hips</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4831.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Arnold Scharzenegger explain 검문소 (geommunso)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Arnold Scharzenegger</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>thinking</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>uh</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <print>no</print>
+
+            <audio>4833.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Arnold Scharzenegger explain 검문소 (geommunso)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Arnold Scharzenegger</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>thinking</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a checkpoint?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4659.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Arnold Scharzenegger explain 검문소 (geommunso)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Arnold Scharzenegger</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>thinking</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a checkpoint?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Arnold Scharzenegger explain 검문소 (geommunso)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Arnold Scharzenegger</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>Let's dissect 검문소 into 검문 and 소</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>digging deeper</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <audio>4832.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Arnold Scharzenegger explain 검문소 (geommunso)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Arnold Scharzenegger</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>검문소</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>inspired</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>inspection (검문) place (소).</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>5000</duration>
+
+            <audio>4660.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+
+            <setting>training hall</setting>
+
+            <duration>62</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>resilient</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>training hall</setting>
+
+            <duration>125</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>resilient</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>to win</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>training hall</setting>
+
+            <duration>1000</duration>
+
+            <audio>3751.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>resilient</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>to win</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>fainting</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>training hall</setting>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>resilient</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>to win</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>fainting</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>이기다</content>
+               </balloon>
+            </right>
+
+            <below>i-gi-da</below>
+
+            <setting>training hall</setting>
+
+            <duration>2000</duration>
+
+            <audio>3752.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>rebellious</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>rebellious</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a bomb</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>1429.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>cowering</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>cowering</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>폭탄</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <print>no</print>
+
+            <audio>1430.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>rebellious</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a bomb</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>cowering</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>폭탄</content>
+               </balloon>
+            </right>
+
+            <below>pok-tan</below>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>2000</duration>
+
+            <audio>1429.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Mister Spock explain 폭탄 (poktan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Mister Spock</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>25</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Mister Spock explain 폭탄 (poktan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Mister Spock</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>폭탄 literally means</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>reading</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4831.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Mister Spock explain 폭탄 (poktan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Mister Spock</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>discarding book</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>uh</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <print>no</print>
+
+            <audio>4833.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Mister Spock explain 폭탄 (poktan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Mister Spock</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>discarding book</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a bomb?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>1429.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Mister Spock explain 폭탄 (poktan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Mister Spock</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>discarding book</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>a bomb?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can Mister Spock explain 폭탄 (poktan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Mister Spock</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>Let's dissect 폭탄 into 폭 and 탄</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>shrugging</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <audio>4832.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can Mister Spock explain 폭탄 (poktan)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>Mister Spock</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>폭탄</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>inspiring</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>explosive (폭) thing (탄).</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>5000</duration>
+
+            <audio>1430.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <panel>
+
+            <setting>training hall</setting>
+
+            <duration>62</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>unconscious</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>training hall</setting>
+
+            <duration>125</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>unconscious</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>무의식의</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>blank</id>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>training hall</setting>
+
+            <duration>1000</duration>
+
+            <audio>2995.mp3</audio>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>unconscious</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>무의식의</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>kneeling</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>training hall</setting>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <left>
+               <figure>
+                  <id>Billie Jean King</id>
+                  <pose>unconscious</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>무의식의</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>kneeling</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>unconscious</content>
+               </balloon>
+            </right>
+
+            <below>mu-ui-sik-ui</below>
+
+            <setting>training hall</setting>
+
+            <duration>2000</duration>
+
+            <audio>2994.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a popular scientist explain 무의식의 (mu-ui-sik-ui)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a popular scientist</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>blank</pose>
+                  <facing>right</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>25</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can a popular scientist explain 무의식의 (mu-ui-sik-ui)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a popular scientist</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>무의식의 literally means</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>empathetic</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>4831.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a popular scientist explain 무의식의 (mu-ui-sik-ui)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a popular scientist</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>confused</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>uh</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <print>no</print>
+
+            <audio>4833.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a popular scientist explain 무의식의 (mu-ui-sik-ui)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a popular scientist</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>confused</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>unconscious?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>1000</duration>
+
+            <audio>2994.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a popular scientist explain 무의식의 (mu-ui-sik-ui)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a popular scientist</pose>
+                  <facing>right</facing>
+               </figure>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>confused</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>unconscious?</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>250</duration>
+
+            <print>no</print>
+         </panel>
+         <panel>
+            <above>Can a popular scientist explain 무의식의 (mu-ui-sik-ui)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a popular scientist</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>Let's dissect 무의식의 into 무 and 의식 and 의</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>shrugging</pose>
+                  <facing>left</facing>
+               </figure>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>500</duration>
+
+            <audio>4832.mp3</audio>
+         </panel>
+         <panel>
+            <above>Can a popular scientist explain 무의식의 (mu-ui-sik-ui)?</above>
+
+            <left>
+               <figure>
+                  <appearance>default</appearance>
+                  <skin>default</skin>
+                  <hair>default</hair>
+                  <pose>a popular scientist</pose>
+                  <facing>right</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>무의식의</content>
+               </balloon>
+            </left>
+            <right>
+               <figure>
+                  <id>Michael Jordan</id>
+                  <pose>inspiring</pose>
+                  <facing>left</facing>
+               </figure>
+
+               <balloon status = "speech">
+                  <content>without (무) consciousness (의식) + 'of' (의).</content>
+               </balloon>
+            </right>
+
+            <setting>blank</setting>
+
+            <border>white</border>
+
+            <duration>5000</duration>
+
+            <audio>2995.mp3</audio>
+         </panel>
+      </scene>
+      <scene>
+         <rubric>
+            <image>goldfinger says goodbye</image>
+            <above>That's all for now!</above>
+            <below>Korean lessons brought to you by Excelsior Comics!</below>
+         </rubric>
+      </scene>
+   </scenes>
+
+</comic>
