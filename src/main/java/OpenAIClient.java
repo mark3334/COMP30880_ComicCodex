@@ -137,7 +137,7 @@ public class OpenAIClient {
      * User interaction. Realize the interaction between users and chat
      * @param scanner: Get the user input
      */
-    public void runUserInteraction(Scanner scanner) {
+    public static void runUserInteraction(Scanner scanner) {
         while (true) {
 
             System.out.print("User: ");

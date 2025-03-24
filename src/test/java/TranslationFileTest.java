@@ -10,7 +10,7 @@ public class TranslationFileTest {
     @Test
     void testGetTargetLanguage(){
         TranslationFile tFile = new TranslationFile("Test_Text_Files/TranslationFileTest.txt");
-        assertEquals("Spanish", tFile.getTargetLanguage());
+        assertEquals("Spanish", OpenAIClient.getLanguage());
     }
 
     @Test

@@ -11,37 +11,7 @@ public class helper {
         return config.getValueByKey("language");
     }
 
-    public static List<sourceText> readTexts(String filePath) {
-        List<sourceText> texts = new ArrayList<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-            String line;
-            boolean firstLine = true;
-
-            while ((line = br.readLine()) != null) {
-                if (firstLine) {
-                    firstLine = false;
-                    continue;
-                }
-
-                String[] values = line.split("\t", -1);
-                if (values.length < 5) continue;
-
-                sourceText text = new sourceText(
-                        values[0],
-                        values[1],
-                        values[2],
-                        values[3],
-                        values[4]
-                );
-                texts.add(text);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return texts;
-    }
     public static File getRootDirectory() {
         File current = new File(System.getProperty("user.dir")); // Current working directory
         // Traverse up to find "COMP30880_ComicCodex"
@@ -53,4 +23,18 @@ public class helper {
         }
         return current; // Returns the root directory or null if not found
     }
+
+    public static void create_submission_zip(int sprintNum){
+        //TODO
+         File root = helper.getRootDirectory();
+         File submissionFolder = new File(root, "Submission");
+         if (!submissionFolder.exists()) {
+            System.out.println("Submission folder doesn't exist.");
+            return;
+         }
+        // Find files starting with Sprint{i}
+        File[] filesToCopy = submissionFolder.listFiles((dir1, name) -> name.startsWith("Sprint" + sprintNum));
+        return;
+    }
+
 }
