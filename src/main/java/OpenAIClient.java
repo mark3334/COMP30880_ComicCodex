@@ -20,7 +20,7 @@ public class OpenAIClient {
     private static final String model;
     private static final String url;
     private static final LinkedList<JSONObject> messageHistory = new LinkedList<>();
-    private  static String language;
+    private  static final String language;
 
     static {
         ConfigurationFile config = new ConfigurationFile();
@@ -41,6 +41,9 @@ public class OpenAIClient {
         if (messageHistory.size() > MAX_CONVERSATION_HISTORY_SIZE * 2) {
             messageHistory.removeFirst();
         }
+    }
+    public static void emptyContext() {
+        messageHistory.clear();
     }
 
     /**
@@ -154,7 +157,7 @@ public class OpenAIClient {
 
             System.out.println("ChatGPT: " + response);
 
-            this.saveContext(prompt, response);
+            saveContext(prompt, response);
         }
     }
 
