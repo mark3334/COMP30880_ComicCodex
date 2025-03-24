@@ -16,6 +16,8 @@ public class TranslationManager {
      * @param textEntries: List of sourceText instances having
      */
     public void readText(List<sourceText> textEntries) {
+        String targetLanguage = helper.getTargetLanguage();
+
         for (sourceText entry : textEntries) {
             String combined = String.valueOf(entry.getCombinedText()); // Assuming this returns the full text
             String translated = translate(combined);
@@ -41,7 +43,8 @@ public class TranslationManager {
 
         //otherwise if it dont exist in MAP then we ask GPT.
         String targetLanguage = helper.getTargetLanguage();
-        String prompt = "Please translate the following English text to " + targetLanguage + ":\n" + text;
+        String prompt = "Please translate the following English text to " + targetLanguage + ":\n" + text + "Please note, you only need to reply with the translated text. \" +\n" +
+                "                \"For example, if I ask you Hello, you should simply reply Bonjour.";
         String translation = OpenAIClient.translateToSpanish(client, prompt);
 
 
@@ -59,6 +62,7 @@ public class TranslationManager {
 
     public static void main(String[] args) {
         TranslationManager t = new TranslationManager("TextFiles/Translations.txt");
-        t.readText(helper.readTexts("words.tsv"));
+        t.readText(helper.readTexts("TextFiles/test.tsv"));
+        //t.readText(helper.readTexts("words.tsv"));
     }
 }

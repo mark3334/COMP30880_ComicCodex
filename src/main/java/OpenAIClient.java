@@ -178,7 +178,6 @@ public class OpenAIClient {
         return response.trim();
     }
 
-
     public static void main(String[] args) {
         /*
         OpenAIClient client = new OpenAIClient();
