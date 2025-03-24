@@ -18,7 +18,7 @@ public class ConfigurationFile {
         this.configMap = new HashMap<>();
         BufferedReader fileReader = null;
         try{
-            File file = new File(root, "Resources/config.txt");
+            File file = new File(root, "Resources/Config.txt");
             fileReader = new BufferedReader(new FileReader(file));
             String line;
             while ((line = fileReader.readLine()) != null) {
