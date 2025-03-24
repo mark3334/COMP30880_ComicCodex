@@ -2,13 +2,11 @@ import java.util.List;
 import java.util.Map;
 
 public class TranslationManager {
-    private TranslationFile translationFile;
-    private final OpenAIClient client;
+    private final TranslationFile translationFile;
 
 
     public TranslationManager(String filePath) {
         this.translationFile = new TranslationFile(filePath);
-        this.client = new OpenAIClient();
     }
 
     /**
