@@ -9,25 +9,6 @@ public class TranslationManager {
     }
 
     /**
-     * Reads the CombinedText from the sourceText instances and sends to translate method.
-     * @param textEntries: List of sourceText instances having
-     */
-    public void readText(List<sourceText> textEntries) {
-        for (sourceText entry : textEntries) {
-            String combined = String.valueOf(entry.getCombinedText()); // Assuming this returns the full text
-            String left_text = String.valueOf(entry.getLeftText()); //Assuming this returns the full left_text
-            String combined_translated = translate(combined);
-            String left_translated = translate(left_text);
-
-            System.out.println("Original combinedText: " + combined);
-            System.out.println("Translate: " + combined_translated);
-            System.out.println("Original left_text: " + left_text);
-            System.out.println("Translate: " + left_translated);
-            System.out.println("--------------------------");
-        }
-    }
-
-    /**
      * Sends a GPT call to translate the text phrase, if the translation doesn't exist already in file.
      * Extra Note: Doesn't add anything to Translation File is error is received back.
      * @param text: Original Text in English
@@ -80,15 +61,7 @@ public class TranslationManager {
     }
 
     public static void main(String[] args) {
-        /*
-        TranslationManager t = new TranslationManager("Resources/Translations.txt");
-        String filePath = "Resources/test.tsv";
-        TextReader text_reader = new TextReader(filePath);
-        t.readText(text_reader.getTexts());
-        //t.readText(helper.readTexts("words.tsv"));
-
-         */
-        String filePath = "Resources/test.tsv";
+        String filePath = "Resources/words.tsv";
         TextReader text_reader = new TextReader(filePath);
         TranslationManager t = new TranslationManager("Resources/Translations.txt");
         t.processAll(text_reader.getTexts());
