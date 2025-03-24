@@ -85,8 +85,15 @@ public class helper {
                 }
             }
         }
-
-         return;
+    }
+    public static void merge_mp4_files(int sprintNum){
+        /*
+            Uses the ffmeg to merge mp4 files into Sprint{sprintNum}Video.mp4
+            ffmpeg is a command-line tool that processes audio or video formats
+            Use ProcessBuilder to execute the command
+        */
+        String outputName = "Sprint" + Integer.toString(sprintNum) + "Video.mp4";
+        //String ffmpegCommand = "ffmpeg -f concat -safe 0 -i " + tempListFile.getAbsolutePath() + " -c copy " + outputName;
     }
 
     public static void main(String[] args) {
