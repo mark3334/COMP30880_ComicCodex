@@ -45,7 +45,7 @@ public class TranslationManager {
         String targetLanguage = helper.getTargetLanguage();
         String prompt = "Please translate the following English text to " + targetLanguage + ":\n" + text + "Please note, you only need to reply with the translated text. \" +\n" +
                 "                \"For example, if I ask you Hello, you should simply reply Bonjour.";
-        String translation = OpenAIClient.translateToSpanish(client, prompt);
+        String translation = OpenAIClient.translate(prompt);
 
 
         //If the error starts off with error, then we dont want to include it in the TranslationFile
@@ -62,7 +62,7 @@ public class TranslationManager {
 
     public static void main(String[] args) {
         TranslationManager t = new TranslationManager("TextFiles/Translations.txt");
-        t.readText(helper.readTexts("TextFiles/test.tsv"));
+        t.readText(helper.readTexts("Resources/test.tsv"));
         //t.readText(helper.readTexts("words.tsv"));
     }
 }
