@@ -45,7 +45,9 @@ public class OpenAIClient {
     public static void emptyContext() {
         messageHistory.clear();
     }
-
+    public static String getLanguage() {
+        return OpenAIClient.language;
+    }
     /**
      * Returns the conversation as JSON
      */

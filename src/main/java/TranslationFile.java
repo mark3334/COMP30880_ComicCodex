@@ -54,8 +54,4 @@ public class TranslationFile {
     /**
      * Returns the target language set.
      */
-    public String getTargetLanguage() {
-        ConfigurationFile config = new ConfigurationFile();
-        return config.getValueByKey("language");
-    }
 }
