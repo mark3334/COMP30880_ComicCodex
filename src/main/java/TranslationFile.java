@@ -4,9 +4,11 @@ import java.util.Map;
 
 public class TranslationFile {
     private final File file;
-
+    private Map<String, String> translations;
     public TranslationFile(String filePath) {
         this.file = new File(filePath);
+        this.translations = new HashMap<>();
+        this.loadTranslationsFile();
         try {
             if (file.createNewFile()) { //Checks if the already exists.
                 System.out.println("Translation file created: " + file.getAbsolutePath());
@@ -19,23 +21,21 @@ public class TranslationFile {
     /**
      * Loads Translations from the File into Memory (Map<String, String>) and returns this.
      */
-    public Map<String, String> loadTranslationsFile() { //Loads Translations from the File into Memory (Map).
-        Map<String, String> translations = new HashMap<String, String>();
+    public void loadTranslationsFile() { //Loads Translations from the File into Memory (Map).
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(" : ");
                 if (parts.length == 2) {
-                    translations.put(parts[0].trim(), parts[1].trim());
+                    this.translations.put(parts[0].trim(), parts[1].trim());
                 }
             }
         }
         catch (IOException e) {
             System.err.println("Error reading translation file: " + e.getMessage());
         }
-
-        return translations;
     }
+    public Map<String, String> getTranslations(){return this.translations;}
 
     public void writeTranslatedVignetteToTSV(VignetteSchema original, String translatedCombinedText, String translatedLeftText) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {

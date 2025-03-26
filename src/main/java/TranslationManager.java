@@ -14,7 +14,7 @@ public class TranslationManager {
      * @param text: Original Text in English
      */
     public String translate(String text) {
-        Map<String, String> translations = translationFile.loadTranslationsFile(); // Load existing translations
+        Map<String, String> translations = translationFile.getTranslations(); // Load existing translations
 
         if (translations.containsKey(text)) {//if translation exists
             //System.out.println("ALREADY IN MAP: " + text);
