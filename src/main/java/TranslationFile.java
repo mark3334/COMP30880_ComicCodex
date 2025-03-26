@@ -37,7 +37,7 @@ public class TranslationFile {
         return translations;
     }
 
-    public void writeTranslatedVignetteToTSV(sourceText original, String translatedCombinedText, String translatedLeftText) {
+    public void writeTranslatedVignetteToTSV(VignetteSchema original, String translatedCombinedText, String translatedLeftText) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
             String line = String.join("\t",
                     original.getLeftPose(),

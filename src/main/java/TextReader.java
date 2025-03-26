@@ -4,7 +4,7 @@ import java.util.List;
 
 public class TextReader {
     private String filePath;
-    private List<sourceText> texts;
+    private List<VignetteSchema> texts;
 
     public TextReader(String filePath) {
         this.filePath = filePath;
@@ -12,7 +12,7 @@ public class TextReader {
         readFile();
     }
 
-    public List<sourceText> getTexts(){
+    public List<VignetteSchema> getTexts(){
         return this.texts;
     }
 
@@ -27,7 +27,7 @@ public class TextReader {
                 }
 
                 String[] values = line.split("\t", -1);
-                sourceText text = new sourceText(
+                VignetteSchema text = new VignetteSchema(
                         values[0], // Left Pose
                         values[1], // Combined Text
                         values[2], // Left Text
@@ -42,7 +42,7 @@ public class TextReader {
         }
     }
     public void printTexts() {
-        for (sourceText text : texts) {
+        for (VignetteSchema text : texts) {
             System.out.println(text);
         }
     }

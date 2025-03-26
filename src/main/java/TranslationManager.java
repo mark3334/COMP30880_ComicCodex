@@ -44,8 +44,8 @@ public class TranslationManager {
     /**
      * Full pipeline: read → translate → write
      */
-    public void processAll(List<sourceText> list) {
-        for (sourceText vignette : list) {
+    public void processAll(List<VignetteSchema> list) {
+        for (VignetteSchema vignette : list) {
             String translatedCombined = translate(vignette.getCombinedText().toString());
             String translatedLeft = translate(vignette.getLeftText().toString());
 

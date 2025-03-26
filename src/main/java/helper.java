@@ -34,7 +34,7 @@ public class helper {
             System.out.println("Submission folder doesn't exist.");
             return;
          }
-        // Find files starting with Sprint{i}
+        // Find files starting with Sprint{i} //TODO starts with Sprint and then next characters are exactly num
         File[] filesToCopy = submissionFolder.listFiles((dir1, name) -> name.startsWith("Sprint" + sprintNum));
         String arr[] = submissionFolder.list();
         String prefix = "Sprint" + Integer.toString(sprintNum);
