@@ -29,7 +29,7 @@ public class TranslationManager {
         }
 
         //otherwise if it dont exist in MAP then we ask GPT.
-        String targetLanguage = helper.getTargetLanguage();
+        String targetLanguage = Helper.getTargetLanguage();
         String prompt = "Please translate the following English text to " + targetLanguage + ":\n" + text + "Please note, you only need to reply with the translated text. \" +\n" +
                 "                \"For example, if I ask you Hello, you should simply reply Bonjour.";
         String translation = OpenAIClient.translate(prompt);

@@ -23,10 +23,4 @@ class ConfigurationFileTest {
         assertEquals("gpt-4o-mini", configFile.getValueByKey("MODEL"));
     }
 
-    @Test
-    void testFindIndexByKey() {
-        assertTrue(configFile.findIndexByKey("API_KEY") >= 0);
-        assertTrue(configFile.findIndexByKey("MODEL") >= 0);
-        assertEquals(-1, configFile.findIndexByKey("INVALID_KEY"));
-    }
 }

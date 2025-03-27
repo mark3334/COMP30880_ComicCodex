@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.*;
 import java.io.*;
-public class helper {
+public class Helper {
     public static String getTargetLanguage() {
         ConfigurationFile config = ConfigurationFile.getInstance();
         return config.getValueByKey("Target_Language");
@@ -25,7 +25,7 @@ public class helper {
 
     public static void create_submission_zip(int sprintNum) throws IOException {
         //TODO copy resources folder and .jar file from artifacts
-         File root = helper.getRootDirectory();
+         File root = Helper.getRootDirectory();
          File submissionFolder = new File(root, "Submission");
          if (!submissionFolder.exists()) {
             System.out.println("Submission folder doesn't exist.");
@@ -95,7 +95,7 @@ public class helper {
     }
 
     public static void get_zip_project(){
-        File root = helper.getRootDirectory();
+        File root = Helper.getRootDirectory();
         //Then get a zip of this folder.
     }
 
