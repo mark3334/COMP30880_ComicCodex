@@ -26,7 +26,7 @@ public class OpenAIClient {
         ConfigurationFile config = ConfigurationFile.getInstance();
         model = config.getValueByKey("MODEL");
         url = config.getValueByKey("COMPLETIONS_URL");
-        language = config.getValueByKey("language");
+        language = config.getValueByKey("TARGET_LANGUAGE");
         apiKey = config.getValueByKey("API_KEY");
         System.out.println("Model: " + model);
         System.out.println("URL: " + url);
@@ -182,6 +182,12 @@ public class OpenAIClient {
         OpenAIClient.saveContext(prompt, response);
 
         return response.trim();
+    }
+
+    public static void main(String[] args) {
+        ConfigurationFile configFile = ConfigurationFile.getInstance();
+        String apiKey = configFile.getValueByKey("API_KEY");
+        System.out.println("API Key: [" + apiKey + "]");
     }
 
 }

@@ -24,6 +24,9 @@ public class VignetteSchema {
         return list.get(rand.nextInt(list.size()));
     }
 
+    public List<String> getPhrasesToTranslate(){
+        return this.combinedText;
+    }
     public String getLeftPose() { return leftPose; }
     public List<String> getCombinedText() { return combinedText; }
     public List<String> getLeftText() { return leftText; }

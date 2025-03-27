@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.*;
 import java.io.*;
-public class Helper {
+public final class Helper {
     public static String getTargetLanguage() {
         ConfigurationFile config = ConfigurationFile.getInstance();
-        return config.getValueByKey("Target_Language");
+        return config.getValueByKey("TARGET_LANGUAGE");
     }
 
 
