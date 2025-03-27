@@ -6,7 +6,7 @@ import java.util.zip.*;
 import java.io.*;
 public class helper {
     public static String getTargetLanguage() {
-        ConfigurationFile config = new ConfigurationFile();
+        ConfigurationFile config = ConfigurationFile.getInstance();
         return config.getValueByKey("Target_Language");
     }
 
@@ -92,6 +92,11 @@ public class helper {
         */
         String outputName = "Sprint" + Integer.toString(sprintNum) + "Video.mp4";
         //String ffmpegCommand = "ffmpeg -f concat -safe 0 -i " + tempListFile.getAbsolutePath() + " -c copy " + outputName;
+    }
+
+    public static void get_zip_project(){
+        File root = helper.getRootDirectory();
+        //Then get a zip of this folder.
     }
 
     public static void main(String[] args) {

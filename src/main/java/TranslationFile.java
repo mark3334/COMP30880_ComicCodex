@@ -19,7 +19,7 @@ public class TranslationFile {
     }
 
     /**
-     * Loads Translations from the File into Memory (Map<String, String>) and returns this.
+     * Loads Translations from the File into Memory (Map<String, String>)
      */
     public void loadTranslationsFile() { //Loads Translations from the File into Memory (Map).
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {

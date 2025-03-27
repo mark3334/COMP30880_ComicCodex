@@ -4,7 +4,7 @@ import java.util.Map;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ConfigurationFileTest {
-    private final ConfigurationFile configFile = new ConfigurationFile();
+    private final ConfigurationFile configFile = ConfigurationFile.getInstance();
 
     /**
      * Testing if the config map is correctly loaded.

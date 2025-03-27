@@ -7,12 +7,18 @@ import java.util.List;
 import java.util.Map;
 
 public class ConfigurationFile {
-    private Map<String, String> configMap;
+    private static ConfigurationFile instance;
+    private  Map<String, String> configMap;
 
-    public ConfigurationFile() {
+    private ConfigurationFile() {
         createHashMapConfig();
     }
-
+    public static synchronized ConfigurationFile getInstance() {
+        if (instance == null) {
+            instance = new ConfigurationFile();
+        }
+        return instance;
+    }
     private void createHashMapConfig() {
         File root = helper.getRootDirectory();
         this.configMap = new HashMap<>();
@@ -32,8 +38,6 @@ public class ConfigurationFile {
                 else{
                     System.out.println("Mistake in config line");
                 }
-
-
             }
         }
         catch(Exception e) {
@@ -45,6 +49,7 @@ public class ConfigurationFile {
                     fileReader.close();
                 }
                 catch (Exception e) {
+                    System.out.println("Filereader couldn't be closed");
                     e.printStackTrace();
                 }
             }
@@ -55,28 +60,13 @@ public class ConfigurationFile {
         return configMap;
     }
 
-    public  int findIndexByKey(String keyName) {
-        List<Map.Entry<String, String>> entryList = new ArrayList<>(this.getConfigMap().entrySet());
-        for (int i = 0; i < entryList.size(); i++) {
-            String cleanedKey = entryList.get(i).getKey().replace("\"", "").trim();
-            if (cleanedKey.equalsIgnoreCase(keyName)) {
-                return i;
-            }
-        }
-        return -1;
-    }
 
     public String getValueByKey(String keyName) {
-        List<Map.Entry<String, String>> entryList = new ArrayList<>(this.getConfigMap().entrySet());
-        int index = findIndexByKey(keyName);
-        if (index != -1) {
-            return entryList.get(index).getValue();
-        }
-        return "Key not found";
+        return this.configMap.getOrDefault(keyName, "Key not found");
     }
 
     public static void main(String[] args) {
-        ConfigurationFile configFile = new ConfigurationFile();
+        ConfigurationFile configFile = ConfigurationFile.getInstance();
 
         System.out.println("ConfigMap Content: " + configFile.getConfigMap());
 

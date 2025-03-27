@@ -20,10 +20,10 @@ public class OpenAIClient {
     private static final String model;
     private static final String url;
     private static final LinkedList<JSONObject> messageHistory = new LinkedList<>();
-    private  static final String language;
+    private static final String language;
 
     static {
-        ConfigurationFile config = new ConfigurationFile();
+        ConfigurationFile config = ConfigurationFile.getInstance();
         model = config.getValueByKey("MODEL");
         url = config.getValueByKey("COMPLETIONS_URL");
         language = config.getValueByKey("language");
