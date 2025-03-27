@@ -1,16 +1,13 @@
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.zip.*;
 import java.io.*;
 public class helper {
     public static String getTargetLanguage() {
         ConfigurationFile config = new ConfigurationFile();
-        return config.getValueByKey("language");
+        return config.getValueByKey("Target_Language");
     }
 
 
@@ -57,7 +54,7 @@ public class helper {
         else {
             System.out.println("The submission folder is empty or does not exist.");
         }
-        List<File> filteredFiles = new ArrayList<>();;
+        List<File> filteredFiles = new ArrayList<>();
         for(String fileName : filteredNames){
             File f = new File(submissionFolder, fileName);
             if (f.isFile()) {

@@ -28,6 +28,10 @@ public class OpenAIClient {
         url = config.getValueByKey("COMPLETIONS_URL");
         language = config.getValueByKey("language");
         apiKey = config.getValueByKey("API_KEY");
+        System.out.println("Model: " + model);
+        System.out.println("URL: " + url);
+        System.out.println("Language: " + language);
+        System.out.println("API Key: " + apiKey);
     }
     /**
      * Save conversation history (maximum conversation history is 5)

@@ -19,7 +19,7 @@ class ConfigurationFileTest {
     @Test
     void testGetValueByKey_() {
         assertEquals("Key not found", configFile.getValueByKey("LOLIPOP"));
-        assertEquals("Spanish", configFile.getValueByKey("language"));
+        assertEquals("Spanish", configFile.getValueByKey("Target_Language"));
         assertEquals("gpt-4o-mini", configFile.getValueByKey("MODEL"));
     }
 

@@ -13,3 +13,5 @@ feeding	un biberón	alimentar a un bebé	regaining consciousness	"living room, d
 freeing	["cadenas, una cerradura, una llave"]	["liberar, una cerradura, una llave, una cerradura y llave, una cadena, cadenas"]	"chained, imprisoned"	"dungeon, police state"
 guiding	un paraguas	["una guía, un guía turístico"]	dispatched	"dublin, estonia, europe, florence duomo, frankfurt, pisa, St. Basil's cathedral, tower bridge, the hermitage"
 handshaking	un apretón de manos	un apretón de manos	shaking hands	negotiating table
+attracted	Key not found	Key not found	"nude, posing"	"bedroom, red carpet event, locker room"
+bowing	Key not found	Key not found	"ruling, commanding, summoning"	iron throne

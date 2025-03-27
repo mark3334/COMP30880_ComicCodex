@@ -35,6 +35,21 @@ public class TranslationFile {
             System.err.println("Error reading translation file: " + e.getMessage());
         }
     }
+
+    /**
+     * Appends new translations into the Translation File.
+     * @param source: Original Text in English
+     * @param target: Text in Target Language
+     */
+    public void addTranslationMapping(String source, String target) {
+        try (BufferedWriter w = new BufferedWriter(new FileWriter(file, true))) {
+            w.write(source + " : " + target);
+            w.newLine();
+        } catch (IOException e) {
+            System.err.println("Error writing translation file: " + e.getMessage());
+        }
+    }
+
     public Map<String, String> getTranslations(){return this.translations;}
 
     public void writeTranslatedVignetteToTSV(VignetteSchema original, String translatedCombinedText, String translatedLeftText) {

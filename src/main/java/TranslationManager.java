@@ -3,9 +3,12 @@ import java.util.Map;
 
 public class TranslationManager {
     private final TranslationFile translationFile;
+    Map<String, String> translations;
 
     public TranslationManager(String filePath) {
         this.translationFile = new TranslationFile(filePath);
+        translationFile.loadTranslationsFile();
+        translations = translationFile.getTranslations();
     }
 
     /**
@@ -14,7 +17,7 @@ public class TranslationManager {
      * @param text: Original Text in English
      */
     public String translate(String text) {
-        Map<String, String> translations = translationFile.getTranslations(); // Load existing translations
+        //Map<String, String> translations = translationFile.getTranslations(); // Load existing translations
 
         if (translations.containsKey(text)) {//if translation exists
             //System.out.println("ALREADY IN MAP: " + text);
@@ -38,6 +41,8 @@ public class TranslationManager {
             return translation; // Just return the error, do not save it
         }
 
+        //Saves new Translation.
+        translationFile.addTranslationMapping(text, translation);
         return translation;
     }
 
