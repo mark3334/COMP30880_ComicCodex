@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class VignetteManager {
     private String filePath;
@@ -17,6 +18,12 @@ public class VignetteManager {
 
     public List<VignetteSchema> getVignetteSchemas(){
         return this.vignetteSchemas;
+    }
+
+    public VignetteSchema getRandomSchema() {
+        if (vignetteSchemas.isEmpty()) return null;
+        Random rand = new Random();
+        return vignetteSchemas.get(rand.nextInt(vignetteSchemas.size()));
     }
 
     public void printAll() {
