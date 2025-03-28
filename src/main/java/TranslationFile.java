@@ -6,9 +6,10 @@ import java.util.Map;
 
 public class TranslationFile {
     private final File file;
+    private static TranslationFile instance;
     private Map<String, String> translations;
 
-    public TranslationFile(File file) {
+    private TranslationFile(File file) {
         this.file = file;
         this.translations = new HashMap<>();
         try {
@@ -21,7 +22,16 @@ public class TranslationFile {
         this.loadTranslationsFile();
     }
 
-
+    public static synchronized TranslationFile getInstance() {
+        if (instance == null) {
+            ConfigurationFile configFile = ConfigurationFile.getInstance();
+            String filepath = configFile.getValueByKey("TRANSLATIONS_PATH");
+            filepath += ("/" + configFile.getValueByKey("SOURCE_LANGUAGE") + "_" + configFile.getValueByKey("TARGET_LANGUAGE"));
+            File file = new File(filepath);
+            instance = new TranslationFile(file);
+        }
+        return instance;
+    }
     public void loadTranslationsFile() { //Loads Translations from the File into Memory (Map).
         boolean append = true;
         FileParser.fileToHashmap(this.file, this.translations, append);
@@ -100,11 +110,7 @@ public class TranslationFile {
     }
 
     public static void main(String[] args) {
-        ConfigurationFile configFile = ConfigurationFile.getInstance();
-        String filepath = configFile.getValueByKey("TRANSLATIONS_PATH");
-        filepath += ("/" + configFile.getValueByKey("SOURCE_LANGUAGE") + "_" + configFile.getValueByKey("TARGET_LANGUAGE"));
-        File file = new File(filepath);
-        TranslationFile t = new TranslationFile(file);
+        TranslationFile t = TranslationFile.getInstance();
 
         //Now get all the phrases to be translated from the VignetteManager
         List<String> phrases = TranslationFile.getAllPhrasesToTranslate();

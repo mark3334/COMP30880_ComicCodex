@@ -1,11 +1,16 @@
 public class comicXMLGenerator {
 
+    private TranslationFile t;
     public static String generateSceneXML(VignetteSchema schema, int sceneId) {
         String leftPose = schema.getLeftPose();
         String leftText = VignetteSchema.getRandomElement(schema.getLeftText());
         String rightPose = VignetteSchema.getRandomElement(schema.getRightPose());
         String background = VignetteSchema.getRandomElement(schema.getBackgrounds());
         String combinedText = VignetteSchema.getRandomElement(schema.getCombinedText());
+
+        TranslationFile t = TranslationFile.getInstance();
+        String leftTextTranslated = t.translate(leftText);
+        String combinedTextTranslated = t.translate(combinedText);
 
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("<scene id=\"%d\">\n", sceneId));
