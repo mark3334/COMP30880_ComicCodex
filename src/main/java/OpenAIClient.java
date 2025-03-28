@@ -7,6 +7,7 @@ import java.util.Scanner;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+//TODO make class a Singleton
 public class OpenAIClient {
     /**
      * Initialize constant variables

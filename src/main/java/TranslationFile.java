@@ -81,6 +81,11 @@ public class TranslationFile {
             return translation; // Just return the error, do not save it
         }
 
+        if(translation == "Key not Found"){
+            System.err.println("Translation failed: " + translation);
+            return translation;
+        }
+
         //Saves new Translation.
         this.translations.put(text, translation);
         this.writeTranslationMapping(text, translation);
