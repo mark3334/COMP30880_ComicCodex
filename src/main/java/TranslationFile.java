@@ -53,10 +53,17 @@ public class TranslationFile {
 
     public void translateAllPhrases(List<String> phrases){
         //TODO
+        String prompt;
         for(String phrase : phrases){
-            this.translate(phrase);
+            prompt = trimRemoveQuotesPhrase(phrase);
+            this.translate(prompt);
         }
-        return;
+    }
+    public static String trimRemoveQuotesPhrase(String phrase){
+        if (phrase == null) {
+            return null;
+        }
+        return phrase.trim().replace("\"", "");
     }
     public String translate(String text) {
         if (this.translations.containsKey(text)) {
@@ -81,7 +88,7 @@ public class TranslationFile {
             return translation; // Just return the error, do not save it
         }
 
-        if(translation == "Key not Found"){
+        if(translation.equals("Key not Found")){
             System.err.println("Translation failed: " + translation);
             return translation;
         }
