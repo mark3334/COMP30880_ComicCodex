@@ -17,9 +17,23 @@ public class ConfigurationFile {
         this.configMap = new HashMap<>();
         FileParser.fileToHashmap(file, this.configMap, append);
     }
+
+    private ConfigurationFile(File file) {
+        boolean append = false;
+        this.configMap = new HashMap<>();
+        FileParser.fileToHashmap(file, this.configMap, append);
+    }
+
     public static synchronized ConfigurationFile getInstance() {
         if (instance == null) {
             instance = new ConfigurationFile();
+        }
+        return instance;
+    }
+
+    public static synchronized ConfigurationFile getInstance(File file) {
+        if (instance == null) {
+            instance = new ConfigurationFile(file);
         }
         return instance;
     }
