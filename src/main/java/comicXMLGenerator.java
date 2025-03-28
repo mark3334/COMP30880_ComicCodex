@@ -26,6 +26,13 @@ public class comicXMLGenerator {
         return sb.toString();
     }
 
+    //TODO
+    //process lesson 3 specification to get figures
+    //figure.toString should produce the same XML that's in example comiXML at the <figure tag>
+    //figure class? - name, hair... etc
+    //List<figure> goes into comicXMLGenerator
+    //comicXMLGenerator.printFigures
+    //each row is one scene.
     // Example usage
     public static void main(String[] args) {
         VignetteManager vignetteManager = new VignetteManager();
