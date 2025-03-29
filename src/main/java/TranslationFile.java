@@ -100,15 +100,23 @@ public class TranslationFile {
         String translation = OpenAIClient.translate(prompt);
 
 
-        //If the error starts off with error, then we dont want to include it in the TranslationFile
-        if (translation.startsWith("Error:")) {
-            System.err.println("Translation failed: " + translation);
-            return translation; // Just return the error, do not save it
+        if (translation.contains("429")) {
+            System.err.println("Rate limit hit. Retrying in 60 seconds...");
+            try {
+                Thread.sleep(120_000); //120 seconds wait
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt(); //restore interrupt status
+            }
+
+            //Retry the request
+            translation = OpenAIClient.translate(prompt);
         }
 
-        if(translation.equals("Key not Found")){
+
+        //If the error starts off with error, then we dont want to include it in the TranslationFile
+        if (translation.startsWith("Error:") || translation.equals("Key not Found")) {
             System.err.println("Translation failed: " + translation);
-            return translation;
+            return translation; // Just return the error, do not save it
         }
 
         //Saves new Translation.
