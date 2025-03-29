@@ -32,6 +32,12 @@ public class TranslationFile {
         }
         return instance;
     }
+
+    public static synchronized TranslationFile getInstance(File testFile) {
+        instance = new TranslationFile(testFile); // override singleton for test
+        return instance;
+    }
+
     public void loadTranslationsFile() { //Loads Translations from the File into Memory (Map).
         boolean append = true;
         FileParser.fileToHashmap(this.file, this.translations, append);
@@ -69,12 +75,14 @@ public class TranslationFile {
             this.translate(prompt);
         }
     }
+
     public static String trimRemoveQuotesPhrase(String phrase){
         if (phrase == null) {
             return null;
         }
         return phrase.trim().replace("\"", "");
     }
+
     public String translate(String text) {
         if (this.translations.containsKey(text)) {
             //System.out.println("ALREADY IN MAP: " + text);
