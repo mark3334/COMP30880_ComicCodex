@@ -8,7 +8,7 @@ Members;
     Name:	Abdullah Shinwari	Student Number: 22496944
 
 
-//TODO to run the project ... run main?
+Running `main` will execute the method `comicXMLGenerator.SceneExporter()`, which will generate an XML file in the `Resources` folder. This file is the result we need for this sprint.
 
 TranslationFile class is now a singleton which reads and write to a
 source_target language dictionary.
@@ -29,5 +29,10 @@ Main class //TODO
 
 Helper class may be able to be removed as it has little use in the current version.
 
-OpenAIClient //TODO
+The OpenAIClient class has not been extensively modified yet. We plan to make it a Singleton and extend it to LLMClient so that users can choose the LLM model they want to use, rather than being limited to OpenAI.
 
+XML document generation:
+Added Figure and FigureData. Figure is an entity class used to construct characters that appear in the comic, while FigureData serves as a repository for all possible traits of a figure. The generateRandomFigure method in Figure can generate a character with random features.
+Added comicXMLGenerator, which contains the method generateSceneXML to create the XML file we need. The sceneExporter method outputs the content to a .txt file.
+Add the SceneGeneratorRegistry class, which is used to determine which preset generation method should be used to generate the required XML file based on the input schema.
+The SceneGenerator contains four generation classes that implement the SceneGeneratorInterface. The interface defines the matches method to check for a match and the generate method to generate the XML text.
