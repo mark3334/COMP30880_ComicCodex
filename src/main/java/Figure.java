@@ -9,11 +9,10 @@ public class Figure {
     private final String hairlength;
     private final String hairstyle;
     private final String lips;
-    private final String pose;
     private final String facing;
 
     public Figure(String name, String appearance, String skin, String hair, String beard,
-                  String hairlength, String hairstyle, String lips, String pose, String facing) {
+                  String hairlength, String hairstyle, String lips, String facing) {
         this.name = name;
         this.appearance = appearance;
         this.skin = skin;
@@ -22,7 +21,6 @@ public class Figure {
         this.hairlength = hairlength;
         this.hairstyle = hairstyle;
         this.lips = lips;
-        this.pose = pose;
         this.facing = facing;
     }
 
@@ -37,7 +35,6 @@ public class Figure {
                 FigureData.HAIR_LENGTHS[rand.nextInt(FigureData.HAIR_LENGTHS.length)],
                 FigureData.HAIRSTYLES[rand.nextInt(FigureData.HAIRSTYLES.length)],
                 FigureData.LIPS[rand.nextInt(FigureData.LIPS.length)],
-                FigureData.POSES[rand.nextInt(FigureData.POSES.length)],
                 facing
         );
     }
@@ -53,9 +50,18 @@ public class Figure {
         if (hairlength != null) sb.append(String.format("        <hairlength>%s</hairlength>\n", hairlength));
         if (hairstyle != null) sb.append(String.format("        <hairstyle>%s</hairstyle>\n", hairstyle));
         if (lips != null) sb.append(String.format("        <lips>%s</lips>\n", lips));
-        if (pose != null) sb.append(String.format("        <pose>%s</pose>\n", pose));
         if (facing != null) sb.append(String.format("        <facing>%s</facing>\n", facing));
         sb.append("    </figure>\n");
         return sb.toString();
     }
+
+    public String getName() {return name;}
+    public String getAppearance() {return appearance;}
+    public String getSkin() {return skin;}
+    public String getHair() {return hair;}
+    public String getBeard() {return beard;}
+    public String getHairLength() {return hairlength;}
+    public String getHairstyle() {return hairstyle;}
+    public String getLips() {return lips;}
+    public String getFacing() {return facing;}
 }

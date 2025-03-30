@@ -1,4 +1,3 @@
-
 class FullSceneGenerator implements SceneGeneratorInterface {
     @Override
     public boolean matches(VignetteSchema schema) {
@@ -17,55 +16,55 @@ class FullSceneGenerator implements SceneGeneratorInterface {
         String rightPose = VignetteSchema.getRandomElement(schema.getRightPose());
         String background = VignetteSchema.getRandomElement(schema.getBackgrounds());
         String combinedText = VignetteSchema.getRandomElement(schema.getCombinedText());
+        String combinedTextTranslated = vignetteManager.translateToSpanish(combinedText);
 
-        String combinedTextTranslated = vignetteManager.translateToSpanish(VignetteSchema.getRandomElement(schema.getCombinedText()));
+        Figure leftFigure = Figure.generateRandomFigure("right");
+        Figure rightFigure = Figure.generateRandomFigure("left");
+        String leftName = leftFigure.getName();
+        String rightName = rightFigure.getName();
 
-        return String.format("""
-            <scene>
-              <background>%s</background>
+        StringBuilder sb = new StringBuilder();
+        sb.append("  <scene>\n");
+        sb.append(String.format("    <background>%s</background>\n", background));
 
-              <panel>
-                <left pose="%s">
-                  <balloon status="speech">
-                    <content>%s</content>
-                  </balloon>
-                </left>
-                <duration>5000</duration>
-              </panel>
+        // Panel 1
+        sb.append("    <panel>\n");
+        sb.append(String.format("      <left>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>right</facing>\n        </figure>\n      </left>\n", leftName, leftPose));
+        sb.append("      <balloon status=\"speech\">\n");
+        sb.append(String.format("        <content>%s</content>\n", leftText));
+        sb.append("      </balloon>\n");
+        sb.append("      <duration>5000</duration>\n");
+        sb.append("    </panel>\n");
 
-              <panel>
-                <left pose="%s"/>
-                <right pose="%s"/>
-                <below>%s</below>
-                <duration>5000</duration>
-              </panel>
+        // Panel 2
+        sb.append("    <panel>\n");
+        sb.append(String.format("      <left>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>right</facing>\n        </figure>\n      </left>\n", leftName, leftPose));
+        sb.append(String.format("      <right>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>left</facing>\n        </figure>\n      </right>\n", rightName, rightPose));
+        sb.append(String.format("      <below>%s</below>\n", combinedText));
+        sb.append("      <duration>5000</duration>\n");
+        sb.append("    </panel>\n");
 
-              <panel>
-                <left pose="%s">
-                  <balloon status="speech">
-                    <content>%s</content>
-                  </balloon>
-                </left>
-                <duration>5000</duration>
-              </panel>
+        // Panel 3
+        sb.append("    <panel>\n");
+        sb.append(String.format("      <left>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>right</facing>\n        </figure>\n      </left>\n", leftName, leftPose));
+        sb.append("      <balloon status=\"speech\">\n");
+        sb.append(String.format("        <content>%s</content>\n", combinedText));
+        sb.append("      </balloon>\n");
+        sb.append("      <duration>5000</duration>\n");
+        sb.append("    </panel>\n");
 
-              <panel>
-                <left pose="%s"/>
-                <right pose="%s">
-                  <balloon status="speech">
-                    <content>%s</content>
-                  </balloon>
-                </right>
-                <duration>5000</duration>
-              </panel>
-            </scene>
-            """,
-                background,
-                leftPose, leftText,
-                leftPose, rightPose, combinedText,
-                leftPose, combinedText,
-                leftPose, rightPose, combinedTextTranslated
-        );
+        // Panel 4
+        sb.append("    <panel>\n");
+        sb.append(String.format("      <left>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>right</facing>\n        </figure>\n      </left>\n", leftName, leftPose));
+        sb.append(String.format("      <right>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>left</facing>\n        </figure>\n      </right>\n", rightName, rightPose));
+        sb.append("      <balloon status=\"speech\">\n");
+        sb.append(String.format("        <content>%s</content>\n", combinedTextTranslated));
+        sb.append("      </balloon>\n");
+        sb.append("      <duration>5000</duration>\n");
+        sb.append("    </panel>\n");
+
+        sb.append("  </scene>\n");
+        return sb.toString();
     }
 
     private boolean isNonEmpty(String str) {
@@ -73,9 +72,7 @@ class FullSceneGenerator implements SceneGeneratorInterface {
     }
 }
 
-
 class NoLeftTextSceneGenerator implements SceneGeneratorInterface {
-
     @Override
     public boolean matches(VignetteSchema schema) {
         return isNonEmpty(schema.getLeftPose()) &&
@@ -92,52 +89,49 @@ class NoLeftTextSceneGenerator implements SceneGeneratorInterface {
         String rightPose = VignetteSchema.getRandomElement(schema.getRightPose());
         String combinedText = VignetteSchema.getRandomElement(schema.getCombinedText());
         String background = VignetteSchema.getRandomElement(schema.getBackgrounds());
+        String combinedTextTranslated = vignetteManager.translateToSpanish(combinedText);
 
-        String combinedTextTranslated = vignetteManager.translateToSpanish(VignetteSchema.getRandomElement(schema.getCombinedText()));
+        Figure leftFigure = Figure.generateRandomFigure("right");
+        Figure rightFigure = Figure.generateRandomFigure("left");
+        String leftName = leftFigure.getName();
+        String rightName = rightFigure.getName();
 
-        return String.format("""
-            <scene>
-              <background>%s</background>
+        StringBuilder sb = new StringBuilder();
+        sb.append("  <scene>\n");
+        sb.append(String.format("    <background>%s</background>\n", background));
 
-              <panel>
-                <left pose="%s"/>
-                <right pose="%s">
-                  <balloon status="speech">
-                    <content>%s</content>
-                  </balloon>
-                </right>
-                <below>%s</below>
-                <duration>5000</duration>
-              </panel>
+        // Panel 1
+        sb.append("    <panel>\n");
+        sb.append(String.format("      <left>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>right</facing>\n        </figure>\n      </left>\n", leftName, leftPose));
+        sb.append(String.format("      <right>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>left</facing>\n        </figure>\n      </right>\n", rightName, rightPose));
+        sb.append("      <balloon status=\"speech\">\n");
+        sb.append(String.format("        <content>%s</content>\n", combinedText));
+        sb.append("      </balloon>\n");
+        sb.append(String.format("      <below>%s</below>\n", combinedText));
+        sb.append("      <duration>5000</duration>\n");
+        sb.append("    </panel>\n");
 
-              <!-- Panel 2: -->
-              <panel>
-                <left pose="%s">
-                  <balloon status="speech">
-                    <content>%s</content>
-                  </balloon>
-                </left>
-                <duration>5000</duration>
-              </panel>
+        // Panel 2
+        sb.append("    <panel>\n");
+        sb.append(String.format("      <left>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>right</facing>\n        </figure>\n      </left>\n", leftName, leftPose));
+        sb.append("      <balloon status=\"speech\">\n");
+        sb.append(String.format("        <content>%s</content>\n", combinedText));
+        sb.append("      </balloon>\n");
+        sb.append("      <duration>5000</duration>\n");
+        sb.append("    </panel>\n");
 
-              <!-- Panel 3: -->
-              <panel>
-                <left pose="%s"/>
-                <right pose="%s">
-                  <balloon status="speech">
-                    <content>%s</content>
-                  </balloon>
-                </right>
-                <duration>5000</duration>
-              </panel>
+        // Panel 3
+        sb.append("    <panel>\n");
+        sb.append(String.format("      <left>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>right</facing>\n        </figure>\n      </left>\n", leftName, leftPose));
+        sb.append(String.format("      <right>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>left</facing>\n        </figure>\n      </right>\n", rightName, rightPose));
+        sb.append("      <balloon status=\"speech\">\n");
+        sb.append(String.format("        <content>%s</content>\n", combinedTextTranslated));
+        sb.append("      </balloon>\n");
+        sb.append("      <duration>5000</duration>\n");
+        sb.append("    </panel>\n");
 
-            </scene>
-            """,
-                background,
-                leftPose, rightPose, combinedText, combinedText,
-                leftPose, combinedText,
-                leftPose, rightPose, combinedTextTranslated
-        );
+        sb.append("  </scene>\n");
+        return sb.toString();
     }
 
     private boolean isNonEmpty(String str) {
@@ -150,7 +144,6 @@ class NoLeftTextSceneGenerator implements SceneGeneratorInterface {
 }
 
 class OnlyCombinedTextSceneGenerator implements SceneGeneratorInterface {
-
     @Override
     public boolean matches(VignetteSchema schema) {
         return isNonEmpty(schema.getLeftPose()) &&
@@ -166,37 +159,36 @@ class OnlyCombinedTextSceneGenerator implements SceneGeneratorInterface {
         String leftPose = schema.getLeftPose();
         String combinedText = VignetteSchema.getRandomElement(schema.getCombinedText());
         String background = VignetteSchema.getRandomElement(schema.getBackgrounds());
+        String combinedTextTranslated = vignetteManager.translateToSpanish(combinedText);
 
-        String defaultRightPose = "neutral";
-        String combinedTextTranslated = vignetteManager.translateToSpanish(VignetteSchema.getRandomElement(schema.getCombinedText()));
+        Figure leftFigure = Figure.generateRandomFigure("right");
+        Figure rightFigure = Figure.generateRandomFigure("left");
+        String leftName = leftFigure.getName();
+        String rightName = rightFigure.getName();
 
         StringBuilder sb = new StringBuilder();
-        sb.append("<scene>\n");
-        sb.append(String.format("  <background>%s</background>\n", background));
+        sb.append("  <scene>\n");
+        sb.append(String.format("    <background>%s</background>\n", background));
 
-        // Panel 1:
-        sb.append("  <panel>\n");
-        sb.append(String.format("    <left pose=\"%s\">\n", leftPose));
+        sb.append("    <panel>\n");
+        sb.append(String.format("      <left>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>right</facing>\n        </figure>\n      </left>\n", leftName, leftPose));
+        sb.append(String.format("      <right>\n        <figure>\n          <id>%s</id>\n          <pose>neutral</pose>\n          <facing>left</facing>\n        </figure>\n      </right>\n", rightName));
         sb.append("      <balloon status=\"speech\">\n");
         sb.append(String.format("        <content>%s</content>\n", combinedText));
         sb.append("      </balloon>\n");
-        sb.append("    </left>\n");
-        sb.append(String.format("    <right pose=\"%s\"/>\n", defaultRightPose));
-        sb.append("    <duration>5000</duration>\n");
-        sb.append("  </panel>\n");
+        sb.append("      <duration>5000</duration>\n");
+        sb.append("    </panel>\n");
 
-        // Panel 2:
-        sb.append("  <panel>\n");
-        sb.append(String.format("    <left pose=\"%s\"/>\n", leftPose));
-        sb.append(String.format("    <right pose=\"%s\">\n", defaultRightPose));
+        sb.append("    <panel>\n");
+        sb.append(String.format("      <left>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>right</facing>\n        </figure>\n      </left>\n", leftName, leftPose));
+        sb.append(String.format("      <right>\n        <figure>\n          <id>%s</id>\n          <pose>neutral</pose>\n          <facing>left</facing>\n        </figure>\n      </right>\n", rightName));
         sb.append("      <balloon status=\"speech\">\n");
         sb.append(String.format("        <content>%s</content>\n", combinedTextTranslated));
         sb.append("      </balloon>\n");
-        sb.append("    </right>\n");
-        sb.append("    <duration>5000</duration>\n");
-        sb.append("  </panel>\n");
+        sb.append("      <duration>5000</duration>\n");
+        sb.append("    </panel>\n");
 
-        sb.append("</scene>\n");
+        sb.append("  </scene>\n");
         return sb.toString();
     }
 
@@ -210,7 +202,6 @@ class OnlyCombinedTextSceneGenerator implements SceneGeneratorInterface {
 }
 
 class LeftTextOnlySceneGenerator implements SceneGeneratorInterface {
-
     @Override
     public boolean matches(VignetteSchema schema) {
         return isNonEmpty(schema.getLeftPose()) &&
@@ -225,32 +216,31 @@ class LeftTextOnlySceneGenerator implements SceneGeneratorInterface {
         VignetteManager vignetteManager = new VignetteManager();
         String leftPose = schema.getLeftPose();
         String leftText = VignetteSchema.getRandomElement(schema.getLeftText());
-        String leftTextTranslated = vignetteManager.translateToSpanish(VignetteSchema.getRandomElement(schema.getLeftText()));
+        String leftTextTranslated = vignetteManager.translateToSpanish(leftText);
+
+        Figure leftFigure = Figure.generateRandomFigure("right");
+        String leftName = leftFigure.getName();
 
         StringBuilder sb = new StringBuilder();
-        sb.append("<scene>\n");
+        sb.append("  <scene>\n");
 
-        // Panel 1:
-        sb.append("  <panel>\n");
-        sb.append(String.format("    <left pose=\"%s\">\n", leftPose));
+        sb.append("    <panel>\n");
+        sb.append(String.format("      <left>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>right</facing>\n        </figure>\n      </left>\n", leftName, leftPose));
         sb.append("      <balloon status=\"speech\">\n");
         sb.append(String.format("        <content>%s</content>\n", leftText));
         sb.append("      </balloon>\n");
-        sb.append("    </left>\n");
-        sb.append("    <duration>5000</duration>\n");
-        sb.append("  </panel>\n");
+        sb.append("      <duration>5000</duration>\n");
+        sb.append("    </panel>\n");
 
-        // Panel 2:
-        sb.append("  <panel>\n");
-        sb.append(String.format("    <left pose=\"%s\">\n", leftPose));
+        sb.append("    <panel>\n");
+        sb.append(String.format("      <left>\n        <figure>\n          <id>%s</id>\n          <pose>%s</pose>\n          <facing>right</facing>\n        </figure>\n      </left>\n", leftName, leftPose));
         sb.append("      <balloon status=\"speech\">\n");
         sb.append(String.format("        <content>%s</content>\n", leftTextTranslated));
         sb.append("      </balloon>\n");
-        sb.append("    </left>\n");
-        sb.append("    <duration>5000</duration>\n");
-        sb.append("  </panel>\n");
+        sb.append("      <duration>5000</duration>\n");
+        sb.append("    </panel>\n");
 
-        sb.append("</scene>\n");
+        sb.append("  </scene>\n");
         return sb.toString();
     }
 

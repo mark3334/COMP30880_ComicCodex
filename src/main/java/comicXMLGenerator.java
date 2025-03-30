@@ -1,37 +1,32 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class comicXMLGenerator {
-
-    public static String generateFiguresXML() {
-        Figure figure1 = Figure.generateRandomFigure("left");
-        Figure figure2 = Figure.generateRandomFigure("right");
-
-        return "  <figures>\n" +
-                figure1.toXML() +
-                figure2.toXML() +
-                "  </figures>\n";
-    }
-
     public static String generateSceneXML(VignetteSchema schema) {
         return SceneGeneratorRegistry.generateScene(schema);
     }
 
-
-    //TODO
-    //process lesson 3 specification to get figures
-    //figure.toString should produce the same XML that's in example comiXML at the <figure tag>
-    //figure class? - name, hair... etc
-    //List<figure> goes into comicXMLGenerator
-    //comicXMLGenerator.printFigures
-    //each row is one scene.
-    // Example usage
-    public static void main(String[] args) {
+    public static void SceneExporter(){
         VignetteSchema schema = new VignetteManager().getRandomSchema();
         String xml = generateSceneXML(schema);
-        System.out.println(schema);
+        String fullContent = "<comic>\n" + xml + "</comic>";
 
-        System.out.println("<comic>");
-        //System.out.println(generateFiguresXML());
-        System.out.println(xml);
-        System.out.println("</comic>");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
+        String timestamp = LocalDateTime.now().format(formatter);
+        String filePath = "Resources/scene_" + timestamp + ".xml";
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            writer.write(fullContent);
+            System.out.println("XML written to: " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        SceneExporter();
     }
 }
