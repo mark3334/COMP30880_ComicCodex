@@ -8,7 +8,9 @@ public class VignetteManager {
 
     public VignetteManager() {
         ConfigurationFile configFile = ConfigurationFile.getInstance();
-        this.filePath = configFile.getValueByKey("WORD_ASSET_MAPPING");
+        File root = Helper.getRootDirectory();
+        String pathFromRoot = configFile.getValueByKey("WORD_ASSET_MAPPING");
+        this.filePath = new File(root, pathFromRoot).getAbsolutePath();
         File file = new File(this.filePath);
         this.vignetteSchemas = new ArrayList<>();
         boolean append = false;
@@ -16,6 +18,7 @@ public class VignetteManager {
 
         this.translationMap = new HashMap<>();
         String folderPath = configFile.getValueByKey("TRANSLATIONS_PATH");
+        folderPath = new File(root, folderPath).getAbsolutePath();
         String translationFileName = "English_Spanish";
         File translationFile = new File(folderPath, translationFileName);
         FileParser.fileToHashmap(translationFile, this.translationMap, false);

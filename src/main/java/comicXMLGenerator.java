@@ -1,4 +1,5 @@
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -16,8 +17,8 @@ public class comicXMLGenerator {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
         String timestamp = LocalDateTime.now().format(formatter);
-        String filePath = "Resources/scene_" + timestamp + ".xml";
-
+        File root = Helper.getRootDirectory();
+        String filePath = new File(root, "Resources/scene_" + timestamp + ".xml").getAbsolutePath();
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             writer.write(fullContent);
             System.out.println("XML written to: " + filePath);
