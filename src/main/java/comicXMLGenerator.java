@@ -25,8 +25,4 @@ public class comicXMLGenerator {
             e.printStackTrace();
         }
     }
-
-    public static void main(String[] args) {
-        SceneExporter();
-    }
 }
