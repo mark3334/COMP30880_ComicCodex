@@ -39,22 +39,6 @@ public class Figure {
         );
     }
 
-    public String toXML() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("    <figure>\n");
-        sb.append(String.format("        <name>%s</name>\n", name));
-        sb.append(String.format("        <appearance>%s</appearance>\n", appearance));
-        if (skin != null) sb.append(String.format("        <skin>%s</skin>\n", skin));
-        if (hair != null) sb.append(String.format("        <hair>%s</hair>\n", hair));
-        if (beard != null) sb.append(String.format("        <beard>%s</beard>\n", beard));
-        if (hairlength != null) sb.append(String.format("        <hairlength>%s</hairlength>\n", hairlength));
-        if (hairstyle != null) sb.append(String.format("        <hairstyle>%s</hairstyle>\n", hairstyle));
-        if (lips != null) sb.append(String.format("        <lips>%s</lips>\n", lips));
-        if (facing != null) sb.append(String.format("        <facing>%s</facing>\n", facing));
-        sb.append("    </figure>\n");
-        return sb.toString();
-    }
-
     public String getName() {return name;}
     public String getAppearance() {return appearance;}
     public String getSkin() {return skin;}
