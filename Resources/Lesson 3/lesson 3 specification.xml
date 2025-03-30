@@ -30,20 +30,22 @@
       <scene>
          <rubric>
             <image>cowboys and idioms</image>
-            <above>엑셀시어 코믹스와 함께 한국어를 연습해보세요
-</above>
+            <above>엑셀시어 코믹스와 함께 한국어를 연습해보세요 </above>
             <below>Practice Korean with Excelsior Comics!</below>
             <duration>10000</duration>
             <audio>Korean intro.mp3</audio>
          </rubric>
       </scene>
+      ------------------------------------------------------------------------------------------------------------------
       <scene>
+         ---------------------------------------------------------------------------------------------------------------
          <rubric>
             <image>learn Korean</image>
             <above>Our Korean teacher is joined today by ...</above>
             <below>    Michael Jordan and Billie Jean King.</below>
             <duration>5000</duration>
          </rubric>
+         ---------------------------------------------------------------------------------------------------------------
          <panel>
             <above>Featuring Michael Jordan from The Chicago Bulls</above>
 
@@ -70,6 +72,7 @@
 
             <duration>5000</duration>
          </panel>
+         ---------------------------------------------------------------------------------------------------------------
          <panel>
             <above>And Billie Jean King from California</above>
 
@@ -120,6 +123,7 @@
 
             <print>no</print>
          </panel>
+         ---------------------------------------------------------------------------------------------------------------
          <panel>
             <left>
                <figure>

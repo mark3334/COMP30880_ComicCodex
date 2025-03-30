@@ -1,30 +1,20 @@
+
 public class comicXMLGenerator {
 
-    private TranslationFile t;
-    public static String generateSceneXML(VignetteSchema schema, int sceneId) {
-        String leftPose = schema.getLeftPose();
-        String leftText = VignetteSchema.getRandomElement(schema.getLeftText());
-        String rightPose = VignetteSchema.getRandomElement(schema.getRightPose());
-        String background = VignetteSchema.getRandomElement(schema.getBackgrounds());
-        String combinedText = VignetteSchema.getRandomElement(schema.getCombinedText());
+    public static String generateFiguresXML() {
+        Figure figure1 = Figure.generateRandomFigure("left");
+        Figure figure2 = Figure.generateRandomFigure("right");
 
-        TranslationFile t = TranslationFile.getInstance();
-        String leftTextTranslated = t.translate(leftText);
-        String combinedTextTranslated = t.translate(combinedText);
-
-        StringBuilder sb = new StringBuilder();
-        sb.append(String.format("<scene id=\"%d\">\n", sceneId));
-        sb.append(String.format("    <left pose=\"%s\">%s</left>\n",
-                leftPose, leftText));
-        sb.append(String.format("    <right pose=\"%s\"></right>\n",
-                rightPose));
-        sb.append(String.format("    <background>%s</background>\n",
-                background));
-        sb.append(String.format("    <combinedText>%s</combinedText>\n",
-                combinedText));
-        sb.append("</scene>");
-        return sb.toString();
+        return "  <figures>\n" +
+                figure1.toXML() +
+                figure2.toXML() +
+                "  </figures>\n";
     }
+
+    public static String generateSceneXML(VignetteSchema schema) {
+        return SceneGeneratorRegistry.generateScene(schema);
+    }
+
 
     //TODO
     //process lesson 3 specification to get figures
@@ -35,11 +25,13 @@ public class comicXMLGenerator {
     //each row is one scene.
     // Example usage
     public static void main(String[] args) {
-        VignetteManager vignetteManager = new VignetteManager();
-        VignetteSchema schema = vignetteManager.getRandomSchema();
+        VignetteSchema schema = new VignetteManager().getRandomSchema();
+        String xml = generateSceneXML(schema);
         System.out.println(schema);
 
-        String xml = generateSceneXML(schema, 1);
+        System.out.println("<comic>");
+        //System.out.println(generateFiguresXML());
         System.out.println(xml);
+        System.out.println("</comic>");
     }
 }

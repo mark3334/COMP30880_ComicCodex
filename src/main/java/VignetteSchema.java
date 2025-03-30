@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 import java.util.Random;
@@ -24,14 +25,36 @@ public class VignetteSchema {
         return list.get(rand.nextInt(list.size()));
     }
 
+    private List<String> cleanQuotes(List<String> input) {
+        List<String> result = new ArrayList<>();
+        for (String s : input) {
+            if (s != null) {
+                result.add(s.replace("\"", "").trim());
+            }
+        }
+        return result;
+    }
+
     public List<String> getPhrasesToTranslate(){
         return this.combinedText;
     }
     public String getLeftPose() { return leftPose; }
-    public List<String> getCombinedText() { return combinedText; }
-    public List<String> getLeftText() { return leftText; }
-    public List<String> getRightPose() { return rightPose; }
-    public List<String> getBackgrounds() { return backgrounds; }
+    public List<String> getCombinedText() {
+        return cleanQuotes(combinedText);
+    }
+
+    public List<String> getLeftText() {
+        return cleanQuotes(leftText);
+    }
+
+    public List<String> getRightPose() {
+        return cleanQuotes(rightPose);
+    }
+
+    public List<String> getBackgrounds() {
+        return cleanQuotes(backgrounds);
+    }
+
 
     @Override
     public String toString() {
