@@ -2,10 +2,8 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -23,7 +21,7 @@ public class OpenAIClient {
     private static final String model;
     private static final String url;
     private static final LinkedList<JSONObject> messageHistory = new LinkedList<>();
-    private static final String language;
+    static final String language;
 
     static {
         ConfigurationFile config = ConfigurationFile.getInstance();
@@ -187,28 +185,51 @@ public class OpenAIClient {
         return response.trim();
     }
 
-    public  static List<String> translateAll(List<String> phrases){
+
+    /**
+     * @param phrases: List of phrases to be translated
+     * @return List: List of Translations in Spanish.
+     */
+    public static List<String> translateAll(List<String> phrases){
         String language = OpenAIClient.language;
         StringBuilder sb = new StringBuilder();
-        sb.append("Translate the following English words to " + language + ":\n");
-        sb.append("The format of the output should be the translation of each word on a newline");
-        for(String phrase : phrases){
-            sb.append(phrase + "\n");
-        }
-        String prompt = sb.toString();
-        String response = getChatCompletion(prompt);
+        sb.append("Translate the following English words to ").append(language).append(".");
+        sb.append("The format of the output should be the translation of each word on a newline:");
 
-        System.out.println("ChatGPT: " + response);
+        for(String phrase : phrases){
+            sb.append("\n").append(phrase);
+        }
+
+        String prompt = sb.toString();
+        //System.out.println("Prompt: {" + prompt+"}");
+
+        String response = getChatCompletion(prompt);
+        //System.out.println("ChatGPT: " + response);
+
         //parse response to get List<String>
-        return Arrays.asList("Hola" , "name"); //TODO change return
+        List<String> translated = new ArrayList<>();
+        for (String line : response.split("\n")) {
+            translated.add(line.trim());
+        }
+
+        //System.out.println("Returning List: "+translated.toString());
+
+        return translated;
     }
 
     public static void main(String[] args) {
         ConfigurationFile configFile = ConfigurationFile.getInstance();
         String apiKey = configFile.getValueByKey("API_KEY");
         System.out.println("API Key: [" + apiKey + "]");
-        List<String> s = Arrays.asList("Hello" , "name");
-        OpenAIClient.translateAll(s);
+        List<String> s = Arrays.asList("Hello" , "name", "teacher", "student");
+        List<String> translatedPhrases = OpenAIClient.translateAll(s);
+
+        System.out.println(translatedPhrases.size());
+
+        System.out.println(translatedPhrases.get(0));
+        System.out.println(translatedPhrases.get(1));
+        System.out.println(translatedPhrases.get(2));
+        System.out.println(translatedPhrases.get(3));
     }
 
 }
