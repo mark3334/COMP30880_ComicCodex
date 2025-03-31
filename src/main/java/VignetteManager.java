@@ -5,7 +5,7 @@ public class VignetteManager {
     private String filePath;
     private List<VignetteSchema> vignetteSchemas;
     private Map<String, String> translationMap;
-
+    private TranslationFile  t;
     public VignetteManager() {
         ConfigurationFile configFile = ConfigurationFile.getInstance();
         File root = Helper.getRootDirectory();
@@ -16,14 +16,13 @@ public class VignetteManager {
         boolean append = false;
         FileParser.readFileToVignetteSchemas(file, this.vignetteSchemas, append);
 
-        this.translationMap = new HashMap<>();
-        String folderPath = configFile.getValueByKey("TRANSLATIONS_PATH");
-        folderPath = new File(root, folderPath).getAbsolutePath();
-        String translationFileName = "English_Spanish";
-        File translationFile = new File(folderPath, translationFileName);
-        FileParser.fileToHashmap(translationFile, this.translationMap, false);
-    }
+        this.t = TranslationFile.getInstance();
 
+    }
+    public static String translate(String s){
+        TranslationFile t = TranslationFile.getInstance();
+        return t.translate(s);
+    }
     public List<VignetteSchema> getVignetteSchemas(){
         return this.vignetteSchemas;
     }
@@ -40,13 +39,13 @@ public class VignetteManager {
         }
     }
 
-    public String translateToSpanish(String english) {
-        return translationMap.get(english);
+    public String translateToTarget(String inp) {
+        return this.t.translate(inp);
     }
 
     public static void main(String[] args) {
         VignetteManager text_reader = new VignetteManager();
-        System.out.println(text_reader.translateToSpanish("His expression looks determined."));
+        System.out.println(text_reader.t.translate("His expression looks determined."));
         //text_reader.printAll();
     }
 }

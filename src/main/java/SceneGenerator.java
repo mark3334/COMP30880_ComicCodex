@@ -16,7 +16,7 @@ class FullSceneGenerator implements SceneGeneratorInterface {
         String rightPose = VignetteSchema.getRandomElement(schema.getRightPose());
         String background = VignetteSchema.getRandomElement(schema.getBackgrounds());
         String combinedText = VignetteSchema.getRandomElement(schema.getCombinedText());
-        String combinedTextTranslated = vignetteManager.translateToSpanish(combinedText);
+        String combinedTextTranslated = vignetteManager.translateToTarget(combinedText);
 
         Figure leftFigure = Figure.generateRandomFigure("right");
         Figure rightFigure = Figure.generateRandomFigure("left");
@@ -89,7 +89,7 @@ class NoLeftTextSceneGenerator implements SceneGeneratorInterface {
         String rightPose = VignetteSchema.getRandomElement(schema.getRightPose());
         String combinedText = VignetteSchema.getRandomElement(schema.getCombinedText());
         String background = VignetteSchema.getRandomElement(schema.getBackgrounds());
-        String combinedTextTranslated = vignetteManager.translateToSpanish(combinedText);
+        String combinedTextTranslated = vignetteManager.translateToTarget(combinedText);
 
         Figure leftFigure = Figure.generateRandomFigure("right");
         Figure rightFigure = Figure.generateRandomFigure("left");
@@ -159,7 +159,7 @@ class OnlyCombinedTextSceneGenerator implements SceneGeneratorInterface {
         String leftPose = schema.getLeftPose();
         String combinedText = VignetteSchema.getRandomElement(schema.getCombinedText());
         String background = VignetteSchema.getRandomElement(schema.getBackgrounds());
-        String combinedTextTranslated = vignetteManager.translateToSpanish(combinedText);
+        String combinedTextTranslated = vignetteManager.translateToTarget(combinedText);
 
         Figure leftFigure = Figure.generateRandomFigure("right");
         Figure rightFigure = Figure.generateRandomFigure("left");
@@ -216,7 +216,7 @@ class LeftTextOnlySceneGenerator implements SceneGeneratorInterface {
         VignetteManager vignetteManager = new VignetteManager();
         String leftPose = schema.getLeftPose();
         String leftText = VignetteSchema.getRandomElement(schema.getLeftText());
-        String leftTextTranslated = vignetteManager.translateToSpanish(leftText);
+        String leftTextTranslated = vignetteManager.translateToTarget(leftText);
 
         Figure leftFigure = Figure.generateRandomFigure("right");
         String leftName = leftFigure.getName();
