@@ -3,12 +3,12 @@ import java.util.*;
 
 public class VignetteManager {
     private String filePath;
-    private List<VignetteSchema> vignetteSchemas;
+    private List<VignetteSchema> vignetteSchemas; //A list that will hold VignetteScheme Objects from the file.
     private Map<String, String> translationMap;
 
     public VignetteManager() {
         ConfigurationFile configFile = ConfigurationFile.getInstance();
-        this.filePath = configFile.getValueByKey("WORD_ASSET_MAPPING");
+        this.filePath = configFile.getValueByKey("WORD_ASSET_MAPPING"); //Loading file path for vignette data.
         File file = new File(this.filePath);
         this.vignetteSchemas = new ArrayList<>();
         boolean append = false;
@@ -21,22 +21,41 @@ public class VignetteManager {
         FileParser.fileToHashmap(translationFile, this.translationMap, false);
     }
 
+
+    /**
+     *
+     * @return a random element from the list, or null if empty
+     */
     public List<VignetteSchema> getVignetteSchemas(){
         return this.vignetteSchemas;
     }
 
+    /**
+     *
+     * @return a random element from the list, or null if empty
+     */
     public VignetteSchema getRandomSchema() {
         if (vignetteSchemas.isEmpty()) return null;
         Random rand = new Random();
         return vignetteSchemas.get(rand.nextInt(vignetteSchemas.size()));
     }
 
+    /**
+     * Prints all loaded vignettes schemas.
+     */
     public void printAll() {
         for (VignetteSchema text : this.vignetteSchemas) {
             System.out.println(text);
         }
     }
 
+    /*
+        Returns the spanish translation for english text.
+     */
+    /**
+     * @param english: English text to be translated.
+     * @return String: Corresponding Translation in Spanish.
+     */
     public String translateToSpanish(String english) {
         return translationMap.get(english);
     }
