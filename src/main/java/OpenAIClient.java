@@ -2,7 +2,9 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -180,15 +182,33 @@ public class OpenAIClient {
 
         System.out.println("ChatGPT: " + response);
 
-        OpenAIClient.saveContext(prompt, response);
+        //OpenAIClient.saveContext(prompt, response);
 
         return response.trim();
+    }
+
+    public  static List<String> translateAll(List<String> phrases){
+        String language = OpenAIClient.language;
+        StringBuilder sb = new StringBuilder();
+        sb.append("Translate the following English words to " + language + ":\n");
+        sb.append("The format of the output should be the translation of each word on a newline");
+        for(String phrase : phrases){
+            sb.append(phrase + "\n");
+        }
+        String prompt = sb.toString();
+        String response = getChatCompletion(prompt);
+
+        System.out.println("ChatGPT: " + response);
+        //parse response to get List<String>
+        return Arrays.asList("Hola" , "name"); //TODO change return
     }
 
     public static void main(String[] args) {
         ConfigurationFile configFile = ConfigurationFile.getInstance();
         String apiKey = configFile.getValueByKey("API_KEY");
         System.out.println("API Key: [" + apiKey + "]");
+        List<String> s = Arrays.asList("Hello" , "name");
+        OpenAIClient.translateAll(s);
     }
 
 }

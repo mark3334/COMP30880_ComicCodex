@@ -37,6 +37,10 @@ public class XML_Parser {
             e.printStackTrace();
             return;
         }
+
+//        public NodeList getBalloons(Document doc){
+//            //Nodelist figuresNode = document.getElementsByTagName("figures").item(0);
+//        }
     }
     public static void main(String[] args) throws ParserConfigurationException {
 
