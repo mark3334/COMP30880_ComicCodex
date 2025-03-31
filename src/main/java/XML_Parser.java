@@ -21,7 +21,16 @@ public class XML_Parser {
             document.getDocumentElement().normalize();
             Element root = document.getDocumentElement();
             System.out.println("Root element: " + root);
-            //Node figuresNode = document.getElementByTagName("figures").item(0);
+            Node figuresNode = document.getElementsByTagName("figures").item(0);
+            System.out.println("Figures element: " + figuresNode);
+            NodeList figureNodes = figuresNode.getChildNodes();
+            //For figure in Figures
+            for (int i = 0; i < figureNodes.getLength(); i++) {
+                Node n = figureNodes.item(i);
+                if (n.getNodeType() == Node.ELEMENT_NODE) {
+                    System.out.println(n.getNodeName() + ": " + n.getTextContent().trim());
+                }
+            }
         }
         catch (Exception e){
             System.out.println("Error: exception building DOM from XML");
