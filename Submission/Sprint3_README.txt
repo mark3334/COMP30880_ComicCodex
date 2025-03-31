@@ -9,6 +9,7 @@ Members;
 
 
 Running `main` will execute the method `comicXMLGenerator.SceneExporter()`, which will generate an XML file in the `Resources` folder. This file is the result we need for this sprint.
+Run jar file by cd to COMP30880_ComicCodex/Submission then java -jar Sprint3executable.jar
 
 TranslationFile class is now a singleton which reads and write to a
 source_target language dictionary.
@@ -24,8 +25,6 @@ comicXMLGenerator class generates a xml string from a given
 
 VignetteManager maintains a list of VignetteSchemas from the word_asset_mapping file
 The object VignetteSchema is defined in VignetteSchema which has a toString method.
-
-Main class //TODO
 
 Helper class may be able to be removed as it has little use in the current version.
 

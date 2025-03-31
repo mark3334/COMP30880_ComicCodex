@@ -25,8 +25,11 @@ public class TranslationFile {
     public static synchronized TranslationFile getInstance() {
         if (instance == null) {
             ConfigurationFile configFile = ConfigurationFile.getInstance();
+            File root = Helper.getRootDirectory();
             String filepath = configFile.getValueByKey("TRANSLATIONS_PATH");
+            filepath = new File(root, filepath).getAbsolutePath();
             filepath += ("/" + configFile.getValueByKey("SOURCE_LANGUAGE") + "_" + configFile.getValueByKey("TARGET_LANGUAGE"));
+            System.out.println("Filepath : " + filepath);
             File file = new File(filepath);
             instance = new TranslationFile(file);
         }
