@@ -71,11 +71,19 @@ public class TranslationFile {
     }
 
     public void translateAllPhrases(List<String> phrases){
-        //TODO
-        String prompt;
-        for(String phrase : phrases){
-            prompt = trimRemoveQuotesPhrase(phrase);
-            this.translate(prompt);
+        OpenAIClient client = OpenAIClient.getInstance();
+        List<String> filteredPhrases = new ArrayList<>();
+        for (String phrase : phrases) {
+            if (!translations.containsKey(phrase)) { // If not already translated
+                filteredPhrases.add(phrase);
+            }
+        }
+        int n = 200;//TODO determine size
+        if(filteredPhrases.size() > n)
+            System.out.println("Error to many phrases to translate");
+        List<String> translated = client.translateAll(filteredPhrases);
+        for(int i = 0; i < translated.size();i++) {
+            this.addTranslation(filteredPhrases.get(i), translated.get(i));
         }
     }
 
@@ -87,6 +95,7 @@ public class TranslationFile {
     }
 
     public String translate(String text) {
+        // TODO !!!
         if (this.translations.containsKey(text)) {
             //System.out.println("ALREADY IN MAP: " + text);
             return translations.get(text);
@@ -123,9 +132,14 @@ public class TranslationFile {
         }
 
         //Saves new Translation.
-        this.translations.put(text, translation);
+        addTranslation(text, translation);
         this.writeTranslationMapping(text, translation);
         return translation;
+    }
+
+    public void addTranslation(String text, String translation){
+        this.translations.put(text, translation);
+        this.writeTranslationMapping(text, translation);
     }
 
     public static void main(String[] args) {
@@ -133,7 +147,8 @@ public class TranslationFile {
 
         //Now get all the phrases to be translated from the VignetteManager
         List<String> phrases = TranslationFile.getAllPhrasesToTranslate();
-        t.translateAllPhrases(phrases);
+        List<String> first100Phrases = phrases.subList(0, Math.min(100, phrases.size()));
+        t.translateAllPhrases(first100Phrases);
 
     }
 

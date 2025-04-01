@@ -7,7 +7,6 @@ import java.util.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-//TODO make class a Singleton
 public class OpenAIClient {
     private static OpenAIClient instance;
 
@@ -222,6 +221,10 @@ public class OpenAIClient {
         List<String> translated = new ArrayList<>();
         for (String line : response.split("\n")) {
             translated.add(line.trim());
+        }
+        // TODO
+        if(translated.size() != phrases.size()){
+            System.out.println("ERROR! - incorrect size");
         }
 
         //System.out.println("Returning List: "+translated.toString());
