@@ -85,7 +85,6 @@ public class XML_Parser {
         catch (Exception e){
             System.out.println("Error: exception building DOM from XML");
             e.printStackTrace();
-            return;
         }
     }
 }
