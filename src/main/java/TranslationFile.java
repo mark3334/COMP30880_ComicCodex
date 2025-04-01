@@ -100,7 +100,7 @@ public class TranslationFile {
         String targetLanguage = Helper.getTargetLanguage();
         String prompt = "Please translate the following English text to " + targetLanguage + ":\n" + text + "Please note, you only need to reply with the translated text. \" +\n" +
                 "                \"For example, if I ask you Hello, you should simply reply Bonjour.";
-        String translation = OpenAIClient.translate(prompt);
+        String translation = OpenAIClient.getInstance().translate(prompt);
 
 
         if (translation.contains("429")) {
@@ -112,7 +112,7 @@ public class TranslationFile {
             }
 
             //Retry the request
-            translation = OpenAIClient.translate(prompt);
+            translation = OpenAIClient.getInstance().translate(prompt);
         }
 
 
