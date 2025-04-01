@@ -25,7 +25,7 @@ public class XML_Parser {
         this.doc = document;
         Element root = this.doc.getDocumentElement();
         System.out.println("Root element: " + root.getNodeName());
-        //printFigures();
+        printFigures();
         printBalloons();
     }
     public void printFigures(){
@@ -38,9 +38,9 @@ public class XML_Parser {
         System.out.println("Number of figure Nodes: " + figureNodes.getLength());
         for (int i = 0; i < figureNodes.getLength(); i++) {
             Node n = figureNodes.item(i);
-            Map<String,String> figureMap = new HashMap<>();
             //for(Node attribute : n.getChildNodes())
-            if (n.getNodeType() == Node.ELEMENT_NODE) { // ignores #text:  line
+            if (n.getNodeType() == Node.ELEMENT_NODE) { // ignores #text:  line empty text line counts a node I think
+                Map<String,String> figureMap = new HashMap<>();
                 //System.out.println(n.getNodeName() + ": " + n.getTextContent().trim());
                 NodeList figureTags = n.getChildNodes();
                 for (int j = 0; j < figureTags.getLength(); j++) {
@@ -51,9 +51,9 @@ public class XML_Parser {
                         figureMap.put(key,value);
                     }
                 }
+                System.out.println(figureMap);
+                Figures.add(figureMap);;
             }
-            System.out.println(figureMap);
-            Figures.add(figureMap);;
         }
         System.out.println(Figures);
     }
@@ -71,9 +71,13 @@ public class XML_Parser {
 
 
     public static void main(String[] args) throws ParserConfigurationException {
-
-        String path = "/Resources/Lesson 3/lesson 3 specification.xml";
         File root = Helper.getRootDirectory();
+        //String path = "/Resources/Lesson 3/lesson 3 specification.xml";
+        String path = "Resources/Verbs/specification.xml";
+        String outputPath = "Resources/Verbs/" + Helper.getTargetLanguage();
+        File fOutput =  new File(root, path);
+        //check if output file exists else create it
+        System.out.println(outputPath);
         File f = new File(root, path);
         try {
             XML_Parser parser = new XML_Parser(f);
