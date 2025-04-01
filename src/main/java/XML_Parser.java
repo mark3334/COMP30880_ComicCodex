@@ -10,9 +10,13 @@ import org.xml.sax.SAXException;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class XML_Parser {
     private Document doc;
+
     public XML_Parser(File file) throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -21,15 +25,20 @@ public class XML_Parser {
         this.doc = document;
         Element root = this.doc.getDocumentElement();
         System.out.println("Root element: " + root.getNodeName());
-        printFigures();
+        //printFigures();
+        printBalloons();
     }
     public void printFigures(){
         Node figuresNode = this.doc.getElementsByTagName("figures").item(0);
         System.out.println("Figures element: " + figuresNode.getNodeName());
         NodeList figureNodes = figuresNode.getChildNodes();
+        ArrayList<Map<String,String>> Figures = new ArrayList<>();
+        String key = "", value = "";
         //For figure in Figures
+        System.out.println("Number of figure Nodes: " + figureNodes.getLength());
         for (int i = 0; i < figureNodes.getLength(); i++) {
             Node n = figureNodes.item(i);
+            Map<String,String> figureMap = new HashMap<>();
             //for(Node attribute : n.getChildNodes())
             if (n.getNodeType() == Node.ELEMENT_NODE) { // ignores #text:  line
                 //System.out.println(n.getNodeName() + ": " + n.getTextContent().trim());
@@ -37,21 +46,29 @@ public class XML_Parser {
                 for (int j = 0; j < figureTags.getLength(); j++) {
                     Node child = figureTags.item(j);
                     if (child.getNodeType() == Node.ELEMENT_NODE) {
-                        System.out.println("  └ " + child.getNodeName() + ": " + child.getTextContent().trim());
+                        key = child.getNodeName();
+                        value = child.getTextContent().trim();
+                        figureMap.put(key,value);
                     }
                 }
             }
-            System.out.println();
+            System.out.println(figureMap);
+            Figures.add(figureMap);;
         }
+        System.out.println(Figures);
     }
 
 
-//        public NodeList getBalloons(Document doc){
-//            //Nodelist figuresNode = document.getElementsByTagName("figures").item(0);
-//        }
+    public void printBalloons(){
+        NodeList balloonNodes = this.doc.getElementsByTagName("balloon");
+        for (int i = 0; i < balloonNodes.getLength(); i++) {
+            Node n = balloonNodes.item(i);
+            if (n.getNodeType() == Node.ELEMENT_NODE) {
+                System.out.println("Balloon text content: " + n.getTextContent().trim());
+            }
+        }
+    }
 
-
-          //public print
 
     public static void main(String[] args) throws ParserConfigurationException {
 
