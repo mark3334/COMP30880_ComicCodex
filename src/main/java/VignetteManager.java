@@ -4,7 +4,6 @@ import java.util.*;
 public class VignetteManager {
     private String filePath;
     private List<VignetteSchema> vignetteSchemas; //A list that will hold VignetteScheme Objects from the file.
-    private Map<String, String> translationMap;
 
     public VignetteManager() {
         ConfigurationFile configFile = ConfigurationFile.getInstance();
@@ -13,12 +12,6 @@ public class VignetteManager {
         this.vignetteSchemas = new ArrayList<>();
         boolean append = false;
         FileParser.readFileToVignetteSchemas(file, this.vignetteSchemas, append);
-
-        this.translationMap = new HashMap<>();
-        String folderPath = configFile.getValueByKey("TRANSLATIONS_PATH");
-        String translationFileName = "English_Spanish";
-        File translationFile = new File(folderPath, translationFileName);
-        FileParser.fileToHashmap(translationFile, this.translationMap, false);
     }
 
 
@@ -49,20 +42,8 @@ public class VignetteManager {
         }
     }
 
-    /*
-        Returns the spanish translation for english text.
-     */
-    /**
-     * @param english: English text to be translated.
-     * @return String: Corresponding Translation in Spanish.
-     */
-    public String translateToSpanish(String english) {
-        return translationMap.get(english);
-    }
-
     public static void main(String[] args) {
         VignetteManager text_reader = new VignetteManager();
-        System.out.println(text_reader.translateToSpanish("His expression looks determined."));
-        //text_reader.printAll();
+        text_reader.printAll();
     }
 }
