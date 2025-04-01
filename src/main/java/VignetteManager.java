@@ -7,11 +7,14 @@ public class VignetteManager {
 
     public VignetteManager() {
         ConfigurationFile configFile = ConfigurationFile.getInstance();
-        this.filePath = configFile.getValueByKey("WORD_ASSET_MAPPING"); //Loading file path for vignette data.
+        File root = Helper.getRootDirectory();
+        String pathFromRoot = configFile.getValueByKey("WORD_ASSET_MAPPING");
+        this.filePath = new File(root, pathFromRoot).getAbsolutePath();
         File file = new File(this.filePath);
         this.vignetteSchemas = new ArrayList<>();
         boolean append = false;
         FileParser.readFileToVignetteSchemas(file, this.vignetteSchemas, append);
+
     }
 
 
