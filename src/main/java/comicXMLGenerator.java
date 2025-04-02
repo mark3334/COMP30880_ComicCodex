@@ -10,6 +10,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import java.io.File;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -19,27 +20,33 @@ public class comicXMLGenerator {
         return SceneGeneratorManager.generateScene(schema);
     }
 
-    public static void SceneExporter() {
-        try {
-            VignetteSchema schema = new VignetteManager().getRandomSchema();
-            Document sceneDoc = generateSceneXML(schema);
+    public static void writeXmlToFolder() throws TransformerException, IOException, ParserConfigurationException {
+        File root = Helper.getRootDirectory();
+        File folder = new File(root, "Resources/XMLoutput");
 
-            Document fullDoc = wrapSceneWithComic(sceneDoc);
+        VignetteSchema schema = new VignetteManager().getRandomSchema();
+        Document sceneDoc = generateSceneXML(schema);
+        Document fullDoc = wrapSceneWithComic(sceneDoc);
 
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
-            String timestamp = LocalDateTime.now().format(formatter);
-            File root = Helper.getRootDirectory();
-            String filePath = new File(root, "Resources/scene_" + timestamp + ".xml").getAbsolutePath();
-
-            Transformer transformer = TransformerFactory.newInstance().newTransformer();
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-            transformer.transform(new DOMSource(fullDoc), new StreamResult(new File(filePath)));
-
-            System.out.println("XML written to: " + filePath);
-        } catch (ParserConfigurationException | TransformerException e) {
-            e.printStackTrace();
+        if (!folder.exists()) {
+            boolean created = folder.mkdirs();
+            if (created) {
+                System.out.println("Created directory: " + folder.getAbsolutePath());
+            } else {
+                throw new IOException("Failed to create directory: " + folder.getAbsolutePath());
+            }
         }
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
+        String timestamp = LocalDateTime.now().format(formatter);
+        File outputFile = new File(folder, "scene_" + timestamp + ".xml");
+
+        Transformer transformer = TransformerFactory.newInstance().newTransformer();
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+        transformer.transform(new DOMSource(fullDoc), new StreamResult(outputFile));
+
+        System.out.println("XML written to: " + outputFile.getAbsolutePath());
     }
 
     /**
