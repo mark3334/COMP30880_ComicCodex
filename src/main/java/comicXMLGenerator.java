@@ -20,7 +20,7 @@ public class comicXMLGenerator {
         return SceneGeneratorManager.generateScene(schema);
     }
 
-    public static void writeXmlToFolder() throws TransformerException, IOException, ParserConfigurationException {
+        public static void writeXmlToFolder() throws TransformerException, IOException, ParserConfigurationException {
         File root = Helper.getRootDirectory();
         File folder = new File(root, "Resources/XMLoutput");
 
