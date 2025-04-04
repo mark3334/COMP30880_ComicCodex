@@ -187,9 +187,12 @@ public class OpenAIClient {
      * @return The translated Spanish text.
      */
     public String translate(String englishText) {
-        String prompt = "Translate the following English word to " + language + ":\n" + englishText;
+        String prompt = "You are to act as a professional translator of the " + language + "language\n";
+        prompt += "You must translate the text that is wrapped in the phrase tag\n";
+        prompt += "Your response must only include the translation and nothing else\n";
+        prompt += "<phrase> " + englishText + "<phrase>";
         String translation = getChatCompletion(prompt);
-
+        translation = translation.trim().replace(".", "");
         System.out.println("ChatGPT: " + translation);
 
         //OpenAIClient.saveContext(prompt, response);
@@ -223,6 +226,9 @@ public class OpenAIClient {
         StringBuilder sb = new StringBuilder();
         sb.append("Translate the following English words to ").append(language).append(".");
         sb.append("The format of the output should be the translation of each word on a newline:");
+        sb.append("Pay attention to tense and person; if \\\"(plural)\\\" is included, \" +\n" +
+                "                \"make sure the translation reflects the plural form, and remove \\\"(plural)\\\" in the translated output");
+        sb.append("For example: I eat -> Yo como, You are going (plural) -> Vosotros vais");
 
         for(String phrase : phrases){
             sb.append("\n").append(phrase);
@@ -241,6 +247,8 @@ public class OpenAIClient {
         }
         // TODO
         if(translated.size() != phrases.size()){
+            System.out.println(translated);
+            System.out.println(phrases);
             System.out.println("ERROR! - incorrect size");
         }
 
@@ -262,6 +270,10 @@ public class OpenAIClient {
         System.out.println(translatedPhrases.get(1));
         System.out.println(translatedPhrases.get(2));
         System.out.println(translatedPhrases.get(3));
+
+        String text = "help";
+        String translate = OpenAIClient.getInstance().translate(text);
+        System.out.println(text + " : " + translate);
     }
 
 }

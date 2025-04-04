@@ -17,6 +17,7 @@ import java.util.Map;
 
 public class XML_Parser {
     private Document doc;
+    private TranslationFile t;
 
     public XML_Parser(File file) throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -24,6 +25,7 @@ public class XML_Parser {
         Document document = builder.parse(file);
         document.getDocumentElement().normalize();
         this.doc = document;
+        this.t = TranslationFile.getInstance();
         Element root = this.doc.getDocumentElement();
         System.out.println("Root element: " + root.getNodeName());
         printFigures();
@@ -59,6 +61,30 @@ public class XML_Parser {
         System.out.println(Figures);
     }
 
+    public void Panels() {
+        NodeList panelNodes = this.doc.getElementsByTagName("panel");
+        NodeList balloonNodes = this.doc.getElementsByTagName("balloon");
+        System.out.println("Number of panels  - " + panelNodes.getLength());
+        System.out.println("Number of balloons - " + balloonNodes.getLength());
+        for (int i = 0; i < panelNodes.getLength(); i++) {
+            Node panel = panelNodes.item(i);
+            //System.out.println("Node name - " + panel.getNodeName());
+            Element panelEl = (Element) panel;
+            NodeList balloons = ((Element) panel).getElementsByTagName("balloon");
+            System.out.println("Number of balloons - " + balloons.getLength());
+            if(balloons.getLength() == 1){
+                //copy and print panel to xml.
+                Node newNode = panel.cloneNode(true);
+                String translation = t.translate(balloons.item(0).getTextContent());
+                ((Element) newNode).getElementsByTagName("balloon").item(0).setTextContent(translation);
+                printPanel(newNode);
+            }
+            //Node balloon = panel;
+        }
+    }
+    public void printPanel(Node panel){
+        System.out.println(panel.getTextContent());
+    }
 
     public void printBalloons(){
         NodeList balloonNodes = this.doc.getElementsByTagName("balloon");
@@ -100,7 +126,8 @@ public class XML_Parser {
         File f = new File(root, path);
         try {
             XML_Parser parser = new XML_Parser(f);
-            System.out.println(parser.getBalloons());
+            TranslationFile t = TranslationFile.getInstance();
+            t.translateAllPhrases(parser.getBalloons());
         }
         catch (Exception e){
             System.out.println("Error: exception building DOM from XML");

@@ -56,11 +56,12 @@ public class TranslationFile {
         }
     }
 
+
     public Map<String, String> getTranslations(){return this.translations;}
 
     public static List<String> getAllPhrasesToTranslate(){
         VignetteManager vignetteManager = new VignetteManager();
-        vignetteManager.printAll();
+        //vignetteManager.printAll();
         List<VignetteSchema> vignetteSchemas = vignetteManager.getVignetteSchemas();
         List<String> phrases =  new ArrayList<>();;
         for(VignetteSchema schema : vignetteSchemas){
@@ -125,13 +126,12 @@ public class TranslationFile {
         this.translations.put(text, translation);
         this.writeTranslationMapping(text, translation);
     }
-
     public static void main(String[] args) {
         TranslationFile t = TranslationFile.getInstance();
 
         //Now get all the phrases to be translated from the VignetteManager
         List<String> phrases = TranslationFile.getAllPhrasesToTranslate();
-        List<String> first100Phrases = phrases.subList(0, Math.min(1000, phrases.size()));
+        List<String> first100Phrases = phrases.subList(0, Math.min(10000, phrases.size()));
         t.translateAllPhrases(first100Phrases);
 
     }
