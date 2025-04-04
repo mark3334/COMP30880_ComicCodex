@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class XML_Parser {
@@ -69,9 +70,23 @@ public class XML_Parser {
         }
     }
 
-    public NodeList getBalloonNodes(){
-        return this.doc.getElementsByTagName("balloon");
+    public List<String> getBalloons() {
+        List<String> balloonContents = new ArrayList<>();
+        NodeList balloonNodes = this.doc.getElementsByTagName("balloon");
+
+        for (int i = 0; i < balloonNodes.getLength(); i++) {
+            Node n = balloonNodes.item(i);
+            if (n.getNodeType() == Node.ELEMENT_NODE) {
+                String content = n.getTextContent().trim();
+                if (!content.isEmpty()) {
+                    balloonContents.add(content);
+                }
+            }
+        }
+
+        return balloonContents;
     }
+
 
 
     public static void main(String[] args) throws ParserConfigurationException {
@@ -85,6 +100,7 @@ public class XML_Parser {
         File f = new File(root, path);
         try {
             XML_Parser parser = new XML_Parser(f);
+            System.out.println(parser.getBalloons());
         }
         catch (Exception e){
             System.out.println("Error: exception building DOM from XML");
