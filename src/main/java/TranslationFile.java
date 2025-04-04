@@ -71,14 +71,22 @@ public class TranslationFile {
 
     }
 
-    public void translateAllPhrases(List<String> phrases){
-        OpenAIClient client = OpenAIClient.getInstance();
+    public List<String> cleanFilter(List<String> phrases){
         List<String> filteredPhrases = new ArrayList<>();
         for (String phrase : phrases) {
             if (!translations.containsKey(phrase)) { // If not already translated
                 filteredPhrases.add(phrase);
             }
         }
+        List<String> cleanList = filteredPhrases.stream()
+                .map(String::trim)
+                .filter(s -> !s.isEmpty())
+                .toList();
+        return cleanList;
+    }
+    public void translateAllPhrases(List<String> phrases){
+        OpenAIClient client = OpenAIClient.getInstance();
+        List<String> filteredPhrases = this.cleanFilter(phrases);
         if (filteredPhrases.isEmpty()) {
             System.out.println("No new phrases to translate. Operation skipped.");
             return;
@@ -124,11 +132,7 @@ public class TranslationFile {
         //Now get all the phrases to be translated from the VignetteManager
         List<String> phrases = TranslationFile.getAllPhrasesToTranslate();
         List<String> first100Phrases = phrases.subList(0, Math.min(1000, phrases.size()));
-        List<String> cleanList = first100Phrases.stream()
-                .map(String::trim)
-                .filter(s -> !s.isEmpty())
-                .toList();
-        t.translateAllPhrases(cleanList);
+        t.translateAllPhrases(first100Phrases);
 
     }
 
