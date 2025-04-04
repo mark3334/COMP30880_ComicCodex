@@ -74,7 +74,11 @@ public class TranslationFile {
     public void translateAllPhrases(List<String> phrases){
         OpenAIClient client = OpenAIClient.getInstance();
         List<String> filteredPhrases = new ArrayList<>();
-        for (String phrase : phrases) {
+        List<String> cleanList = phrases.stream()
+                .map(String::trim)
+                .filter(s -> !s.isEmpty())
+                .toList();
+        for (String phrase : cleanList) {
             if (!translations.containsKey(phrase)) { // If not already translated
                 filteredPhrases.add(phrase);
             }
@@ -113,7 +117,9 @@ public class TranslationFile {
         //otherwise if it doesn't exist in MAP then we ask GPT.
         String targetLanguage = Helper.getTargetLanguage();
         String prompt = "Please translate the following English text to " + targetLanguage + ":\n" + text + "Please note, you only need to reply with the translated text. \" +\n" +
-                "                \"For example, if I ask you Hello, you should simply reply Bonjour.";
+                "                \"For example, if I ask you Hello, you should simply reply Bonjour. Pay attention to tense and person; if \"(plural)\" is included, " +
+                "make sure the translation reflects the plural form, and remove \"(plural)\" in the translated output — only return the target language text." +
+                "For example: I eat -> Yo como, You are going (plural) -> Vosotros vais";
         String translation = OpenAIClient.getInstance().translate(prompt);
 
 
@@ -153,11 +159,7 @@ public class TranslationFile {
         //Now get all the phrases to be translated from the VignetteManager
         List<String> phrases = TranslationFile.getAllPhrasesToTranslate();
         List<String> first100Phrases = phrases.subList(0, Math.min(100, phrases.size()));
-        List<String> cleanList = first100Phrases.stream()
-                .map(String::trim)
-                .filter(s -> !s.isEmpty())
-                .toList();
-        t.translateAllPhrases(cleanList);
+        t.translateAllPhrases(first100Phrases);
 
     }
 

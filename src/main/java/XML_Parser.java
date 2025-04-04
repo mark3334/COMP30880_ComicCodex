@@ -100,7 +100,8 @@ public class XML_Parser {
         File f = new File(root, path);
         try {
             XML_Parser parser = new XML_Parser(f);
-            System.out.println(parser.getBalloons());
+            TranslationFile t = TranslationFile.getInstance();
+            t.translateAllPhrases(parser.getBalloons());
         }
         catch (Exception e){
             System.out.println("Error: exception building DOM from XML");
