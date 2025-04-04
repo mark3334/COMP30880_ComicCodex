@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class TranslationFile {
     private final File file;
@@ -78,6 +79,10 @@ public class TranslationFile {
                 filteredPhrases.add(phrase);
             }
         }
+        if (filteredPhrases.isEmpty()) {
+            System.out.println("No new phrases to translate. Operation skipped.");
+            return;
+        }
         int n = 200;//TODO determine size
         if(filteredPhrases.size() > n)
             System.out.println("Error to many phrases to translate");
@@ -148,7 +153,11 @@ public class TranslationFile {
         //Now get all the phrases to be translated from the VignetteManager
         List<String> phrases = TranslationFile.getAllPhrasesToTranslate();
         List<String> first100Phrases = phrases.subList(0, Math.min(100, phrases.size()));
-        t.translateAllPhrases(first100Phrases);
+        List<String> cleanList = first100Phrases.stream()
+                .map(String::trim)
+                .filter(s -> !s.isEmpty())
+                .toList();
+        t.translateAllPhrases(cleanList);
 
     }
 

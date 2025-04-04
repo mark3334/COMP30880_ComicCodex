@@ -69,6 +69,10 @@ public class XML_Parser {
         }
     }
 
+    public NodeList getBalloonNodes(){
+        return this.doc.getElementsByTagName("balloon");
+    }
+
 
     public static void main(String[] args) throws ParserConfigurationException {
         File root = Helper.getRootDirectory();
