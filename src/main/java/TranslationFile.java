@@ -74,11 +74,7 @@ public class TranslationFile {
     public void translateAllPhrases(List<String> phrases){
         OpenAIClient client = OpenAIClient.getInstance();
         List<String> filteredPhrases = new ArrayList<>();
-        List<String> cleanList = phrases.stream()
-                .map(String::trim)
-                .filter(s -> !s.isEmpty())
-                .toList();
-        for (String phrase : cleanList) {
+        for (String phrase : phrases) {
             if (!translations.containsKey(phrase)) { // If not already translated
                 filteredPhrases.add(phrase);
             }
@@ -104,7 +100,6 @@ public class TranslationFile {
     }
 
     public String translate(String text) {
-        // TODO !!!
         if (this.translations.containsKey(text)) {
             //System.out.println("ALREADY IN MAP: " + text);
             return translations.get(text);
@@ -113,38 +108,8 @@ public class TranslationFile {
         if(text.isEmpty()) { //if the input text is empty
             return "";
         }
-
-        //otherwise if it doesn't exist in MAP then we ask GPT.
-        String targetLanguage = Helper.getTargetLanguage();
-        String prompt = "Please translate the following English text to " + targetLanguage + ":\n" + text + "Please note, you only need to reply with the translated text. \" +\n" +
-                "                \"For example, if I ask you Hello, you should simply reply Bonjour. Pay attention to tense and person; if \"(plural)\" is included, " +
-                "make sure the translation reflects the plural form, and remove \"(plural)\" in the translated output — only return the target language text." +
-                "For example: I eat -> Yo como, You are going (plural) -> Vosotros vais";
-        String translation = OpenAIClient.getInstance().translate(prompt);
-
-
-        if (translation.contains("429")) {
-            System.err.println("Rate limit hit. Retrying in 60 seconds...");
-            try {
-                Thread.sleep(120_000); //120 seconds wait
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt(); //restore interrupt status
-            }
-
-            //Retry the request
-            translation = OpenAIClient.getInstance().translate(prompt);
-        }
-
-
-        //If the error starts off with error, then we dont want to include it in the TranslationFile
-        if (translation.startsWith("Error:") || translation.equals("Key not Found")) {
-            System.err.println("Translation failed: " + translation);
-            return translation; // Just return the error, do not save it
-        }
-
-        //Saves new Translation.
-        addTranslation(text, translation);
-        this.writeTranslationMapping(text, translation);
+        String translation = OpenAIClient.getInstance().translate(text);
+        this.addTranslation(text, translation);
         return translation;
     }
 
@@ -158,8 +123,12 @@ public class TranslationFile {
 
         //Now get all the phrases to be translated from the VignetteManager
         List<String> phrases = TranslationFile.getAllPhrasesToTranslate();
-        List<String> first100Phrases = phrases.subList(0, Math.min(100, phrases.size()));
-        t.translateAllPhrases(first100Phrases);
+        List<String> first100Phrases = phrases.subList(0, Math.min(1000, phrases.size()));
+        List<String> cleanList = first100Phrases.stream()
+                .map(String::trim)
+                .filter(s -> !s.isEmpty())
+                .toList();
+        t.translateAllPhrases(cleanList);
 
     }
 

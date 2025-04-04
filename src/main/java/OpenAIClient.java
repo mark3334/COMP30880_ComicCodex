@@ -188,13 +188,30 @@ public class OpenAIClient {
      */
     public String translate(String englishText) {
         String prompt = "Translate the following English word to " + language + ":\n" + englishText;
-        String response = getChatCompletion(prompt);
+        String translation = getChatCompletion(prompt);
 
-        System.out.println("ChatGPT: " + response);
+        System.out.println("ChatGPT: " + translation);
 
         //OpenAIClient.saveContext(prompt, response);
+        if (translation.contains("429")) {
+            System.err.println("Rate limit hit. Retrying in 60 seconds...");
+            try {
+                Thread.sleep(120_000); //120 seconds wait
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt(); //restore interrupt status
+            }
 
-        return response.trim();
+            //Retry the request
+            translation = OpenAIClient.getInstance().translate(prompt);
+        }
+
+
+        //If the error starts off with error, then we dont want to include it in the TranslationFile
+        if (translation.startsWith("Error:") || translation.equals("Key not Found")) {
+            System.err.println("Translation failed: " + translation);
+            return translation; // Just return the error, do not save it
+        }
+        return translation.trim();
     }
 
 
