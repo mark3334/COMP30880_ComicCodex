@@ -63,7 +63,7 @@ public class TranslationFile {
         VignetteManager vignetteManager = new VignetteManager();
         //vignetteManager.printAll();
         List<VignetteSchema> vignetteSchemas = vignetteManager.getVignetteSchemas();
-        List<String> phrases =  new ArrayList<>();;
+        List<String> phrases =  new ArrayList<>();
         for(VignetteSchema schema : vignetteSchemas){
             phrases.addAll(schema.getLeftText());
             phrases.addAll(schema.getCombinedText());
@@ -72,6 +72,14 @@ public class TranslationFile {
 
     }
 
+    /**
+     * Filters and cleans a list of phrases by removing any that have already been translated
+     * (exist in the translations map), trimming whitespace, and discarding empty strings.
+     *
+     * @param phrases: List of phrases that need to be processed.
+     * @return: Returns a list of none empty, trimmed phrases that were not already-
+     * -in the translations hash map.
+     */
     public List<String> cleanFilter(List<String> phrases){
         List<String> filteredPhrases = new ArrayList<>();
         for (String phrase : phrases) {
@@ -85,6 +93,13 @@ public class TranslationFile {
                 .toList();
         return cleanList;
     }
+
+    /**
+     * Translation of a list of phrases and updating the translations hash map.
+     * Uses cleanFilter to preprocess the list.
+     *
+     * @param phrases: List of phrases that need to be translated.
+     */
     public void translateAllPhrases(List<String> phrases){
         OpenAIClient client = OpenAIClient.getInstance();
         List<String> filteredPhrases = this.cleanFilter(phrases);
@@ -100,6 +115,7 @@ public class TranslationFile {
             this.addTranslation(filteredPhrases.get(i), translated.get(i));
         }
     }
+
 
     public static String trimRemoveQuotesPhrase(String phrase){
         if (phrase == null) {
