@@ -1,6 +1,9 @@
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -28,8 +31,8 @@ public class XML_Parser {
         this.t = TranslationFile.getInstance();
         Element root = this.doc.getDocumentElement();
         System.out.println("Root element: " + root.getNodeName());
-        printFigures();
-        printBalloons();
+        //printFigures();
+        //printBalloons();
     }
     public void printFigures(){
         Node figuresNode = this.doc.getElementsByTagName("figures").item(0);
@@ -61,27 +64,53 @@ public class XML_Parser {
         System.out.println(Figures);
     }
 
-    public void Panels() {
+    public void writeXML() throws TransformerException {
+        File root = Helper.getRootDirectory();
+        String fileName = "Verbs_" + Helper.getTargetLanguage();
+        String path = "Resources/XMLoutput/";
+        path += fileName;
+        File outputFile =  new File(root, path);
+        Transformer transformer = TransformerFactory.newInstance().newTransformer();
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+        transformer.transform(new DOMSource(this.doc), new StreamResult(outputFile));
+        System.out.println("XML written to: " + outputFile.getAbsolutePath());
+
+    }
+    public void addTranslatedPanels() {
         NodeList panelNodes = this.doc.getElementsByTagName("panel");
         NodeList balloonNodes = this.doc.getElementsByTagName("balloon");
         System.out.println("Number of panels  - " + panelNodes.getLength());
         System.out.println("Number of balloons - " + balloonNodes.getLength());
+        List<Node> panelsToDuplicate = new ArrayList<>();
+
         for (int i = 0; i < panelNodes.getLength(); i++) {
             Node panel = panelNodes.item(i);
-            //System.out.println("Node name - " + panel.getNodeName());
-            Element panelEl = (Element) panel;
             NodeList balloons = ((Element) panel).getElementsByTagName("balloon");
-            System.out.println("Number of balloons - " + balloons.getLength());
-            if(balloons.getLength() == 1){
-                //copy and print panel to xml.
-                Node newNode = panel.cloneNode(true);
-                String translation = t.translate(balloons.item(0).getTextContent());
-                ((Element) newNode).getElementsByTagName("balloon").item(0).setTextContent(translation);
-                printPanel(newNode);
+            if (balloons.getLength() == 1) {
+                panelsToDuplicate.add(panel);
             }
-            //Node balloon = panel;
+        }
+
+        for (Node panel : panelsToDuplicate) {
+            //Create a clone of the panel get the translation of its text and set it to the translation
+            //then insert that into the Document before the original panel.
+            Node clone =  panel.cloneNode(true);
+            Node balloon = ((Element) clone).getElementsByTagName("balloon").item(0);
+            String translation = t.translate(balloon.getTextContent());
+            balloon.setTextContent(translation);
+
+            Node parent = panel.getParentNode();
+            Node nextSibling = panel.getNextSibling();
+            if (nextSibling != null) {
+                parent.insertBefore(clone, nextSibling);
+            } else {
+                parent.appendChild(clone);
+            }
+
         }
     }
+
     public void printPanel(Node panel){
         System.out.println(panel.getTextContent());
     }
@@ -128,6 +157,9 @@ public class XML_Parser {
             XML_Parser parser = new XML_Parser(f);
             TranslationFile t = TranslationFile.getInstance();
             t.translateAllPhrases(parser.getBalloons());
+            parser.addTranslatedPanels();
+            parser.writeXML();
+
         }
         catch (Exception e){
             System.out.println("Error: exception building DOM from XML");
