@@ -103,6 +103,8 @@ public class XML_Parser {
             String translation = t.translate(balloon.getTextContent().trim());
             balloon.setTextContent(translation);
 
+            //Here the cloned panels are put right after the original
+            //This can easily be reversed.
             Node parent = panel.getParentNode();
             Node nextSibling = panel.getNextSibling();
             if (nextSibling != null) {
