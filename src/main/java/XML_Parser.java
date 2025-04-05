@@ -29,10 +29,9 @@ public class XML_Parser {
         document.getDocumentElement().normalize();
         this.doc = document;
         this.t = TranslationFile.getInstance();
-        Element root = this.doc.getDocumentElement();
-        System.out.println("Root element: " + root.getNodeName());
         //printFigures();
-        //printBalloons();
+        printBalloons();
+        if (t.allTranslated(getBalloons())) System.out.println("All verbs conjugations are translated");
     }
     public void printFigures(){
         Node figuresNode = this.doc.getElementsByTagName("figures").item(0);
@@ -78,6 +77,10 @@ public class XML_Parser {
 
     }
     public void addTranslatedPanels() {
+        if (!t.allTranslated(getBalloons())) {
+            System.out.println("All verbs conjugations are NOT translated");
+            return;
+        }
         NodeList panelNodes = this.doc.getElementsByTagName("panel");
         NodeList balloonNodes = this.doc.getElementsByTagName("balloon");
         System.out.println("Number of panels  - " + panelNodes.getLength());
@@ -97,7 +100,7 @@ public class XML_Parser {
             //then insert that into the Document before the original panel.
             Node clone =  panel.cloneNode(true);
             Node balloon = ((Element) clone).getElementsByTagName("balloon").item(0);
-            String translation = t.translate(balloon.getTextContent());
+            String translation = t.translate(balloon.getTextContent().trim());
             balloon.setTextContent(translation);
 
             Node parent = panel.getParentNode();
@@ -116,12 +119,9 @@ public class XML_Parser {
     }
 
     public void printBalloons(){
-        NodeList balloonNodes = this.doc.getElementsByTagName("balloon");
-        for (int i = 0; i < balloonNodes.getLength(); i++) {
-            Node n = balloonNodes.item(i);
-            if (n.getNodeType() == Node.ELEMENT_NODE) {
-                System.out.println("Balloon text content: " + n.getTextContent().trim());
-            }
+        List<String> balloonContents = getBalloons();
+        for(String s : balloonContents){
+            System.out.println(s);
         }
     }
 
@@ -156,7 +156,7 @@ public class XML_Parser {
         try {
             XML_Parser parser = new XML_Parser(f);
             TranslationFile t = TranslationFile.getInstance();
-            t.translateAllPhrases(parser.getBalloons());
+            //t.translateAllPhrases(parser.getBalloons());
             parser.addTranslatedPanels();
             parser.writeXML();
 

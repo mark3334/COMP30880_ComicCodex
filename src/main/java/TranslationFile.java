@@ -116,6 +116,17 @@ public class TranslationFile {
         }
     }
 
+    public boolean allTranslated(List<String> phrases){
+        for (String phrase : phrases) {
+            if (!translations.containsKey(phrase)) { // If not already translated
+                System.out.println("Translation file does not contain " + phrase);
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 
     public static String trimRemoveQuotesPhrase(String phrase){
         if (phrase == null) {

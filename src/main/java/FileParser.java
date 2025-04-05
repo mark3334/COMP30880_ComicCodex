@@ -26,7 +26,7 @@ public class FileParser{
                         hashMap.put(key, value);
                 }
                 else{
-                    System.out.println("Mistake in config line: " + line);
+                    System.out.println("Line does not conform to hashmap structure " + line);
                 }
             }
         } catch (FileNotFoundException e) {
