@@ -29,9 +29,8 @@ public class XML_Parser {
         document.getDocumentElement().normalize();
         this.doc = document;
         this.t = TranslationFile.getInstance();
-        //printFigures();
-        printBalloons();
         if (t.allTranslated(getBalloons())) System.out.println("All verbs conjugations are translated");
+        else t.translateAllPhrases(getBalloons());
     }
     public void printFigures(){
         Node figuresNode = this.doc.getElementsByTagName("figures").item(0);
@@ -148,12 +147,7 @@ public class XML_Parser {
 
     public static void main(String[] args) throws ParserConfigurationException {
         File root = Helper.getRootDirectory();
-        //String path = "/Resources/Lesson 3/lesson 3 specification.xml";
         String path = "Resources/Verbs/specification.xml";
-        String outputPath = "Resources/Verbs/" + Helper.getTargetLanguage();
-        File fOutput =  new File(root, path);
-        //check if output file exists else create it
-        System.out.println(outputPath);
         File f = new File(root, path);
         try {
             XML_Parser parser = new XML_Parser(f);
