@@ -7,8 +7,8 @@ Members;
     Name:   Guanqiao Han  	    Student Number: 21209757
     Name:	Abdullah Shinwari	Student Number: 22496944
 
-
-Main:
+navigate to Submissions folder and run  java -jar Sprint4executable.jar to execute the Main method
+Main: creates the Verbs_TARGET_LANGUAGE xml file with copied panels that contain the translations of the verbs from the Sprint4 specification.xml
 
 XML_Parser takes in a xml file and creates a Document from it. It can get the content of the speech balloons as a list of strings.
 These strings can be translated using the translateAll method in TranslationFile which filters them
