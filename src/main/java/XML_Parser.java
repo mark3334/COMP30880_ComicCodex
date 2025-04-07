@@ -61,8 +61,7 @@ public class XML_Parser {
         }
         System.out.println(Figures);
     }
-
-    //TODO: writeXML() method doesn't check whether the output folder exist.
+    
     public void writeXML() throws TransformerException, IOException {
         File root = Helper.getRootDirectory();
         String fileName = "Verbs_" + Helper.getTargetLanguage();
