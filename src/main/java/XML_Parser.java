@@ -61,11 +61,22 @@ public class XML_Parser {
         }
         System.out.println(Figures);
     }
-
-    public void writeXML() throws TransformerException {
+    
+    public void writeXML() throws TransformerException, IOException {
         File root = Helper.getRootDirectory();
         String fileName = "Verbs_" + Helper.getTargetLanguage();
         String path = "Resources/XMLoutput/";
+
+        File folder = new File(root, path);
+        if (!folder.exists()) {
+            boolean created = folder.mkdirs();
+            if (created) {
+                System.out.println("Created directory: " + folder.getAbsolutePath());
+            } else {
+                throw new IOException("Failed to create directory: " + folder.getAbsolutePath());
+            }
+        }
+
         path += fileName;
         File outputFile =  new File(root, path);
         Transformer transformer = TransformerFactory.newInstance().newTransformer();

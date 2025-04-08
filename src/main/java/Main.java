@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args)  {
         File root = Helper.getRootDirectory();
+
         String path = "Resources/Verbs/specification.xml";
         File f = new File(root, path);
         try {
