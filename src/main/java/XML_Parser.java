@@ -168,7 +168,7 @@ public class XML_Parser {
 
     public static void main(String[] args) throws ParserConfigurationException {
         File root = Helper.getRootDirectory();
-        String path = "Resources/Verbs/specification.xml";
+        String path = "Resources/XMLinput/Sprint4Verbs.xml";
         File f = new File(root, path);
         try {
             XML_Parser parser = new XML_Parser(f);
