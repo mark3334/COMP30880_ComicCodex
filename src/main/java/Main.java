@@ -14,7 +14,6 @@ public class Main {
         try {
             XML_Parser parser = new XML_Parser(f);
             TranslationFile t = TranslationFile.getInstance();
-            //t.translateAllPhrases(parser.getBalloons());
             parser.addTranslatedPanels();
             parser.writeXML();
 

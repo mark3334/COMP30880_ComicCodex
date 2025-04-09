@@ -1,9 +1,5 @@
 import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.zip.*;
-import java.io.*;
+
 public final class Helper {
     public static String getTargetLanguage() {
         ConfigurationFile config = ConfigurationFile.getInstance();

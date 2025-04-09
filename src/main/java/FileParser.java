@@ -62,4 +62,12 @@ public class FileParser{
             e.printStackTrace();
         }
     }
+
+    public static void ensureFolderExists(File folder) throws IOException {
+        if (!folder.exists()) {
+            boolean created = folder.mkdirs();
+            if (created) System.out.println("Created directory: " + folder.getAbsolutePath());
+            else throw new IOException("Failed to create directory: " + folder.getAbsolutePath());
+        }
+    }
 }

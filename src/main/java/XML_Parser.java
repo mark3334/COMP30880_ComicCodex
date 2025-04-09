@@ -29,8 +29,6 @@ public class XML_Parser {
         document.getDocumentElement().normalize();
         this.doc = document;
         this.t = TranslationFile.getInstance();
-        if (t.allTranslated(getBalloons())) System.out.println("All verbs conjugations are translated");
-        else t.translateAllPhrases(getBalloons());
     }
     public void printFigures(){
         Node figuresNode = this.doc.getElementsByTagName("figures").item(0);
@@ -68,14 +66,7 @@ public class XML_Parser {
         String path = "Resources/XMLoutput/";
 
         File folder = new File(root, path);
-        if (!folder.exists()) {
-            boolean created = folder.mkdirs();
-            if (created) {
-                System.out.println("Created directory: " + folder.getAbsolutePath());
-            } else {
-                throw new IOException("Failed to create directory: " + folder.getAbsolutePath());
-            }
-        }
+        FileParser.ensureFolderExists(folder);
 
         path += fileName;
         File outputFile =  new File(root, path);
@@ -86,17 +77,19 @@ public class XML_Parser {
         System.out.println("XML written to: " + outputFile.getAbsolutePath());
 
     }
-    public void addTranslatedPanels() {
-        if (!t.allTranslated(getBalloons())) {
-            System.out.println("All verbs conjugations are NOT translated");
+    public void ensureTranslatedPanel(){
+        List<String> balloonContents = getBalloons();
+        if (t.allTranslated(balloonContents)){
+            System.out.println("All balloon text contents are translated");
             return;
         }
-        NodeList panelNodes = this.doc.getElementsByTagName("panel");
-        NodeList balloonNodes = this.doc.getElementsByTagName("balloon");
-        System.out.println("Number of panels  - " + panelNodes.getLength());
-        System.out.println("Number of balloons - " + balloonNodes.getLength());
-        List<Node> panelsToDuplicate = new ArrayList<>();
+        else t.translateAllPhrases(balloonContents);
+        if (!t.allTranslated(balloonContents)) System.out.println("Error : Balloon text contents could not be translated");
+    }
 
+    public List<Node> getPanelsToDuplicate() {
+        NodeList panelNodes = this.doc.getElementsByTagName("panel");
+        List<Node> panelsToDuplicate = new ArrayList<>();
         for (int i = 0; i < panelNodes.getLength(); i++) {
             Node panel = panelNodes.item(i);
             NodeList balloons = ((Element) panel).getElementsByTagName("balloon");
@@ -104,6 +97,23 @@ public class XML_Parser {
                 panelsToDuplicate.add(panel);
             }
         }
+        return panelsToDuplicate;
+    }
+
+    public void printInfo() {
+        NodeList panelNodes = this.doc.getElementsByTagName("panel");
+        NodeList balloonNodes = this.doc.getElementsByTagName("balloon");
+        NodeList sceneNodes = this.doc.getElementsByTagName("scene");
+        System.out.println("Number of panels  - " + panelNodes.getLength());
+        System.out.println("Number of balloons - " + balloonNodes.getLength());
+        System.out.println("Number of scenes - " + sceneNodes.getLength());
+    }
+
+    public void addTranslatedPanels() {
+        ensureTranslatedPanel();
+
+
+        List<Node> panelsToDuplicate = getPanelsToDuplicate();
 
         for (Node panel : panelsToDuplicate) {
             //Create a clone of the panel get the translation of its text and set it to the translation
@@ -162,8 +172,6 @@ public class XML_Parser {
         File f = new File(root, path);
         try {
             XML_Parser parser = new XML_Parser(f);
-            TranslationFile t = TranslationFile.getInstance();
-            //t.translateAllPhrases(parser.getBalloons());
             parser.addTranslatedPanels();
             parser.writeXML();
 
