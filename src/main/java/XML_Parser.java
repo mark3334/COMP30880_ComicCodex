@@ -13,15 +13,13 @@ import org.xml.sax.SAXException;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.StringWriter;
+import java.util.*;
 
 public class XML_Parser {
     private Document doc;
     private TranslationFile t;
-
+    private File file;
     public XML_Parser(File file) throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -29,6 +27,7 @@ public class XML_Parser {
         document.getDocumentElement().normalize();
         this.doc = document;
         this.t = TranslationFile.getInstance();
+        this.file = file;
     }
     public void printFigures(){
         Node figuresNode = this.doc.getElementsByTagName("figures").item(0);
@@ -59,7 +58,40 @@ public class XML_Parser {
         }
         System.out.println(Figures);
     }
-    
+
+    public static String nodeToString(Node node) {
+        try {
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+            StringWriter writer = new StringWriter();
+            transformer.transform(new DOMSource(node), new StreamResult(writer));
+            return writer.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public void getRandomScenes(int k) {
+        NodeList sceneNodes = this.doc.getElementsByTagName("scene");
+        int numScenes = sceneNodes.getLength();
+        if(k > numScenes) throw new IllegalArgumentException("k must be <= the number of scenes");
+
+        List<Integer> numbers = new ArrayList<>();
+        for (int i = 0; i < numScenes; i++) {
+            numbers.add(i);
+        }
+        Collections.shuffle(numbers);
+        List<Integer> randomSample = numbers.subList(0, k);
+
+        System.out.println(randomSample);
+        for(int i : randomSample){
+            Node n = sceneNodes.item(i);
+            System.out.println(XML_Parser.nodeToString(n));
+            //System.out.println(n.getNodeType() + n.getNodeName() + n.getTextContent());
+        }
+    }
     public void writeXML() throws TransformerException, IOException {
         File root = Helper.getRootDirectory();
         String fileName = "Verbs_" + Helper.getTargetLanguage();
@@ -101,6 +133,7 @@ public class XML_Parser {
     }
 
     public void printInfo() {
+        System.out.println("\nXML Filepath : " + this.file.getAbsolutePath());
         NodeList panelNodes = this.doc.getElementsByTagName("panel");
         NodeList balloonNodes = this.doc.getElementsByTagName("balloon");
         NodeList sceneNodes = this.doc.getElementsByTagName("scene");
@@ -177,6 +210,16 @@ public class XML_Parser {
 
         }
         catch (Exception e){
+            System.out.println("Error: exception building DOM from XML");
+            e.printStackTrace();
+        }
+        String path2 = "Resources/XMLinput/Sprint5scenes.xml";
+        File file2 = new File(root, path2);
+        try {
+            XML_Parser parser = new XML_Parser(file2);
+            parser.printInfo();
+            parser.getRandomScenes(2);
+        } catch (Exception e){
             System.out.println("Error: exception building DOM from XML");
             e.printStackTrace();
         }
