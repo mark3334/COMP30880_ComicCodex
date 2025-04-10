@@ -95,14 +95,22 @@ public class XML_Parser {
 
         return result;
     }
+    public Node getRandomScene() {
+        NodeList sceneNodes = this.doc.getElementsByTagName("scene");
+        if(sceneNodes.getLength() == 0){
+            System.out.println("Error : no scenes");
+        }
+        Random random = new Random();
+        int randomIndex = random.nextInt(sceneNodes.getLength());
+        return sceneNodes.item(randomIndex);
+    }
 
     private void SceneToPrompt(Node sceneNode) {
         NodeList panels = ((Element) sceneNode).getElementsByTagName("panel");
 
         int panelIndex = 1;
 
-        for (int i = 0; i < panels.getLength(); i++) {
-            if (i == 0) continue;
+        for (int i = 1; i < panels.getLength(); i++) {
 
             Element panel = (Element) panels.item(i);
             String setting = getText(panel, "setting", "an unknown place");
@@ -127,8 +135,7 @@ public class XML_Parser {
             String main = String.join(", ", descriptions);
             String extra = below.isEmpty() ? "" : " " + below;
 
-            System.out.println(panelIndex + ". (" + setting + ") " + main + "." + extra);
-            panelIndex++;
+            System.out.println(i + ". (" + setting + ") " + main + "." + extra);
         }
     }
 
