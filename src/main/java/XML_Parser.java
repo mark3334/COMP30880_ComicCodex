@@ -92,10 +92,9 @@ public class XML_Parser {
             //System.out.println(n.getNodeType() + n.getNodeName() + n.getTextContent());
         }
     }
-    public void writeXML() throws TransformerException, IOException {
+    public void writeXML(String path) throws TransformerException, IOException {
         File root = Helper.getRootDirectory();
         String fileName = "Verbs_" + Helper.getTargetLanguage();
-        String path = "Resources/XMLoutput/";
 
         File folder = new File(root, path);
         FileParser.ensureFolderExists(folder);
@@ -109,6 +108,11 @@ public class XML_Parser {
         System.out.println("XML written to: " + outputFile.getAbsolutePath());
 
     }
+
+
+    /*
+        Gets the balloon string texts and translate them using the Translation singleton.
+     */
     public void ensureTranslatedPanel(){
         List<String> balloonContents = getBalloons();
         if (t.allTranslated(balloonContents)){
@@ -119,6 +123,9 @@ public class XML_Parser {
         if (!t.allTranslated(balloonContents)) System.out.println("Error : Balloon text contents could not be translated");
     }
 
+    /*
+        Returns a list of panels that have at least one baloon text.
+     */
     public List<Node> getPanelsToDuplicate() {
         NodeList panelNodes = this.doc.getElementsByTagName("panel");
         List<Node> panelsToDuplicate = new ArrayList<>();
@@ -273,7 +280,7 @@ public class XML_Parser {
         try {
             XML_Parser parser = new XML_Parser(f);
             parser.addTranslatedPanels();
-            parser.writeXML();
+            parser.writeXML("Resources/XMLoutput/");
 
         }
         catch (Exception e){
