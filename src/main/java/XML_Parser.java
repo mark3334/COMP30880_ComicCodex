@@ -197,6 +197,70 @@ public class XML_Parser {
         return balloonContents;
     }
 
+    /*
+        Takes in Xml file, and returns true of it fits a certain criteria, false otherwise.
+        Criteria;
+        - Has <comic> root tag.
+        - Has <figures> tag and at least one <figure> tag nested inside.
+        - Has <scenes> tag and at least one <scene> tag nested inside.
+     */
+
+    /**
+     * Validates the structure of a comic XML file.
+     * The method checks for the following structural requirements:
+     * - Has <comic> root tag.
+     * - Has <figures> tag and at least one <figure> tag nested inside.
+     * - Has <scenes> tag and at least one <scene> tag nested inside.
+     *
+     * @param xmlFile The XML file to validate.
+     * @return true; if the XML file meets all structural criteria; false otherwise or if a parsing error occurs.
+     */
+    public static boolean validateComicXml(File xmlFile) {
+
+        try {
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document document = builder.parse(xmlFile);
+            document.getDocumentElement().normalize();
+
+            //STARTING CHECKS
+            Element root = document.getDocumentElement();
+            if (!root.getNodeName().equals("comic")) { //Check root element is <comic>.
+                return false;
+            }
+
+            NodeList figuresList = document.getElementsByTagName("figures");
+            if (figuresList.getLength() == 0) { // Check <figures> exists.
+                return false;
+            }
+
+            Element figuresElement = (Element) figuresList.item(0);
+            NodeList figureNodes = figuresElement.getElementsByTagName("figure");
+            if (figureNodes.getLength() == 0) { //Checks <figures> has at least one <figure>.
+                return false;
+            }
+
+            NodeList scenesList = document.getElementsByTagName("scenes");
+            if (scenesList.getLength() == 0) { //Check <scenes> exists.
+                return false;
+            }
+
+            Element scenesElement = (Element) scenesList.item(0);
+            NodeList sceneNodes = scenesElement.getElementsByTagName("scene");
+            if (sceneNodes.getLength() == 0) { //Checks <scenes> has at least one <scene>.
+                return false;
+            }
+
+            //More Checks for format can be added here.
+
+            return true;
+
+        } catch (ParserConfigurationException | IOException | SAXException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 
 
     public static void main(String[] args) throws ParserConfigurationException {
