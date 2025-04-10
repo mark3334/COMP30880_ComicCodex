@@ -73,25 +73,73 @@ public class XML_Parser {
             return null;
         }
     }
-    public void getRandomScenes(int k) {
+    public List<Node> getRandomScenes(int k) {
         NodeList sceneNodes = this.doc.getElementsByTagName("scene");
         int numScenes = sceneNodes.getLength();
-        if(k > numScenes) throw new IllegalArgumentException("k must be <= the number of scenes");
-
-        List<Integer> numbers = new ArrayList<>();
-        for (int i = 0; i < numScenes; i++) {
-            numbers.add(i);
+        if (k > numScenes) {
+            throw new IllegalArgumentException("k must be <= the number of scenes");
         }
-        Collections.shuffle(numbers);
-        List<Integer> randomSample = numbers.subList(0, k);
 
-        System.out.println(randomSample);
-        for(int i : randomSample){
+        List<Integer> indices = new ArrayList<>();
+        for (int i = 0; i < numScenes; i++) {
+            indices.add(i);
+        }
+        Collections.shuffle(indices);
+        List<Integer> randomSample = indices.subList(0, k);
+
+        List<Node> result = new ArrayList<>();
+        for (int i : randomSample) {
             Node n = sceneNodes.item(i);
-            System.out.println(XML_Parser.nodeToString(n));
-            //System.out.println(n.getNodeType() + n.getNodeName() + n.getTextContent());
+            result.add(n);
+        }
+
+        return result;
+    }
+
+    private void SceneToPrompt(Node sceneNode) {
+        NodeList panels = ((Element) sceneNode).getElementsByTagName("panel");
+
+        int panelIndex = 1;
+
+        for (int i = 0; i < panels.getLength(); i++) {
+            if (i == 0) continue;
+
+            Element panel = (Element) panels.item(i);
+            String setting = getText(panel, "setting", "an unknown place");
+            String below = getText(panel, "below", "").trim();
+
+            List<String> descriptions = new ArrayList<>();
+
+            for (String pos : Arrays.asList("left", "middle", "right")) {
+                NodeList posNode = panel.getElementsByTagName(pos);
+                if (posNode.getLength() > 0) {
+                    Element posElement = (Element) posNode.item(0);
+                    NodeList figures = posElement.getElementsByTagName("figure");
+                    if (figures.getLength() > 0) {
+                        Element fig = (Element) figures.item(0);
+                        String name = getText(fig, "name", "someone");
+                        String pose = getText(fig, "pose", "doing something");
+                        descriptions.add(name + " is " + pose);
+                    }
+                }
+            }
+
+            String main = String.join(", ", descriptions);
+            String extra = below.isEmpty() ? "" : " " + below;
+
+            System.out.println(panelIndex + ". (" + setting + ") " + main + "." + extra);
+            panelIndex++;
         }
     }
+
+    private String getText(Element parent, String tag, String defaultValue) {
+        NodeList list = parent.getElementsByTagName(tag);
+        if (list.getLength() > 0 && list.item(0).getTextContent() != null) {
+            return list.item(0).getTextContent().trim();
+        }
+        return defaultValue;
+    }
+
     public void writeXML(String path, String fileName) throws TransformerException, IOException {
         File root = Helper.getRootDirectory();
         //String fileName = "Verbs_" + Helper.getTargetLanguage();
@@ -293,7 +341,12 @@ public class XML_Parser {
         try {
             XML_Parser parser = new XML_Parser(file2);
             parser.printInfo();
-            parser.getRandomScenes(1);
+            parser.getRandomScenes(3);
+            List<Node> randomScenes = parser.getRandomScenes(3);
+            for (Node scene : randomScenes) {
+                parser.SceneToPrompt(scene); 
+            }
+
         } catch (Exception e){
             System.out.println("Error: exception building DOM from XML");
             e.printStackTrace();
