@@ -125,7 +125,7 @@ public class XML_Parser {
         for (int i = 0; i < panelNodes.getLength(); i++) {
             Node panel = panelNodes.item(i);
             NodeList balloons = ((Element) panel).getElementsByTagName("balloon");
-            if (balloons.getLength() == 1) {
+            if (balloons.getLength() >= 1) {
                 panelsToDuplicate.add(panel);
             }
         }
@@ -145,16 +145,19 @@ public class XML_Parser {
     public void addTranslatedPanels() {
         ensureTranslatedPanel();
 
-
         List<Node> panelsToDuplicate = getPanelsToDuplicate();
 
         for (Node panel : panelsToDuplicate) {
             //Create a clone of the panel get the translation of its text and set it to the translation
             //then insert that into the Document before the original panel.
             Node clone =  panel.cloneNode(true);
-            Node balloon = ((Element) clone).getElementsByTagName("balloon").item(0);
-            String translation = t.translate(balloon.getTextContent().trim());
-            balloon.setTextContent(translation);
+            NodeList balloons = ((Element) clone).getElementsByTagName("balloon");
+            for (int i = 0; i < balloons.getLength(); i++) {
+                Node balloon = balloons.item(i);
+                String translation = t.translate(balloon.getTextContent().trim());
+                balloon.setTextContent(translation);
+            }
+
 
             //Here the cloned panels are put right after the original
             //This can easily be reversed.
@@ -282,7 +285,7 @@ public class XML_Parser {
         try {
             XML_Parser parser = new XML_Parser(file2);
             parser.printInfo();
-            parser.getRandomScenes(2);
+            parser.getRandomScenes(1);
         } catch (Exception e){
             System.out.println("Error: exception building DOM from XML");
             e.printStackTrace();
