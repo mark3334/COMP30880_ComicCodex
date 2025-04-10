@@ -92,9 +92,9 @@ public class XML_Parser {
             //System.out.println(n.getNodeType() + n.getNodeName() + n.getTextContent());
         }
     }
-    public void writeXML(String path) throws TransformerException, IOException {
+    public void writeXML(String path, String fileName) throws TransformerException, IOException {
         File root = Helper.getRootDirectory();
-        String fileName = "Verbs_" + Helper.getTargetLanguage();
+        //String fileName = "Verbs_" + Helper.getTargetLanguage();
 
         File folder = new File(root, path);
         FileParser.ensureFolderExists(folder);
@@ -280,7 +280,8 @@ public class XML_Parser {
         try {
             XML_Parser parser = new XML_Parser(f);
             parser.addTranslatedPanels();
-            parser.writeXML("Resources/XMLoutput/");
+            //String fileName = "Verbs_" + Helper.getTargetLanguage();
+            parser.writeXML("Resources/XMLoutput/", "Verbs_" + Helper.getTargetLanguage());
 
         }
         catch (Exception e){
