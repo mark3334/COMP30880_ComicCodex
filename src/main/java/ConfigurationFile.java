@@ -1,9 +1,6 @@
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class ConfigurationFile {
@@ -16,6 +13,10 @@ public class ConfigurationFile {
         boolean append = false;
         this.configMap = new HashMap<>();
         FileParser.fileToHashmap(file, this.configMap, append);
+        String[] coreKeys = {"TARGET_LANGUAGE", "API_KEY", "MODEL", "COMPLETIONS_URL", "MAX_TOKENS_PER_PROMPT"};
+        for(String key : coreKeys){
+            if(!this.configMap.containsKey(key)) System.out.println("Error: Configuration file does not contain all the correct keys");
+        }
     }
 
     private ConfigurationFile(File file) {
@@ -42,9 +43,21 @@ public class ConfigurationFile {
         return configMap;
     }
 
-
     public String getValueByKey(String keyName) {
         return this.configMap.getOrDefault(keyName, "Key not found");
+    }
+
+    public static int getTokenLimit() {
+        ConfigurationFile c = ConfigurationFile.getInstance();
+        String key = "MAX_TOKENS_PER_PROMPT";
+        String limit = c.configMap.get(key);
+        return Integer.parseInt(limit);
+    }
+
+    public static String getTargetLanguage() {
+        ConfigurationFile c = ConfigurationFile.getInstance();
+        String key = "TARGET_LANGUAGE";
+        return c.configMap.get(key);
     }
 
     public static void main(String[] args) {

@@ -245,7 +245,7 @@ public class OpenAIClient {
         for (String line : response.split("\n")) {
             translated.add(line.trim());
         }
-        // TODO
+
         if(translated.size() != phrases.size()){
             System.out.println(translated);
             System.out.println(phrases);

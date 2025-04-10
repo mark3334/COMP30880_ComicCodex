@@ -100,16 +100,19 @@ public class TranslationFile {
      *
      * @param phrases: List of phrases that need to be translated.
      */
-    public void translateAllPhrases(List<String> phrases){
+    public void translateAllPhrases(List<String> phrases)  {
         OpenAIClient client = OpenAIClient.getInstance();
         List<String> filteredPhrases = this.cleanFilter(phrases);
         if (filteredPhrases.isEmpty()) {
             System.out.println("No new phrases to translate. Operation skipped.");
             return;
         }
-        int n = 200;//TODO determine size
-        if(filteredPhrases.size() > n)
-            System.out.println("Error to many phrases to translate");
+        if(estimateNumTokens(phrases) > ConfigurationFile.getTokenLimit()) {
+            int middleIndex = filteredPhrases.size() / 2;
+            translateAllPhrases(filteredPhrases.subList(0, middleIndex));
+            translateAllPhrases(filteredPhrases.subList(middleIndex, filteredPhrases.size()));
+            return;
+        }
         List<String> translated = client.translateAll(filteredPhrases);
         for(int i = 0; i < translated.size();i++) {
             this.addTranslation(filteredPhrases.get(i), translated.get(i));
@@ -153,6 +156,15 @@ public class TranslationFile {
         this.translations.put(text, translation);
         this.writeTranslationMapping(text, translation);
     }
+
+    public static int estimateNumTokens(List<String> phrases) {
+        int numChars = 0;
+        for (String phrase : phrases) {
+            numChars += phrase.length();
+        }
+        // 1 token ≈ 4 characters
+        return (int) Math.ceil(numChars / 4.0);
+    }
     public static void main(String[] args) {
         TranslationFile t = TranslationFile.getInstance();
 
@@ -160,6 +172,9 @@ public class TranslationFile {
         List<String> phrases = TranslationFile.getAllPhrasesToTranslate();
         List<String> first100Phrases = phrases.subList(0, Math.min(10000, phrases.size()));
         t.translateAllPhrases(first100Phrases);
+
+        //1 token ~= 4 chars in English
+        //1 token ~= ¾ words
 
     }
 

@@ -13,9 +13,8 @@ public class Main {
         File f = new File(root, path);
         try {
             XML_Parser parser = new XML_Parser(f);
-            TranslationFile t = TranslationFile.getInstance();
             parser.addTranslatedPanels();
-            parser.writeXML();
+            parser.writeXML("Resources/XMLoutput/", "Verbs_" + Helper.getTargetLanguage());
 
         }
         catch (Exception e){
