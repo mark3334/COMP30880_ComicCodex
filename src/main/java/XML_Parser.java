@@ -21,6 +21,7 @@
         private TranslationFile t;
         private File file;
         private List<String> figureNames;
+        private OpenAIClient client;
         public XML_Parser(File file) throws ParserConfigurationException, IOException, SAXException {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
@@ -30,6 +31,7 @@
             this.t = TranslationFile.getInstance();
             this.file = file;
             this.figureNames = getFigureNames();
+            this.client = OpenAIClient.getInstance();
         }
         public void printFigures(){
             Node figuresNode = this.doc.getElementsByTagName("figures").item(0);
@@ -126,7 +128,7 @@
             return names;
         }
 
-        private String SceneToPrompt(Node sceneNode) {
+        private String getNarrativeArc(Node sceneNode) {
             NodeList panels = ((Element) sceneNode).getElementsByTagName("panel");
 
             StringBuilder sceneDescription = new StringBuilder();
@@ -179,12 +181,7 @@
             FileParser.ensureFolderExists(folder);
 
             path += fileName;
-            File outputFile =  new File(root, path);
-            Transformer transformer = TransformerFactory.newInstance().newTransformer();
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-            transformer.transform(new DOMSource(this.doc), new StreamResult(outputFile));
-            System.out.println("XML written to: " + outputFile.getAbsolutePath());
+            docToXml(this.doc, path);
 
         }
 
@@ -258,16 +255,40 @@
             }
         }
 
-        public void printPanel(Node panel){
-            System.out.println(panel.getTextContent());
+        public List<String> getDialogue(String sceneDescription) {
+            StringBuilder sb = new StringBuilder();
+            sb.append("For each line, generate a short dialogue that the character might say, based on the action described.");
+            sb.append("The character names are : ").append(figureNames.toString());
+            sb.append("Only generate dialogue for lines that start with a character name. The response should be in this format:\n");
+            sb.append("Alfie: <dialogue>\nBetty: <dialogue>\n");
+            sb.append("Example:\n");
+            sb.append("Alfie is eating.\nBetty is watching.\n\n");
+            sb.append("Should produce:\nAlfie: Yum! This is good.\nBetty: I wonder if there’s any left for me.");
+
+            sb.append("\n\nNow here is the list:\n");
+
+            String[] lines = sceneDescription.split("\n");
+            for (String line : lines) {
+                String trimmed = line.trim();
+                if (!trimmed.isEmpty()) {
+                    sb.append(trimmed).append("\n");
+                }
+            }
+
+            String prompt = sb.toString();
+            String response = client.getChatCompletion(prompt);
+
+            List<String> dialogues = new ArrayList<>();
+            for (String line : response.split("\n")) {
+                line = line.trim();
+                if (!line.isEmpty()) {
+                    dialogues.add(line);
+                }
+            }
+
+            return dialogues;
         }
 
-        public void printBalloons(){
-            List<String> balloonContents = getBalloons();
-            for(String s : balloonContents){
-                System.out.println(s);
-            }
-        }
 
         public List<String> getBalloons() {
             List<String> balloonContents = new ArrayList<>();
@@ -351,16 +372,55 @@
         }
 
 
+        public void docToXml(Document document, String path) throws TransformerException {
+            File root = Helper.getRootDirectory();
+            File outputFile =  new File(root, path);
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+            transformer.transform(new DOMSource(document), new StreamResult(outputFile));
+            System.out.println("XML written to: " + outputFile.getAbsolutePath());
+        }
+        public Document scenesToDoc(List<Node> newScenes) throws ParserConfigurationException {
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document newDoc = builder.newDocument();  // Create new empty document
+
+            // Create and append the <comic> element to the new document
+            Element comic = newDoc.createElement("comic");
+            newDoc.appendChild(comic);
+            NodeList figuresList = this.doc.getElementsByTagName("figures");
+            // there should be one <figures> tag in input xml / this.doc
+            if (figuresList.getLength() > 0) {
+                Node figuresNode = figuresList.item(0);
+                Node figuresCopy = figuresNode.cloneNode(true);
+                comic.appendChild(figuresCopy);
+            }
+
+            // Create and append the <scenes> element
+            Element scenesElement = newDoc.createElement("scenes");
+            comic.appendChild(scenesElement);
+            for (Node scene : newScenes) {
+                Node sceneCopy = newDoc.importNode(scene, true);
+                scenesElement.appendChild(sceneCopy);
+            }
+            return newDoc;
+        }
+
+
+        public static void addDialogue(Node scene, String sceneDialogue) {
+            // TODO
+        }
 
         public static void main(String[] args) throws ParserConfigurationException {
             File root = Helper.getRootDirectory();
             String path = "Resources/XMLinput/Sprint4Verbs.xml";
+            String outputFolder = "Resources/XMLoutput/";
             File f = new File(root, path);
             try {
                 XML_Parser parser = new XML_Parser(f);
                 parser.addTranslatedPanels();
-                //String fileName = "Verbs_" + Helper.getTargetLanguage();
-                parser.writeXML("Resources/XMLoutput/", "Verbs_" + Helper.getTargetLanguage());
+                parser.writeXML(outputFolder, "Verbs_" + Helper.getTargetLanguage());
 
             }
             catch (Exception e){
@@ -370,14 +430,25 @@
             String path2 = "Resources/XMLinput/Sprint5scenes.xml";
             File file2 = new File(root, path2);
             try {
-                OpenAIClient openAIClient =OpenAIClient.getInstance();
                 XML_Parser parser = new XML_Parser(file2);
                 parser.printInfo();
                 List<String> figureNames = parser.getFigureNames();
                 System.out.println("Figure Names: " + figureNames);
                 List<Node> randomScenes = parser.getRandomScenes(2);
+                List<Node> newScenes = new ArrayList<>();
+                List<String> sceneDialogue;
+                String sceneDescription;
+                Node scenecopy;
                 for (Node scene : randomScenes) {
-                    System.out.println(openAIClient.getDialogue(parser.SceneToPrompt(scene)));
+                    // TODO add scene dialogue to sceneCopy
+                    scenecopy = scene.cloneNode(true);
+                    sceneDescription = parser.getNarrativeArc(scene);
+                    sceneDialogue = parser.getDialogue(sceneDescription);
+                    for(String panelDialogue : sceneDialogue) {
+                        System.out.println(panelDialogue);
+                    }
+                    //System.out.println(sceneDialogue);
+                    newScenes.add(scenecopy);
                 }
 
             } catch (Exception e){
