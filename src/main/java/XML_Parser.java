@@ -407,10 +407,59 @@
             return newDoc;
         }
 
+        public void addDialogue(Node scene, String sceneDialogue) {
+            Map<String, String> dialogueMap = new HashMap<>();
+            // Parse dialogue string line by line
+            for (String line : sceneDialogue.split("\n")) {
+                line = line.trim();
+                if (line.contains(":")) {
+                    // Split speaker and their line
+                    String[] parts = line.split(":", 2);
+                    String speaker = parts[0].trim();
+                    String speech = parts[1].trim();
+                    // If not empty, remove trailing period and store
+                    if (!speech.isEmpty()) {
+                        if (speech.endsWith(".")) {
+                            speech = speech.substring(0, speech.length() - 1);
+                        }
+                        dialogueMap.put(speaker, speech);
+                    }
+                }
+            }
 
-        public static void addDialogue(Node scene, String sceneDialogue) {
-            // TODO
+            // If this character has a matching line, check whether exist <balloon> tag. If yes
+            // Get <content> and replace its text with new dialogue
+            NodeList panels = ((Element) scene).getElementsByTagName("panel");
+            for (int i = 0; i < panels.getLength(); i++) {
+                Element panel = (Element) panels.item(i);
+                for (String pos : Arrays.asList("left", "middle", "right")) {
+                    NodeList posNodeList = panel.getElementsByTagName(pos);
+                    if (posNodeList.getLength() > 0) {
+                        Element posElement = (Element) posNodeList.item(0);
+
+                        NodeList figures = posElement.getElementsByTagName("figure");
+                        if (figures.getLength() > 0) {
+                            Element fig = (Element) figures.item(0);
+                            String name = getText(fig, "name", null);
+                            if (name != null && dialogueMap.containsKey(name)) {
+                                NodeList balloons = posElement.getElementsByTagName("balloon");
+                                if (balloons.getLength() > 0) {
+                                    Element balloon = (Element) balloons.item(0);
+
+                                    NodeList contents = balloon.getElementsByTagName("content");
+                                    if (contents.getLength() > 0) {
+                                        Element content = (Element) contents.item(0);
+                                        content.setTextContent(dialogueMap.get(name));
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+
+
 
         public static void main(String[] args) throws ParserConfigurationException {
             File root = Helper.getRootDirectory();
@@ -440,14 +489,16 @@
                 String sceneDescription;
                 Node scenecopy;
                 for (Node scene : randomScenes) {
-                    // TODO add scene dialogue to sceneCopy
                     scenecopy = scene.cloneNode(true);
                     sceneDescription = parser.getNarrativeArc(scene);
                     sceneDialogue = parser.getDialogue(sceneDescription);
                     for(String panelDialogue : sceneDialogue) {
-                        System.out.println(panelDialogue);
+                        //System.out.println(panelDialogue);
+                        parser.addDialogue(scenecopy,panelDialogue);
+                        System.out.println(nodeToString(scenecopy));
                     }
                     //System.out.println(sceneDialogue);
+
                     newScenes.add(scenecopy);
                 }
 
