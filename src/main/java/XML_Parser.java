@@ -126,46 +126,42 @@
             return names;
         }
 
-        private void SceneToPrompt(Node sceneNode) {
+        private String SceneToPrompt(Node sceneNode) {
             NodeList panels = ((Element) sceneNode).getElementsByTagName("panel");
 
-            int panelIndex = 1;
+            StringBuilder sceneDescription = new StringBuilder();
 
             for (int i = 1; i < panels.getLength(); i++) {
-
                 Element panel = (Element) panels.item(i);
                 String setting = getText(panel, "setting", "an unknown place");
                 String below = getText(panel, "below", "").trim();
 
-                List<String> descriptions = new ArrayList<>();
-
                 for (String pos : Arrays.asList("left", "middle", "right")) {
-                    String name;
-                    String balloonContent = "none";
-                    //String content = name + "is" + balloonContent;
                     NodeList posNode = panel.getElementsByTagName(pos);
                     if (posNode.getLength() > 0) {
                         Element posElement = (Element) posNode.item(0);
                         NodeList figures = posElement.getElementsByTagName("figure");
                         NodeList balloons = posElement.getElementsByTagName("balloon");
-                        if (balloons.getLength() != 0) {
+
+                        String balloonContent = "doing something";
+                        if (balloons.getLength() > 0) {
                             balloonContent = balloons.item(0).getTextContent().trim();
                         }
 
                         if (figures.getLength() > 0) {
                             Element fig = (Element) figures.item(0);
-                            name = getText(fig, "name", "someone");
-                            if (figureNames.contains(name)) descriptions.add(name + " is " + balloonContent);
+                            String name = getText(fig, "name", "someone");
+                            if (figureNames.contains(name)) {
+                                sceneDescription.append(name).append(" is ").append(balloonContent).append(".\n");
+                            }
                         }
                     }
                 }
-
-                String main = String.join(". ", descriptions);
-                String extra = below.isEmpty() ? "" : " " + below;
-
-                System.out.println(i + ". (" + setting + ") " + main + "." + extra);
             }
+
+            return sceneDescription.toString();
         }
+
 
         private String getText(Element parent, String tag, String defaultValue) {
             NodeList list = parent.getElementsByTagName(tag);
@@ -374,13 +370,14 @@
             String path2 = "Resources/XMLinput/Sprint5scenes.xml";
             File file2 = new File(root, path2);
             try {
+                OpenAIClient openAIClient =OpenAIClient.getInstance();
                 XML_Parser parser = new XML_Parser(file2);
                 parser.printInfo();
                 List<String> figureNames = parser.getFigureNames();
                 System.out.println("Figure Names: " + figureNames);
                 List<Node> randomScenes = parser.getRandomScenes(2);
                 for (Node scene : randomScenes) {
-                    parser.SceneToPrompt(scene);
+                    System.out.println(openAIClient.getDialogue(parser.SceneToPrompt(scene)));
                 }
 
             } catch (Exception e){

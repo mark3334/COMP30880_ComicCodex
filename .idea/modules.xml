@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/COMP30880_ComicCodex.iml" filepath="$PROJECT_DIR$/COMP30880_ComicCodex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/COMP30880_ComicCodex.iml" filepath="$PROJECT_DIR$/.idea/COMP30880_ComicCodex.iml" />
     </modules>
   </component>
 </project>
