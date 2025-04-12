@@ -468,6 +468,37 @@
         }
 
 
+        public Node interleaveTranslatedScene(Node scene) {
+            Document ownerDoc = scene.getOwnerDocument();
+
+            Element newScene = ownerDoc.createElement("scene");
+
+            NodeList panels = ((Element) scene).getElementsByTagName("panel");
+            for (int i = 0; i < panels.getLength(); i++) {
+                Node originalPanel = panels.item(i);
+                Node englishPanel = originalPanel.cloneNode(true);
+                Node translatedPanel = originalPanel.cloneNode(true);
+
+                NodeList balloons = ((Element) translatedPanel).getElementsByTagName("balloon");
+                for (int j = 0; j < balloons.getLength(); j++) {
+                    Element balloon = (Element) balloons.item(j);
+                    NodeList contents = balloon.getElementsByTagName("content");
+                    if (contents.getLength() > 0) {
+                        Element content = (Element) contents.item(0);
+                        String original = content.getTextContent().trim();
+                        String translated = t.translate(original);
+                        content.setTextContent(translated);
+                        balloon.setAttribute("status", "translated");
+                    }
+                }
+
+                newScene.appendChild(englishPanel);
+                newScene.appendChild(translatedPanel);
+            }
+
+            return newScene;
+        }
+
 
 
 
@@ -502,14 +533,25 @@
 
                     String fullDialogue = String.join("\n", sceneDialogue);
 
+                    System.out.println(fullDialogue);
                     parser.addDialogue(scenecopy, fullDialogue);
 
                     newScenes.add(scenecopy);
                 }
 
-                Document newDoc = parser.scenesToDoc(newScenes);
+                Document newDoc1 = parser.scenesToDoc(newScenes);
 
-                parser.docToXml(newDoc, "Resources/XMLoutput/Sprint5_DialogueOutput.xml");
+                parser.docToXml(newDoc1, "Resources/XMLoutput/Sprint5_DialogueOutput.xml");
+
+                List<Node> singleSceneList = new ArrayList<>();
+                for(Node scene : newScenes) {
+                    Node interleaved = parser.interleaveTranslatedScene(scene);
+                    singleSceneList.add(interleaved);
+                }
+                Document newDoc2 = parser.scenesToDoc(singleSceneList);
+
+                parser.docToXml(newDoc2, "Resources/XMLoutput/Sprint5_InterwovenOutput.xml");
+
             } catch (Exception e){
                 System.out.println("Error: exception building DOM from XML");
                 e.printStackTrace();

@@ -14,7 +14,7 @@
                             
           <appearance>female</appearance>
                             
-          <pose>six</pose>
+          <pose>three</pose>
                             
           <facing>right</facing>
                             
@@ -40,7 +40,7 @@
                             
           <lips>red</lips>
                             
-          <pose>nine flipped</pose>
+          <pose>three flipped</pose>
                             
           <facing>left</facing>
                             
@@ -50,7 +50,7 @@
                     
       </right>
                   
-      <below>Scene 69</below>
+      <below>Scene 33</below>
                   
       <border>white</border>
                
@@ -58,6 +58,8 @@
              
     <panel>
                   
+      <above>a coastline with a lighthouse</above>
+                  
       <left>
                        
         <figure>
@@ -74,49 +76,27 @@
                             
           <lips>red</lips>
                             
-          <pose>slogging</pose>
+          <pose>motorcycling</pose>
                             
           <facing>right</facing>
-                            
-          <vertical>little more</vertical>
                          
         </figure>
                        
         <balloon status="speech">
                             
-          <content>What on earth is that thing?!</content>
+          <content>Whoa, this ride is exhilarating!</content>
                          
         </balloon>
                     
       </left>
                   
-      <right>
-                       
-        <figure>
-                            
-          <appearance>default</appearance>
-                            
-          <skin>default</skin>
-                            
-          <hair>default</hair>
-                            
-          <pose>skeleton pointing prop</pose>
-                            
-          <facing>right</facing>
-                            
-          <vertical>little less</vertical>
-                         
-        </figure>
-                    
-      </right>
-                  
-      <below>On the right is a skeleton pointing ahead with its bony finger</below>
-                  
-      <setting>marshlands with bodies</setting>
+      <setting>maine</setting>
                
     </panel>
              
     <panel>
+                  
+      <above>outside lighthouse</above>
                   
       <left>
                        
@@ -134,71 +114,27 @@
                             
           <lips>red</lips>
                             
-          <pose>scared</pose>
+          <pose>dismounting motorcycle</pose>
                             
           <facing>right</facing>
-                            
-          <vertical>little more</vertical>
-                            
-          <horizontal>little more</horizontal>
                          
         </figure>
                        
         <balloon status="thought">
                             
-          <content>I can’t believe this is happening!</content>
+          <content>That was one smooth landing!</content>
                          
         </balloon>
                     
       </left>
                   
-      <middle>
-                       
-        <figure>
-                            
-          <appearance>default</appearance>
-                            
-          <skin>default</skin>
-                            
-          <hair>default</hair>
-                            
-          <pose>skeleton prop</pose>
-                            
-          <facing>right</facing>
-                            
-          <vertical>little less</vertical>
-                         
-        </figure>
-                    
-      </middle>
-                  
-      <right>
-                       
-        <figure>
-                            
-          <appearance>default</appearance>
-                            
-          <skin>default</skin>
-                            
-          <hair>default</hair>
-                            
-          <pose>cerberus prop</pose>
-                            
-          <facing>left</facing>
-                            
-          <horizontal>little less</horizontal>
-                         
-        </figure>
-                    
-      </right>
-                  
-      <below>In the middle is the skeleton. On the right is a three-headed hound</below>
-                  
-      <setting>dark city</setting>
+      <setting>tower</setting>
                
     </panel>
              
     <panel>
+                  
+      <above>base of the lighthouse</above>
                   
       <left>
                        
@@ -216,197 +152,27 @@
                             
           <lips>red</lips>
                             
-          <pose>defensive</pose>
+          <pose>carrying surfboard</pose>
                             
           <facing>right</facing>
-                            
-          <vertical>little more</vertical>
-                         
-        </figure>
-                       
-        <balloon status="speech">
-                            
-          <content>Please, just leave me alone!</content>
-                         
-        </balloon>
-                    
-      </left>
-                  
-      <right>
-                       
-        <figure>
-                            
-          <appearance>default</appearance>
-                            
-          <skin>default</skin>
-                            
-          <hair>default</hair>
-                            
-          <pose>grim reaper prop</pose>
-                            
-          <facing>left</facing>
-                         
-        </figure>
-                    
-      </right>
-                  
-      <below>On the right is the Grim Reaper</below>
-                  
-      <setting>gates of hell</setting>
-               
-    </panel>
-             
-    <panel>
-                  
-      <left>
-                       
-        <figure>
-                            
-          <id>Alfie</id>
-                            
-          <name>Alfie</name>
-                            
-          <appearance>male</appearance>
-                            
-          <skin>light brown</skin>
-                            
-          <hair>dark brown</hair>
-                            
-          <lips>red</lips>
-                            
-          <pose>begging</pose>
-                            
-          <facing>right</facing>
-                            
-          <vertical>little more</vertical>
-                         
-        </figure>
-                       
-        <balloon status="speech">
-                            
-          <content>I’m sorry! Please don’t hurt me!</content>
-                         
-        </balloon>
-                    
-      </left>
-                  
-      <right>
-                       
-        <figure>
-                            
-          <appearance>default</appearance>
-                            
-          <skin>default</skin>
-                            
-          <hair>default</hair>
-                            
-          <pose>grim reaper prop</pose>
-                            
-          <facing>left</facing>
-                         
-        </figure>
-                    
-      </right>
-                  
-      <below>On the right is the Grim Reaper</below>
-                  
-      <setting>gates of hell</setting>
-               
-    </panel>
-             
-    <panel>
-                  
-      <left>
-                       
-        <figure>
-                            
-          <id>Alfie</id>
-                            
-          <name>Alfie</name>
-                            
-          <appearance>male</appearance>
-                            
-          <skin>light brown</skin>
-                            
-          <hair>dark brown</hair>
-                            
-          <lips>red</lips>
-                            
-          <pose>pleading</pose>
-                            
-          <facing>right</facing>
-                            
-          <vertical>little more</vertical>
-                            
-          <horizontal>little more</horizontal>
-                         
-        </figure>
-                       
-        <balloon status="speech">
-                            
-          <content>Aah! It's burning! Get it off me!</content>
-                         
-        </balloon>
-                    
-      </left>
-                  
-      <middle>
-                       
-        <figure>
-                            
-          <appearance>default</appearance>
-                            
-          <skin>default</skin>
-                            
-          <hair>default</hair>
-                            
-          <pose>grim reaper prop</pose>
-                            
-          <facing>left</facing>
-                         
-        </figure>
-                    
-      </middle>
-                  
-      <right>
-                       
-        <figure>
-                            
-          <id>Betty</id>
-                            
-          <name>Betty</name>
-                            
-          <appearance>female</appearance>
-                            
-          <skin>green</skin>
-                            
-          <hair>dark green</hair>
-                            
-          <pose>demon holding fireball</pose>
-                            
-          <facing>left</facing>
-                            
-          <vertical>less</vertical>
-                            
-          <horizontal>little less</horizontal>
                          
         </figure>
                        
         <balloon status="thought">
                             
-          <content>You’re in my territory now, little human!</content>
+          <content>This surfboard is my ticket to the waves!</content>
                          
         </balloon>
                     
-      </right>
+      </left>
                   
-      <below>In the middle is the Grim Reaper</below>
-                  
-      <setting>gates of hell</setting>
+      <setting>tower base</setting>
                
     </panel>
              
     <panel>
+                  
+      <above>a lighthouse battered by waves</above>
                   
       <left>
                        
@@ -424,75 +190,21 @@
                             
           <lips>red</lips>
                             
-          <pose>on fire</pose>
+          <pose>surfing</pose>
                             
-          <facing>left</facing>
-                            
-          <vertical>little more</vertical>
-                            
-          <horizontal>little more</horizontal>
+          <facing>right</facing>
                          
         </figure>
                        
-        <balloon status="speech">
+        <balloon status="thought">
                             
-          <content>engulfed in flames</content>
+          <content>Here we go! Let’s catch some epic waves!</content>
                          
         </balloon>
                     
       </left>
                   
-      <middle>
-                       
-        <figure>
-                            
-          <appearance>default</appearance>
-                            
-          <skin>default</skin>
-                            
-          <hair>default</hair>
-                            
-          <pose>grim reaper prop</pose>
-                            
-          <facing>left</facing>
-                         
-        </figure>
-                    
-      </middle>
-                  
-      <right>
-                       
-        <figure>
-                            
-          <id>Betty</id>
-                            
-          <name>Betty</name>
-                            
-          <appearance>female</appearance>
-                            
-          <skin>green</skin>
-                            
-          <hair>dark green</hair>
-                            
-          <pose>demonic</pose>
-                            
-          <facing>left</facing>
-                            
-          <horizontal>little less</horizontal>
-                         
-        </figure>
-                       
-        <balloon status="speech">
-                            
-          <content>This is too much fun! Who needs mercy?</content>
-                         
-        </balloon>
-                    
-      </right>
-                  
-      <below>In the middle is the Grim Reaper</below>
-                  
-      <setting>gates of hell</setting>
+      <setting>lighthouse</setting>
                
     </panel>
           
@@ -512,7 +224,7 @@
                               
             <appearance>female</appearance>
                               
-            <pose>six</pose>
+            <pose>three</pose>
                               
             <facing>right</facing>
                               
@@ -538,7 +250,7 @@
                               
             <lips>red</lips>
                               
-            <pose>nine flipped</pose>
+            <pose>three flipped</pose>
                               
             <facing>left</facing>
                               
@@ -548,7 +260,7 @@
                       
         </right>
                     
-        <below>Scene 69</below>
+        <below>Scene 33</below>
                     
         <border>white</border>
                  
@@ -556,6 +268,8 @@
                
       <panel>
                     
+        <above>a coastline with a lighthouse</above>
+                    
         <left>
                          
           <figure>
@@ -572,49 +286,27 @@
                               
             <lips>red</lips>
                               
-            <pose>slogging</pose>
+            <pose>motorcycling</pose>
                               
             <facing>right</facing>
-                              
-            <vertical>little more</vertical>
                            
           </figure>
                          
           <balloon status="speech">
                               
-            <content>What on earth is that thing?!</content>
+            <content>Whoa, this ride is exhilarating!</content>
                            
           </balloon>
                       
         </left>
                     
-        <right>
-                         
-          <figure>
-                              
-            <appearance>default</appearance>
-                              
-            <skin>default</skin>
-                              
-            <hair>default</hair>
-                              
-            <pose>skeleton pointing prop</pose>
-                              
-            <facing>right</facing>
-                              
-            <vertical>little less</vertical>
-                           
-          </figure>
-                      
-        </right>
-                    
-        <below>On the right is a skeleton pointing ahead with its bony finger</below>
-                    
-        <setting>marshlands with bodies</setting>
+        <setting>maine</setting>
                  
       </panel>
                
       <panel>
+                    
+        <above>outside lighthouse</above>
                     
         <left>
                          
@@ -632,71 +324,27 @@
                               
             <lips>red</lips>
                               
-            <pose>scared</pose>
+            <pose>dismounting motorcycle</pose>
                               
             <facing>right</facing>
-                              
-            <vertical>little more</vertical>
-                              
-            <horizontal>little more</horizontal>
                            
           </figure>
                          
           <balloon status="thought">
                               
-            <content>I can’t believe this is happening!</content>
+            <content>That was one smooth landing!</content>
                            
           </balloon>
                       
         </left>
                     
-        <middle>
-                         
-          <figure>
-                              
-            <appearance>default</appearance>
-                              
-            <skin>default</skin>
-                              
-            <hair>default</hair>
-                              
-            <pose>skeleton prop</pose>
-                              
-            <facing>right</facing>
-                              
-            <vertical>little less</vertical>
-                           
-          </figure>
-                      
-        </middle>
-                    
-        <right>
-                         
-          <figure>
-                              
-            <appearance>default</appearance>
-                              
-            <skin>default</skin>
-                              
-            <hair>default</hair>
-                              
-            <pose>cerberus prop</pose>
-                              
-            <facing>left</facing>
-                              
-            <horizontal>little less</horizontal>
-                           
-          </figure>
-                      
-        </right>
-                    
-        <below>In the middle is the skeleton. On the right is a three-headed hound</below>
-                    
-        <setting>dark city</setting>
+        <setting>tower</setting>
                  
       </panel>
                
       <panel>
+                    
+        <above>base of the lighthouse</above>
                     
         <left>
                          
@@ -714,197 +362,27 @@
                               
             <lips>red</lips>
                               
-            <pose>defensive</pose>
+            <pose>carrying surfboard</pose>
                               
             <facing>right</facing>
-                              
-            <vertical>little more</vertical>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>Please, just leave me alone!</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
-        <right>
-                         
-          <figure>
-                              
-            <appearance>default</appearance>
-                              
-            <skin>default</skin>
-                              
-            <hair>default</hair>
-                              
-            <pose>grim reaper prop</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                      
-        </right>
-                    
-        <below>On the right is the Grim Reaper</below>
-                    
-        <setting>gates of hell</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <left>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>begging</pose>
-                              
-            <facing>right</facing>
-                              
-            <vertical>little more</vertical>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>I’m sorry! Please don’t hurt me!</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
-        <right>
-                         
-          <figure>
-                              
-            <appearance>default</appearance>
-                              
-            <skin>default</skin>
-                              
-            <hair>default</hair>
-                              
-            <pose>grim reaper prop</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                      
-        </right>
-                    
-        <below>On the right is the Grim Reaper</below>
-                    
-        <setting>gates of hell</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <left>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>pleading</pose>
-                              
-            <facing>right</facing>
-                              
-            <vertical>little more</vertical>
-                              
-            <horizontal>little more</horizontal>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>Aah! It's burning! Get it off me!</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
-        <middle>
-                         
-          <figure>
-                              
-            <appearance>default</appearance>
-                              
-            <skin>default</skin>
-                              
-            <hair>default</hair>
-                              
-            <pose>grim reaper prop</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                      
-        </middle>
-                    
-        <right>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <skin>green</skin>
-                              
-            <hair>dark green</hair>
-                              
-            <pose>demon holding fireball</pose>
-                              
-            <facing>left</facing>
-                              
-            <vertical>less</vertical>
-                              
-            <horizontal>little less</horizontal>
                            
           </figure>
                          
           <balloon status="thought">
                               
-            <content>You’re in my territory now, little human!</content>
+            <content>This surfboard is my ticket to the waves!</content>
                            
           </balloon>
                       
-        </right>
+        </left>
                     
-        <below>In the middle is the Grim Reaper</below>
-                    
-        <setting>gates of hell</setting>
+        <setting>tower base</setting>
                  
       </panel>
                
       <panel>
+                    
+        <above>a lighthouse battered by waves</above>
                     
         <left>
                          
@@ -922,75 +400,21 @@
                               
             <lips>red</lips>
                               
-            <pose>on fire</pose>
+            <pose>surfing</pose>
                               
-            <facing>left</facing>
-                              
-            <vertical>little more</vertical>
-                              
-            <horizontal>little more</horizontal>
+            <facing>right</facing>
                            
           </figure>
                          
-          <balloon status="speech">
+          <balloon status="thought">
                               
-            <content>engulfed in flames</content>
+            <content>Here we go! Let’s catch some epic waves!</content>
                            
           </balloon>
                       
         </left>
                     
-        <middle>
-                         
-          <figure>
-                              
-            <appearance>default</appearance>
-                              
-            <skin>default</skin>
-                              
-            <hair>default</hair>
-                              
-            <pose>grim reaper prop</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                      
-        </middle>
-                    
-        <right>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <skin>green</skin>
-                              
-            <hair>dark green</hair>
-                              
-            <pose>demonic</pose>
-                              
-            <facing>left</facing>
-                              
-            <horizontal>little less</horizontal>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>This is too much fun! Who needs mercy?</content>
-                           
-          </balloon>
-                      
-        </right>
-                    
-        <below>In the middle is the Grim Reaper</below>
-                    
-        <setting>gates of hell</setting>
+        <setting>lighthouse</setting>
                  
       </panel>
             
