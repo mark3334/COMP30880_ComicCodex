@@ -392,9 +392,16 @@
             NodeList figuresList = this.doc.getElementsByTagName("figures");
             // there should be one <figures> tag in input xml / this.doc
             if (figuresList.getLength() > 0) {
+                /*
                 Node figuresNode = figuresList.item(0);
                 Node figuresCopy = figuresNode.cloneNode(true);
                 comic.appendChild(figuresCopy);
+
+                 */
+                for (Node scene : newScenes) {
+                    Node sceneCopy = newDoc.importNode(scene, true);
+                    comic.appendChild(sceneCopy);
+                }
             }
 
             // Create and append the <scenes> element
@@ -408,30 +415,28 @@
         }
 
         public void addDialogue(Node scene, String sceneDialogue) {
-            Map<String, String> dialogueMap = new HashMap<>();
-            // Parse dialogue string line by line
+            Map<String, Queue<String>> dialogueMap = new HashMap<>();
+
             for (String line : sceneDialogue.split("\n")) {
                 line = line.trim();
                 if (line.contains(":")) {
-                    // Split speaker and their line
                     String[] parts = line.split(":", 2);
                     String speaker = parts[0].trim();
                     String speech = parts[1].trim();
-                    // If not empty, remove trailing period and store
                     if (!speech.isEmpty()) {
                         if (speech.endsWith(".")) {
                             speech = speech.substring(0, speech.length() - 1);
                         }
-                        dialogueMap.put(speaker, speech);
+                        dialogueMap.putIfAbsent(speaker, new LinkedList<>());
+                        dialogueMap.get(speaker).add(speech);
                     }
                 }
             }
 
-            // If this character has a matching line, check whether exist <balloon> tag. If yes
-            // Get <content> and replace its text with new dialogue
             NodeList panels = ((Element) scene).getElementsByTagName("panel");
             for (int i = 0; i < panels.getLength(); i++) {
                 Element panel = (Element) panels.item(i);
+
                 for (String pos : Arrays.asList("left", "middle", "right")) {
                     NodeList posNodeList = panel.getElementsByTagName(pos);
                     if (posNodeList.getLength() > 0) {
@@ -441,15 +446,18 @@
                         if (figures.getLength() > 0) {
                             Element fig = (Element) figures.item(0);
                             String name = getText(fig, "name", null);
-                            if (name != null && dialogueMap.containsKey(name)) {
-                                NodeList balloons = posElement.getElementsByTagName("balloon");
-                                if (balloons.getLength() > 0) {
-                                    Element balloon = (Element) balloons.item(0);
 
+                            if (name != null && dialogueMap.containsKey(name)) {
+                                Queue<String> lines = dialogueMap.get(name);
+                                NodeList balloons = posElement.getElementsByTagName("balloon");
+
+                                for (int b = 0; b < balloons.getLength(); b++) {
+                                    if (lines.isEmpty()) break;
+                                    Element balloon = (Element) balloons.item(b);
                                     NodeList contents = balloon.getElementsByTagName("content");
                                     if (contents.getLength() > 0) {
                                         Element content = (Element) contents.item(0);
-                                        content.setTextContent(dialogueMap.get(name));
+                                        content.setTextContent(lines.poll());
                                     }
                                 }
                             }
@@ -458,6 +466,8 @@
                 }
             }
         }
+
+
 
 
 
@@ -483,25 +493,23 @@
                 parser.printInfo();
                 List<String> figureNames = parser.getFigureNames();
                 System.out.println("Figure Names: " + figureNames);
-                List<Node> randomScenes = parser.getRandomScenes(2);
                 List<Node> newScenes = new ArrayList<>();
-                List<String> sceneDialogue;
-                String sceneDescription;
-                Node scenecopy;
+                List<Node> randomScenes = parser.getRandomScenes(1);
                 for (Node scene : randomScenes) {
-                    scenecopy = scene.cloneNode(true);
-                    sceneDescription = parser.getNarrativeArc(scene);
-                    sceneDialogue = parser.getDialogue(sceneDescription);
-                    for(String panelDialogue : sceneDialogue) {
-                        //System.out.println(panelDialogue);
-                        parser.addDialogue(scenecopy,panelDialogue);
-                        System.out.println(nodeToString(scenecopy));
-                    }
-                    //System.out.println(sceneDialogue);
+                    Node scenecopy = scene.cloneNode(true);
+                    String sceneDescription = parser.getNarrativeArc(scene);
+                    List<String> sceneDialogue = parser.getDialogue(sceneDescription);
+
+                    String fullDialogue = String.join("\n", sceneDialogue);
+
+                    parser.addDialogue(scenecopy, fullDialogue);
 
                     newScenes.add(scenecopy);
                 }
 
+                Document newDoc = parser.scenesToDoc(newScenes);
+
+                parser.docToXml(newDoc, "Resources/XMLoutput/Sprint5_DialogueOutput.xml");
             } catch (Exception e){
                 System.out.println("Error: exception building DOM from XML");
                 e.printStackTrace();
