@@ -415,6 +415,7 @@
         }
 
         public void addDialogue(Node scene, String sceneDialogue) {
+            //Stores each character's lines in a FIFO queue
             Map<String, Queue<String>> dialogueMap = new HashMap<>();
 
             for (String line : sceneDialogue.split("\n")) {
@@ -433,15 +434,18 @@
                 }
             }
 
+            // Iterate through all panels in this scene
             NodeList panels = ((Element) scene).getElementsByTagName("panel");
             for (int i = 0; i < panels.getLength(); i++) {
                 Element panel = (Element) panels.item(i);
 
+                //Check each position in the panel
                 for (String pos : Arrays.asList("left", "middle", "right")) {
                     NodeList posNodeList = panel.getElementsByTagName(pos);
                     if (posNodeList.getLength() > 0) {
                         Element posElement = (Element) posNodeList.item(0);
 
+                        // Get the <figure> from this position
                         NodeList figures = posElement.getElementsByTagName("figure");
                         if (figures.getLength() > 0) {
                             Element fig = (Element) figures.item(0);
@@ -466,41 +470,6 @@
                 }
             }
         }
-
-
-        public Node interleaveTranslatedScene(Node scene) {
-            Document ownerDoc = scene.getOwnerDocument();
-
-            Element newScene = ownerDoc.createElement("scene");
-
-            NodeList panels = ((Element) scene).getElementsByTagName("panel");
-            for (int i = 0; i < panels.getLength(); i++) {
-                Node originalPanel = panels.item(i);
-                Node englishPanel = originalPanel.cloneNode(true);
-                Node translatedPanel = originalPanel.cloneNode(true);
-
-                NodeList balloons = ((Element) translatedPanel).getElementsByTagName("balloon");
-                for (int j = 0; j < balloons.getLength(); j++) {
-                    Element balloon = (Element) balloons.item(j);
-                    NodeList contents = balloon.getElementsByTagName("content");
-                    if (contents.getLength() > 0) {
-                        Element content = (Element) contents.item(0);
-                        String original = content.getTextContent().trim();
-                        String translated = t.translate(original);
-                        content.setTextContent(translated);
-                        balloon.setAttribute("status", "translated");
-                    }
-                }
-
-                newScene.appendChild(englishPanel);
-                newScene.appendChild(translatedPanel);
-            }
-
-            return newScene;
-        }
-
-
-
 
         public static void main(String[] args) throws ParserConfigurationException {
             File root = Helper.getRootDirectory();
@@ -541,16 +510,14 @@
 
                 Document newDoc1 = parser.scenesToDoc(newScenes);
 
-                parser.docToXml(newDoc1, "Resources/XMLoutput/Sprint5_DialogueOutput.xml");
+                String outpath = "Resources/XMLoutput/Sprint5_DialogueOutput.xml";
+                parser.docToXml(newDoc1, outpath);
 
-                List<Node> singleSceneList = new ArrayList<>();
-                for(Node scene : newScenes) {
-                    Node interleaved = parser.interleaveTranslatedScene(scene);
-                    singleSceneList.add(interleaved);
-                }
-                Document newDoc2 = parser.scenesToDoc(singleSceneList);
+                String fname = "Sprint5_InterwovenOutput.xml";
+                XML_Parser parser2 = new XML_Parser(new File(root, outpath));
+                parser2.addTranslatedPanels();
+                parser2.writeXML(outputFolder, fname);
 
-                parser.docToXml(newDoc2, "Resources/XMLoutput/Sprint5_InterwovenOutput.xml");
 
             } catch (Exception e){
                 System.out.println("Error: exception building DOM from XML");

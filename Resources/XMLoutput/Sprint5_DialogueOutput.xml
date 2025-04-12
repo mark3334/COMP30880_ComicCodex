@@ -8,13 +8,19 @@
                        
         <figure>
                             
-          <id>Betty</id>
+          <id>Alfie</id>
                             
-          <name>Betty</name>
+          <name>Alfie</name>
                             
-          <appearance>female</appearance>
+          <appearance>male</appearance>
                             
-          <pose>three</pose>
+          <skin>light brown</skin>
+                            
+          <hair>dark brown</hair>
+                            
+          <lips>red</lips>
+                            
+          <pose>seven</pose>
                             
           <facing>right</facing>
                             
@@ -28,19 +34,13 @@
                        
         <figure>
                             
-          <id>Alfie</id>
+          <id>Betty</id>
                             
-          <name>Alfie</name>
+          <name>Betty</name>
                             
-          <appearance>male</appearance>
+          <appearance>female</appearance>
                             
-          <skin>light brown</skin>
-                            
-          <hair>dark brown</hair>
-                            
-          <lips>red</lips>
-                            
-          <pose>three flipped</pose>
+          <pose>zero flipped</pose>
                             
           <facing>left</facing>
                             
@@ -50,7 +50,7 @@
                     
       </right>
                   
-      <below>Scene 33</below>
+      <below>Scene 70</below>
                   
       <border>white</border>
                
@@ -58,8 +58,6 @@
              
     <panel>
                   
-      <above>a coastline with a lighthouse</above>
-                  
       <left>
                        
         <figure>
@@ -76,7 +74,7 @@
                             
           <lips>red</lips>
                             
-          <pose>motorcycling</pose>
+          <pose>clinching intimately</pose>
                             
           <facing>right</facing>
                          
@@ -84,19 +82,89 @@
                        
         <balloon status="speech">
                             
-          <content>Whoa, this ride is exhilarating!</content>
+          <content>I never want this moment to end</content>
                          
         </balloon>
                     
       </left>
                   
-      <setting>maine</setting>
+      <setting>bedroom</setting>
                
     </panel>
              
     <panel>
                   
-      <above>outside lighthouse</above>
+      <middle>
+                       
+        <figure>
+                            
+          <id>Alfie</id>
+                            
+          <name>Alfie</name>
+                            
+          <appearance>male</appearance>
+                            
+          <skin>light brown</skin>
+                            
+          <hair>dark brown</hair>
+                            
+          <lips>red</lips>
+                            
+          <pose>smoking cigar</pose>
+                            
+          <facing>right</facing>
+                         
+        </figure>
+                       
+        <balloon status="thought">
+                            
+          <content>This is the good stuff, nothing like a fine cigar</content>
+                         
+        </balloon>
+                    
+      </middle>
+                  
+      <setting>restaurant exterior</setting>
+               
+    </panel>
+             
+    <panel>
+                  
+      <middle>
+                       
+        <figure>
+                            
+          <id>Alfie</id>
+                            
+          <name>Alfie</name>
+                            
+          <appearance>male</appearance>
+                            
+          <skin>light brown</skin>
+                            
+          <hair>dark brown</hair>
+                            
+          <lips>red</lips>
+                            
+          <pose>sipping</pose>
+                            
+          <facing>right</facing>
+                         
+        </figure>
+                       
+        <balloon status="speech">
+                            
+          <content>Cheers to us—let's make tonight unforgettable!</content>
+                         
+        </balloon>
+                    
+      </middle>
+                  
+      <setting>bar</setting>
+               
+    </panel>
+             
+    <panel>
                   
       <left>
                        
@@ -114,27 +182,25 @@
                             
           <lips>red</lips>
                             
-          <pose>dismounting motorcycle</pose>
+          <pose>eating</pose>
                             
           <facing>right</facing>
                          
         </figure>
                        
-        <balloon status="thought">
+        <balloon status="speech">
                             
-          <content>That was one smooth landing!</content>
+          <content>I can't believe I ate the whole thing—so worth it!</content>
                          
         </balloon>
                     
       </left>
                   
-      <setting>tower</setting>
+      <setting>cafeteria</setting>
                
     </panel>
              
     <panel>
-                  
-      <above>base of the lighthouse</above>
                   
       <left>
                        
@@ -152,27 +218,25 @@
                             
           <lips>red</lips>
                             
-          <pose>carrying surfboard</pose>
+          <pose>fainting</pose>
                             
           <facing>right</facing>
                          
         </figure>
                        
-        <balloon status="thought">
+        <balloon status="speech">
                             
-          <content>This surfboard is my ticket to the waves!</content>
+          <content>Help me! I can't breathe—someone call for help!</content>
                          
         </balloon>
                     
       </left>
                   
-      <setting>tower base</setting>
+      <setting>food truck</setting>
                
     </panel>
              
     <panel>
-                  
-      <above>a lighthouse battered by waves</above>
                   
       <left>
                        
@@ -190,21 +254,43 @@
                             
           <lips>red</lips>
                             
-          <pose>surfing</pose>
+          <pose>scared</pose>
                             
           <facing>right</facing>
+                            
+          <vertical>little more</vertical>
                          
         </figure>
                        
-        <balloon status="thought">
+        <balloon status="speech">
                             
-          <content>Here we go! Let’s catch some epic waves!</content>
+          <content>What if I end up where I don’t want to be?</content>
                          
         </balloon>
                     
       </left>
                   
-      <setting>lighthouse</setting>
+      <right>
+                       
+        <figure>
+                            
+          <appearance>default</appearance>
+                            
+          <skin>default</skin>
+                            
+          <hair>default</hair>
+                            
+          <pose>grim reaper prop</pose>
+                            
+          <facing>left</facing>
+                         
+        </figure>
+                    
+      </right>
+                  
+      <below>On the right is the Grim Reaper</below>
+                  
+      <setting>gates of hell</setting>
                
     </panel>
           
@@ -218,13 +304,19 @@
                          
           <figure>
                               
-            <id>Betty</id>
+            <id>Alfie</id>
                               
-            <name>Betty</name>
+            <name>Alfie</name>
                               
-            <appearance>female</appearance>
+            <appearance>male</appearance>
                               
-            <pose>three</pose>
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>seven</pose>
                               
             <facing>right</facing>
                               
@@ -238,19 +330,13 @@
                          
           <figure>
                               
-            <id>Alfie</id>
+            <id>Betty</id>
                               
-            <name>Alfie</name>
+            <name>Betty</name>
                               
-            <appearance>male</appearance>
+            <appearance>female</appearance>
                               
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>three flipped</pose>
+            <pose>zero flipped</pose>
                               
             <facing>left</facing>
                               
@@ -260,7 +346,7 @@
                       
         </right>
                     
-        <below>Scene 33</below>
+        <below>Scene 70</below>
                     
         <border>white</border>
                  
@@ -268,8 +354,6 @@
                
       <panel>
                     
-        <above>a coastline with a lighthouse</above>
-                    
         <left>
                          
           <figure>
@@ -286,7 +370,7 @@
                               
             <lips>red</lips>
                               
-            <pose>motorcycling</pose>
+            <pose>clinching intimately</pose>
                               
             <facing>right</facing>
                            
@@ -294,19 +378,89 @@
                          
           <balloon status="speech">
                               
-            <content>Whoa, this ride is exhilarating!</content>
+            <content>I never want this moment to end</content>
                            
           </balloon>
                       
         </left>
                     
-        <setting>maine</setting>
+        <setting>bedroom</setting>
                  
       </panel>
                
       <panel>
                     
-        <above>outside lighthouse</above>
+        <middle>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>smoking cigar</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="thought">
+                              
+            <content>This is the good stuff, nothing like a fine cigar</content>
+                           
+          </balloon>
+                      
+        </middle>
+                    
+        <setting>restaurant exterior</setting>
+                 
+      </panel>
+               
+      <panel>
+                    
+        <middle>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>sipping</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>Cheers to us—let's make tonight unforgettable!</content>
+                           
+          </balloon>
+                      
+        </middle>
+                    
+        <setting>bar</setting>
+                 
+      </panel>
+               
+      <panel>
                     
         <left>
                          
@@ -324,27 +478,25 @@
                               
             <lips>red</lips>
                               
-            <pose>dismounting motorcycle</pose>
+            <pose>eating</pose>
                               
             <facing>right</facing>
                            
           </figure>
                          
-          <balloon status="thought">
+          <balloon status="speech">
                               
-            <content>That was one smooth landing!</content>
+            <content>I can't believe I ate the whole thing—so worth it!</content>
                            
           </balloon>
                       
         </left>
                     
-        <setting>tower</setting>
+        <setting>cafeteria</setting>
                  
       </panel>
                
       <panel>
-                    
-        <above>base of the lighthouse</above>
                     
         <left>
                          
@@ -362,27 +514,25 @@
                               
             <lips>red</lips>
                               
-            <pose>carrying surfboard</pose>
+            <pose>fainting</pose>
                               
             <facing>right</facing>
                            
           </figure>
                          
-          <balloon status="thought">
+          <balloon status="speech">
                               
-            <content>This surfboard is my ticket to the waves!</content>
+            <content>Help me! I can't breathe—someone call for help!</content>
                            
           </balloon>
                       
         </left>
                     
-        <setting>tower base</setting>
+        <setting>food truck</setting>
                  
       </panel>
                
       <panel>
-                    
-        <above>a lighthouse battered by waves</above>
                     
         <left>
                          
@@ -400,21 +550,43 @@
                               
             <lips>red</lips>
                               
-            <pose>surfing</pose>
+            <pose>scared</pose>
                               
             <facing>right</facing>
+                              
+            <vertical>little more</vertical>
                            
           </figure>
                          
-          <balloon status="thought">
+          <balloon status="speech">
                               
-            <content>Here we go! Let’s catch some epic waves!</content>
+            <content>What if I end up where I don’t want to be?</content>
                            
           </balloon>
                       
         </left>
                     
-        <setting>lighthouse</setting>
+        <right>
+                         
+          <figure>
+                              
+            <appearance>default</appearance>
+                              
+            <skin>default</skin>
+                              
+            <hair>default</hair>
+                              
+            <pose>grim reaper prop</pose>
+                              
+            <facing>left</facing>
+                           
+          </figure>
+                      
+        </right>
+                    
+        <below>On the right is the Grim Reaper</below>
+                    
+        <setting>gates of hell</setting>
                  
       </panel>
             
