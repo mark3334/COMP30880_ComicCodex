@@ -8,19 +8,13 @@
                        
         <figure>
                             
-          <id>Alfie</id>
+          <id>Betty</id>
                             
-          <name>Alfie</name>
+          <name>Betty</name>
                             
-          <appearance>male</appearance>
+          <appearance>female</appearance>
                             
-          <skin>light brown</skin>
-                            
-          <hair>dark brown</hair>
-                            
-          <lips>red</lips>
-                            
-          <pose>seven</pose>
+          <pose>six</pose>
                             
           <facing>right</facing>
                             
@@ -34,13 +28,19 @@
                        
         <figure>
                             
-          <id>Betty</id>
+          <id>Alfie</id>
                             
-          <name>Betty</name>
+          <name>Alfie</name>
                             
-          <appearance>female</appearance>
+          <appearance>male</appearance>
                             
-          <pose>zero flipped</pose>
+          <skin>light brown</skin>
+                            
+          <hair>dark brown</hair>
+                            
+          <lips>red</lips>
+                            
+          <pose>seven flipped</pose>
                             
           <facing>left</facing>
                             
@@ -50,7 +50,7 @@
                     
       </right>
                   
-      <below>Scene 70</below>
+      <below>Scene 67</below>
                   
       <border>white</border>
                
@@ -74,7 +74,7 @@
                             
           <lips>red</lips>
                             
-          <pose>clinching intimately</pose>
+          <pose>yawning</pose>
                             
           <facing>right</facing>
                          
@@ -82,189 +82,7 @@
                        
         <balloon status="speech">
                             
-          <content>I never want this moment to end</content>
-                         
-        </balloon>
-                    
-      </left>
-                  
-      <setting>bedroom</setting>
-               
-    </panel>
-             
-    <panel>
-                  
-      <middle>
-                       
-        <figure>
-                            
-          <id>Alfie</id>
-                            
-          <name>Alfie</name>
-                            
-          <appearance>male</appearance>
-                            
-          <skin>light brown</skin>
-                            
-          <hair>dark brown</hair>
-                            
-          <lips>red</lips>
-                            
-          <pose>smoking cigar</pose>
-                            
-          <facing>right</facing>
-                         
-        </figure>
-                       
-        <balloon status="thought">
-                            
-          <content>This is the good stuff, nothing like a fine cigar</content>
-                         
-        </balloon>
-                    
-      </middle>
-                  
-      <setting>restaurant exterior</setting>
-               
-    </panel>
-             
-    <panel>
-                  
-      <middle>
-                       
-        <figure>
-                            
-          <id>Alfie</id>
-                            
-          <name>Alfie</name>
-                            
-          <appearance>male</appearance>
-                            
-          <skin>light brown</skin>
-                            
-          <hair>dark brown</hair>
-                            
-          <lips>red</lips>
-                            
-          <pose>sipping</pose>
-                            
-          <facing>right</facing>
-                         
-        </figure>
-                       
-        <balloon status="speech">
-                            
-          <content>Cheers to us—let's make tonight unforgettable!</content>
-                         
-        </balloon>
-                    
-      </middle>
-                  
-      <setting>bar</setting>
-               
-    </panel>
-             
-    <panel>
-                  
-      <left>
-                       
-        <figure>
-                            
-          <id>Alfie</id>
-                            
-          <name>Alfie</name>
-                            
-          <appearance>male</appearance>
-                            
-          <skin>light brown</skin>
-                            
-          <hair>dark brown</hair>
-                            
-          <lips>red</lips>
-                            
-          <pose>eating</pose>
-                            
-          <facing>right</facing>
-                         
-        </figure>
-                       
-        <balloon status="speech">
-                            
-          <content>I can't believe I ate the whole thing—so worth it!</content>
-                         
-        </balloon>
-                    
-      </left>
-                  
-      <setting>cafeteria</setting>
-               
-    </panel>
-             
-    <panel>
-                  
-      <left>
-                       
-        <figure>
-                            
-          <id>Alfie</id>
-                            
-          <name>Alfie</name>
-                            
-          <appearance>male</appearance>
-                            
-          <skin>light brown</skin>
-                            
-          <hair>dark brown</hair>
-                            
-          <lips>red</lips>
-                            
-          <pose>fainting</pose>
-                            
-          <facing>right</facing>
-                         
-        </figure>
-                       
-        <balloon status="speech">
-                            
-          <content>Help me! I can't breathe—someone call for help!</content>
-                         
-        </balloon>
-                    
-      </left>
-                  
-      <setting>food truck</setting>
-               
-    </panel>
-             
-    <panel>
-                  
-      <left>
-                       
-        <figure>
-                            
-          <id>Alfie</id>
-                            
-          <name>Alfie</name>
-                            
-          <appearance>male</appearance>
-                            
-          <skin>light brown</skin>
-                            
-          <hair>dark brown</hair>
-                            
-          <lips>red</lips>
-                            
-          <pose>scared</pose>
-                            
-          <facing>right</facing>
-                            
-          <vertical>little more</vertical>
-                         
-        </figure>
-                       
-        <balloon status="speech">
-                            
-          <content>What if I end up where I don’t want to be?</content>
+          <content>*Yawn* Wow, what a dream that was!</content>
                          
         </balloon>
                     
@@ -274,23 +92,331 @@
                        
         <figure>
                             
-          <appearance>default</appearance>
+          <id>Betty</id>
                             
-          <skin>default</skin>
+          <name>Betty</name>
                             
-          <hair>default</hair>
+          <appearance>female</appearance>
                             
-          <pose>grim reaper prop</pose>
+          <pose>looking in mirror</pose>
                             
           <facing>left</facing>
                          
         </figure>
+                       
+        <balloon status="thought">
+                            
+          <content>You're looking good today, aren't you?</content>
+                         
+        </balloon>
                     
       </right>
                   
-      <below>On the right is the Grim Reaper</below>
+      <setting>bedroom</setting>
+               
+    </panel>
+             
+    <panel>
                   
-      <setting>gates of hell</setting>
+      <left>
+                       
+        <figure>
+                            
+          <id>Alfie</id>
+                            
+          <name>Alfie</name>
+                            
+          <appearance>male</appearance>
+                            
+          <skin>light brown</skin>
+                            
+          <hair>dark brown</hair>
+                            
+          <lips>red</lips>
+                            
+          <pose>confused</pose>
+                            
+          <facing>right</facing>
+                         
+        </figure>
+                       
+        <balloon status="speech">
+                            
+          <content>I can't believe I hit the snooze button again</content>
+                         
+        </balloon>
+                    
+      </left>
+                  
+      <right>
+                       
+        <figure>
+                            
+          <id>Betty</id>
+                            
+          <name>Betty</name>
+                            
+          <appearance>female</appearance>
+                            
+          <pose>dressing</pose>
+                            
+          <facing>left</facing>
+                         
+        </figure>
+                       
+        <balloon status="speech">
+                            
+          <content>What do you think of this outfit?</content>
+                         
+        </balloon>
+                    
+      </right>
+                  
+      <setting>bedroom</setting>
+               
+    </panel>
+             
+    <panel>
+                  
+      <left>
+                       
+        <figure>
+                            
+          <id>Alfie</id>
+                            
+          <name>Alfie</name>
+                            
+          <appearance>male</appearance>
+                            
+          <skin>light brown</skin>
+                            
+          <hair>dark brown</hair>
+                            
+          <lips>red</lips>
+                            
+          <pose>smirking</pose>
+                            
+          <facing>right</facing>
+                         
+        </figure>
+                       
+        <balloon status="thought">
+                            
+          <content>Got something funny to share?</content>
+                         
+        </balloon>
+                    
+      </left>
+                  
+      <right>
+                       
+        <figure>
+                            
+          <id>Betty</id>
+                            
+          <name>Betty</name>
+                            
+          <appearance>female</appearance>
+                            
+          <pose>offering coffee</pose>
+                            
+          <facing>left</facing>
+                         
+        </figure>
+                       
+        <balloon status="thought">
+                            
+          <content>Want some coffee to wake you up?</content>
+                         
+        </balloon>
+                    
+      </right>
+                  
+      <setting>bedroom</setting>
+               
+    </panel>
+             
+    <panel>
+                  
+      <left>
+                       
+        <figure>
+                            
+          <id>Alfie</id>
+                            
+          <name>Alfie</name>
+                            
+          <appearance>male</appearance>
+                            
+          <skin>light brown</skin>
+                            
+          <hair>dark brown</hair>
+                            
+          <lips>red</lips>
+                            
+          <pose>spilling coffee</pose>
+                            
+          <facing>right</facing>
+                         
+        </figure>
+                       
+        <balloon status="thought">
+                            
+          <content>Oops! Not my finest moment, huh?</content>
+                         
+        </balloon>
+                    
+      </left>
+                  
+      <right>
+                       
+        <figure>
+                            
+          <id>Betty</id>
+                            
+          <name>Betty</name>
+                            
+          <appearance>female</appearance>
+                            
+          <pose>running late</pose>
+                            
+          <facing>left</facing>
+                         
+        </figure>
+                       
+        <balloon status="thought">
+                            
+          <content>I should have left ten minutes ago!</content>
+                         
+        </balloon>
+                    
+      </right>
+                  
+      <setting>bedroom</setting>
+               
+    </panel>
+             
+    <panel>
+                  
+      <left>
+                       
+        <figure>
+                            
+          <id>Betty</id>
+                            
+          <name>Betty</name>
+                            
+          <appearance>female</appearance>
+                            
+          <pose>poking</pose>
+                            
+          <facing>right</facing>
+                         
+        </figure>
+                       
+        <balloon status="speech">
+                            
+          <content>Come on, let's move!</content>
+                         
+        </balloon>
+                    
+      </left>
+                  
+      <right>
+                       
+        <figure>
+                            
+          <id>Alfie</id>
+                            
+          <name>Alfie</name>
+                            
+          <appearance>male</appearance>
+                            
+          <skin>light brown</skin>
+                            
+          <hair>dark brown</hair>
+                            
+          <lips>red</lips>
+                            
+          <pose>sprinting</pose>
+                            
+          <facing>right</facing>
+                         
+        </figure>
+                       
+        <balloon status="speech">
+                            
+          <content>I'll make it, just gotta pick up the pace!</content>
+                         
+        </balloon>
+                    
+      </right>
+                  
+      <setting>bedroom</setting>
+               
+    </panel>
+             
+    <panel>
+                  
+      <left>
+                       
+        <figure>
+                            
+          <id>Alfie</id>
+                            
+          <name>Alfie</name>
+                            
+          <appearance>male</appearance>
+                            
+          <skin>light brown</skin>
+                            
+          <hair>dark brown</hair>
+                            
+          <lips>red</lips>
+                            
+          <pose>slogging</pose>
+                            
+          <facing>right</facing>
+                         
+        </figure>
+                       
+        <balloon status="speech">
+                            
+          <content>I'm going to be so late, I can feel it!</content>
+                         
+        </balloon>
+                    
+      </left>
+                  
+      <right>
+                       
+        <figure>
+                            
+          <id>Gerry</id>
+                            
+          <name>Gerry</name>
+                            
+          <appearance>male</appearance>
+                            
+          <skin>olive</skin>
+                            
+          <hair>black</hair>
+                            
+          <pose>drinking coffee</pose>
+                            
+          <facing>left</facing>
+                         
+        </figure>
+                       
+        <balloon status="thought">
+                            
+          <content>That's the way to start the day, isn’t it?</content>
+                         
+        </balloon>
+                    
+      </right>
+                  
+      <setting>office</setting>
                
     </panel>
           
@@ -301,6 +427,26 @@
       <panel>
                     
         <left>
+                         
+          <figure>
+                              
+            <id>Betty</id>
+                              
+            <name>Betty</name>
+                              
+            <appearance>female</appearance>
+                              
+            <pose>six</pose>
+                              
+            <facing>right</facing>
+                              
+            <horizontal>more</horizontal>
+                           
+          </figure>
+                      
+        </left>
+                    
+        <right>
                          
           <figure>
                               
@@ -316,27 +462,7 @@
                               
             <lips>red</lips>
                               
-            <pose>seven</pose>
-                              
-            <facing>right</facing>
-                              
-            <horizontal>more</horizontal>
-                           
-          </figure>
-                      
-        </left>
-                    
-        <right>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <pose>zero flipped</pose>
+            <pose>seven flipped</pose>
                               
             <facing>left</facing>
                               
@@ -346,7 +472,7 @@
                       
         </right>
                     
-        <below>Scene 70</below>
+        <below>Scene 67</below>
                     
         <border>white</border>
                  
@@ -370,7 +496,7 @@
                               
             <lips>red</lips>
                               
-            <pose>clinching intimately</pose>
+            <pose>yawning</pose>
                               
             <facing>right</facing>
                            
@@ -378,189 +504,7 @@
                          
           <balloon status="speech">
                               
-            <content>I never want this moment to end</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
-        <setting>bedroom</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <middle>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>smoking cigar</pose>
-                              
-            <facing>right</facing>
-                           
-          </figure>
-                         
-          <balloon status="thought">
-                              
-            <content>This is the good stuff, nothing like a fine cigar</content>
-                           
-          </balloon>
-                      
-        </middle>
-                    
-        <setting>restaurant exterior</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <middle>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>sipping</pose>
-                              
-            <facing>right</facing>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>Cheers to us—let's make tonight unforgettable!</content>
-                           
-          </balloon>
-                      
-        </middle>
-                    
-        <setting>bar</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <left>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>eating</pose>
-                              
-            <facing>right</facing>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>I can't believe I ate the whole thing—so worth it!</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
-        <setting>cafeteria</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <left>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>fainting</pose>
-                              
-            <facing>right</facing>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>Help me! I can't breathe—someone call for help!</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
-        <setting>food truck</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <left>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>scared</pose>
-                              
-            <facing>right</facing>
-                              
-            <vertical>little more</vertical>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>What if I end up where I don’t want to be?</content>
+            <content>*Yawn* Wow, what a dream that was!</content>
                            
           </balloon>
                       
@@ -570,23 +514,331 @@
                          
           <figure>
                               
-            <appearance>default</appearance>
+            <id>Betty</id>
                               
-            <skin>default</skin>
+            <name>Betty</name>
                               
-            <hair>default</hair>
+            <appearance>female</appearance>
                               
-            <pose>grim reaper prop</pose>
+            <pose>looking in mirror</pose>
                               
             <facing>left</facing>
                            
           </figure>
+                         
+          <balloon status="thought">
+                              
+            <content>You're looking good today, aren't you?</content>
+                           
+          </balloon>
                       
         </right>
                     
-        <below>On the right is the Grim Reaper</below>
+        <setting>bedroom</setting>
+                 
+      </panel>
+               
+      <panel>
                     
-        <setting>gates of hell</setting>
+        <left>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>confused</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>I can't believe I hit the snooze button again</content>
+                           
+          </balloon>
+                      
+        </left>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <id>Betty</id>
+                              
+            <name>Betty</name>
+                              
+            <appearance>female</appearance>
+                              
+            <pose>dressing</pose>
+                              
+            <facing>left</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>What do you think of this outfit?</content>
+                           
+          </balloon>
+                      
+        </right>
+                    
+        <setting>bedroom</setting>
+                 
+      </panel>
+               
+      <panel>
+                    
+        <left>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>smirking</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="thought">
+                              
+            <content>Got something funny to share?</content>
+                           
+          </balloon>
+                      
+        </left>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <id>Betty</id>
+                              
+            <name>Betty</name>
+                              
+            <appearance>female</appearance>
+                              
+            <pose>offering coffee</pose>
+                              
+            <facing>left</facing>
+                           
+          </figure>
+                         
+          <balloon status="thought">
+                              
+            <content>Want some coffee to wake you up?</content>
+                           
+          </balloon>
+                      
+        </right>
+                    
+        <setting>bedroom</setting>
+                 
+      </panel>
+               
+      <panel>
+                    
+        <left>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>spilling coffee</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="thought">
+                              
+            <content>Oops! Not my finest moment, huh?</content>
+                           
+          </balloon>
+                      
+        </left>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <id>Betty</id>
+                              
+            <name>Betty</name>
+                              
+            <appearance>female</appearance>
+                              
+            <pose>running late</pose>
+                              
+            <facing>left</facing>
+                           
+          </figure>
+                         
+          <balloon status="thought">
+                              
+            <content>I should have left ten minutes ago!</content>
+                           
+          </balloon>
+                      
+        </right>
+                    
+        <setting>bedroom</setting>
+                 
+      </panel>
+               
+      <panel>
+                    
+        <left>
+                         
+          <figure>
+                              
+            <id>Betty</id>
+                              
+            <name>Betty</name>
+                              
+            <appearance>female</appearance>
+                              
+            <pose>poking</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>Come on, let's move!</content>
+                           
+          </balloon>
+                      
+        </left>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>sprinting</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>I'll make it, just gotta pick up the pace!</content>
+                           
+          </balloon>
+                      
+        </right>
+                    
+        <setting>bedroom</setting>
+                 
+      </panel>
+               
+      <panel>
+                    
+        <left>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>slogging</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>I'm going to be so late, I can feel it!</content>
+                           
+          </balloon>
+                      
+        </left>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <id>Gerry</id>
+                              
+            <name>Gerry</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>olive</skin>
+                              
+            <hair>black</hair>
+                              
+            <pose>drinking coffee</pose>
+                              
+            <facing>left</facing>
+                           
+          </figure>
+                         
+          <balloon status="thought">
+                              
+            <content>That's the way to start the day, isn’t it?</content>
+                           
+          </balloon>
+                      
+        </right>
+                    
+        <setting>office</setting>
                  
       </panel>
             

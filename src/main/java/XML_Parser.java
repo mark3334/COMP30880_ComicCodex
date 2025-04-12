@@ -128,7 +128,7 @@
             return names;
         }
 
-        private String getNarrativeArc(Node sceneNode) {
+        public String getNarrativeArc(Node sceneNode) {
             NodeList panels = ((Element) sceneNode).getElementsByTagName("panel");
 
             StringBuilder sceneDescription = new StringBuilder();
