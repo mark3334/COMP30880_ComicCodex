@@ -17,20 +17,34 @@ public class XML_ParserTest {
     public void testAddTranslatedPanelsOutputMatchesExpected() throws ParserConfigurationException, IOException, SAXException, TransformerException {
         File root = Helper.getRootDirectory();
         File inputFile = new File(root, "Resources/XMLinput/Sprint4Verbs.xml");
-        File expectedOutputFile = new File(root, "Resources/XMLoutput/Verbs_Spanish");
-
-        File testOutputFile = new File(root, "Resources/Testing/Verbs_Spanish_Test.xml");
 
 
         XML_Parser parser = new XML_Parser(inputFile);
         parser.addTranslatedPanels();
 
-        parser.writeXML("Resources/Testing/", "Verbs_Spanish_Test.xml");
+        parser.writeXML("Resources/XMLoutput/", "Verbs_Spanish_Test.xml");
 
+
+        File testOutputFile = new File(root, "Resources/XMLoutput/Verbs_Spanish_Test.xml");
         List<String> actualLines = Files.readAllLines(testOutputFile.toPath());
+
+
+        File expectedOutputFile = new File(root, "Resources/XMLoutput/Verbs_Spanish");
         List<String> expectedLines = Files.readAllLines(expectedOutputFile.toPath());
 
-        Assertions.assertEquals(expectedLines, actualLines, "Translated XML output does not match expected Verbs_Spanish file.");
+
+        if (actualLines.size() != expectedLines.size()) {
+            Assertions.fail("Line count mismatch: expected " + expectedLines.size() +
+                    " lines but got " + actualLines.size());
+        }
+
+        int size= actualLines.size();
+        for (int i = 0; i < size; i++) {
+            String actual = i < actualLines.size() ? actualLines.get(i) : "<missing line>";
+            String expected = i < expectedLines.size() ? expectedLines.get(i) : "<missing line>";
+
+            Assertions.assertEquals(expected, actual, "Mismatch at line " + (i));
+        }
     }
 
 
