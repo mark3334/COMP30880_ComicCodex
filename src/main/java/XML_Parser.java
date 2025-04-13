@@ -36,6 +36,10 @@
             this.client = OpenAIClient.getInstance();
         }
 
+        public Document getDoc() {
+            return doc;
+        }
+
         /**
          * Prints all figure elements found in the <figures> tag.
          */

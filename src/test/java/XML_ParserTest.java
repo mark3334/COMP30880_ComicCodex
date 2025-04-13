@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -7,7 +9,12 @@ import javax.xml.transform.TransformerException;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class XML_ParserTest {
@@ -45,6 +52,9 @@ public class XML_ParserTest {
 
             Assertions.assertEquals(expected, actual, "Mismatch at line " + (i));
         }
+
+        testOutputFile.delete();
+
     }
 
 
@@ -56,7 +66,7 @@ public class XML_ParserTest {
 
         File valid = new File(root, "Resources/XMLinput/Sprint5scenes.xml");
         FileParser.ensureFolderExists(valid);
-        Assertions.assertTrue(XML_Parser.validateComicXml(valid));
+        assertTrue(XML_Parser.validateComicXml(valid));
 
 
         File invalid = new File(root, "Resources/XMLinput/invalidTest.xml");
@@ -64,4 +74,58 @@ public class XML_ParserTest {
         Assertions.assertFalse(XML_Parser.validateComicXml(invalid));
 
     }
+
+    @Test
+    public void testSprint5FullPipelineExecution() throws Exception {
+        File root = Helper.getRootDirectory();
+        String inputPath = "Resources/XMLinput/Sprint5scenes.xml";
+        String outputFolder = "Resources/XMLoutput/";
+
+        File inputFile = new File(root, inputPath);
+
+        //Assert 1: Load and extract first scene
+        XML_Parser parser = new XML_Parser(inputFile);
+        List<Node> newScenes = new ArrayList<>();
+
+        Node firstScene = parser.getDoc().getElementsByTagName("scene").item(0);
+        //System.out.println("First Scene Print:\n"+XML_Parser.nodeToString(firstScene));
+        assertNotNull(firstScene, "First scene should exist in input XML");
+
+
+        Node scenecopy = firstScene.cloneNode(true);
+        String sceneDescription = parser.getNarrativeArc(firstScene);
+        System.out.println("Scene Description:\n" + sceneDescription);
+
+        List<String> sceneDialogue = parser.getDialogue(sceneDescription);
+        System.out.println("Dialogue:\n" + sceneDialogue); //Dialogue Changes across different runs.
+
+        String fullDialogue = String.join("\n", sceneDialogue);
+
+        System.out.println("Full Dialogue:\n" + fullDialogue);
+
+        parser.addDialogue(scenecopy, fullDialogue);
+        newScenes.add(scenecopy);
+
+        //Assert 2: Create dialogue XML and write to disk
+        Document dialogueDoc = parser.scenesToDoc(newScenes);
+        String dialogueOutputName = "Sprint5_DialogueOutput_Test.xml";
+        parser.docToXml(dialogueDoc, outputFolder + dialogueOutputName);
+
+        File dialogueOutputFile = new File(root, outputFolder + dialogueOutputName);
+        assertTrue(dialogueOutputFile.exists(), "Dialogue output file should be created");
+
+        //Assert 3: Add translated panels and write final output
+        String finalOutputName = "Sprint5_InterwovenOutput_Test.xml";
+        XML_Parser parser2 = new XML_Parser(dialogueOutputFile);
+        parser2.addTranslatedPanels(); //Addes cloned panel with translation.
+        parser2.writeXML(outputFolder, finalOutputName); //Creates new XML file.
+
+        File finalOutputFile = new File(root, outputFolder + finalOutputName);
+        assertTrue(finalOutputFile.exists(), "Final interwoven output should be created");
+
+        dialogueOutputFile.delete();
+        finalOutputFile.delete();
+
+    }
+
 }
