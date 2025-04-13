@@ -22,6 +22,8 @@
         private File file;
         private List<String> figureNames;
         private OpenAIClient client;
+
+
         public XML_Parser(File file) throws ParserConfigurationException, IOException, SAXException {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
@@ -33,6 +35,10 @@
             this.figureNames = getFigureNames();
             this.client = OpenAIClient.getInstance();
         }
+
+        /**
+         * Prints all figure elements found in the <figures> tag.
+         */
         public void printFigures(){
             Node figuresNode = this.doc.getElementsByTagName("figures").item(0);
             System.out.println("Figures element: " + figuresNode.getNodeName());
@@ -63,7 +69,12 @@
             System.out.println(Figures);
         }
 
-
+        /**
+         * Converts a DOM Node to a formatted string representation.
+         *
+         * @param node the DOM node to convert.
+         * @return the string representation of the node.
+         */
         public static String nodeToString(Node node) {
             try {
                 Transformer transformer = TransformerFactory.newInstance().newTransformer();
@@ -79,6 +90,12 @@
             }
         }
 
+
+        /**
+         * Returns a list of k random scene nodes from the xml document.
+         * @param k the number of random scenes to collect.
+         * @return a list of randomly collected scene nodes.
+         */
         public List<Node> getRandomScenes(int k) {
             NodeList sceneNodes = this.doc.getElementsByTagName("scene");
             int numScenes = sceneNodes.getLength();
@@ -102,6 +119,9 @@
             return result;
         }
 
+        /**
+            Returns a list of character names by extracting <name> tags inside <figure> elements.
+         */
         public List<String> getFigureNames() {
             List<String> names = new ArrayList<>();
 
@@ -128,6 +148,12 @@
             return names;
         }
 
+        /**
+         *Generates a narative description of a scene based on its panel and characters.
+         *
+         * @param sceneNode the scene node to describe.
+         * @return a narative arc String of the scene node.
+         */
         public String getNarrativeArc(Node sceneNode) {
             NodeList panels = ((Element) sceneNode).getElementsByTagName("panel");
 
@@ -173,6 +199,14 @@
             return defaultValue;
         }
 
+        /**
+         * Writes the current DOM document to a file at the specified path.
+         *
+         * @param path the relative output folder path.
+         * @param fileName the output file name.
+         * @throws TransformerException if an error occurs during XML transformation.
+         * @throws IOException if an I/O error occurs.
+         */
         public void writeXML(String path, String fileName) throws TransformerException, IOException {
             File root = Helper.getRootDirectory();
             //String fileName = "Verbs_" + Helper.getTargetLanguage();
@@ -182,11 +216,10 @@
 
             path += fileName;
             docToXml(this.doc, path);
-
         }
 
 
-        /*
+        /**
             Gets the balloon string texts and translate them using the Translation singleton.
          */
         public void ensureTranslatedPanel(){
@@ -199,8 +232,8 @@
             if (!t.allTranslated(balloonContents)) System.out.println("Error : Balloon text contents could not be translated");
         }
 
-        /*
-            Returns a list of panels that have at least one baloon text.
+        /**
+            Returns a list of panels that have at least one balloon text.
          */
         public List<Node> getPanelsToDuplicate() {
             NodeList panelNodes = this.doc.getElementsByTagName("panel");
@@ -215,6 +248,9 @@
             return panelsToDuplicate;
         }
 
+        /**
+         * Prints some statistics and file path information about the loaded XML document.
+         */
         public void printInfo() {
             System.out.println("\nXML Filepath : " + this.file.getAbsolutePath());
             NodeList panelNodes = this.doc.getElementsByTagName("panel");
@@ -224,6 +260,7 @@
             System.out.println("Number of balloons - " + balloonNodes.getLength());
             System.out.println("Number of scenes - " + sceneNodes.getLength());
         }
+
 
         public void addTranslatedPanels() {
             ensureTranslatedPanel();
@@ -255,6 +292,12 @@
             }
         }
 
+        /**
+         * Sends a scene description to OpenAIClient and returns a list of generated dialogue lines.
+         *
+         * @param sceneDescription the scene's narrative description.
+         * @return a list of dialogue lines in "Name: dialogue" format.
+         */
         public List<String> getDialogue(String sceneDescription) {
             StringBuilder sb = new StringBuilder();
             sb.append("For each line, generate a short dialogue that the character might say, based on the action described.");
@@ -290,6 +333,9 @@
         }
 
 
+        /**
+            @return a list of none-empty balloon (dialogue) texts in the document.
+         */
         public List<String> getBalloons() {
             List<String> balloonContents = new ArrayList<>();
             NodeList balloonNodes = this.doc.getElementsByTagName("balloon");
@@ -306,14 +352,6 @@
 
             return balloonContents;
         }
-
-        /*
-            Takes in Xml file, and returns true of it fits a certain criteria, false otherwise.
-            Criteria;
-            - Has <comic> root tag.
-            - Has <figures> tag and at least one <figure> tag nested inside.
-            - Has <scenes> tag and at least one <scene> tag nested inside.
-         */
 
         /**
          * Validates the structure of a comic XML file.
@@ -371,7 +409,13 @@
             }
         }
 
-
+        /**
+         * Writes a given DOM Document object to an XML file at the specified path.
+         *
+         * @param document the DOM Document to write to disk.
+         * @param path the relative file path (within the root directory) where the XML should be saved.
+         * @throws TransformerException if an error occurs during XML transformation or saving.
+         */
         public void docToXml(Document document, String path) throws TransformerException {
             File root = Helper.getRootDirectory();
             File outputFile =  new File(root, path);
@@ -381,6 +425,8 @@
             transformer.transform(new DOMSource(document), new StreamResult(outputFile));
             System.out.println("XML written to: " + outputFile.getAbsolutePath());
         }
+
+
         public Document scenesToDoc(List<Node> newScenes) throws ParserConfigurationException {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
@@ -413,6 +459,7 @@
             }
             return newDoc;
         }
+
 
         public void addDialogue(Node scene, String sceneDialogue) {
             //Stores each character's lines in a FIFO queue
