@@ -40,7 +40,7 @@
                             
           <lips>red</lips>
                             
-          <pose>seven flipped</pose>
+          <pose>five flipped</pose>
                             
           <facing>left</facing>
                             
@@ -50,7 +50,7 @@
                     
       </right>
                   
-      <below>Scene 67</below>
+      <below>Scene 65</below>
                   
       <border>white</border>
                
@@ -74,15 +74,15 @@
                             
           <lips>red</lips>
                             
-          <pose>yawning</pose>
+          <pose>riding with determination</pose>
                             
           <facing>right</facing>
                          
         </figure>
                        
-        <balloon status="speech">
+        <balloon status="thought">
                             
-          <content>*Yawn* Wow, what a dream that was!</content>
+          <content>I won't stop until I reach the finish line!</content>
                          
         </balloon>
                     
@@ -92,27 +92,23 @@
                        
         <figure>
                             
-          <id>Betty</id>
+          <appearance>default</appearance>
                             
-          <name>Betty</name>
+          <skin>default</skin>
                             
-          <appearance>female</appearance>
+          <hair>default</hair>
                             
-          <pose>looking in mirror</pose>
+          <pose>dinosaur bones prop</pose>
                             
           <facing>left</facing>
                          
         </figure>
-                       
-        <balloon status="thought">
-                            
-          <content>You're looking good today, aren't you?</content>
-                         
-        </balloon>
                     
       </right>
                   
-      <setting>bedroom</setting>
+      <below>On the right is a pile of dinosaur bones</below>
+                  
+      <setting>gobi desert</setting>
                
     </panel>
              
@@ -134,45 +130,21 @@
                             
           <lips>red</lips>
                             
-          <pose>confused</pose>
+          <pose>riding while blocking sun</pose>
                             
           <facing>right</facing>
                          
         </figure>
                        
-        <balloon status="speech">
+        <balloon status="thought">
                             
-          <content>I can't believe I hit the snooze button again</content>
+          <content>Gotta shield my eyes! The sun is brutal today</content>
                          
         </balloon>
                     
       </left>
                   
-      <right>
-                       
-        <figure>
-                            
-          <id>Betty</id>
-                            
-          <name>Betty</name>
-                            
-          <appearance>female</appearance>
-                            
-          <pose>dressing</pose>
-                            
-          <facing>left</facing>
-                         
-        </figure>
-                       
-        <balloon status="speech">
-                            
-          <content>What do you think of this outfit?</content>
-                         
-        </balloon>
-                    
-      </right>
-                  
-      <setting>bedroom</setting>
+      <setting>mongolia</setting>
                
     </panel>
              
@@ -194,7 +166,7 @@
                             
           <lips>red</lips>
                             
-          <pose>smirking</pose>
+          <pose>riding while lost</pose>
                             
           <facing>right</facing>
                          
@@ -202,37 +174,13 @@
                        
         <balloon status="thought">
                             
-          <content>Got something funny to share?</content>
+          <content>Where am I? I thought I knew this trail!</content>
                          
         </balloon>
                     
       </left>
                   
-      <right>
-                       
-        <figure>
-                            
-          <id>Betty</id>
-                            
-          <name>Betty</name>
-                            
-          <appearance>female</appearance>
-                            
-          <pose>offering coffee</pose>
-                            
-          <facing>left</facing>
-                         
-        </figure>
-                       
-        <balloon status="thought">
-                            
-          <content>Want some coffee to wake you up?</content>
-                         
-        </balloon>
-                    
-      </right>
-                  
-      <setting>bedroom</setting>
+      <setting>egypt</setting>
                
     </panel>
              
@@ -254,105 +202,65 @@
                             
           <lips>red</lips>
                             
-          <pose>spilling coffee</pose>
+          <pose>hindering</pose>
                             
           <facing>right</facing>
-                         
-        </figure>
-                       
-        <balloon status="thought">
                             
-          <content>Oops! Not my finest moment, huh?</content>
-                         
-        </balloon>
-                    
-      </left>
-                  
-      <right>
-                       
-        <figure>
+          <vertical>little more</vertical>
                             
-          <id>Betty</id>
-                            
-          <name>Betty</name>
-                            
-          <appearance>female</appearance>
-                            
-          <pose>running late</pose>
-                            
-          <facing>left</facing>
-                         
-        </figure>
-                       
-        <balloon status="thought">
-                            
-          <content>I should have left ten minutes ago!</content>
-                         
-        </balloon>
-                    
-      </right>
-                  
-      <setting>bedroom</setting>
-               
-    </panel>
-             
-    <panel>
-                  
-      <left>
-                       
-        <figure>
-                            
-          <id>Betty</id>
-                            
-          <name>Betty</name>
-                            
-          <appearance>female</appearance>
-                            
-          <pose>poking</pose>
-                            
-          <facing>right</facing>
+          <horizontal>little more</horizontal>
                          
         </figure>
                        
         <balloon status="speech">
                             
-          <content>Come on, let's move!</content>
+          <content>Come on, horse! Just a little further!</content>
                          
         </balloon>
                     
       </left>
                   
-      <right>
+      <middle>
                        
         <figure>
                             
-          <id>Alfie</id>
+          <appearance>default</appearance>
                             
-          <name>Alfie</name>
+          <skin>default</skin>
                             
-          <appearance>male</appearance>
+          <hair>default</hair>
                             
-          <skin>light brown</skin>
-                            
-          <hair>dark brown</hair>
-                            
-          <lips>red</lips>
-                            
-          <pose>sprinting</pose>
+          <pose>human bones prop</pose>
                             
           <facing>right</facing>
                          
         </figure>
+                    
+      </middle>
+                  
+      <right>
                        
-        <balloon status="speech">
+        <figure>
                             
-          <content>I'll make it, just gotta pick up the pace!</content>
+          <appearance>default</appearance>
+                            
+          <skin>default</skin>
+                            
+          <hair>default</hair>
+                            
+          <pose>horse prop</pose>
+                            
+          <facing>right</facing>
+                            
+          <horizontal>rather less</horizontal>
                          
-        </balloon>
+        </figure>
                     
       </right>
                   
-      <setting>bedroom</setting>
+      <below>On the right is a runaway horse. In the middle is a bile of human bones</below>
+                  
+      <setting>desert</setting>
                
     </panel>
              
@@ -374,15 +282,15 @@
                             
           <lips>red</lips>
                             
-          <pose>slogging</pose>
+          <pose>crawling</pose>
                             
           <facing>right</facing>
                          
         </figure>
                        
-        <balloon status="speech">
+        <balloon status="thought">
                             
-          <content>I'm going to be so late, I can feel it!</content>
+          <content>I just need to keep moving... I can't give up now</content>
                          
         </balloon>
                     
@@ -392,31 +300,143 @@
                        
         <figure>
                             
-          <id>Gerry</id>
+          <id>Betty</id>
                             
-          <name>Gerry</name>
+          <name>Betty</name>
                             
-          <appearance>male</appearance>
+          <appearance>female</appearance>
                             
-          <skin>olive</skin>
-                            
-          <hair>black</hair>
-                            
-          <pose>drinking coffee</pose>
+          <pose>catering</pose>
                             
           <facing>left</facing>
                          
         </figure>
                        
-        <balloon status="thought">
+        <balloon status="speech">
                             
-          <content>That's the way to start the day, isn’t it?</content>
+          <content>Can I get you a drink to quench your thirst?</content>
                          
         </balloon>
                     
       </right>
                   
-      <setting>office</setting>
+      <setting>gobi desert</setting>
+               
+    </panel>
+             
+    <panel>
+                  
+      <left>
+                       
+        <figure>
+                            
+          <id>Alfie</id>
+                            
+          <name>Alfie</name>
+                            
+          <appearance>male</appearance>
+                            
+          <skin>light brown</skin>
+                            
+          <hair>dark brown</hair>
+                            
+          <lips>red</lips>
+                            
+          <pose>crawling and reaching</pose>
+                            
+          <facing>right</facing>
+                         
+        </figure>
+                       
+        <balloon status="thought">
+                            
+          <content>Just a bit more... I can almost touch it!</content>
+                         
+        </balloon>
+                    
+      </left>
+                  
+      <right>
+                       
+        <figure>
+                            
+          <id>Betty</id>
+                            
+          <name>Betty</name>
+                            
+          <appearance>female</appearance>
+                            
+          <pose>catering</pose>
+                            
+          <facing>left</facing>
+                         
+        </figure>
+                       
+        <balloon status="speech">
+                            
+          <content>Wait, don't go! I was just about to serve you!</content>
+                         
+        </balloon>
+                    
+      </right>
+                  
+      <setting>gobi desert</setting>
+               
+    </panel>
+             
+    <panel>
+                  
+      <left>
+                       
+        <figure>
+                            
+          <id>Alfie</id>
+                            
+          <name>Alfie</name>
+                            
+          <appearance>male</appearance>
+                            
+          <skin>light brown</skin>
+                            
+          <hair>dark brown</hair>
+                            
+          <lips>red</lips>
+                            
+          <pose>unconscious</pose>
+                            
+          <facing>right</facing>
+                         
+        </figure>
+                       
+        <balloon status="thought">
+                            
+          <content>What happened? Why can't I move?</content>
+                         
+        </balloon>
+                    
+      </left>
+                  
+      <right>
+                       
+        <figure>
+                            
+          <appearance>default</appearance>
+                            
+          <skin>default</skin>
+                            
+          <hair>default</hair>
+                            
+          <pose>cactus prop</pose>
+                            
+          <facing>left</facing>
+                         
+        </figure>
+                    
+      </right>
+                  
+      <below>On the right is a cactus not a waitress</below>
+                  
+      <setting>gobi desert</setting>
                
     </panel>
           
@@ -462,7 +482,7 @@
                               
             <lips>red</lips>
                               
-            <pose>seven flipped</pose>
+            <pose>five flipped</pose>
                               
             <facing>left</facing>
                               
@@ -472,7 +492,7 @@
                       
         </right>
                     
-        <below>Scene 67</below>
+        <below>Scene 65</below>
                     
         <border>white</border>
                  
@@ -496,15 +516,15 @@
                               
             <lips>red</lips>
                               
-            <pose>yawning</pose>
+            <pose>riding with determination</pose>
                               
             <facing>right</facing>
                            
           </figure>
                          
-          <balloon status="speech">
+          <balloon status="thought">
                               
-            <content>*Yawn* Wow, what a dream that was!</content>
+            <content>I won't stop until I reach the finish line!</content>
                            
           </balloon>
                       
@@ -514,27 +534,23 @@
                          
           <figure>
                               
-            <id>Betty</id>
+            <appearance>default</appearance>
                               
-            <name>Betty</name>
+            <skin>default</skin>
                               
-            <appearance>female</appearance>
+            <hair>default</hair>
                               
-            <pose>looking in mirror</pose>
+            <pose>dinosaur bones prop</pose>
                               
             <facing>left</facing>
                            
           </figure>
-                         
-          <balloon status="thought">
-                              
-            <content>You're looking good today, aren't you?</content>
-                           
-          </balloon>
                       
         </right>
                     
-        <setting>bedroom</setting>
+        <below>On the right is a pile of dinosaur bones</below>
+                    
+        <setting>gobi desert</setting>
                  
       </panel>
                
@@ -556,45 +572,21 @@
                               
             <lips>red</lips>
                               
-            <pose>confused</pose>
+            <pose>riding while blocking sun</pose>
                               
             <facing>right</facing>
                            
           </figure>
                          
-          <balloon status="speech">
+          <balloon status="thought">
                               
-            <content>I can't believe I hit the snooze button again</content>
+            <content>Gotta shield my eyes! The sun is brutal today</content>
                            
           </balloon>
                       
         </left>
                     
-        <right>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <pose>dressing</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>What do you think of this outfit?</content>
-                           
-          </balloon>
-                      
-        </right>
-                    
-        <setting>bedroom</setting>
+        <setting>mongolia</setting>
                  
       </panel>
                
@@ -616,7 +608,7 @@
                               
             <lips>red</lips>
                               
-            <pose>smirking</pose>
+            <pose>riding while lost</pose>
                               
             <facing>right</facing>
                            
@@ -624,37 +616,13 @@
                          
           <balloon status="thought">
                               
-            <content>Got something funny to share?</content>
+            <content>Where am I? I thought I knew this trail!</content>
                            
           </balloon>
                       
         </left>
                     
-        <right>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <pose>offering coffee</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                         
-          <balloon status="thought">
-                              
-            <content>Want some coffee to wake you up?</content>
-                           
-          </balloon>
-                      
-        </right>
-                    
-        <setting>bedroom</setting>
+        <setting>egypt</setting>
                  
       </panel>
                
@@ -676,105 +644,65 @@
                               
             <lips>red</lips>
                               
-            <pose>spilling coffee</pose>
+            <pose>hindering</pose>
                               
             <facing>right</facing>
-                           
-          </figure>
-                         
-          <balloon status="thought">
                               
-            <content>Oops! Not my finest moment, huh?</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
-        <right>
-                         
-          <figure>
+            <vertical>little more</vertical>
                               
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <pose>running late</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                         
-          <balloon status="thought">
-                              
-            <content>I should have left ten minutes ago!</content>
-                           
-          </balloon>
-                      
-        </right>
-                    
-        <setting>bedroom</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <left>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <pose>poking</pose>
-                              
-            <facing>right</facing>
+            <horizontal>little more</horizontal>
                            
           </figure>
                          
           <balloon status="speech">
                               
-            <content>Come on, let's move!</content>
+            <content>Come on, horse! Just a little further!</content>
                            
           </balloon>
                       
         </left>
                     
-        <right>
+        <middle>
                          
           <figure>
                               
-            <id>Alfie</id>
+            <appearance>default</appearance>
                               
-            <name>Alfie</name>
+            <skin>default</skin>
                               
-            <appearance>male</appearance>
+            <hair>default</hair>
                               
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>sprinting</pose>
+            <pose>human bones prop</pose>
                               
             <facing>right</facing>
                            
           </figure>
+                      
+        </middle>
+                    
+        <right>
                          
-          <balloon status="speech">
+          <figure>
                               
-            <content>I'll make it, just gotta pick up the pace!</content>
+            <appearance>default</appearance>
+                              
+            <skin>default</skin>
+                              
+            <hair>default</hair>
+                              
+            <pose>horse prop</pose>
+                              
+            <facing>right</facing>
+                              
+            <horizontal>rather less</horizontal>
                            
-          </balloon>
+          </figure>
                       
         </right>
                     
-        <setting>bedroom</setting>
+        <below>On the right is a runaway horse. In the middle is a bile of human bones</below>
+                    
+        <setting>desert</setting>
                  
       </panel>
                
@@ -796,15 +724,15 @@
                               
             <lips>red</lips>
                               
-            <pose>slogging</pose>
+            <pose>crawling</pose>
                               
             <facing>right</facing>
                            
           </figure>
                          
-          <balloon status="speech">
+          <balloon status="thought">
                               
-            <content>I'm going to be so late, I can feel it!</content>
+            <content>I just need to keep moving... I can't give up now</content>
                            
           </balloon>
                       
@@ -814,31 +742,143 @@
                          
           <figure>
                               
-            <id>Gerry</id>
+            <id>Betty</id>
                               
-            <name>Gerry</name>
+            <name>Betty</name>
                               
-            <appearance>male</appearance>
+            <appearance>female</appearance>
                               
-            <skin>olive</skin>
-                              
-            <hair>black</hair>
-                              
-            <pose>drinking coffee</pose>
+            <pose>catering</pose>
                               
             <facing>left</facing>
                            
           </figure>
                          
-          <balloon status="thought">
+          <balloon status="speech">
                               
-            <content>That's the way to start the day, isn’t it?</content>
+            <content>Can I get you a drink to quench your thirst?</content>
                            
           </balloon>
                       
         </right>
                     
-        <setting>office</setting>
+        <setting>gobi desert</setting>
+                 
+      </panel>
+               
+      <panel>
+                    
+        <left>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>crawling and reaching</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="thought">
+                              
+            <content>Just a bit more... I can almost touch it!</content>
+                           
+          </balloon>
+                      
+        </left>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <id>Betty</id>
+                              
+            <name>Betty</name>
+                              
+            <appearance>female</appearance>
+                              
+            <pose>catering</pose>
+                              
+            <facing>left</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>Wait, don't go! I was just about to serve you!</content>
+                           
+          </balloon>
+                      
+        </right>
+                    
+        <setting>gobi desert</setting>
+                 
+      </panel>
+               
+      <panel>
+                    
+        <left>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>unconscious</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="thought">
+                              
+            <content>What happened? Why can't I move?</content>
+                           
+          </balloon>
+                      
+        </left>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <appearance>default</appearance>
+                              
+            <skin>default</skin>
+                              
+            <hair>default</hair>
+                              
+            <pose>cactus prop</pose>
+                              
+            <facing>left</facing>
+                           
+          </figure>
+                      
+        </right>
+                    
+        <below>On the right is a cactus not a waitress</below>
+                    
+        <setting>gobi desert</setting>
                  
       </panel>
             

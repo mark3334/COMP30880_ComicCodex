@@ -544,6 +544,7 @@
                 for (Node scene : randomScenes) {
                     Node scenecopy = scene.cloneNode(true);
                     String sceneDescription = parser.getNarrativeArc(scene);
+                    System.out.println(sceneDescription);
                     List<String> sceneDialogue = parser.getDialogue(sceneDescription);
 
                     String fullDialogue = String.join("\n", sceneDialogue);
