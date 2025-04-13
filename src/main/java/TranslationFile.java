@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+
+// TODO translations with punctuation also translations with ":" may break it
+// TODO implement a private static final String DELIMITER such as "|||";
+// TODO rewrite translation .txt file with new DELIMITER
+
 public class TranslationFile {
     private final File file;
     private static TranslationFile instance;
@@ -122,7 +127,7 @@ public class TranslationFile {
     public boolean allTranslated(List<String> phrases){
         for (String phrase : phrases) {
             if (!translations.containsKey(phrase)) { // If not already translated
-                System.out.println("Translation file does not contain " + phrase);
+                //System.out.println("Translation file does not contain " + phrase);
                 return false;
             }
         }

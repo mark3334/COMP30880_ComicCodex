@@ -259,6 +259,7 @@
             System.out.println("Number of panels  - " + panelNodes.getLength());
             System.out.println("Number of balloons - " + balloonNodes.getLength());
             System.out.println("Number of scenes - " + sceneNodes.getLength());
+            System.out.println("Figure Names: " + this.figureNames);
         }
 
 
@@ -538,8 +539,6 @@
             try {
                 XML_Parser parser = new XML_Parser(file2);
                 parser.printInfo();
-                List<String> figureNames = parser.getFigureNames();
-                System.out.println("Figure Names: " + figureNames);
                 List<Node> newScenes = new ArrayList<>();
                 List<Node> randomScenes = parser.getRandomScenes(1);
                 for (Node scene : randomScenes) {
