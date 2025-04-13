@@ -23,4 +23,4 @@ characters this is based on the token limit of our API key which is less than th
 to ensure the prompt won't be too long.
 
 The narrative arc for a scene is the combination of sentences from each panel of the form
-{figureName} : {balloonContent}. //TODO setting and below tags are not used.
+{figureName} : {balloonContent}. //TODO setting and below tags are not used - This was done at commit b3b2d5d41ba69571f5b3b3bc7dade255e76305d8
