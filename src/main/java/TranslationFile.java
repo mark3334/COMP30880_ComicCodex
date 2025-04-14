@@ -30,13 +30,7 @@ public class TranslationFile {
 
     public static synchronized TranslationFile getInstance() {
         if (instance == null) {
-            ConfigurationFile configFile = ConfigurationFile.getInstance();
-            File root = Helper.getRootDirectory();
-            String filepath = configFile.getValueByKey("TRANSLATIONS_PATH");
-            filepath = new File(root, filepath).getAbsolutePath();
-            filepath += ("/" + configFile.getValueByKey("SOURCE_LANGUAGE") + "_" + configFile.getValueByKey("TARGET_LANGUAGE"));
-            System.out.println("Filepath : " + filepath);
-            File file = new File(filepath);
+            File file = FileParser.getTranslationFile();
             instance = new TranslationFile(file);
         }
         return instance;
@@ -64,18 +58,6 @@ public class TranslationFile {
 
     public Map<String, String> getTranslations(){return this.translations;}
 
-    public static List<String> getAllPhrasesToTranslate(){
-        VignetteManager vignetteManager = new VignetteManager();
-        //vignetteManager.printAll();
-        List<VignetteSchema> vignetteSchemas = vignetteManager.getVignetteSchemas();
-        List<String> phrases =  new ArrayList<>();
-        for(VignetteSchema schema : vignetteSchemas){
-            phrases.addAll(schema.getLeftText());
-            phrases.addAll(schema.getCombinedText());
-        }
-        return phrases;
-
-    }
 
     /**
      * Filters and cleans a list of phrases by removing any that have already been translated
@@ -173,10 +155,6 @@ public class TranslationFile {
     public static void main(String[] args) {
         TranslationFile t = TranslationFile.getInstance();
 
-        //Now get all the phrases to be translated from the VignetteManager
-        List<String> phrases = TranslationFile.getAllPhrasesToTranslate();
-        List<String> first100Phrases = phrases.subList(0, Math.min(10000, phrases.size()));
-        t.translateAllPhrases(first100Phrases);
 
         //1 token ~= 4 chars in English
         //1 token ~= ¾ words
