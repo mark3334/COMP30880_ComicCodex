@@ -19,11 +19,11 @@ class ConfigurationFileTest {
         tempFile = File.createTempFile("Configuration_Test_File", ".txt"); //creates the temporary file.
 
         try (PrintWriter writer = new PrintWriter(tempFile)) {
-            writer.println("\"TARGET_LANGUAGE\" : \"Spanish\"");
-            writer.println("\"SOURCE_LANGUAGE\" : \"English\"");
-            writer.println("\"API_KEY\" : \"xyzbda\"");
-            writer.println("\"MODEL\" : \"gpt-4\"");
-            writer.println("\"COMPLETIONS_URL\" : \"https://ChocolateCheeseChips.com\"");
+            writer.println("\"TARGET_LANGUAGE\" ||| \"Spanish\"");
+            writer.println("\"SOURCE_LANGUAGE\" ||| \"English\"");
+            writer.println("\"API_KEY\" ||| \"xyzbda\"");
+            writer.println("\"MODEL\" ||| \"gpt-4\"");
+            writer.println("\"COMPLETIONS_URL\" ||| \"https://ChocolateCheeseChips.com\"");
         }
 
 
