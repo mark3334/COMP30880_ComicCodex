@@ -1,11 +1,12 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
+import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+import javax.xml.parsers.DocumentBuilder;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -15,7 +16,6 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 
 public class XML_ParserTest {
 
@@ -126,6 +126,92 @@ public class XML_ParserTest {
         dialogueOutputFile.delete();
         finalOutputFile.delete();
 
+    }
+
+    @Test
+    public void testSplitPanel_TwoBalloons() throws Exception {
+        //Create a panel with two balloon.
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Document doc = builder.newDocument();
+
+        Element panel = doc.createElement("panel");
+
+        // Left side
+        Element left = doc.createElement("left");
+        Element fig1 = doc.createElement("figure");
+        Element name1 = doc.createElement("name");
+        name1.setTextContent("Alfie");
+        fig1.appendChild(name1);
+        left.appendChild(fig1);
+        Element balloon1 = doc.createElement("balloon");
+        Element content1 = doc.createElement("content");
+        content1.setTextContent("Hi from Alfie.");
+        balloon1.appendChild(content1);
+        left.appendChild(balloon1);
+
+        // Right side
+        Element right = doc.createElement("right");
+        Element fig2 = doc.createElement("figure");
+        Element name2 = doc.createElement("name");
+        name2.setTextContent("Betty");
+        fig2.appendChild(name2);
+        right.appendChild(fig2);
+        Element balloon2 = doc.createElement("balloon");
+        Element content2 = doc.createElement("content");
+        content2.setTextContent("Hello from Betty.");
+        balloon2.appendChild(content2);
+        right.appendChild(balloon2);
+
+        panel.appendChild(left);
+        panel.appendChild(right);
+
+        //Using split method
+        XML_Parser parser = new XML_Parser(new File("Resources/XMLinput/Sprint5scenes.xml"));
+        List<Element> result = parser.splitPanel(panel);
+
+        // Assert
+        assertEquals("Should return 2 panels", 2, result.size());
+
+        for (Element splitPanel : result) {
+            NodeList balloons = splitPanel.getElementsByTagName("balloon");
+            assertEquals("Each split panel should have exactly 1 balloon", 1, balloons.getLength());
+        }
+
+        System.out.println("Test Passed: Two-balloon panel successfully split into two panels.");
+    }
+
+    @Test
+    public void testSplitPanel_SingleBalloon() throws Exception {
+        //Create a panel with only one panel.
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Document doc = builder.newDocument();
+
+        Element panel = doc.createElement("panel");
+        Element left = doc.createElement("left");
+        Element fig = doc.createElement("figure");
+        Element name = doc.createElement("name");
+        name.setTextContent("Alfie");
+        fig.appendChild(name);
+        left.appendChild(fig);
+        Element balloon = doc.createElement("balloon");
+        Element content = doc.createElement("content");
+        content.setTextContent("Only one.");
+        balloon.appendChild(content);
+        left.appendChild(balloon);
+        panel.appendChild(left);
+
+        // Using split method
+        XML_Parser parser = new XML_Parser(new File("Resources/XMLinput/Sprint5scenes.xml"));
+        List<Element> result = parser.splitPanel(panel);
+
+        // Assert
+        assertEquals("Panel with 1 balloon should not be split", 1, result.size());
+        assertEquals("Still has 1 balloon", 1,
+                result.get(0).getElementsByTagName("balloon").getLength());
+
+        System.out.println("Test Passed: One-balloon panel not split.");
     }
 
 }

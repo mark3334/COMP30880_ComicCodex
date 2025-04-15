@@ -12,7 +12,7 @@ public class ConfigurationFile {
         this.configMap = new HashMap<>();
         FileParser.fileToHashmap(file, this.configMap, append);
         String[] coreKeys = {"TARGET_LANGUAGE", "API_KEY", "MODEL", "COMPLETIONS_URL", "MAX_TOKENS_PER_PROMPT"};
-        System.out.println(configMap);
+        //System.out.println(configMap);
         for(String key : coreKeys){
             if(!this.configMap.containsKey(key)) System.out.println("Error: Configuration file does not contain all the correct keys");
         }

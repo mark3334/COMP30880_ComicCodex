@@ -521,6 +521,37 @@
             }
         }
 
+        public List<Element> splitPanel(Element panel) {
+            List<Element> result = new ArrayList<>();
+            Document doc = panel.getOwnerDocument();
+
+            NodeList balloons = panel.getElementsByTagName("balloon");
+            if (balloons.getLength() <= 1) {
+                result.add(panel); // no need to split
+                return result;
+            }
+
+            Element panel1 = (Element) panel.cloneNode(true);
+            Element panel2 = (Element) panel.cloneNode(true);
+
+            NodeList balloons1 = panel1.getElementsByTagName("balloon");
+            if (balloons1.getLength() > 1) {
+                Node toRemove = balloons1.item(1);
+                toRemove.getParentNode().removeChild(toRemove);
+            }
+
+            NodeList balloons2 = panel2.getElementsByTagName("balloon");
+            if (balloons2.getLength() > 0) {
+                Node toRemove = balloons2.item(0);
+                toRemove.getParentNode().removeChild(toRemove);
+            }
+
+            result.add(panel1);
+            result.add(panel2);
+            return result;
+        }
+
+
         public static void main(String[] args) throws ParserConfigurationException {
             File root = Helper.getRootDirectory();
             String path = "Resources/XMLinput/Sprint4Verbs.xml";
