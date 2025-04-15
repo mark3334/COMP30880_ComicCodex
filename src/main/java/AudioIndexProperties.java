@@ -12,7 +12,7 @@ public interface AudioIndexProperties {
      * Returns the index name (e.g., "003") of the .mp3 file for the given text in the target language.
      * If not already present, generates a new index and returns it.
      */
-    String getOrAdd(String text, String language);
+    int getOrAdd(String text, String language);
 
 
     /*
