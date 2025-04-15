@@ -165,8 +165,6 @@
 
             for (int i = 1; i < panels.getLength(); i++) {
                 Element panel = (Element) panels.item(i);
-                String setting = getText(panel, "setting", "an unknown place");
-                String below = getText(panel, "below", "").trim();
 
                 for (String pos : Arrays.asList("left", "middle", "right")) {
                     NodeList posNode = panel.getElementsByTagName(pos);
