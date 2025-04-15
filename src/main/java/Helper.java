@@ -21,7 +21,7 @@ public final class Helper {
 
     public static boolean isRootDirectory(String filename) {
         filename = filename.toLowerCase().trim();
-        return filename.startsWith("comp30880_comiccodex");
+        return filename.startsWith("comp30880_comiccodex") && !filename.contains("jar");
     }
 
 

@@ -24,3 +24,9 @@ to ensure the prompt won't be too long.
 
 The narrative arc for a scene is the combination of sentences from each panel of the form
 {figureName} : {balloonContent}. //TODO setting and below tags are not used - This was done at commit b3b2d5d41ba69571f5b3b3bc7dade255e76305d8
+
+GetDialogue method takes a scene description as input and generates a list of character dialogue lines using LLM. 
+It parses character actions line by line and prompts the model to respond with natural-sounding dialogue for each.
+
+AddDialogue method assigns generated dialogue to the appropriate character balloons within a scene by matching speaker names and inserting their lines in order. 
+It uses a FIFO queue to ensure dialogue appears in the correct sequence per character.

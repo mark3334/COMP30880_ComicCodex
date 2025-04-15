@@ -2,18 +2,17 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
 public class ConfigurationFile {
     private static ConfigurationFile instance;
     private final Map<String, String> configMap;
 
     private ConfigurationFile() {
-        File root = Helper.getRootDirectory();
-        File file = new File(root, "Resources/Config.txt");
+        File file = FileParser.getConfigFile();
         boolean append = false;
         this.configMap = new HashMap<>();
         FileParser.fileToHashmap(file, this.configMap, append);
         String[] coreKeys = {"TARGET_LANGUAGE", "API_KEY", "MODEL", "COMPLETIONS_URL", "MAX_TOKENS_PER_PROMPT"};
+        System.out.println(configMap);
         for(String key : coreKeys){
             if(!this.configMap.containsKey(key)) System.out.println("Error: Configuration file does not contain all the correct keys");
         }
