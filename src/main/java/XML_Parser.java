@@ -166,6 +166,11 @@
             for (int i = 1; i < panels.getLength(); i++) {
                 Element panel = (Element) panels.item(i);
 
+                String setting = getText(panel, "setting", "an unknown place");
+                String below = getText(panel, "below", "").trim();
+
+                List<String> descriptions = new ArrayList<>();
+
                 for (String pos : Arrays.asList("left", "middle", "right")) {
                     NodeList posNode = panel.getElementsByTagName(pos);
                     if (posNode.getLength() > 0) {
@@ -184,6 +189,9 @@
                             if (figureNames.contains(name)) {
                                 sceneDescription.append(name).append(" is ").append(balloonContent).append(".\n");
                             }
+                            String main = String.join(". ", descriptions);
+                            String extra = below.isEmpty() ? "" : " " + below;
+                            System.out.println(i + ". (" + setting + ") " + main + "." + extra);
                         }
                     }
                 }
