@@ -1,16 +1,19 @@
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class AudioIndex implements AudioIndexProperties {
+public class AudioIndex {
 
     private static AudioIndex instance;
 
     private Map<String, Integer> indexes;
-    private int nextIndex = 0;
+    private int nextIndex = 1;
     private final String AUDIO_INDEX_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_INDEX_PATH");
     private final String AUDIO_MP3_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_MP3_PATH");;
 
@@ -29,7 +32,6 @@ public class AudioIndex implements AudioIndexProperties {
         return instance;
     }
 
-    @Override
     public void load() {
         indexes = new HashMap<>();
         int maxIndex = 0;
@@ -75,45 +77,32 @@ public class AudioIndex implements AudioIndexProperties {
         }
     }
 
-    @Override
-    public void save() {
-        try {
-            Path indexPath = Path.of(AUDIO_INDEX_PATH);
-
-            //Build each line and collect to a list
-            StringBuilder content = new StringBuilder();
-            for (Map.Entry<String, Integer> entry : indexes.entrySet()) {
-                String key = entry.getKey(); // e.g., "Hello ||| en"
-                int index = entry.getValue();
-                content.append(key).append(" ||| ").append(index).append("\n");
-            }
-
-            //Write to file (overwrites existing file)
-            Files.writeString(indexPath, content.toString());
-
-            System.out.println("Audio index saved to: " + AUDIO_INDEX_PATH);
-        } catch (Exception e) {
-            System.err.println("Failed to save audio index: " + e.getMessage());
-            e.printStackTrace();
-        }
-    }
-
-    @Override
     public int getOrAdd(String text, String language) {
         String key = text + " ||| " + language;
         if (indexes.containsKey(key)) {
             return indexes.get(key);
         }
 
+        //Otherwise need to Add this new (text + language) => index, and valid .mp3 file.
+        //TODO sudo code
         int newIndex = nextIndex++;
         //Need to make TTS Call Successfully, and then only put() below.
         indexes.put(key, newIndex);
-        save();
+        appendSingleEntry(text, language, newIndex); //Save new index to disk.
 
         return newIndex;
     }
 
-    @Override
+    public void appendSingleEntry(String text, String language, int index) {
+        try {
+            Path indexPath = Path.of(AUDIO_INDEX_PATH);
+            String entry = text + " ||| " + language + " ||| " + index + "\n";
+            Files.writeString(indexPath, entry, StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            System.err.println("Failed to append index entry: " + e.getMessage());
+        }
+    }
+
     public boolean contains(String text, String language) {
         return indexes.containsKey(text + " ||| " + language);
     }
@@ -124,6 +113,10 @@ public class AudioIndex implements AudioIndexProperties {
         AudioIndex audioIndex = new AudioIndex();
 
         System.out.println("Hashmap Before Adding: "+audioIndex.indexes.toString());
+
+
+        assertFalse(audioIndex.contains("Hello", "Lingala"));
+        assertFalse(audioIndex.contains("Hello", "Hindi"));
 
 
         audioIndex.getOrAdd("Hello", "French");
