@@ -53,19 +53,17 @@ public class AudioIndex {
                 if (line.isBlank()) continue;
 
                 String[] parts = line.split(FileParser.getDelimiterRegex()); // Split using regex for "|||"
-                if (parts.length != 3) {
+                if (parts.length != 2) {
                     System.err.println("Skipping malformed line: " + line);
                     continue;
                 }
 
                 String text = parts[0].trim();
-                String language = parts[1].trim();
-                String indexStr = parts[2].trim();
+                String indexStr = parts[1].trim();
 
                 try {
                     int index = Integer.parseInt(indexStr);
-                    String key = text + FileParser.getDelimiterLiteral() + language;
-                    indexes.put(key, index);
+                    indexes.put(text, index);
                     if (index > maxIndex) maxIndex = index;
                 } catch (NumberFormatException e) {
                     System.err.println("Invalid index value in line: " + line);
@@ -81,34 +79,33 @@ public class AudioIndex {
         }
     }
 
-    public int getOrAdd(String text, String language) {
-        String key = text + FileParser.getDelimiterLiteral() + language;
-        if (indexes.containsKey(key)) {
-            return indexes.get(key);
+    public int getOrAdd(String text) {
+        if (indexes.containsKey(text)) {
+            return indexes.get(text);
         }
 
         //Otherwise need to Add this new (text + language) => index, and valid .mp3 file.
         //TODO sudo code
         int newIndex = nextIndex++;
         //Need to make TTS Call Successfully, and then only put() below.
-        indexes.put(key, newIndex);
-        appendSingleEntry(text, language, newIndex); //Save new index to disk.
+        indexes.put(text, newIndex);
+        appendSingleEntry(text, newIndex); //Save new index to disk.
 
         return newIndex;
     }
 
-    public void appendSingleEntry(String text, String language, int index) {
+    public void appendSingleEntry(String text, int index) {
         try {
             Path indexPath = Path.of(AUDIO_INDEX_PATH);
-            String entry = text + FileParser.getDelimiterLiteral() + language + FileParser.getDelimiterLiteral() + index + "\n";
+            String entry = text +" "+FileParser.getDelimiterLiteral() +" "+ index + "\n";
             Files.writeString(indexPath, entry, StandardOpenOption.APPEND);
         } catch (IOException e) {
             System.err.println("Failed to append index entry: " + e.getMessage());
         }
     }
 
-    public boolean contains(String text, String language) {
-        return indexes.containsKey(text + FileParser.getDelimiterLiteral() + language);
+    public boolean contains(String text) {
+        return indexes.containsKey(text);
     }
 
 
@@ -119,26 +116,26 @@ public class AudioIndex {
         System.out.println("Hashmap Before Adding: "+audioIndex.indexes.toString());
 
 
-        assertFalse(audioIndex.contains("Hello", "Lingala"));
-        assertFalse(audioIndex.contains("Hello", "Hindi"));
+        assertFalse(audioIndex.contains("Hello"));
+        assertFalse(audioIndex.contains("Hej"));
 
 
-        audioIndex.getOrAdd("Hello", "French");
-        audioIndex.getOrAdd("Hello", "Urdu");
-        audioIndex.getOrAdd("Hello", "Arabic");
-        audioIndex.getOrAdd("Hello", "Irish");
+        audioIndex.getOrAdd("Ciao");
+        audioIndex.getOrAdd("Bonjour");
+        audioIndex.getOrAdd("Hola");
+        audioIndex.getOrAdd("Merhaba");
 
 
         System.out.println("Hashmap After Adding: "+audioIndex.indexes.toString());
 
-        System.out.println("Hello in French: "+audioIndex.getOrAdd("Hello", "French"));
-        System.out.println("Hello in Urdu: "+audioIndex.getOrAdd("Hello", "Urdu"));
-        System.out.println("Hello in Arabic: "+audioIndex.getOrAdd("Hello", "Arabic"));
-        System.out.println("Hello in Irish: "+audioIndex.getOrAdd("Hello", "Irish"));
+        System.out.println("Hello in Italian: "+audioIndex.getOrAdd("Ciao"));
+        System.out.println("Hello in Spanish: "+audioIndex.getOrAdd("Hola"));
+        System.out.println("Hello in Turkish: "+audioIndex.getOrAdd("Merhaba"));
+        System.out.println("Hello in French: "+audioIndex.getOrAdd("Bonjour"));
 
 
-        assertTrue(audioIndex.contains("Hello", "French"));
-        assertTrue(audioIndex.contains("Hello", "Urdu"));
+        assertTrue(audioIndex.contains("Ciao"));
+        assertTrue(audioIndex.contains("Hola"));
 
     }
 }
