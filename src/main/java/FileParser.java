@@ -11,12 +11,15 @@ public class FileParser{
     // Delimiter as regex for reading/splitting
     private static final String delimiterRegex = "\\|\\|\\|"; // Escaped for regex (| is special)
 
-    public static File root = Helper.getRootDirectory();
+    public static File root = FileParser.getRootDirectoryMethod();
 
     public static String getDelimiterLiteral() {
         return delimiterLiteral;
     }
 
+    public static File getRootDirectory() {
+        return root;
+    }
     public static String getDelimiterRegex() {
         return delimiterRegex;
     }
@@ -102,10 +105,29 @@ public class FileParser{
         return new File(root, pathFromRoot);
     }
 
+    private static File getRootDirectoryMethod() {
+        File current = new File(System.getProperty("user.dir")); // Current working directory
+        // Traverse up to find "COMP30880_ComicCodex"
+        while (current != null && !Helper.isRootDirectory(current.getName())) {
+            current = current.getParentFile();
+        }
+        if (current == null) {
+            System.out.println("Error: COMP30880_ComicCodex directory not found!");
+            // System.exit(1);
+        }
+        return current; // Returns the root directory or null if not found
+    }
+
+    public static boolean isRootDirectory(String filename) {
+        filename = filename.toLowerCase().trim();
+        return filename.startsWith("comp30880_comiccodex") && !filename.contains("jar");
+    }
+
     public static void main(String[] args)  {
 
         String oldDelimiter = ":"; // \\|\\|\\|"; // escape each '|'
         //replaceDelimiter(getConfigFile(), oldDelimiter);
-        replaceDelimiter(getTranslationFile(), oldDelimiter);
+        //replaceDelimiter(getTranslationFile(), oldDelimiter);
+        System.out.println(FileParser.getRootDirectory().getAbsolutePath());
     }
 }
