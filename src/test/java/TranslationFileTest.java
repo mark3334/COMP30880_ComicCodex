@@ -25,10 +25,10 @@ public class TranslationFileTest {
         tempFile = File.createTempFile("Translation_Test_", ".txt");
 
         try (PrintWriter writer = new PrintWriter(tempFile)) {
-            writer.println("Hello : Hola");
-            writer.println("Spanish : Española");
-            writer.println("Car : Auto");
-            writer.println("Pink : Rosa");
+            writer.println("Hello "+FileParser.getDelimiterRegex().replace("\\", "")+" Hola");
+            writer.println("Spanish "+FileParser.getDelimiterRegex().replace("\\", "")+" Española");
+            writer.println("Car "+FileParser.getDelimiterRegex().replace("\\", "")+" Auto");
+            writer.println("Pink "+FileParser.getDelimiterRegex().replace("\\", "")+" Rosa");
         }
 
         translationFile = TranslationFile.getInstance(tempFile);
