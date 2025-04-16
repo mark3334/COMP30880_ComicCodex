@@ -11,6 +11,8 @@ public class FileParser{
     // Delimiter as regex for reading/splitting
     private static final String delimiterRegex = "\\|\\|\\|"; // Escaped for regex (| is special)
 
+    public static File root = Helper.getRootDirectory();
+
     public static String getDelimiterLiteral() {
         return delimiterLiteral;
     }
@@ -66,7 +68,7 @@ public class FileParser{
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = br.readLine()) != null) {
-                String updatedLine = line.replace(oldDelimiter, newDelimiter);
+                String updatedLine = line.replaceFirst(oldDelimiter, newDelimiter);
                 updatedLines.add(updatedLine);
             }
         } catch (FileNotFoundException e) {
@@ -86,7 +88,6 @@ public class FileParser{
 
     public static File getTranslationFile() {
         ConfigurationFile configFile = ConfigurationFile.getInstance();
-        File root = Helper.getRootDirectory();
         String filepath = configFile.getValueByKey("TRANSLATIONS_PATH");
         filepath = new File(root, filepath).getAbsolutePath();
         filepath += ("/" + configFile.getValueByKey("SOURCE_LANGUAGE") + "_" + configFile.getValueByKey("TARGET_LANGUAGE"));
@@ -94,14 +95,17 @@ public class FileParser{
         return new File(filepath);
     }
     public static File getConfigFile() {
-        File root = Helper.getRootDirectory();
         return new File(root, "Resources/Config.txt");
+    }
+
+    public static File getFile(String pathFromRoot) {
+        return new File(root, pathFromRoot);
     }
 
     public static void main(String[] args)  {
 
-        String oldDelimiter = "(:)"; // \\|\\|\\|"; // escape each '|'
-        replaceDelimiter(getConfigFile(), oldDelimiter);
+        String oldDelimiter = ":"; // \\|\\|\\|"; // escape each '|'
+        //replaceDelimiter(getConfigFile(), oldDelimiter);
         replaceDelimiter(getTranslationFile(), oldDelimiter);
     }
 }

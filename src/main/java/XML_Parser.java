@@ -168,8 +168,7 @@
 
                 String setting = getText(panel, "setting", "an unknown place");
                 String below = getText(panel, "below", "").trim();
-
-                List<String> descriptions = new ArrayList<>();
+                String caption;
 
                 for (String pos : Arrays.asList("left", "middle", "right")) {
                     NodeList posNode = panel.getElementsByTagName(pos);
@@ -187,14 +186,14 @@
                             Element fig = (Element) figures.item(0);
                             String name = getText(fig, "name", "someone");
                             if (figureNames.contains(name)) {
-                                sceneDescription.append(name).append(" is ").append(balloonContent).append(".\n");
+                                sceneDescription.append("(").append(setting).append(")").append(name).append(" is ").append(balloonContent).append(".\n");
                             }
-                            String main = String.join(". ", descriptions);
-                            String extra = below.isEmpty() ? "" : " " + below;
-                            System.out.println(i + ". (" + setting + ") " + main + "." + extra);
                         }
                     }
                 }
+                caption = "";
+                if(!below.isEmpty()) caption = "Caption : " + below + "\n";
+                sceneDescription.append(caption);
             }
 
             return sceneDescription.toString();
@@ -312,6 +311,7 @@
         public List<String> getDialogue(String sceneDescription) {
             StringBuilder sb = new StringBuilder();
             sb.append("For each line, generate a short dialogue that the character might say, based on the action described.");
+            sb.append("Do not generate dialogue for the lines with Caption : just keep the caption in mind when generating the dialogue");
             sb.append("The character names are : ").append(figureNames.toString());
             sb.append("Only generate dialogue for lines that start with a character name. The response should be in this format:\n");
             sb.append("Alfie: <dialogue>\nBetty: <dialogue>\n");
@@ -585,7 +585,8 @@
                 for (Node scene : randomScenes) {
                     Node scenecopy = scene.cloneNode(true);
                     String sceneDescription = parser.getNarrativeArc(scene);
-                    System.out.println(sceneDescription);
+                    for(String line : sceneDescription.split("\n")) System.out.println(line);
+
                     List<String> sceneDialogue = parser.getDialogue(sceneDescription);
 
                     String fullDialogue = String.join("\n", sceneDialogue);

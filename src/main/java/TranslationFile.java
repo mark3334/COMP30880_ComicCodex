@@ -48,7 +48,7 @@ public class TranslationFile {
 
     public void writeTranslationMapping(String source, String target) {
         try (BufferedWriter w = new BufferedWriter(new FileWriter(file, true))) {
-            w.write(source + " : " + target);
+            w.write(source + FileParser.getDelimiterLiteral() + target);
             w.newLine();
         } catch (IOException e) {
             System.err.println("Error writing translation file: " + e.getMessage());
