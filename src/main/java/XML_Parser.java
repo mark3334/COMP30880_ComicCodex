@@ -568,7 +568,7 @@
             try {
                 XML_Parser parser = new XML_Parser(f);
                 parser.addTranslatedPanels();
-                parser.writeXML(outputFolder, "Verbs_" + Helper.getTargetLanguage());
+                parser.writeXML(outputFolder, "Verbs_" + ConfigurationFile.getTargetLanguage());
 
             }
             catch (Exception e){

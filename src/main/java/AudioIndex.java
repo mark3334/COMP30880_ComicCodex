@@ -52,7 +52,7 @@ public class AudioIndex {
             for (String line : Files.readAllLines(indexPath)) {
                 if (line.isBlank()) continue;
 
-                String[] parts = line.split("\\|\\|\\|"); // Split using regex for "|||"
+                String[] parts = line.split(FileParser.getDelimiterRegex()); // Split using regex for "|||"
                 if (parts.length != 3) {
                     System.err.println("Skipping malformed line: " + line);
                     continue;
@@ -64,7 +64,7 @@ public class AudioIndex {
 
                 try {
                     int index = Integer.parseInt(indexStr);
-                    String key = text + " ||| " + language;
+                    String key = text + FileParser.getDelimiterLiteral() + language;
                     indexes.put(key, index);
                     if (index > maxIndex) maxIndex = index;
                 } catch (NumberFormatException e) {
@@ -82,7 +82,7 @@ public class AudioIndex {
     }
 
     public int getOrAdd(String text, String language) {
-        String key = text + " ||| " + language;
+        String key = text + FileParser.getDelimiterLiteral() + language;
         if (indexes.containsKey(key)) {
             return indexes.get(key);
         }
@@ -100,7 +100,7 @@ public class AudioIndex {
     public void appendSingleEntry(String text, String language, int index) {
         try {
             Path indexPath = Path.of(AUDIO_INDEX_PATH);
-            String entry = text + " ||| " + language + " ||| " + index + "\n";
+            String entry = text + FileParser.getDelimiterLiteral() + language + FileParser.getDelimiterLiteral() + index + "\n";
             Files.writeString(indexPath, entry, StandardOpenOption.APPEND);
         } catch (IOException e) {
             System.err.println("Failed to append index entry: " + e.getMessage());
@@ -108,7 +108,7 @@ public class AudioIndex {
     }
 
     public boolean contains(String text, String language) {
-        return indexes.containsKey(text + " ||| " + language);
+        return indexes.containsKey(text + FileParser.getDelimiterLiteral() + language);
     }
 
 
