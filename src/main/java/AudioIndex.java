@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -40,6 +41,9 @@ public class AudioIndex {
             Path indexPath = Path.of(AUDIO_INDEX_PATH);
 
             if (!Files.exists(indexPath)) {
+                File root = Helper.getRootDirectory();
+                File folder = new File(root, "Resources/Audio");
+                FileParser.ensureFolderExists(folder);
                 System.out.println("Audio index file not found, creating: " + AUDIO_INDEX_PATH);
                 Files.createFile(indexPath); //Create empty file
                 return;
