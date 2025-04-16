@@ -123,4 +123,21 @@ public class XmlWriter {
             balloon.setAttribute("status", "speech");
         }
     }
+
+    public static void main(String[] args) throws ParserConfigurationException {
+        File root = Helper.getRootDirectory();
+        String path = "Resources/XMLinput/Sprint4Verbs.xml";
+        String outputFolder = "Resources/XMLoutput/";
+        File f = new File(root, path);
+        try {
+            XML_Parser parser = new XML_Parser(f);
+            parser.addTranslatedPanels();
+            parser.writeXML(outputFolder, "Verbs_" + ConfigurationFile.getTargetLanguage());
+
+        }
+        catch (Exception e){
+            System.out.println("Error: exception building DOM from XML");
+            e.printStackTrace();
+        }
+    }
 }

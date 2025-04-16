@@ -15,6 +15,7 @@ public final class Helper {
         }
         if (current == null) {
             System.out.println("Error: COMP30880_ComicCodex directory not found!");
+            // System.exit(1);
         }
         return current; // Returns the root directory or null if not found
     }
