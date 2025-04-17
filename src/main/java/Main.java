@@ -1,5 +1,7 @@
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -9,57 +11,69 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args)  {
-        File root = Helper.getRootDirectory();
-        String path = "Resources/XMLinput/Sprint4Verbs.xml";
-        String outputFolder = "Resources/XMLoutput/";
-        File f = new File(root, path);
+    public static void main(String[] args) {
         try {
-            XML_Parser parser = new XML_Parser(f);
-            parser.addTranslatedPanels();
-            parser.writeXML(outputFolder, "Verbs_" + ConfigurationFile.getTargetLanguage());
+            File root = Helper.getRootDirectory();
+            File inputFile = new File(root, "Resources/XMLoutput/Sprint5_InterwovenOutput.xml");
+            XML_Parser parser1 = new XML_Parser(inputFile);
 
-        }
-        catch (Exception e){
-            System.out.println("Error: exception building DOM from XML");
-            e.printStackTrace();
-        }
-        String path2 = "Resources/XMLinput/Sprint5scenes.xml";
-        File file2 = new File(root, path2);
-        try {
-            XML_Parser parser = new XML_Parser(file2);
-            parser.printInfo();
+            // Create a list to store all new scenes
             List<Node> newScenes = new ArrayList<>();
-            List<Node> randomScenes = parser.getRandomScenes(1);
-            for (Node scene : randomScenes) {
-                Node scenecopy = scene.cloneNode(true);
-                String sceneDescription = parser.getNarrativeArc(scene);
-                System.out.println(sceneDescription);
-                List<String> sceneDialogue = parser.getDialogue(sceneDescription);
 
-                String fullDialogue = String.join("\n", sceneDialogue);
+            //Use splitPanel to process the file.
+            NodeList sceneNodes = parser1.getDoc().getElementsByTagName("scene");
+            for (int i = 0; i < sceneNodes.getLength(); i++) {
+                Element oldScene = (Element) sceneNodes.item(i);
 
-                System.out.println(fullDialogue);
-                parser.addDialogue(scenecopy, fullDialogue);
+                Document doc = parser1.getDoc();
+                Element newScene = doc.createElement("scene");
 
-                newScenes.add(scenecopy);
+                NodeList panelNodes = oldScene.getElementsByTagName("panel");
+                for (int j = 0; j < panelNodes.getLength(); j++) {
+                    Element panel = (Element) panelNodes.item(j);
+
+                    List<Element> split = parser1.splitPanel(panel);
+
+                    for (Element p : split) {
+                        Node imported = doc.importNode(p, true);
+                        newScene.appendChild(imported);
+                    }
+                }
+
+                newScenes.add(newScene);
             }
 
-            Document newDoc1 = parser.scenesToDoc(newScenes);
+            // Write the split panels into the file.
+            Document newDoc = parser1.scenesToDoc(newScenes);
+            String splitPanelsFilePath = "Resources/XMLoutput/Sprint5_SplitPanels.xml";
+            parser1.docToXml(newDoc, splitPanelsFilePath);
 
-            String outpath = "Resources/XMLoutput/Sprint5_DialogueOutput.xml";
-            parser.docToXml(newDoc1, outpath);
+            //Read the splitpanels file and use the getOrAdd method to create the indexes and audio files.
+            File inputXml = new File(root, splitPanelsFilePath);
+            XML_Parser parser2 = new XML_Parser(inputXml);
 
-            String fname = "Sprint5_InterwovenOutput.xml";
-            XML_Parser parser2 = new XML_Parser(new File(root, outpath));
-            parser2.addTranslatedPanels();
-            parser2.writeXML(outputFolder, fname);
+            AudioManager audioManager = AudioManager.getInstance();
+            List<String> balloonTexts = parser2.getBalloons();
 
+            for (String text : balloonTexts) {
+                if (text.isEmpty()) continue;
 
-        } catch (Exception e){
-            System.out.println("Error: exception building DOM from XML");
+                audioManager.getOrAdd(text);
+            }
+
+            System.out.println("All audio and indexing processing is complete.");
+
+            //Use the addAudioToPanel method to write the <audio> tags into the file and generate the final output file.
+            Document docWithAudio = parser2.getDoc();
+            XML_Parser.addAudioToPanel(docWithAudio);
+
+            parser2.docToXml(docWithAudio, "Resources/XMLoutput/Sprint6_FinalAudioTagged.xml");
+
+            System.out.println("The final version has been generated.");
+
+        } catch (Exception e) {
+            System.out.println(" Error during split panel processing:");
             e.printStackTrace();
         }
     }
-
 }

@@ -1,5 +1,11 @@
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
@@ -9,16 +15,16 @@ import java.util.Map;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class AudioIndex {
+public class AudioManager {
 
-    private static AudioIndex instance;
+    private static AudioManager instance;
 
     private Map<String, Integer> indexes;
     private int nextIndex = 1;
     private final String AUDIO_INDEX_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_INDEX_PATH");
     private final String AUDIO_MP3_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_MP3_PATH");;
 
-    private AudioIndex () {
+    private AudioManager () {
 //        System.out.println(AUDIO_INDEX_PATH);
 //        System.out.println(AUDIO_MP3_PATH);
 //        System.out.println(nextIndex);
@@ -26,9 +32,9 @@ public class AudioIndex {
         load();
     }
 
-    public static synchronized AudioIndex getInstance() {
+    public static synchronized AudioManager getInstance() {
         if (instance == null) {
-            instance = new AudioIndex();
+            instance = new AudioManager();
         }
         return instance;
     }
@@ -81,18 +87,66 @@ public class AudioIndex {
 
     public int getOrAdd(String text) {
         if (indexes.containsKey(text)) {
-            return indexes.get(text);
+            return indexes.get(text); // If the text exists, return.
         }
 
-        //Otherwise need to Add this new (text + language) => index, and valid .mp3 file.
-        //TODO sudo code
         int newIndex = nextIndex++;
-        //Need to make TTS Call Successfully, and then only put() below.
-        indexes.put(text, newIndex);
-        appendSingleEntry(text, newIndex); //Save new index to disk.
+        File audioFolder = new File(FileParser.getRootDirectory(), "Resources/Audio");
+        File outputFile = new File(audioFolder, newIndex + ".mp3");
+
+        try {
+            FileParser.ensureFolderExists(audioFolder);
+
+            // If mp3 file already exists, skip generation and only add index mapping
+            if (outputFile.exists()) {
+                System.out.println("Skipped mp3 (already exists): " + newIndex + ".mp3");
+            } else {
+                ConfigurationFile config = ConfigurationFile.getInstance();
+                String apiKey = config.getValueByKey("API_KEY");
+                String model = config.getValueByKey("AUDIO_MODEL");
+                String voice = config.getValueByKey("AUDIO_VOICE");
+
+                // Build the json & request
+                String json = String.format("""
+                {
+                    "model": "%s",
+                    "input": "%s",
+                    "voice": "%s"
+                }
+            """, model, text, voice);
+
+                //Send the request to openAi
+                HttpRequest request = HttpRequest.newBuilder()
+                        .uri(URI.create("https://api.openai.com/v1/audio/speech"))
+                        .header("Authorization", "Bearer " + apiKey)
+                        .header("Content-Type", "application/json")
+                        .header("Accept", "audio/mpeg")
+                        .POST(HttpRequest.BodyPublishers.ofString(json))
+                        .build();
+
+                HttpClient client = HttpClient.newHttpClient();
+                HttpResponse<InputStream> response = client.send(request, HttpResponse.BodyHandlers.ofInputStream());
+
+                //Create the audio file
+                try (FileOutputStream out = new FileOutputStream(outputFile)) {
+                    response.body().transferTo(out);
+                }
+
+                System.out.println("Generated: " + newIndex + ".mp3");
+            }
+
+            // Add indexes into the file and save
+            indexes.put(text, newIndex);
+            appendSingleEntry(text, newIndex);
+
+        } catch (Exception e) {
+            System.err.println("Failed to generate MP3 for text: " + text);
+            e.printStackTrace();
+        }
 
         return newIndex;
     }
+
 
     public void appendSingleEntry(String text, int index) {
         try {
@@ -111,7 +165,7 @@ public class AudioIndex {
 
     public static void main(String[] args) {
         HashMap<String, Integer> index = new HashMap<>();
-        AudioIndex audioIndex = new AudioIndex();
+        AudioManager audioIndex = new AudioManager();
 
         System.out.println("Hashmap Before Adding: "+audioIndex.indexes.toString());
 
