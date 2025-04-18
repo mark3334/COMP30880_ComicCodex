@@ -21,20 +21,29 @@ public class AudioManager {
 
     private Map<String, Integer> indexes;
     private int nextIndex = 1;
-    private final String AUDIO_INDEX_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_INDEX_PATH");
-    private final String AUDIO_MP3_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_MP3_PATH");;
+    private String AUDIO_INDEX_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_INDEX_PATH");
+    private String AUDIO_MP3_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_MP3_PATH");
 
     private AudioManager () {
-//        System.out.println(AUDIO_INDEX_PATH);
-//        System.out.println(AUDIO_MP3_PATH);
-//        System.out.println(nextIndex);
-//        System.out.println(indexes);
+        load();
+    }
+
+    private AudioManager (String audioIndexPath, String audioMp3Path) {
+        this.AUDIO_INDEX_PATH = audioIndexPath;
+        this.AUDIO_MP3_PATH = audioMp3Path;
         load();
     }
 
     public static synchronized AudioManager getInstance() {
         if (instance == null) {
             instance = new AudioManager();
+        }
+        return instance;
+    }
+
+    public static synchronized AudioManager getInstance(String audioIndexPath, String audioMp3Path) {
+        if (instance == null) {
+            instance = new AudioManager(audioIndexPath, audioMp3Path);
         }
         return instance;
     }
@@ -165,7 +174,10 @@ public class AudioManager {
 
     public static void main(String[] args) {
         HashMap<String, Integer> index = new HashMap<>();
-        AudioManager audioIndex = new AudioManager();
+        AudioManager audioIndex = new AudioManager(
+                ConfigurationFile.getInstance().getValueByKey("AUDIO_INDEX_PATH"),
+                ConfigurationFile.getInstance().getValueByKey("AUDIO_MP3_PATH")
+        );
 
         System.out.println("Hashmap Before Adding: "+audioIndex.indexes.toString());
 
