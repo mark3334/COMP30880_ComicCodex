@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<comic>
+    
+  <scene>
+                 
+    
+    <panel>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>nine</pose>
+                                      
+          
+          <facing>right</facing>
+                                      
+          
+          <horizontal>more</horizontal>
+                                   
+        
+        </figure>
+                            
+      
+      </left>
+                        
+      
+      <right>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Betty</id>
+                                      
+          
+          <name>Betty</name>
+                                      
+          
+          <appearance>female</appearance>
+                                      
+          
+          <pose>eight flipped</pose>
+                                      
+          
+          <facing>left</facing>
+                                      
+          
+          <horizontal>less</horizontal>
+                                   
+        
+        </figure>
+                            
+      
+      </right>
+                        
+      
+      <below>Scene 98</below>
+                        
+      
+      <border>white</border>
+                     
+    
+    </panel>
+                 
+    
+    <panel>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>reading on bicycle</pose>
+                                      
+          
+          <facing>right</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="thought">
+                                      
+          
+          <content>Whoa! Did that balloon just pop?</content>
+                                   
+        
+        </balloon>
+                            
+      
+      </left>
+                        
+      
+      <setting>library exterior</setting>
+                     
+    
+    </panel>
+    <panel>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>reading on bicycle</pose>
+                                      
+          
+          <facing>right</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="thought">¡Guau! ¿Ese globo acaba de estallar?</balloon>
+                            
+      
+      </left>
+                        
+      
+      <setting>library exterior</setting>
+                     
+    
+    </panel>
+                 
+    
+    <panel>
+                        
+      
+      <above>library interior</above>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>whistling while reading</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="thought">
+                                      
+          
+          <content>whistling while reading</content>
+                                   
+        
+        </balloon>
+                            
+      
+      </left>
+                        
+      
+      <right>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Betty</id>
+                                      
+          
+          <name>Betty</name>
+                                      
+          
+          <appearance>female</appearance>
+                                      
+          
+          <pose>silencing</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="thought">
+                                      
+          
+          <content>Surprise! I hope I didn't startle you too much!</content>
+                                   
+        
+        </balloon>
+                            
+      
+      </right>
+                        
+      
+      <setting>library</setting>
+                     
+    
+    </panel>
+    <panel>
+                        
+      
+      <above>library interior</above>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>whistling while reading</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="thought">silbando mientras leo</balloon>
+                            
+      
+      </left>
+                        
+      
+      <right>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Betty</id>
+                                      
+          
+          <name>Betty</name>
+                                      
+          
+          <appearance>female</appearance>
+                                      
+          
+          <pose>silencing</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="thought">¡Sorpresa! ¡Espero no haberte asustado demasiado!</balloon>
+                            
+      
+      </right>
+                        
+      
+      <setting>library</setting>
+                     
+    
+    </panel>
+                 
+    
+    <panel>
+                        
+      
+      <above>library interior</above>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>reading in headphones</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">
+                                      
+          
+          <content>whistling loudly while reading in  headphones</content>
+                                   
+        
+        </balloon>
+                            
+      
+      </left>
+                        
+      
+      <right>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Betty</id>
+                                      
+          
+          <name>Betty</name>
+                                      
+          
+          <appearance>female</appearance>
+                                      
+          
+          <pose>whispering</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">
+                                      
+          
+          <content>shushing</content>
+                                   
+        
+        </balloon>
+                            
+      
+      </right>
+                        
+      
+      <setting>library</setting>
+                     
+    
+    </panel>
+    <panel>
+                        
+      
+      <above>library interior</above>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>reading in headphones</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">silbando fuertemente mientras leo con auriculares</balloon>
+                            
+      
+      </left>
+                        
+      
+      <right>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Betty</id>
+                                      
+          
+          <name>Betty</name>
+                                      
+          
+          <appearance>female</appearance>
+                                      
+          
+          <pose>whispering</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">silenciando</balloon>
+                            
+      
+      </right>
+                        
+      
+      <setting>library</setting>
+                     
+    
+    </panel>
+                 
+    
+    <panel>
+                        
+      
+      <above>library interior</above>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>whistling while reading</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">
+                                      
+          
+          <content>humming loudly while reading</content>
+                                   
+        
+        </balloon>
+                            
+      
+      </left>
+                        
+      
+      <right>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Betty</id>
+                                      
+          
+          <name>Betty</name>
+                                      
+          
+          <appearance>female</appearance>
+                                      
+          
+          <pose>screaming</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">
+                                      
+          
+          <content>screaming for silence</content>
+                                   
+        
+        </balloon>
+                            
+      
+      </right>
+                        
+      
+      <setting>library</setting>
+                     
+    
+    </panel>
+    <panel>
+                        
+      
+      <above>library interior</above>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>whistling while reading</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">tarareando fuertemente mientras leo</balloon>
+                            
+      
+      </left>
+                        
+      
+      <right>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Betty</id>
+                                      
+          
+          <name>Betty</name>
+                                      
+          
+          <appearance>female</appearance>
+                                      
+          
+          <pose>screaming</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">gritando por silencio</balloon>
+                            
+      
+      </right>
+                        
+      
+      <setting>library</setting>
+                     
+    
+    </panel>
+                 
+    
+    <panel>
+                        
+      
+      <above>library interior</above>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>reading in headphones</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="thought">
+                                      
+          
+          <content>reading in headphones</content>
+                                   
+        
+        </balloon>
+                            
+      
+      </left>
+                        
+      
+      <right>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Betty</id>
+                                      
+          
+          <name>Betty</name>
+                                      
+          
+          <appearance>female</appearance>
+                                      
+          
+          <pose>blowing balloon</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">
+                                      
+          
+          <content>inflating a balloon</content>
+                                   
+        
+        </balloon>
+                            
+      
+      </right>
+                        
+      
+      <setting>library</setting>
+                     
+    
+    </panel>
+    <panel>
+                        
+      
+      <above>library interior</above>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>reading in headphones</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="thought">leyendo con auriculares</balloon>
+                            
+      
+      </left>
+                        
+      
+      <right>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Betty</id>
+                                      
+          
+          <name>Betty</name>
+                                      
+          
+          <appearance>female</appearance>
+                                      
+          
+          <pose>blowing balloon</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">inflar un globo</balloon>
+                            
+      
+      </right>
+                        
+      
+      <setting>library</setting>
+                     
+    
+    </panel>
+                 
+    
+    <panel>
+                        
+      
+      <above>library interior</above>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>falling with book</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">
+                                      
+          
+          <content>falling with surprise</content>
+                                   
+        
+        </balloon>
+                            
+      
+      </left>
+                        
+      
+      <right>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Betty</id>
+                                      
+          
+          <name>Betty</name>
+                                      
+          
+          <appearance>female</appearance>
+                                      
+          
+          <pose>popping balloon</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">
+                                      
+          
+          <content>loudly popping balloon with a pin</content>
+                                   
+        
+        </balloon>
+                            
+      
+      </right>
+                        
+      
+      <setting>library</setting>
+                     
+    
+    </panel>
+    <panel>
+                        
+      
+      <above>library interior</above>
+                        
+      
+      <left>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Alfie</id>
+                                      
+          
+          <name>Alfie</name>
+                                      
+          
+          <appearance>male</appearance>
+                                      
+          
+          <skin>light brown</skin>
+                                      
+          
+          <hair>dark brown</hair>
+                                      
+          
+          <lips>red</lips>
+                                      
+          
+          <pose>falling with book</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">cayendo con sorpresa</balloon>
+                            
+      
+      </left>
+                        
+      
+      <right>
+                               
+        
+        <figure>
+                                      
+          
+          <id>Betty</id>
+                                      
+          
+          <name>Betty</name>
+                                      
+          
+          <appearance>female</appearance>
+                                      
+          
+          <pose>popping balloon</pose>
+                                      
+          
+          <facing>left</facing>
+                                   
+        
+        </figure>
+                               
+        
+        <balloon status="speech">reventando un globo fuertemente con un alfiler</balloon>
+                            
+      
+      </right>
+                        
+      
+      <setting>library</setting>
+                     
+    
+    </panel>
+  </scene>
+</comic>

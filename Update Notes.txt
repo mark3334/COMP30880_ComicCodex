@@ -1,0 +1,24 @@
+For AudioIndex.java and TTStest.java
+ - Merge the two classes into a single AudioManager class.
+ - Merge the generateMp3File method into the getOrAdd method.
+ - If the text doesn't exist, add it to indexes.txt and generate the MP3 file.
+ - Delete TTStest.java File
+
+For XML Parser.java
+- Add addAudioToPanel method, it inserts <audio> tags into comic panels that contain dialogue or thought text. It links each <content> with corresponding TTS-generated audio files for source and target languages.
+
+For Main.java
+- Add the code needed for Sprint 6.
+	- Step1: Use splitPanel to process the file.
+	- Step2: Read the splitpanels file and use the getOrAdd method to create the indexes and audio files.
+	- Step3: 
+
+Some issues:
+ - It seems like the file we generated in sprint 5 is being created twice. I manually modified the file to complete Sprint 6, but we’ll need to optimize the code later.
+
+
+
+
+
+
+
