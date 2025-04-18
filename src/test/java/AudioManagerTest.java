@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,21 +16,32 @@ public class AudioManagerTest {
 
     @BeforeEach
     void setupOnce() throws IOException {
-        tempIndexFile = Files.createTempFile("indexesTest", ".txt");
-        tempAudioFolder = Files.createTempDirectory("mp3FilesTest");
-        audioManager= AudioManager.getInstance(tempIndexFile.toString(), tempAudioFolder.toString());
+        tempIndexFile = Path.of("Resources/Audio/Tests", "indexeTest.txt");
+        tempAudioFolder = Path.of("Resources/Audio/Tests", "mp3FileTest");
+
+        // Ensure folders exist
+        Files.createDirectories(tempAudioFolder.getParent());
+        Files.createDirectories(tempAudioFolder);
+
+        if (Files.exists(tempIndexFile)) {
+            Files.write(tempIndexFile, new byte[0]); // clear file
+        } else {
+            Files.createFile(tempIndexFile);
+        }
+
+        audioManager = AudioManager.getInstance(tempIndexFile.toString(), tempAudioFolder.toString());
     }
 
-    @AfterEach
-    void cleanupOnce() throws IOException {
-        System.out.println("Deleting "+tempIndexFile.getFileName());
-        Files.deleteIfExists(tempIndexFile);
-        for (File file : tempAudioFolder.toFile().listFiles()) {
-            System.out.println("Deleting " + file.getName());
-            file.delete();
-        }
-        tempAudioFolder.toFile().delete();
-    }
+//    @AfterEach
+//    void cleanupOnce() throws IOException {
+//        System.out.println("Deleting "+tempIndexFile.getFileName());
+//        Files.deleteIfExists(tempIndexFile);
+//        for (File file : tempAudioFolder.toFile().listFiles()) {
+//            System.out.println("Deleting " + file.getName());
+//            file.delete();
+//        }
+//        tempAudioFolder.toFile().delete();
+//    }
 
     @Test
     void testTextNotPresentInitially() {
@@ -46,7 +58,12 @@ public class AudioManagerTest {
         assertTrue(audioManager.contains("Bonjour"));
         assertTrue(audioManager.contains("Hola"));
 
-        //Still need to test if mp3 file was created through TTS call.
+
+        File audioFolder = new File(FileParser.getRootDirectory(), tempAudioFolder.toString());
+        File outputFile = new File(audioFolder,  1 + ".mp3");
+        File outputFile2 = new File(audioFolder,  1 + ".mp3");
+        assertTrue(outputFile.exists());
+        assertTrue(outputFile2.exists());
     }
 
     @Test
@@ -57,12 +74,12 @@ public class AudioManagerTest {
     }
 
     @Test
-    public void testAppendSingleEntryCreatesCorrectFormat() {
+    public void testAppendSingleEntryCreatesCorrectFormat() throws IOException {
+        audioManager.appendSingleEntry("Testing", 123);
 
+        List<String> lines = Files.readAllLines(tempIndexFile);
+        assertEquals(1, lines.size());
+        //System.out.println("Line 0; "+lines.get(0));
+        assertTrue(lines.get(0).contains("Testing "+FileParser.getDelimiterLiteral()+" 123"));
     }
-
-
-
-
-
 }
