@@ -45,6 +45,9 @@ public class ConfigurationFile {
     public String getValueByKey(String keyName) {
         return this.configMap.getOrDefault(keyName, "Key not found");
     }
+    public static String get(String key) {
+        return getInstance().getValueByKey(key);
+    }
 
     public static int getTokenLimit() {
         ConfigurationFile c = ConfigurationFile.getInstance();

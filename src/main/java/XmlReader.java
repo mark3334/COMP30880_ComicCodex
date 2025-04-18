@@ -166,4 +166,13 @@ public class XmlReader {
         return dialogues;
     }
 
+    public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
+        String fileName = "Sprint5scenes.xml";
+        String folder = ConfigurationFile.get("XML_INPUT_PATH");
+        String path = folder + "/" + fileName;
+        File file = FileParser.getFile(path);
+        XmlReader reader = new XmlReader(file);
+        reader.printInfo();
+    }
+
 }
