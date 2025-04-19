@@ -97,6 +97,8 @@ public class AudioManager {
         int newIndex = nextIndex++;
         File outputFile = new File(mp3Folder, newIndex + ".mp3");
 
+        String cleanedText = text.replace("(plural)", "").trim();
+
         try {
 
             // If mp3 file already exists, skip generation and only add index mapping
@@ -115,7 +117,7 @@ public class AudioManager {
                     "input": "%s",
                     "voice": "%s"
                 }
-            """, model, text, voice);
+            """, model, cleanedText, voice);
 
                 //Send the request to openAi
                 HttpRequest request = HttpRequest.newBuilder()
