@@ -525,7 +525,6 @@
 
         public List<Element> splitPanel(Element panel) {
             List<Element> result = new ArrayList<>();
-            Document doc = panel.getOwnerDocument();
 
             NodeList balloons = panel.getElementsByTagName("balloon");
             if (balloons.getLength() <= 1) {
@@ -533,25 +532,28 @@
                 return result;
             }
 
-            Element panel1 = (Element) panel.cloneNode(true);
-            Element panel2 = (Element) panel.cloneNode(true);
+            if (balloons.getLength() == 2) { //Modify the condition logic, if there are exactly two balloons, split the panel.
+                Element panel1 = (Element) panel.cloneNode(true);
+                Element panel2 = (Element) panel.cloneNode(true);
 
-            NodeList balloons1 = panel1.getElementsByTagName("balloon");
-            if (balloons1.getLength() > 1) {
-                Node toRemove = balloons1.item(1);
-                toRemove.getParentNode().removeChild(toRemove);
+                // Remove second balloon from panel1
+                Node toRemove1 = panel1.getElementsByTagName("balloon").item(1);
+                toRemove1.getParentNode().removeChild(toRemove1);
+
+                // Remove first balloon from panel2
+                Node toRemove2 = panel2.getElementsByTagName("balloon").item(0);
+                toRemove2.getParentNode().removeChild(toRemove2);
+
+                result.add(panel1);
+                result.add(panel2);
+                return result;
             }
 
-            NodeList balloons2 = panel2.getElementsByTagName("balloon");
-            if (balloons2.getLength() > 0) {
-                Node toRemove = balloons2.item(0);
-                toRemove.getParentNode().removeChild(toRemove);
-            }
-
-            result.add(panel1);
-            result.add(panel2);
+            // If more than 2 balloons, return original panel for now (or could be extended later)
+            result.add(panel);
             return result;
         }
+
 
         public static void addAudioToPanel(Document doc) {
             Map<String, String> audioMap = new HashMap<>();
