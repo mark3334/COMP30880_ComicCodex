@@ -25,7 +25,7 @@ public class XmlWriter {
     private Element scenes;
     private XmlReader reader;
     private TranslationFile t = TranslationFile.getInstance();
-
+    private AudioManager audioManager = AudioManager.getInstance();
     public XmlWriter(File sourceXML) throws ParserConfigurationException, IOException, SAXException {
         FileParser.ensureFolderExists(FileParser.getFile(outFolder));
         this.reader = new XmlReader(sourceXML);

@@ -556,10 +556,7 @@
 
 
         public static void addAudioToPanel(Document doc) {
-            Map<String, String> audioMap = new HashMap<>();
-            File indexFile = FileParser.getFile("Resources/Audio/indexes.txt");
-            FileParser.fileToHashmap(indexFile, audioMap, false);
-
+            AudioManager audioManager = AudioManager.getInstance();
             NodeList panels = doc.getElementsByTagName("panel");
 
             for (int i = 0; i < panels.getLength(); i++) {
@@ -579,15 +576,12 @@
                         text = balloon.getTextContent().trim();
                     }
 
-                    if (audioMap.containsKey(text)) {
-                        String index = audioMap.get(text);
-
-                        Element audioElement = doc.createElement("audio");
-                        audioElement.setTextContent(index + ".mp3");
-
-                        panel.appendChild(audioElement);
-                        break; // only one <audio> for each panel
-                    }
+                    int index = audioManager.getOrAdd(text);
+                    Element audioElement = doc.createElement("audio");
+                    audioElement.setTextContent(index + ".mp3");
+                    panel.appendChild(audioElement);
+                    break; // only one <audio> for each panel
+                    // TODO ? split panels
                 }
             }
         }
