@@ -183,7 +183,7 @@ public class XmlWriter {
 //            System.out.println("Error: adding translated panels is for when indoc = outdoc");
 //            System.out.println("This function should only be called when outdoc is null");
 //        }
-//      outDoc = inDoc;
+        outDoc = inDoc;
         reader.ensureTranslatedBalloons();
 
         List<Node> panelsToDuplicate = reader.getPanelsToDuplicate();
