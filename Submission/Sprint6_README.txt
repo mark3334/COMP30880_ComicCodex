@@ -7,5 +7,5 @@ Members:
     Name:   Guanqiao Han  	    Student Number: 21209757
     Name:	Abdullah Shinwari	Student Number: 22496944
 
-navigate to Submissions folder and run  java -jar Sprint5executable.jar to execute the Main method
+navigate to Submissions folder and run  java -jar Sprint6executable.jar to execute the Main method
 

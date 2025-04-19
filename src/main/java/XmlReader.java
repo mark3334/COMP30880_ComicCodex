@@ -7,9 +7,16 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -32,6 +39,7 @@ public class XmlReader {
         this.client = OpenAIClient.getInstance();
     }
 
+    public File getFile() { return file; }
     public Document getDoc() { return doc; }
     public void printInfo() {
         System.out.println("\nXML Filepath : " + this.file.getAbsolutePath());
@@ -128,13 +136,79 @@ public class XmlReader {
             System.out.println("All balloon text contents are translated");
             return;
         }
-        else t.translateAllPhrases(balloonContents);
+        else{
+            System.out.println("Now translating balloon contents : ...");
+            t.translateAllPhrases(balloonContents);
+        }
         if (!t.allTranslated(balloonContents)) System.out.println("Error : Balloon text contents could not be translated");
     }
 
+    public static String nodeToString(Node node) {
+        try {
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+            StringWriter writer = new StringWriter();
+            transformer.transform(new DOMSource(node), new StreamResult(writer));
+            return writer.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public String getNarrativeArc(Node sceneNode) {
+        NodeList panels = ((Element) sceneNode).getElementsByTagName("panel");
+
+        StringBuilder sceneDescription = new StringBuilder();
+
+        for (int i = 1; i < panels.getLength(); i++) {
+            Element panel = (Element) panels.item(i);
+
+            String setting = getText(panel, "setting", "an unknown place");
+            String below = getText(panel, "below", "").trim();
+            String caption;
+
+            for (String pos : Arrays.asList("left", "middle", "right")) {
+                NodeList posNode = panel.getElementsByTagName(pos);
+                if (posNode.getLength() > 0) {
+                    Element posElement = (Element) posNode.item(0);
+                    NodeList figures = posElement.getElementsByTagName("figure");
+                    NodeList balloons = posElement.getElementsByTagName("balloon");
+
+                    String balloonContent = "doing something";
+                    if (balloons.getLength() > 0) {
+                        balloonContent = balloons.item(0).getTextContent().trim();
+                    }
+
+                    if (figures.getLength() > 0) {
+                        Element fig = (Element) figures.item(0);
+                        String name = getText(fig, "name", "someone");
+                        if (figureNames.contains(name)) {
+                            sceneDescription.append("(").append(setting).append(")").append(name).append(" is ").append(balloonContent).append(".\n");
+                        }
+                    }
+                }
+            }
+            caption = "";
+            if(!below.isEmpty()) caption = "Caption : " + below + "\n";
+            sceneDescription.append(caption);
+        }
+
+        return sceneDescription.toString();
+    }
+
+    public String getText(Element parent, String tag, String defaultValue) {
+        NodeList list = parent.getElementsByTagName(tag);
+        if (list.getLength() > 0 && list.item(0).getTextContent() != null) {
+            return list.item(0).getTextContent().trim();
+        }
+        return defaultValue;
+    }
     public List<String> getDialogue(String sceneDescription) {
         StringBuilder sb = new StringBuilder();
         sb.append("For each line, generate a short dialogue that the character might say, based on the action described.");
+        sb.append("Do not generate dialogue for the lines with Caption : just keep the caption in mind when generating the dialogue");
         sb.append("The character names are : ").append(figureNames.toString());
         sb.append("Only generate dialogue for lines that start with a character name. The response should be in this format:\n");
         sb.append("Alfie: <dialogue>\nBetty: <dialogue>\n");
@@ -167,12 +241,18 @@ public class XmlReader {
     }
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
-        String fileName = "Sprint5scenes.xml";
-        String folder = ConfigurationFile.get("XML_INPUT_PATH");
-        String path = folder + "/" + fileName;
-        File file = FileParser.getFile(path);
-        XmlReader reader = new XmlReader(file);
+        String fileNameVerbs = "Sprint4verbs.xml";
+        String inFolder = ConfigurationFile.get("XML_INPUT_PATH");
+        String path = inFolder + "/" + fileNameVerbs;
+        File readFile = FileParser.getFile(path);
+        XmlReader reader = new XmlReader(readFile);
         reader.printInfo();
+
+        String fileNameScenes = "Sprint5scenes.xml";
+        String pathScenes = inFolder + "/"  + fileNameScenes;
+        File scenesFile = FileParser.getFile(pathScenes);
+        XmlReader readerScenes = new XmlReader(scenesFile);
+        readerScenes.printInfo();
     }
 
 }
