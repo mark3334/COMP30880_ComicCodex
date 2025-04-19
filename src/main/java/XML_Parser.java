@@ -555,36 +555,6 @@
         }
 
 
-        public static void addAudioToPanel(Document doc) {
-            AudioManager audioManager = AudioManager.getInstance();
-            NodeList panels = doc.getElementsByTagName("panel");
-
-            for (int i = 0; i < panels.getLength(); i++) {
-                Element panel = (Element) panels.item(i);
-
-                NodeList balloonList = panel.getElementsByTagName("balloon");
-                for (int j = 0; j < balloonList.getLength(); j++) {
-                    Element balloon = (Element) balloonList.item(j);
-                    String text = "";
-
-                    // If the format is <balloon><content>...</content></balloon>
-                    NodeList contents = balloon.getElementsByTagName("content");
-                    if (contents.getLength() > 0) {
-                        text = contents.item(0).getTextContent().trim();
-                    } else {
-                        // If the format is <balloon>...</balloon>
-                        text = balloon.getTextContent().trim();
-                    }
-
-                    int index = audioManager.getOrAdd(text);
-                    Element audioElement = doc.createElement("audio");
-                    audioElement.setTextContent(index + ".mp3");
-                    panel.appendChild(audioElement);
-                    break; // only one <audio> for each panel
-                    // TODO ? split panels
-                }
-            }
-        }
 
 
 

@@ -13,8 +13,6 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, TransformerException, SAXException {
-        System.out.println(("Pay attention to tense and person; if \\\"(plural)\\\" is included, \" +\n" +
-                "                \"make sure the translation reflects the plural form, and remove \\\"(plural)\\\" in the translated output"));
         XmlWriter.main(args);
     }
 }
