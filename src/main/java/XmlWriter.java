@@ -19,19 +19,21 @@ import java.util.*;
 public class XmlWriter {
     private Document outDoc;
     private Document inDoc;
-    private String outFolder;
+    private String outFolder = ConfigurationFile.get("XML_OUTPUT_PATH");
     private String fileName;
     private Element comic;
     private Element scenes;
     private XmlReader reader;
     private TranslationFile t = TranslationFile.getInstance();
 
-    public XmlWriter(String outFolder, String fileName, File sourceXML) throws ParserConfigurationException, IOException, SAXException {
-        //this.fileName = fileName;
-        this.outFolder = outFolder;
+    public XmlWriter(File sourceXML) throws ParserConfigurationException, IOException, SAXException {
         FileParser.ensureFolderExists(FileParser.getFile(outFolder));
         this.reader = new XmlReader(sourceXML);
         this.inDoc = reader.getDoc();
+    }
+
+    public void setOutFolder(String folderPath) {
+        outFolder = folderPath;
     }
     public void createEmptyComic() throws ParserConfigurationException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -225,8 +227,7 @@ public class XmlWriter {
         String inFolder = ConfigurationFile.get("XML_INPUT_PATH");
         String inPath = inFolder + "/" + fileNameVerbs;
         File verbsFile = FileParser.getFile(inPath);
-        String outputFolder = ConfigurationFile.get("XML_OUTPUT_PATH");
-        XmlWriter writerVerbs = new XmlWriter(outputFolder, fileNameVerbs, verbsFile);
+        XmlWriter writerVerbs = new XmlWriter(verbsFile);
         writerVerbs.addTranslatedPanels();
         writerVerbs.writeXML(fileNameVerbs);
 
@@ -234,9 +235,10 @@ public class XmlWriter {
         String fileNameScenesT = "Sprint5scenesTranslated.xml";
         String pathScenes = inFolder + "/"  + fileNameScenes;
         File scenesFile = FileParser.getFile(pathScenes);
-        XmlWriter writerScenes = new XmlWriter(outputFolder, fileNameScenes, scenesFile);
+        XmlWriter writerScenes = new XmlWriter(scenesFile);
         writerScenes.createNewScenes(1);
         writerScenes.addTranslatedPanels();
+        writerScenes.setBalloonSpeech();
         writerScenes.writeXMLTranslated(fileNameScenes, fileNameScenesT);
 
 
