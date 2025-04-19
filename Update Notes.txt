@@ -11,7 +11,7 @@ For Main.java
 - Add the code needed for Sprint 6.
 	- Step1: Use splitPanel to process the file.
 	- Step2: Read the splitpanels file and use the getOrAdd method to create the indexes and audio files.
-	- Step3: 
+	- Step3: Use addAudioToPanel method to generate the final required file.
 
 Some issues:
  - It seems like the file we generated in sprint 5 is being created twice. I manually modified the file to complete Sprint 6, but we’ll need to optimize the code later.

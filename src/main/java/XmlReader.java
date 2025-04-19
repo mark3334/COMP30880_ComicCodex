@@ -206,10 +206,45 @@ public class XmlReader {
         }
         return defaultValue;
     }
+
+    private List<String> ensureValidDialogue(String prompt) {
+        int maxRetries = 2;
+        List<String> dialogues = new ArrayList<>();
+
+        while (maxRetries-- > 0) {
+            String response = client.getChatCompletion(prompt);
+            dialogues.clear(); // Clear before reusing the list
+
+            boolean allValid = true;
+
+            for (String line : response.split("\n")) {
+                line = line.trim();
+                if (!line.isEmpty()) {
+                    dialogues.add(line);
+
+                    // Remove non-letter characters and split by space to get words
+                    String[] words = line.replaceAll("[^a-zA-Z]", " ").trim().split("\\s+");
+
+                    // If no valid words or all are one-character, mark as invalid
+                    if (words.length == 0 || Arrays.stream(words).allMatch(s -> s.length() <= 1)) {
+                        allValid = false;
+                    }
+                }
+            }
+
+            if (allValid) break;
+            System.out.println("Invalid response detected, retrying...");
+        }
+
+        return dialogues;
+    }
+
+
     public List<String> getDialogue(String sceneDescription) {
         StringBuilder sb = new StringBuilder();
         sb.append("For each line, generate a short dialogue that the character might say, based on the action described.");
         sb.append("Do not generate dialogue for the lines with Caption : just keep the caption in mind when generating the dialogue");
+        sb.append("Each translation must contain at least one word, not just punctuation or ellipses (e.g., \"...\" is not acceptable).\n");
         sb.append("The character names are : ").append(figureNames.toString());
         sb.append("Only generate dialogue for lines that start with a character name. The response should be in this format:\n");
         sb.append("Alfie: <dialogue>\nBetty: <dialogue>\n");
@@ -228,17 +263,8 @@ public class XmlReader {
         }
 
         String prompt = sb.toString();
-        String response = client.getChatCompletion(prompt);
 
-        List<String> dialogues = new ArrayList<>();
-        for (String line : response.split("\n")) {
-            line = line.trim();
-            if (!line.isEmpty()) {
-                dialogues.add(line);
-            }
-        }
-
-        return dialogues;
+        return ensureValidDialogue(prompt);
     }
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
