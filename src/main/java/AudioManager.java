@@ -94,7 +94,7 @@ public class AudioManager {
         if (indexes.containsKey(text)) {
             return indexes.get(text); // If the text exists, return.
         }
-
+        System.out.println("Creating mp3 file for text: " + text);
         int newIndex = nextIndex++;
         File outputFile = new File(mp3Folder, newIndex + ".mp3");
 

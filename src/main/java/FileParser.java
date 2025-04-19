@@ -32,6 +32,10 @@ public class FileParser{
         if (!appendMode) {
             hashMap.clear();
         }
+        if (file.length() == 0) {
+            System.out.println("File is empty: " + file.getAbsolutePath());
+            return;
+        }
 
         String regex = getDelimiterRegex();
         try (BufferedReader fileReader = new BufferedReader(new FileReader(file))) {
