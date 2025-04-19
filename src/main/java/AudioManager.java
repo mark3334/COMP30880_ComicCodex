@@ -30,7 +30,6 @@ public class AudioManager {
 
     private final Path indexPath = indexFile.toPath();
     private AudioManager () {
-        this.mp3Folder = FileParser.getFile(AUDIO_MP3_PATH);
         load();
     }
 
