@@ -57,7 +57,7 @@ public class AudioManager {
 
             if (!Files.exists(indexPath)) {
                 File root = Helper.getRootDirectory();
-                File folder = new File(root, "Resources/Audio");
+                File folder = new File(root, AUDIO_INDEX_PATH);
                 FileParser.ensureFolderExists(folder);
                 System.out.println("Audio index file not found, creating: " + AUDIO_INDEX_PATH);
                 Files.createFile(indexPath); //Create empty file
@@ -100,7 +100,7 @@ public class AudioManager {
         }
 
         int newIndex = nextIndex++;
-        File audioFolder = new File(FileParser.getRootDirectory(), "Resources/Audio");
+        File audioFolder = new File(FileParser.getRootDirectory(), AUDIO_MP3_PATH);
         File outputFile = new File(audioFolder, newIndex + ".mp3");
 
         try {
