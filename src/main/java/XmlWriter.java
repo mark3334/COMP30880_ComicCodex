@@ -262,6 +262,7 @@ public class XmlWriter {
         File verbsFile = FileParser.getFile(inPath);
         XmlWriter writerVerbs = new XmlWriter(verbsFile);
         writerVerbs.addTranslatedPanels();
+        writerVerbs.addAudio();
         writerVerbs.writeXML(fileNameVerbs);
 
         String fileNameScenes = "Sprint5scenes.xml";
