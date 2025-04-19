@@ -21,19 +21,22 @@ public class AudioManager {
 
     private Map<String, Integer> indexes;
     private int nextIndex = 1;
-    private String AUDIO_INDEX_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_INDEX_PATH");
+    private final String AUDIO_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_PATH");
     private String AUDIO_MP3_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_MP3_PATH");
-    private final File audioFolder;
+    private File mp3Folder;
+    private final String indexName = "indexes.txt";
+    private File indexFile = FileParser.getFile(AUDIO_PATH + "/" + indexName);
 
+
+    private final Path indexPath = indexFile.toPath();
     private AudioManager () {
-        this.audioFolder = new File(FileParser.getRootDirectory(), AUDIO_MP3_PATH);
+        this.mp3Folder = FileParser.getFile(AUDIO_MP3_PATH);
         load();
     }
 
     private AudioManager (String audioIndexPath, String audioMp3Path) {
-        this.AUDIO_INDEX_PATH = audioIndexPath;
         this.AUDIO_MP3_PATH = audioMp3Path;
-        this.audioFolder = new File(FileParser.getRootDirectory(), AUDIO_MP3_PATH);
+        this.indexFile = FileParser.getFile(audioIndexPath);
         load();
 
     }
@@ -51,49 +54,34 @@ public class AudioManager {
         }
         return instance;
     }
-
     public void load() {
+        this.mp3Folder = FileParser.getFile(AUDIO_MP3_PATH);
         indexes = new HashMap<>();
-        int maxIndex = 0;
 
+        Map<String, String> audioMap = new HashMap<>();
         try {
-            Path indexPath = Path.of(AUDIO_INDEX_PATH);
+            // Ensure audio folder exists (parent of index file)
+            FileParser.ensureFolderExists(FileParser.getFile(AUDIO_PATH));
 
+            // Ensure mp3 folder exists
+            FileParser.ensureFolderExists(mp3Folder);
+
+            Path indexPath = indexFile.toPath();
             if (!Files.exists(indexPath)) {
-                File root = Helper.getRootDirectory();
-                File folder = new File(root, AUDIO_INDEX_PATH);
-                FileParser.ensureFolderExists(folder);
-                System.out.println("Audio index file not found, creating: " + AUDIO_INDEX_PATH);
-
-                File audioDir = new File(root, AUDIO_MP3_PATH);
-                FileParser.ensureFolderExists(audioDir);
-                System.out.println("Audio file not found, creating: " + AUDIO_MP3_PATH);
-                Files.createFile(indexPath); //Create empty file
+                System.out.println("Audio index file not found, creating: " + indexPath);
+                Files.createFile(indexPath);
                 return;
             }
-
-            for (String line : Files.readAllLines(indexPath)) {
-                if (line.isBlank()) continue;
-
-                String[] parts = line.split(FileParser.getDelimiterRegex()); // Split using regex for "|||"
-                if (parts.length != 2) {
-                    System.err.println("Skipping malformed line: " + line);
-                    continue;
-                }
-
-                String text = parts[0].trim();
-                String indexStr = parts[1].trim();
-
+            FileParser.fileToHashmap(indexFile, audioMap, false);
+            for (Map.Entry<String, String> entry : audioMap.entrySet()) {
                 try {
-                    int index = Integer.parseInt(indexStr);
-                    indexes.put(text, index);
-                    if (index > maxIndex) maxIndex = index;
+                    int index = Integer.parseInt(entry.getValue());
+                    indexes.put(entry.getKey(), index);
                 } catch (NumberFormatException e) {
-                    System.err.println("Invalid index value in line: " + line);
+                    System.err.println("Invalid index for entry: " + entry.getKey() + " -> " + entry.getValue());
                 }
             }
-
-            nextIndex = maxIndex + 1;
+            this.nextIndex = audioMap.keySet().size() + 1;
             System.out.println("Loaded audio index. Next available index: " + nextIndex);
 
         } catch (Exception e) {
@@ -108,14 +96,13 @@ public class AudioManager {
         }
 
         int newIndex = nextIndex++;
-        File outputFile = new File(audioFolder, newIndex + ".mp3");
+        File outputFile = new File(mp3Folder, newIndex + ".mp3");
 
         try {
-            FileParser.ensureFolderExists(audioFolder);
 
             // If mp3 file already exists, skip generation and only add index mapping
             if (outputFile.exists()) {
-                System.out.println("Skipped mp3 (already exists): " + newIndex + ".mp3");
+                System.out.println("ERROR : Skipped mp3 (already exists): " + newIndex + ".mp3");
             } else {
                 ConfigurationFile config = ConfigurationFile.getInstance();
                 String apiKey = config.getValueByKey("API_KEY");
@@ -164,9 +151,8 @@ public class AudioManager {
     }
 
 
-    public void appendSingleEntry(String text, int index) {
+    private void appendSingleEntry(String text, int index) {
         try {
-            Path indexPath = Path.of(AUDIO_INDEX_PATH);
             String entry = text +" "+FileParser.getDelimiterLiteral() +" "+ index + "\n";
             Files.writeString(indexPath, entry, StandardOpenOption.APPEND);
         } catch (IOException e) {
@@ -180,11 +166,7 @@ public class AudioManager {
 
 
     public static void main(String[] args) {
-        HashMap<String, Integer> index = new HashMap<>();
-        AudioManager audioIndex = new AudioManager(
-                ConfigurationFile.getInstance().getValueByKey("AUDIO_INDEX_PATH"),
-                ConfigurationFile.getInstance().getValueByKey("AUDIO_MP3_PATH")
-        );
+        AudioManager audioIndex = AudioManager.getInstance();
 
         System.out.println("Hashmap Before Adding: "+audioIndex.indexes.toString());
 
@@ -197,7 +179,7 @@ public class AudioManager {
         audioIndex.getOrAdd("Bonjour");
         audioIndex.getOrAdd("Hola");
         audioIndex.getOrAdd("Merhaba");
-
+        audioIndex.getOrAdd("Au revoir");
 
         System.out.println("Hashmap After Adding: "+audioIndex.indexes.toString());
 
@@ -205,6 +187,7 @@ public class AudioManager {
         System.out.println("Hello in Spanish: "+audioIndex.getOrAdd("Hola"));
         System.out.println("Hello in Turkish: "+audioIndex.getOrAdd("Merhaba"));
         System.out.println("Hello in French: "+audioIndex.getOrAdd("Bonjour"));
+        System.out.println("Goodbye in French: "+audioIndex.getOrAdd("Au revoir"));
 
 
         assertTrue(audioIndex.contains("Ciao"));

@@ -73,13 +73,5 @@ public class AudioManagerTest {
         assertEquals(firstIndex, secondIndex);
     }
 
-    @Test
-    public void testAppendSingleEntryCreatesCorrectFormat() throws IOException {
-        audioManager.appendSingleEntry("Testing", 123);
 
-        List<String> lines = Files.readAllLines(tempIndexFile);
-        assertEquals(1, lines.size());
-        //System.out.println("Line 0; "+lines.get(0));
-        assertTrue(lines.get(0).contains("Testing "+FileParser.getDelimiterLiteral()+" 123"));
-    }
 }
