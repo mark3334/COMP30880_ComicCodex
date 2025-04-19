@@ -225,7 +225,7 @@ public class OpenAIClient {
     public List<String> translateAll(List<String> phrases){
         StringBuilder sb = new StringBuilder();
         sb.append("Translate the following English words to ").append(language).append(".");
-        sb.append("The format of the output should be the translation of each word on a newline:");
+        sb.append("The format of the output should be the translation of each phrase on a newline:");
         sb.append("Pay attention to tense and person; if \\\"(plural)\\\" is included, \" +\n" +
                 "                \"make sure the translation reflects the plural form, and remove \\\"(plural)\\\" in the translated output");
         sb.append("For example: I eat -> Yo como, You are going (plural) -> Vosotros vais");
@@ -247,9 +247,11 @@ public class OpenAIClient {
         }
 
         if(translated.size() != phrases.size()){
+            System.out.println("ERROR! - incorrect size");
+            System.out.println("output size : " + translated.size());
+            System.out.println("input size : " + translated.size());
             System.out.println(translated);
             System.out.println(phrases);
-            System.out.println("ERROR! - incorrect size");
         }
 
         //System.out.println("Returning List: "+translated.toString());

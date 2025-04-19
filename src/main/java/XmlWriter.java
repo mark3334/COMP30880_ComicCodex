@@ -162,6 +162,7 @@ public class XmlWriter {
         System.out.println("XML written to: " + outputFile.getAbsolutePath());
         this.reader = new XmlReader(outputFile);
         this.inDoc = reader.getDoc();
+        this.outDoc = this.inDoc;
         addTranslatedPanels();
         writeXML(fNameTranslated);
 
@@ -176,11 +177,11 @@ public class XmlWriter {
         System.out.println("XML written to: " + outputFile.getAbsolutePath());
     }
     public void addTranslatedPanels() {
-        if(outDoc != null && outDoc != inDoc) {
-            System.out.println("Error: adding translated panels is for when indoc = outdoc");
-            System.out.println("This function should only be called when outdoc is null");
-        }
-        outDoc = inDoc;
+//        if(outDoc != null && outDoc != inDoc) {
+//            System.out.println("Error: adding translated panels is for when indoc = outdoc");
+//            System.out.println("This function should only be called when outdoc is null");
+//        }
+//      outDoc = inDoc;
         reader.ensureTranslatedBalloons();
 
         List<Node> panelsToDuplicate = reader.getPanelsToDuplicate();

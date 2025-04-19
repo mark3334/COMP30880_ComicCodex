@@ -133,12 +133,13 @@ public class XmlReader {
     public void ensureTranslatedBalloons(){
         List<String> balloonContents = getBalloons();
         if (t.allTranslated(balloonContents)){
-            System.out.println("All balloon text contents are translated");
+            System.out.println("All balloon text contents are already translated");
             return;
         }
         else{
             System.out.println("Now translating balloon contents : ...");
             t.translateAllPhrases(balloonContents);
+            System.out.println("Balloon contents have been translated");
         }
         if (!t.allTranslated(balloonContents)) System.out.println("Error : Balloon text contents could not be translated");
     }
