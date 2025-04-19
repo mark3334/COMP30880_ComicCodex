@@ -447,18 +447,12 @@
             Element comic = newDoc.createElement("comic");
             newDoc.appendChild(comic);
             NodeList figuresList = this.doc.getElementsByTagName("figures");
+
             // there should be one <figures> tag in input xml / this.doc
             if (figuresList.getLength() > 0) {
-                /*
                 Node figuresNode = figuresList.item(0);
-                Node figuresCopy = figuresNode.cloneNode(true);
+                Node figuresCopy = newDoc.importNode(figuresNode, true);
                 comic.appendChild(figuresCopy);
-
-                 */
-                for (Node scene : newScenes) {
-                    Node sceneCopy = newDoc.importNode(scene, true);
-                    comic.appendChild(sceneCopy);
-                }
             }
 
             // Create and append the <scenes> element
