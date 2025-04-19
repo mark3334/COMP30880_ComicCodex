@@ -64,6 +64,10 @@ public class AudioManager {
                 File folder = new File(root, AUDIO_INDEX_PATH);
                 FileParser.ensureFolderExists(folder);
                 System.out.println("Audio index file not found, creating: " + AUDIO_INDEX_PATH);
+
+                File audioDir = new File(root, AUDIO_MP3_PATH);
+                FileParser.ensureFolderExists(audioDir);
+                System.out.println("Audio file not found, creating: " + AUDIO_MP3_PATH);
                 Files.createFile(indexPath); //Create empty file
                 return;
             }
