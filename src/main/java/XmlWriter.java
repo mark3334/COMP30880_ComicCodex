@@ -240,7 +240,5 @@ public class XmlWriter {
         writerScenes.addTranslatedPanels();
         writerScenes.setBalloonSpeech();
         writerScenes.writeXMLTranslated(fileNameScenes, fileNameScenesT);
-
-
     }
 }
