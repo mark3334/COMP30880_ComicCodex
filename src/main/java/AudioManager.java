@@ -23,15 +23,19 @@ public class AudioManager {
     private int nextIndex = 1;
     private String AUDIO_INDEX_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_INDEX_PATH");
     private String AUDIO_MP3_PATH = ConfigurationFile.getInstance().getValueByKey("AUDIO_MP3_PATH");
+    private final File audioFolder;
 
     private AudioManager () {
+        this.audioFolder = new File(FileParser.getRootDirectory(), AUDIO_MP3_PATH);
         load();
     }
 
     private AudioManager (String audioIndexPath, String audioMp3Path) {
         this.AUDIO_INDEX_PATH = audioIndexPath;
         this.AUDIO_MP3_PATH = audioMp3Path;
+        this.audioFolder = new File(FileParser.getRootDirectory(), AUDIO_MP3_PATH);
         load();
+
     }
 
     public static synchronized AudioManager getInstance() {
@@ -100,7 +104,6 @@ public class AudioManager {
         }
 
         int newIndex = nextIndex++;
-        File audioFolder = new File(FileParser.getRootDirectory(), AUDIO_MP3_PATH);
         File outputFile = new File(audioFolder, newIndex + ".mp3");
 
         try {
