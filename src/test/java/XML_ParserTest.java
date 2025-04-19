@@ -36,7 +36,7 @@ public class XML_ParserTest {
         List<String> actualLines = Files.readAllLines(testOutputFile.toPath());
 
 
-        File expectedOutputFile = new File(root, "Resources/XMLoutput/Verbs_Spanish");
+        File expectedOutputFile = new File(root, "Resources/XMLoutput/Sprint4verbs.xml");
         List<String> expectedLines = Files.readAllLines(expectedOutputFile.toPath());
 
 
