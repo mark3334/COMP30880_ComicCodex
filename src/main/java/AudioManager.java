@@ -37,7 +37,6 @@ public class AudioManager {
         this.AUDIO_MP3_PATH = audioMp3Path;
         this.indexFile = FileParser.getFile(audioIndexPath);
         load();
-
     }
 
     public static synchronized AudioManager getInstance() {
@@ -53,6 +52,11 @@ public class AudioManager {
         }
         return instance;
     }
+
+    /**
+     * Loads the audio indexes.txt file and initializes internal mappings.
+     * Ensures necessary folders and index file exist. Reads mappings into memory.
+     */
     public void load() {
         this.mp3Folder = FileParser.getFile(AUDIO_MP3_PATH);
         indexes = new HashMap<>();
@@ -89,6 +93,14 @@ public class AudioManager {
         }
     }
 
+    /**
+     * Retrieves the index for a given text string.
+     * If the text is not already indexed, it generates a new MP3 file using
+     * the OpenAI API for TTS and updates the index.
+     *
+     * @param text the input string to generate or retrieve
+     * @return the index of the corresponding audio file
+     */
     public int getOrAdd(String text) {
         if (indexes.containsKey(text)) {
             return indexes.get(text); // If the text exists, return.
@@ -151,7 +163,12 @@ public class AudioManager {
         return newIndex;
     }
 
-
+    /**
+     * Appends a single (text, index) mapping to the index file.
+     *
+     * @param text  the input string
+     * @param index the assigned audio index
+     */
     private void appendSingleEntry(String text, int index) {
         try {
             String entry = text +" "+FileParser.getDelimiterLiteral() +" "+ index + "\n";
@@ -161,6 +178,12 @@ public class AudioManager {
         }
     }
 
+    /**
+     * Checks whether the given text has already been indexed.
+     *
+     * @param text the input string to check
+     * @return true if the text exists in the index, false otherwise
+     */
     public boolean contains(String text) {
         return indexes.containsKey(text);
     }
