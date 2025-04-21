@@ -158,7 +158,10 @@ public class XmlWriter {
         String path = this.outFolder + "/" + fName;
         File outputFile =  FileParser.getFile(path);
 
-        addAudio(); // adds audio for scenes (not translated scenes)
+        // The way the code is now only add audio to either the non-translated version or the translated version
+        // as the translated version reads from the file of the translated version so adding audio can
+        // cause issues
+        // addAudio(); // adds audio for scenes (not translated scenes)
 
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -171,6 +174,8 @@ public class XmlWriter {
         this.inDoc = reader.getDoc();
         this.outDoc = this.inDoc;
         addTranslatedPanels();
+
+        addAudio();
         writeXML(fNameTranslated);
 
     }
