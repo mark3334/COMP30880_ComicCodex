@@ -156,7 +156,7 @@ public class XmlWriter {
 
     public void writeXMLTranslated(String fName, String fNameTranslated) throws TransformerException, IOException, ParserConfigurationException, SAXException {
         String path = this.outFolder + "/" + fName;
-        File outputFile =  FileParser.getFile(path);
+        File outputFile = FileParser.getFile(path);
 
         // The way the code is now only add audio to either the non-translated version or the translated version
         // as the translated version reads from the file of the translated version so adding audio can
@@ -167,7 +167,6 @@ public class XmlWriter {
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
         transformer.transform(new DOMSource(this.outDoc), new StreamResult(outputFile));
-
 
         System.out.println("XML written to: " + outputFile.getAbsolutePath());
         this.reader = new XmlReader(outputFile);

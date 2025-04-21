@@ -217,7 +217,7 @@
          * @throws IOException if an I/O error occurs.
          */
         public void writeXML(String path, String fileName) throws TransformerException, IOException {
-            File root = Helper.getRootDirectory();
+            File root = FileParser.getRootDirectory();
             //String fileName = "Verbs_" + Helper.getTargetLanguage();
 
             File folder = new File(root, path);
@@ -428,7 +428,7 @@
          * @throws TransformerException if an error occurs during XML transformation or saving.
          */
         public void docToXml(Document document, String path) throws TransformerException {
-            File root = Helper.getRootDirectory();
+            File root = FileParser.getRootDirectory();
             File outputFile =  new File(root, path);
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -560,7 +560,7 @@
 
 
         public static void main(String[] args) throws ParserConfigurationException {
-            File root = Helper.getRootDirectory();
+            File root = FileParser.getRootDirectory();
             String path = "Resources/XMLinput/Sprint4Verbs.xml";
             String outputFolder = "Resources/XMLoutput/";
             File f = new File(root, path);

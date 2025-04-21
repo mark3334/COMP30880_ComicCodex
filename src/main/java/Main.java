@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            File root = Helper.getRootDirectory();
+            File root = FileParser.getRootDirectory();
             File inputFile = new File(root, "Resources/XMLoutput/Sprint5_InterwovenOutput.xml");
             XML_Parser parser1 = new XML_Parser(inputFile);
 
