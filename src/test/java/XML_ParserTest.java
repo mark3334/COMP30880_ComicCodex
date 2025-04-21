@@ -22,7 +22,7 @@ public class XML_ParserTest {
 
     @Test
     public void testAddTranslatedPanelsOutputMatchesExpected() throws ParserConfigurationException, IOException, SAXException, TransformerException {
-        File root = Helper.getRootDirectory();
+        File root = FileParser.getRootDirectory();
         File inputFile = new File(root, "Resources/XMLinput/Sprint4Verbs.xml");
 
 
@@ -61,7 +61,7 @@ public class XML_ParserTest {
     @Test
     public void testValidateComicXml() throws IOException {
 
-        File root = Helper.getRootDirectory();
+        File root = FileParser.getRootDirectory();
 
 
         File valid = new File(root, "Resources/XMLinput/Sprint5scenes.xml");
@@ -77,7 +77,7 @@ public class XML_ParserTest {
 
     @Test
     public void testSprint5FullPipelineExecution() throws Exception {
-        File root = Helper.getRootDirectory();
+        File root = FileParser.getRootDirectory();
         String inputPath = "Resources/XMLinput/Sprint5scenes.xml";
         String outputFolder = "Resources/XMLoutput/";
 
