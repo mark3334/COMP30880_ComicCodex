@@ -158,10 +158,13 @@ public class XmlWriter {
         String path = this.outFolder + "/" + fName;
         File outputFile =  FileParser.getFile(path);
 
+        addAudio(); // adds audio for scenes (not translated scenes)
+
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
         transformer.transform(new DOMSource(this.outDoc), new StreamResult(outputFile));
+
 
         System.out.println("XML written to: " + outputFile.getAbsolutePath());
         this.reader = new XmlReader(outputFile);
