@@ -161,7 +161,7 @@ public class XmlWriter {
         // The way the code is now only add audio to either the non-translated version or the translated version
         // as the translated version reads from the file of the translated version so adding audio can
         // cause issues
-        // addAudio(); // adds audio for scenes (not translated scenes)
+        addAudio(); // adds audio for scenes (not translated scenes)
 
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -174,7 +174,7 @@ public class XmlWriter {
         this.outDoc = this.inDoc;
         addTranslatedPanels();
 
-        addAudio();
+        // addAudio(); - doesn't work (11 duplicates?)
         writeXML(fNameTranslated);
 
     }

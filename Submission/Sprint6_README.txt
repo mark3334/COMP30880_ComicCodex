@@ -15,6 +15,9 @@ such as getting nodes from the Document or printing information about it.
 The writer class handles editing a document such as adding translated panels, adding audio tags for each balloon content,
 splitting panels that have two balloon texts.
 
+We ended up not using the XmlWriter.main method as for the scenes translating it was producing each audio tag 12 times along with
+12 panels for each panel ... for some reason. This happened when adding audio just to the translated doc. No such error
+occurred when adding audio just to the Sprint5scenes.
 AudioManager
 This is a singleton class that reads in an indexes.txt into a hashmap to support amortized O(1) lookup for some text
 to the index of its corresponding mp3 files.
