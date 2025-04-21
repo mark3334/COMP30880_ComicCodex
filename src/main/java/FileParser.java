@@ -112,7 +112,7 @@ public class FileParser{
     private static File getRootDirectoryMethod() {
         File current = new File(System.getProperty("user.dir")); // Current working directory
         // Traverse up to find "COMP30880_ComicCodex"
-        while (current != null && !Helper.isRootDirectory(current.getName())) {
+        while (current != null && !isRootDirectory(current.getName())) {
             current = current.getParentFile();
         }
         if (current == null) {

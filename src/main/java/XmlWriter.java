@@ -85,10 +85,12 @@ public class XmlWriter {
 
             System.out.println(fullDialogue);
             addDialogue(scenecopy, fullDialogue);
-
+            // String sceneCopyString = XmlReader.nodeToString(scenecopy); // working as expected
+            //System.out.println(sceneCopyString);
             newScenes.add(scenecopy);
         }
         if(outDoc == null) {
+            System.out.println("Creating empty comic with figures from source XML file (createNewScenes method)");
             createEmptyComic();
             addFigures();
         }
@@ -224,7 +226,54 @@ public class XmlWriter {
 
     public void addAudio() { addAudioToDoc(outDoc); }
 
+    public static void splitPanels(Document doc) {
+        NodeList panelNodes = doc.getElementsByTagName("panel");
+        List<Element> panelsToAdd = new ArrayList<>();
+        List<Element> panelsToRemove = new ArrayList<>();
+        for (int i = 0; i < panelNodes.getLength(); i++) {
+            List<Element> result = new ArrayList<>();
+            Element panel = (Element) panelNodes.item(i);
+            NodeList balloons = panel.getElementsByTagName("balloon");
+            if (balloons.getLength() <= 1) continue;
+
+            if (balloons.getLength() == 2) { //Modify the condition logic, if there are exactly two balloons, split the panel.
+                Element panel1 = (Element) panel.cloneNode(true);
+                Element panel2 = (Element) panel.cloneNode(true);
+
+                // Remove second balloon from panel1
+                Node toRemove1 = panel1.getElementsByTagName("balloon").item(1);
+                toRemove1.getParentNode().removeChild(toRemove1);
+
+                // Remove first balloon from panel2
+                Node toRemove2 = panel2.getElementsByTagName("balloon").item(0);
+                toRemove2.getParentNode().removeChild(toRemove2);
+
+                panelsToAdd.add(panel1);
+                panelsToAdd.add(panel2);
+                panelsToRemove.add(panel);
+            }
+            else if (balloons.getLength() > 2) {
+                System.out.println("Error, Unexpected input : number of balloons in panel " + balloons.getLength());
+            }
+        }
+        for (Element originalPanel : panelsToRemove) {
+            Node parent = originalPanel.getParentNode();
+            Node nextSibling = originalPanel.getNextSibling();
+
+            parent.removeChild(originalPanel);
+
+            for (Element newPanel : panelsToAdd) {
+                Node importedPanel = doc.importNode(newPanel, true);
+                if (nextSibling != null) {
+                    parent.insertBefore(importedPanel, nextSibling);
+                } else {
+                    parent.appendChild(importedPanel);
+                }
+            }
+        }
+    }
     public static void addAudioToDoc(Document doc) {
+        XmlWriter.splitPanels(doc);
         AudioManager audioManager = AudioManager.getInstance();
         NodeList panels = doc.getElementsByTagName("panel");
 
@@ -250,7 +299,6 @@ public class XmlWriter {
                 audioElement.setTextContent(index + ".mp3");
                 panel.appendChild(audioElement);
                 break; // only one <audio> for each panel
-                // TODO ? split panels
             }
         }
     }
@@ -271,7 +319,6 @@ public class XmlWriter {
         File scenesFile = FileParser.getFile(pathScenes);
         XmlWriter writerScenes = new XmlWriter(scenesFile);
         writerScenes.createNewScenes(1);
-        writerScenes.addTranslatedPanels();
         writerScenes.setBalloonSpeech();
         writerScenes.writeXMLTranslated(fileNameScenes, fileNameScenesT);
     }

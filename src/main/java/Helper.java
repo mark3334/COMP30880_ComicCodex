@@ -30,8 +30,6 @@ public final class Helper {
 
     public static void main(String[] args) {
 
-        System.out.println(Helper.getTargetLanguage());
-        System.out.println(Helper.getRootDirectory());
 
     }
 
