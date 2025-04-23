@@ -49,7 +49,7 @@ public class ConfigurationFile {
 
             // Check if the newTarget_language is equal to Source_Language
             if (newLanguage.equalsIgnoreCase(configMap.get("SOURCE_LANGUAGE"))) {
-                System.out.println("Wrong, the Target Language could not be the same as Source Language");
+                System.out.println("Error: the Target Language could not be the same as Source Language");
             } else {
                 break;
             }
@@ -59,7 +59,7 @@ public class ConfigurationFile {
         // Write HashMap to file.
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(configFile))) {
             for (Map.Entry<String, String> entry : configMap.entrySet()) {
-                String line = "\"" + entry.getKey() + "\" " + FileParser.getDelimiterLiteral() + " \"" + entry.getValue() + "\"";
+                String line = FileParser.generateMapLine(entry.getKey(), entry.getValue());
                 writer.write(line);
                 writer.newLine();
             }
