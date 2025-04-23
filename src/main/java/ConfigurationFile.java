@@ -106,6 +106,18 @@ public class ConfigurationFile {
         String key = "TARGET_LANGUAGE";
         return c.configMap.get(key);
     }
+    public static List<String> getLessonSchedule() {
+        ConfigurationFile c = ConfigurationFile.getInstance();
+        String key = "LESSON_SCHEDULE";
+        String value = c.configMap.get(key);
+        // Clean the brackets and quotes and spaces
+        value = value.replace("[", "")
+                .replace("]", "")
+                .replace("\"", "")
+                .replace(" ", "");
+        List<String> schedule = new ArrayList<String>(Arrays.asList(value.split(",")));
+        return schedule;
+    }
 
     public static void main(String[] args) {
         /*
@@ -123,8 +135,10 @@ public class ConfigurationFile {
         System.out.println("Completion URL: [" + completionUrl + "]");
         System.out.println("Target Language:  [" + language + "]");
         */
-        ConfigurationFile c = ConfigurationFile.getInstance();
-        c.configUpdater();
+//        ConfigurationFile c = ConfigurationFile.getInstance();
+//        c.configUpdater();
+        List<String> s = getLessonSchedule();
+        for(String i : s) System.out.println(i);
     }
 
 }
