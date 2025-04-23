@@ -228,7 +228,7 @@ public class OpenAIClient {
         sb.append("The format of the output should be the translation of each phrase on a newline:");
         sb.append("Pay attention to tense and person; if \"(plural)\" is included, ")
                 .append("make sure the translation reflects the plural form, and remove \"(plural)\" in the translated output.\n");
-        sb.append("For example: I eat -> Yo como, You are going (plural) -> Vosotros vais");
+        sb.append("For example: I eat -> Yo como(If the target language is Spanish), You are going (plural) -> Vosotros vais");
 
         for(String phrase : phrases){
             sb.append("\n").append(phrase);
