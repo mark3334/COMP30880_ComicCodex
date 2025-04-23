@@ -44,8 +44,8 @@ public class FileParser{
 
                 String[] pair = line.split(regex,2);
                 if (pair.length == 2) {
-                    String key = pair[0].replaceAll("\"", "").trim();
-                    String value = pair[1].replaceAll("\"", "").trim();   //replaceAll("\"", "").trim();
+                    String key = pair[0].trim();
+                    String value = pair[1].trim();   //replaceAll("\"", "").trim();
                     if (!key.isEmpty() && !value.isEmpty())
                         hashMap.put(key, value);
                 }
@@ -127,6 +127,9 @@ public class FileParser{
         return filename.startsWith("comp30880_comiccodex") && !filename.contains("jar");
     }
 
+    public static String generateMapLine(String key, String value){
+        return key + " " + getDelimiterLiteral() + " " + value;
+    }
     public static void main(String[] args)  {
 
         String oldDelimiter = ":"; // \\|\\|\\|"; // escape each '|'
