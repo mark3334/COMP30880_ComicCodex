@@ -310,6 +310,17 @@ public class XmlWriter {
         }
     }
 
+    public void createComicFullLesson() throws ParserConfigurationException {
+        List<String> schedule = ConfigurationFile.getLessonSchedule();
+        createEmptyComic();
+        for(String type : schedule){
+            if(type.equalsIgnoreCase("conjugation")) continue;// add verb scene co
+            if(type.equalsIgnoreCase("left")) continue; // add left vignette
+            if(type.equalsIgnoreCase("whole")) continue; //
+            if(type.equalsIgnoreCase("story")) continue;
+        }
+    }
+
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
         String fileNameVerbs = "Sprint4verbs.xml";
         String inFolder = ConfigurationFile.get("XML_INPUT_PATH");
