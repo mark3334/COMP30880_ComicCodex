@@ -1,7 +1,9 @@
+import java.io.BufferedWriter;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
+
 public class ConfigurationFile {
     private static ConfigurationFile instance;
     private final Map<String, String> configMap;
@@ -24,6 +26,47 @@ public class ConfigurationFile {
         boolean append = false;
         this.configMap = new HashMap<>();
         FileParser.fileToHashmap(file, this.configMap, append);
+    }
+
+    public void configUpdater(){
+        Scanner scanner = new Scanner(System.in);
+
+        File configFile = FileParser.getConfigFile();
+        Map<String, String> configMap = new LinkedHashMap<>();
+
+        FileParser.fileToHashmap(configFile, configMap, false);
+        String newLanguage;
+
+        while (true) {
+
+            System.out.println("The target language is: " + configMap.get("TARGET_LANGUAGE"));
+            System.out.println("Please enter the new target language: ");
+
+            //Get the new target_language and unified format.
+            newLanguage = scanner.nextLine().trim();
+            newLanguage = newLanguage.toLowerCase();
+            newLanguage = newLanguage.substring(0, 1).toUpperCase() + newLanguage.substring(1);
+
+            // Check if the newTarget_language is equal to Source_Language
+            if (newLanguage.equalsIgnoreCase(configMap.get("SOURCE_LANGUAGE"))) {
+                System.out.println("Wrong, the Target Language could not be the same as Source Language");
+            } else {
+                break;
+            }
+        }
+        configMap.put("TARGET_LANGUAGE", newLanguage);
+
+        // Write HashMap to file.
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(configFile))) {
+            for (Map.Entry<String, String> entry : configMap.entrySet()) {
+                String line = "\"" + entry.getKey() + "\" " + FileParser.getDelimiterLiteral() + " \"" + entry.getValue() + "\"";
+                writer.write(line);
+                writer.newLine();
+            }
+            System.out.println("Target language has been updated to " + newLanguage);
+        } catch (IOException e) {
+            System.out.println("Wrong: " + e.getMessage());
+        }
     }
 
     public static synchronized ConfigurationFile getInstance() {
@@ -65,6 +108,7 @@ public class ConfigurationFile {
     }
 
     public static void main(String[] args) {
+        /*
         ConfigurationFile configFile = ConfigurationFile.getInstance();
 
         System.out.println("ConfigMap Content: " + configFile.getConfigMap());
@@ -78,7 +122,9 @@ public class ConfigurationFile {
         System.out.println("Model: [" + model + "]");
         System.out.println("Completion URL: [" + completionUrl + "]");
         System.out.println("Target Language:  [" + language + "]");
-
+        */
+        ConfigurationFile c = ConfigurationFile.getInstance();
+        c.configUpdater();
     }
 
 }
