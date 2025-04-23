@@ -28,13 +28,10 @@ public class ConfigurationFile {
         FileParser.fileToHashmap(file, this.configMap, append);
     }
 
-    public void configUpdater(){
+    public void updateLanguage(){
         Scanner scanner = new Scanner(System.in);
 
         File configFile = FileParser.getConfigFile();
-        Map<String, String> configMap = new LinkedHashMap<>();
-
-        FileParser.fileToHashmap(configFile, configMap, false);
         String newLanguage;
 
         while (true) {
@@ -135,8 +132,9 @@ public class ConfigurationFile {
         System.out.println("Completion URL: [" + completionUrl + "]");
         System.out.println("Target Language:  [" + language + "]");
         */
-//        ConfigurationFile c = ConfigurationFile.getInstance();
-//        c.configUpdater();
+        ConfigurationFile c = ConfigurationFile.getInstance();
+        c.updateLanguage();
+        System.out.println(ConfigurationFile.getTargetLanguage());
         List<String> s = getLessonSchedule();
         for(String i : s) System.out.println(i);
     }
