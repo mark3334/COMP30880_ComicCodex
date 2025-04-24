@@ -310,15 +310,26 @@ public class XmlWriter {
         }
     }
 
-    public void createComicFullLesson() throws ParserConfigurationException {
+    public void createComicFullLesson() throws TransformerException, ParserConfigurationException, IOException, SAXException {
         List<String> schedule = ConfigurationFile.getLessonSchedule();
         createEmptyComic();
+
         for(String type : schedule){
-            if(type.equalsIgnoreCase("conjugation")) continue;// add verb scene co
+            if(type.equalsIgnoreCase("conjugation")){
+                try {
+                    Node scene = XML_Parser.generateConjugationScene(this.outDoc);
+                    this.comic.appendChild(scene);
+                } catch (Exception e) {
+                    System.out.println("Failed to generate conjugation scene");
+                    e.printStackTrace();
+                }
+            } ;// add verb scene co
             if(type.equalsIgnoreCase("left")) continue; // add left vignette
             if(type.equalsIgnoreCase("whole")) continue; //
             if(type.equalsIgnoreCase("story")) continue;
         }
+        String outputFile = "FinalSprint.xml";
+        this.writeXML(outputFile);
     }
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
