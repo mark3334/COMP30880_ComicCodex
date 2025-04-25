@@ -310,9 +310,23 @@ public class XmlWriter {
         }
     }
 
-    public void createComicFullLesson() throws ParserConfigurationException {
+    public void createComicFullLesson() throws ParserConfigurationException, IOException, SAXException {
         List<String> schedule = ConfigurationFile.getLessonSchedule();
         createEmptyComic();
+        Map<String, Integer> typeCounts = new HashMap<>();
+        for(String type : schedule) {
+            String key = type.toLowerCase();
+            typeCounts.put(key, typeCounts.getOrDefault(key, 0) + 1);
+        }
+        String verbFileName = "Sprint4verbs.xml";
+        File verbsFile = FileParser.getFile(outFolder + "/" + verbFileName);
+        XmlReader verbReader = new XmlReader(verbsFile);
+        verbReader.getRandomScenes(typeCounts.get("conjugation"));
+        String scenesFileName = "Sprint5scenes.xml"; // TODO change file name possibly
+        File scenesFile = FileParser.getFile(outFolder + "/" + scenesFileName);
+        XmlReader sceneReader = new XmlReader(scenesFile);
+        verbReader.getRandomScenes(typeCounts.get("conjugation"));
+        sceneReader.getRandomScenes(typeCounts.get("story"));
         for(String type : schedule){
             if(type.equalsIgnoreCase("conjugation")) continue;// add verb scene co
             if(type.equalsIgnoreCase("left")) continue; // add left vignette
