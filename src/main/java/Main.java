@@ -22,6 +22,8 @@ public class Main {
         String schedule = ConfigurationFile.getInstance().getValueByKey("LESSON_SCHEDULE");
         System.out.println(schedule);
 
+        ConfigurationFile cf = ConfigurationFile.getInstance();
+        cf.updateLanguage();
         XmlWriter xmlWriter = new XmlWriter(new File("Resources/XMLinput/Sprint4Verbs.xml"));
         xmlWriter.createComicFullLesson();
     }
