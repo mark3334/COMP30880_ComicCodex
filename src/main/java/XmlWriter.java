@@ -280,7 +280,7 @@ public class XmlWriter {
         }
     }
     public static void addAudioToDoc(Document doc) {
-        XmlWriter.splitPanels(doc);
+        //XmlWriter.splitPanels(doc);
         AudioManager audioManager = AudioManager.getInstance();
         NodeList panels = doc.getElementsByTagName("panel");
 
@@ -316,17 +316,16 @@ public class XmlWriter {
 
         for(String type : schedule){
             if(type.equalsIgnoreCase("conjugation")){
-                try {
-                    Node scene = XML_Parser.generateConjugationScene(this.outDoc);
-                    this.comic.appendChild(scene);
-                } catch (Exception e) {
-                    System.out.println("Failed to generate conjugation scene");
-                    e.printStackTrace();
-                }
+                Node scene = XML_Parser.generateScene(this.outDoc, "Resources/XMLinput/Sprint4Verbs.xml",false);
+                this.comic.appendChild(scene);
+
             } ;// add verb scene co
             if(type.equalsIgnoreCase("left")) continue; // add left vignette
             if(type.equalsIgnoreCase("whole")) continue; //
-            if(type.equalsIgnoreCase("story")) continue;
+            if(type.equalsIgnoreCase("story")) {
+                Node scene = XML_Parser.generateScene(this.outDoc, "Resources/XMLoutput/Sprint6_FinalAudioFile.xml",true);
+                this.comic.appendChild(scene);
+            }
         }
         String outputFile = "FinalSprint.xml";
         this.writeXML(outputFile);

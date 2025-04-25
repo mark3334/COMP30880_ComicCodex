@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class Main {
-    /*
+/*
     public static void main(String[] args) {
         try {
             File root = FileParser.getRootDirectory();
@@ -80,14 +80,15 @@ public class Main {
         }
     }
 
-    */
+*/
 
-    public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
+    public static void main(String[] args) throws Exception {
         String schedule = ConfigurationFile.getInstance().getValueByKey("LESSON_SCHEDULE");
         System.out.println(schedule);
 
         XmlWriter xmlWriter = new XmlWriter(new File("Resources/XMLinput/Sprint4Verbs.xml"));
         xmlWriter.createComicFullLesson();
-
     }
+
+
 }

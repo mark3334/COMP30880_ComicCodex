@@ -554,14 +554,15 @@
             return result;
         }
 
-        public static Node generateConjugationScene(Document mainDoc) throws ParserConfigurationException, IOException, SAXException {
+        public static Node generateScene(Document mainDoc, String path, Boolean isTranslated) throws ParserConfigurationException, IOException, SAXException {
             File root = FileParser.getRootDirectory();
-            String path = "Resources/XMLinput/Sprint4Verbs.xml";
 
             File f = new File(root, path);
             XML_Parser parser = new XML_Parser(f);
             try {
-                parser.addTranslatedPanels();
+                if(!isTranslated){
+                    parser.addTranslatedPanels();
+                }
 
                 List<Node> scenes = parser.getRandomScenes(1);
                 if (!scenes.isEmpty()) {
