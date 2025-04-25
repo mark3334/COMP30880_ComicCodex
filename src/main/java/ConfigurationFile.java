@@ -16,8 +16,8 @@ public class ConfigurationFile {
         String[] coreKeys = {"TARGET_LANGUAGE", "API_KEY", "MODEL", "COMPLETIONS_URL", "MAX_TOKENS_PER_PROMPT"};
         //System.out.println(configMap);
         for(String key : coreKeys){
-            assert(this.configMap.containsKey(key)) : "Config.txt is missing necessary keys";
-            if(!this.configMap.containsKey(key)) System.out.println("Error: Configuration file does not contain all the correct keys");
+            assert(this.configMap.containsKey("\""+key+"\"")) : "Config.txt is missing necessary keys";
+            if(!this.configMap.containsKey("\""+key+"\"")) System.out.println("Error: Configuration file does not contain all the correct keys");
         }
     }
 
@@ -85,7 +85,7 @@ public class ConfigurationFile {
     }
 
     public String getValueByKey(String keyName) {
-        return this.configMap.getOrDefault(keyName, "Key not found");
+        return this.configMap.getOrDefault("\""+keyName+"\"", "Key not found").replaceAll("\"", "");
     }
     public static String get(String key) {
         return getInstance().getValueByKey(key);
