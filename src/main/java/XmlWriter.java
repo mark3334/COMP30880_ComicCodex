@@ -331,6 +331,17 @@ public class XmlWriter {
         this.writeXML(outputFile);
     }
 
+    public static void createConjugationLesson() throws ParserConfigurationException, IOException, SAXException, TransformerException {
+        String fileNameVerbs = "Sprint4verbs.xml";
+        String inFolder = ConfigurationFile.get("XML_INPUT_PATH");
+        String inPath = inFolder + "/" + fileNameVerbs;
+        File verbsFile = FileParser.getFile(inPath);
+        XmlWriter writerVerbs = new XmlWriter(verbsFile);
+        writerVerbs.addTranslatedPanels();
+        writerVerbs.addAudio();
+        writerVerbs.writeXML(fileNameVerbs);
+    }
+
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
         String fileNameVerbs = "Sprint4verbs.xml";
         String inFolder = ConfigurationFile.get("XML_INPUT_PATH");
