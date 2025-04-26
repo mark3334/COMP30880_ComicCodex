@@ -554,31 +554,6 @@
             return result;
         }
 
-        public static Node generateScene(Document mainDoc, String path, Boolean isTranslated) throws ParserConfigurationException, IOException, SAXException {
-            File root = FileParser.getRootDirectory();
-
-            File f = new File(root, path);
-            XML_Parser parser = new XML_Parser(f);
-            try {
-                if(!isTranslated){
-                    parser.addTranslatedPanels();
-                }
-
-                List<Node> scenes = parser.getRandomScenes(1);
-                if (!scenes.isEmpty()) {
-                    return mainDoc.importNode(scenes.getFirst(), true);
-                } else {
-                    System.out.println("Could not find scenes.");
-                    return null;
-                }
-
-            } catch (Exception e) {
-                System.out.println("Error: exception building DOM from XML");
-                e.printStackTrace();
-                return null;
-            }
-        }
-
         public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
             //generateConjugationScene(DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument());
 

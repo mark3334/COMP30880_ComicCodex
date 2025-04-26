@@ -310,24 +310,61 @@ public class XmlWriter {
         }
     }
 
-    public void createComicFullLesson() throws TransformerException, ParserConfigurationException, IOException, SAXException {
+    public void createComicFullLesson() throws ParserConfigurationException, IOException, SAXException, TransformerException {
         List<String> schedule = ConfigurationFile.getLessonSchedule();
         createEmptyComic();
 
-        for(String type : schedule){
-            if(type.equalsIgnoreCase("conjugation")){
-                Node scene = XML_Parser.generateScene(this.outDoc, "Resources/XMLinput/Sprint4Verbs.xml",false);
-                this.comic.appendChild(scene);
+        Map<String, Integer> typeCounts = new HashMap<>();
+        for(String type : schedule) {
+            String key = type.toLowerCase();
+            typeCounts.put(key, typeCounts.getOrDefault(key, 0) + 1);
+        }
 
-            } ;// add verb scene co
-            if(type.equalsIgnoreCase("left")) continue; // add left vignette
-            if(type.equalsIgnoreCase("whole")) continue; //
-            if(type.equalsIgnoreCase("story")) {
-                Node scene = XML_Parser.generateScene(this.outDoc, "Resources/XMLoutput/Sprint6_FinalAudioFile.xml",true);
-                this.comic.appendChild(scene);
+        Map<String, Stack<Node>> sceneStacks = new HashMap<>();
+        sceneStacks.put("conjugation", new Stack<>());
+        sceneStacks.put("story", new Stack<>());
+        sceneStacks.put("left", new Stack<>());
+        sceneStacks.put("whole", new Stack<>());
+
+        String verbFileName = "Sprint4verbs.xml";
+        File verbsFile = FileParser.getFile(outFolder + "/" + verbFileName);
+        XmlReader verbReader = new XmlReader(verbsFile);
+        String storyFileName = "Sprint6_FinalAudioFile.xml";
+        File storyFile = FileParser.getFile(outFolder + "/" + storyFileName);
+        XmlReader storyReader = new XmlReader(storyFile);
+        String leftFileName = "left_scenes.xml";
+        File leftFile = FileParser.getFile(outFolder + "/" + leftFileName);
+        XmlReader leftReader = new XmlReader(leftFile);
+        String wholeFileName = "whole_scenes.xml";
+        File wholeFile = FileParser.getFile(outFolder + "/" + wholeFileName);
+        XmlReader wholeReader = new XmlReader(wholeFile);
+
+        for (Node scene : verbReader.getRandomScenes(typeCounts.get("conjugation"))) {
+            sceneStacks.get("conjugation").push(scene);
+        }
+
+        //for (Node scene : storyReader.getRandomScenes(typeCounts.get("story"))) {
+        for (Node scene : storyReader.getRandomScenes(1)){
+            sceneStacks.get("story").push(scene);
+        }
+        for (Node scene : leftReader.getRandomScenes(typeCounts.get("left"))) {
+            sceneStacks.get("left").push(scene);
+        }
+        for (Node scene : wholeReader.getRandomScenes(typeCounts.get("whole"))) {
+            sceneStacks.get("whole").push(scene);
+        }
+
+        for (String type : schedule) {
+            String key = type.toLowerCase();
+            if (sceneStacks.containsKey(key) && !sceneStacks.get(key).isEmpty()) {
+                Node raw = sceneStacks.get(key).pop();
+                Node imported = this.outDoc.importNode(raw, true);
+                this.comic.appendChild(imported);
             }
         }
+
         String outputFile = "FinalSprint.xml";
+        this.addAudio();
         this.writeXML(outputFile);
     }
 

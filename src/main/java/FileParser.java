@@ -93,6 +93,33 @@ public class FileParser{
         }
     }
 
+    public static void readFileToVignetteSchemas(File file, List<VignetteSchema> vignetteSchemas, boolean appendMode) {
+        if (!appendMode) {
+            vignetteSchemas.clear();
+        }
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            boolean firstLine = true;
+            while ((line = br.readLine()) != null) {
+                if (firstLine) {
+                    firstLine = false;
+                    continue; // Skip the header row
+                }
+                String[] values = line.split("\t", -1);
+                VignetteSchema text = new VignetteSchema(
+                        values[0], // Left Pose
+                        values[1], // Combined Text
+                        values[2], // Left Text
+                        values[3], // Right Pose
+                        values[4]  // Backgrounds
+                );
+                vignetteSchemas.add(text);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static File getTranslationFile() {
         ConfigurationFile configFile = ConfigurationFile.getInstance();
         String filepath = configFile.getValueByKey("TRANSLATIONS_PATH");
