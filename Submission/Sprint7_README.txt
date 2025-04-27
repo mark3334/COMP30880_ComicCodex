@@ -11,4 +11,4 @@ navigate to Submissions folder and run  java -jar Sprint7executable.jar to execu
 
 
 --- a zipped directory containing a comprehensive sample comic (the .xml specification, all audio files referenced in the .xml)
-In Submission there is a folder called sampleComic which contains a comic.xml file and a mp3folder
+In Submission there is a folder called SampleComic which contains a comic.xml file and a audioFiles folder

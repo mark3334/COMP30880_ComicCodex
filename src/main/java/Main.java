@@ -24,7 +24,7 @@ public class Main {
 
         ConfigurationFile cf = ConfigurationFile.getInstance();
         cf.updateLanguage();
-        XmlWriter xmlWriter = new XmlWriter(new File("Resources/XMLinput/Sprint4Verbs.xml"));
+        XmlWriter xmlWriter = new XmlWriter(FileParser.getFile("Resources/XMLinput/Sprint4Verbs.xml"));
         xmlWriter.createComicFullLesson();
     }
 
