@@ -1,3 +1,13 @@
+import org.w3c.dom.Document;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -157,6 +167,72 @@ public class FileParser{
     public static String generateMapLine(String key, String value){
         return key + " " + getDelimiterLiteral() + " " + value;
     }
+
+    public static void ensureUntranslatedExists() {
+        String leftScenesPath = FileParser.getRootDirectory() + "/Resources/XMLoutput/left_scenes.xml";
+        String wholeScenesPath = FileParser.getRootDirectory() + "/Resources/XMLoutput/whole_scenes.xml";
+        String leftScenesUntranslatedPath = FileParser.getRootDirectory() + "/Resources/XMLoutput/left_scenes_untranslated.xml";
+        String wholeScenesUntranslatedPath = FileParser.getRootDirectory() + "/Resources/XMLoutput/whole_scenes_untranslated.xml";
+
+        // Check if the untranslated files already exist
+        if (new File(leftScenesUntranslatedPath).exists() && new File(wholeScenesUntranslatedPath).exists()) {
+            System.out.println("Untranslated files already exist.");
+            return;
+        }
+
+        try {
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+
+            //Parse and process left_scenes.xml
+            File leftScenesFile = new File(leftScenesPath);
+            if (leftScenesFile.exists()) {
+                Document doc1 = builder.parse(leftScenesFile);
+                doc1.getDocumentElement().normalize();
+                XmlWriter.removeTranslatedPanel(doc1);
+                saveDocumentToFile(doc1, leftScenesUntranslatedPath);
+            } else {
+                System.err.println("File not found: " + leftScenesPath);
+            }
+
+            //Parse and process whole_scenes.xml
+            File wholeScenesFile = new File(wholeScenesPath);
+            if (wholeScenesFile.exists()) {
+                Document doc2 = builder.parse(wholeScenesFile);
+                doc2.getDocumentElement().normalize();
+                XmlWriter.removeTranslatedPanel(doc2);
+                saveDocumentToFile(doc2, wholeScenesUntranslatedPath);
+            } else {
+                System.err.println("File not found: " + wholeScenesPath);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void saveDocumentToFile(Document doc, String outputPath) {
+        try {
+            // Create a TransformerFactory and a Transformer
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes"); // Pretty print the XML
+
+            // Prepare the DOM document for writing
+            DOMSource source = new DOMSource(doc);
+
+            // Set the output file
+            StreamResult result = new StreamResult(new File(outputPath));
+
+            // Write the data to the output file
+            transformer.transform(source, result);
+
+            System.out.println("File saved to: " + outputPath);
+        } catch (TransformerException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     public static void main(String[] args)  {
 
         String oldDelimiter = ":"; // \\|\\|\\|"; // escape each '|'
