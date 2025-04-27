@@ -1,0 +1,41 @@
+Team Report:
+Name: 	Mark Kirwan		Student Number: 22382686
+Percentage: 40%
+
+
+TranslationFile : Most
+ConfigurationFile : Most
+FileParser : All (Moved all methods that were in Helper)
+OpenAiClient : translate, translateAll, changed to Singleton, Implemented original save context functionality (later modified)
+XML_Parser : getting and printing figures from source XML, building Document from file, addTranslatedPanels, get random scenes, nodeToString
+Organised xml files into input / output folder and put the path into config.txt
+Fixed getDialogue, getNarrativeArc,
+XmlReader/writer : Organised XML_Parser functionality into reading from an xml file into DOM parser and extracting key elements and editing an xml file which involves editing a document and writing this document to a file.
+AudioManager : Refactored to use FileParser methods.
+
+Handled most of the planning of the project through WhatsApp and Google Docs.
+Handled error fixing throughout the project. (Fixing old translationFile functionality, and many others).
+
+
+
+
+Name: Guanqiao Han  	Student Number: 21209757
+Percentage: 40%
+Done by me: Figure, SceneGenerator, SceneGeneratorInterface, SceneGeneratorManager, VignetteManager, VignetteSchema
+AudioManager: getOrAdd method.
+ConfigurationFile: Partial code
+OpenAI: Let Java programs interact with OpenAI and receive chat responses.
+XML_Parser: getRandomScenes, getNarrativeArc,getText,getBalloons,addDialogue,splitPanel methods
+XML_Reader:ensureValidDialogue
+
+Responsible for initially building the basic code needed for each sprint, then discussing and refining the code with team members
+
+
+Name:	Abdullah Shinwari	Student Number: 22496944
+Percentage: 20%
+
+Contributed to the architectural backbone of the system by designing the initial class frames for TranslationFile, ConfigurationFile, and AudioManager.
+Proposed and implemented testing strategies for each of these classes from the early stages of development.
+Updated unit tests after refactoring the components into Singleton objects (TranslationFile, ConfigurationFile and OpenAIClient)  to maintain coverage, consistency; after each development.
+Contributed tests for the final output of Sprint 5, which was a critical checkpoint for the system’s end-to-end functionality.
+Wrote extensive Javadoc documentation across the codebase to improve clarity, team communication, and future maintainability.
