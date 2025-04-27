@@ -21,24 +21,29 @@ public class FastTest {
 
     @Test
     public void testin2(){
-            try {
-                // Parse the first XML file
-                File xmlFile1 = new File(FileParser.getRootDirectory() + "/Resources/XMLoutput/left_scenes.xml");
-                System.out.println("File pathhhh: "+xmlFile1.getAbsolutePath());
+        try {
+            // Parse the first XML file
+            File xmlFile1 = new File(FileParser.getRootDirectory() + "/Resources/XMLoutput/left_scenes.xml");
+            File xmlFile2 = new File(FileParser.getRootDirectory() + "/Resources/XMLoutput/whole_scenes.xml");
+            System.out.println("File pathhhh: "+xmlFile1.getAbsolutePath());
 
-                DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-                DocumentBuilder builder = factory.newDocumentBuilder();
-                Document doc1 = builder.parse(xmlFile1);
-                doc1.getDocumentElement().normalize();
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
 
-                XmlWriter.removeTranslatedPanel(doc1);
+            Document doc1 = builder.parse(xmlFile1);
+            doc1.getDocumentElement().normalize();
 
-                saveDocumentToFile(doc1, FileParser.getRootDirectory() + "/Resources/XMLoutput/left_scenes_untranslated.xml");
+            Document doc2 = builder.parse(xmlFile2);
+            doc2.getDocumentElement().normalize();
 
+            XmlWriter.removeTranslatedPanel(doc1);
+            saveDocumentToFile(doc1, FileParser.getRootDirectory() + "/Resources/XMLoutput/left_scenes_untranslated.xml");
 
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            XmlWriter.removeTranslatedPanel(doc2);
+            saveDocumentToFile(doc2, FileParser.getRootDirectory() + "/Resources/XMLoutput/whole_scenes_untranslated.xml");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void saveDocumentToFile(Document doc, String outputPath) {
@@ -62,4 +67,9 @@ public class FastTest {
             e.printStackTrace();
         }
     }
+
+//    @Test
+//    public void testin3(){
+//        FileParser.ensureUntranslatedExists();
+//    }
 }
