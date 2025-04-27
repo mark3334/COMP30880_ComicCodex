@@ -23,7 +23,7 @@ public class FastTest {
     public void testin2(){
             try {
                 // Parse the first XML file
-                File xmlFile1 = new File(FileParser.getRootDirectory() + "\\Resources\\XMLoutput\\left_scenes.xml");
+                File xmlFile1 = new File(FileParser.getRootDirectory() + "/Resources/XMLoutput/left_scenes.xml");
                 System.out.println("File pathhhh: "+xmlFile1.getAbsolutePath());
 
                 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -33,7 +33,7 @@ public class FastTest {
 
                 XmlWriter.removeTranslatedPanel(doc1);
 
-                saveDocumentToFile(doc1, FileParser.getRootDirectory() + "\\Resources\\XMLoutput\\left_scenes_untranslated.xml");
+                saveDocumentToFile(doc1, FileParser.getRootDirectory() + "/Resources/XMLoutput/left_scenes_untranslated.xml");
 
 
             } catch (Exception e) {

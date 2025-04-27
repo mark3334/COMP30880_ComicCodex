@@ -384,6 +384,7 @@ public class XmlWriter {
     public void createComicFullLesson() throws ParserConfigurationException, IOException, SAXException, TransformerException {
         List<String> schedule = ConfigurationFile.getLessonSchedule();
         createEmptyComic();
+        // addFigures();
 
         Map<String, Integer> typeCounts = new HashMap<>();
         for(String type : schedule) {
@@ -400,13 +401,17 @@ public class XmlWriter {
         String verbFileName = "Sprint4verbs.xml";
         File verbsFile = FileParser.getFile(outFolder + "/" + verbFileName);
         XmlReader verbReader = new XmlReader(verbsFile);
+        XmlWriter.removeAudio(verbReader.getDoc());
+        XmlWriter.removeTranslatedPanel(verbReader.getDoc());
         String storyFileName = "Sprint6_FinalAudioFile.xml";
         File storyFile = FileParser.getFile(outFolder + "/" + storyFileName);
         XmlReader storyReader = new XmlReader(storyFile);
         String leftFileName = "left_scenes.xml";
+        leftFileName = "left_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml"; // NEW
         File leftFile = FileParser.getFile(outFolder + "/" + leftFileName);
         XmlReader leftReader = new XmlReader(leftFile);
         String wholeFileName = "whole_scenes.xml";
+        wholeFileName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
         File wholeFile = FileParser.getFile(outFolder + "/" + wholeFileName);
         XmlReader wholeReader = new XmlReader(wholeFile);
 
@@ -435,6 +440,7 @@ public class XmlWriter {
         }
 
         String outputFile = "FinalSprint.xml";
+        // this.addTranslatedPanels();
         this.addAudio();
         this.writeXML(outputFile);
     }
@@ -494,6 +500,35 @@ public class XmlWriter {
         for (int i = 0; i < balloons.getLength(); i++) {
             balloons.item(i).setTextContent("");
         }
+    }
+
+    public static void writeTranslatedVignettes() throws ParserConfigurationException, IOException, SAXException, TransformerException {
+        String leftScenesFilename = "left_scenes_untranslated.xml";
+        String leftOutputName = "left_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
+        String inFolder = ConfigurationFile.get("XML_OUTPUT_PATH");
+        String inPathLeft = inFolder + "/" + leftScenesFilename;
+        File leftScenesFile = FileParser.getFile(inPathLeft);
+        if (!leftScenesFile.exists()) {
+            System.err.println("Left scenes file not found: " + inPathLeft);
+            return;
+        }
+        XmlWriter leftWriter = new XmlWriter(leftScenesFile);
+        leftWriter.addTranslatedPanels();
+        leftWriter.addAudio();
+        leftWriter.writeXML(leftOutputName);
+
+        String wholeScenesFilename = "whole_scenes_untranslated.xml";
+        String wholeOutputName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
+        String inPathWhole = inFolder + "/" + wholeScenesFilename;
+        File wholeScenesFile = FileParser.getFile(inPathWhole);
+        if (!wholeScenesFile.exists()) {
+            System.err.println("Whole scenes file not found: " + inPathWhole);
+            return;
+        }
+        XmlWriter wholeWriter = new XmlWriter(wholeScenesFile);
+        wholeWriter.addTranslatedPanels();
+        wholeWriter.addAudio();
+        wholeWriter.writeXML(wholeOutputName);
     }
 
 
