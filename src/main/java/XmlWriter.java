@@ -454,9 +454,6 @@ public class XmlWriter {
         writerVerbs.writeXML(fileNameVerbs);
     }
 
-    public static void removeTranslatedPanel(Document doc){
-        // TODO
-    }
     public static void removeAudio(Document doc){
         NodeList audioNodes = doc.getElementsByTagName("audio");
         List<Node> nodesToRemove = new ArrayList<>();
@@ -472,7 +469,35 @@ public class XmlWriter {
             parent.removeChild(audioNode);
         }
     }
-    //
+
+    public static void removeTranslatedPanel(Document doc) {
+        NodeList panelNodes = doc.getElementsByTagName("panel");
+        for (int i = 1; i < panelNodes.getLength(); i++) {
+            Node prevPanel = panelNodes.item(i - 1);
+            Node currPanel = panelNodes.item(i);
+
+            Node prevClone = prevPanel.cloneNode(true);
+            Node currClone = currPanel.cloneNode(true);
+
+            resetBalloon(prevClone);
+            resetBalloon(currClone);
+
+            if (prevClone.isEqualNode(currClone)) {
+                currPanel.getParentNode().removeChild(currPanel);
+                i--;
+            }
+        }
+    }
+
+    private static void resetBalloon(Node panel) {
+        NodeList balloons = ((Element) panel).getElementsByTagName("balloon");
+        for (int i = 0; i < balloons.getLength(); i++) {
+            balloons.item(i).setTextContent("");
+        }
+    }
+
+
+
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
         String fileNameVerbs = "Sprint4verbs.xml";
         String inFolder = ConfigurationFile.get("XML_INPUT_PATH");
