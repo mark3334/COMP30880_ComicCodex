@@ -375,6 +375,7 @@ public class XmlWriter {
                 break; // only one <audio> for each panel
             }
         }
+
     }
 
     /**
@@ -517,18 +518,21 @@ public class XmlWriter {
         leftWriter.addAudio();
         leftWriter.writeXML(leftOutputName);
 
-        String wholeScenesFilename = "whole_scenes_untranslated.xml";
-        String wholeOutputName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
-        String inPathWhole = inFolder + "/" + wholeScenesFilename;
-        File wholeScenesFile = FileParser.getFile(inPathWhole);
-        if (!wholeScenesFile.exists()) {
-            System.err.println("Whole scenes file not found: " + inPathWhole);
-            return;
+        TranslationFile t = TranslationFile.getInstance();
+        // handle whole scenes separately as its translation structure is different.
+        String wholeFileName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
+        String outFolder = ConfigurationFile.get("XML_OUTPUT_PATH");
+        File wholeFile = FileParser.getFile(outFolder + "/" + wholeFileName);
+        XmlReader wholeReader = new XmlReader(wholeFile);
+        NodeList balloonNodes = wholeReader.getDoc().getElementsByTagName("balloon");
+
+        for (int i = 3; i < balloonNodes.getLength(); i += 3) {
+            Node balloonNode = balloonNodes.item(i);
+            String toTranslate = balloonNodes.item(i - 1).getTextContent();
+            balloonNode.setTextContent(t.translate(toTranslate));
         }
-        XmlWriter wholeWriter = new XmlWriter(wholeScenesFile);
-        wholeWriter.addTranslatedPanels();
-        wholeWriter.addAudio();
-        wholeWriter.writeXML(wholeOutputName);
+        String wholeOutputName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
+        // do doc to xml
     }
 
 
