@@ -454,6 +454,25 @@ public class XmlWriter {
         writerVerbs.writeXML(fileNameVerbs);
     }
 
+    public static void removeTranslatedPanel(Document doc){
+        // TODO
+    }
+    public static void removeAudio(Document doc){
+        NodeList audioNodes = doc.getElementsByTagName("audio");
+        List<Node> nodesToRemove = new ArrayList<>();
+        for (int i = 0; i < audioNodes.getLength(); i++) {
+            nodesToRemove.add(audioNodes.item(i));
+        }
+        for (Node audioNode : nodesToRemove) {
+            Node parent = audioNode.getParentNode();
+            if (parent == null) {
+                System.out.println("Error audio tag must have parent");
+                return;
+            }
+            parent.removeChild(audioNode);
+        }
+    }
+    //
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
         String fileNameVerbs = "Sprint4verbs.xml";
         String inFolder = ConfigurationFile.get("XML_INPUT_PATH");
