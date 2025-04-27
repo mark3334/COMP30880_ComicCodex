@@ -32,9 +32,18 @@ public class XmlWriter {
         this.inDoc = reader.getDoc();
     }
 
+    /**
+     * Sets the output folder path where the generated XML files will be saved.
+     *
+     * @param folderPath the path to the desired output folder
+     */
     public void setOutFolder(String folderPath) {
         outFolder = folderPath;
     }
+
+    /**
+     * Initializes an empty comic structure in the output XML document by creating the root <comic> element.
+     */
     public void createEmptyComic() throws ParserConfigurationException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -44,8 +53,10 @@ public class XmlWriter {
         this.comic = comic;
     }
 
-
-
+    /**
+     * Adds the <figures> element from the input XML document to the output document.
+     * If the <figures> element is not found in the input, an error message is printed.
+     */
     public void addFigures() {
         NodeList figuresList = this.inDoc.getElementsByTagName("figures");
         // there should be one <figures> tag in input xml / this.inDoc
@@ -60,6 +71,12 @@ public class XmlWriter {
         }
     }
 
+    /**
+     * Adds a list of scene nodes to the output XML document under the <scenes> element.
+     * If the <scenes> element does not exist, it is created and appended to the <comic> element.
+     *
+     * @param newScenes a list of scene nodes to be added to the output document
+     */
     public void addScenes(List<Node> newScenes) {
         if(comic == null) System.out.println("Error no comic node in output doc ");
         if(this.scenes == null){
@@ -71,6 +88,14 @@ public class XmlWriter {
             this.scenes.appendChild(sceneCopy);
         }
     }
+
+    /**
+     * Creates new scenes by selecting random scenes from the input document, adding dialogue to them,
+     * and appending them to the output document. If the output document is not initialized,
+     * it creates an empty comic and adds figures before adding the scenes.
+     *
+     * @param k the number of random scenes to create and add
+     */
     public void createNewScenes(int k) throws ParserConfigurationException {
         List<Node> newScenes = new ArrayList<>();
         List<Node> randomScenes = reader.getRandomScenes(k);
@@ -97,6 +122,14 @@ public class XmlWriter {
         addScenes(newScenes);
         //return newScenes;
     }
+
+    /**
+     * Adds dialogue to the specified scene node by mapping speaker names to their respective lines.
+     * The dialogue is distributed across the <balloon> elements within the scene's panels.
+     *
+     * @param scene         the scene node to which dialogue will be added
+     * @param sceneDialogue the dialogue text containing speaker names and their lines
+     */
     public void addDialogue(Node scene, String sceneDialogue) {
         //Stores each character's lines in a FIFO queue
         Map<String, Queue<String>> dialogueMap = new HashMap<>();
@@ -154,6 +187,10 @@ public class XmlWriter {
         }
     }
 
+    /**
+     * Writes the output XML document to a file with the specified filename, adds audio elements,
+     * translates the panels, and writes the translated document to another specified file.
+     */
     public void writeXMLTranslated(String fName, String fNameTranslated) throws TransformerException, IOException, ParserConfigurationException, SAXException {
         String path = this.outFolder + "/" + fName;
         File outputFile = FileParser.getFile(path);
@@ -178,6 +215,12 @@ public class XmlWriter {
         writeXML(fNameTranslated);
 
     }
+
+    /**
+     * Writes the current output XML document to a file with the specified filename.
+     *
+     * @param fName the filename for the output XML
+     */
     public void writeXML(String fName) throws TransformerException, IOException {
         String path = this.outFolder + "/" + fName;
         File outputFile =  FileParser.getFile(path);
@@ -187,6 +230,11 @@ public class XmlWriter {
         transformer.transform(new DOMSource(this.outDoc), new StreamResult(outputFile));
         System.out.println("XML written to: " + outputFile.getAbsolutePath());
     }
+
+    /**
+     * Adds translated versions of panels to the output XML document by duplicating existing panels
+     * and replacing their text content with translated text.
+     */
     public void addTranslatedPanels() {
 //        if(outDoc != null && outDoc != inDoc) {
 //            System.out.println("Error: adding translated panels is for when indoc = outdoc");
@@ -222,7 +270,9 @@ public class XmlWriter {
         }
     }
 
-
+    /**
+     * Sets the "status" attribute of all <balloon> elements in the output XML document to "speech".
+     */
     public void setBalloonSpeech() {
         NodeList balloons = outDoc.getElementsByTagName("balloon");
         for (int i = 0; i < balloons.getLength(); i++) {
@@ -231,8 +281,18 @@ public class XmlWriter {
         }
     }
 
+    /**
+     * Adds audio elements to the output XML document by associating audio files with the text content
+     * of <balloon> elements within each panel.
+     */
     public void addAudio() { addAudioToDoc(outDoc); }
 
+    /**
+     * Splits panels in the provided XML document that contain multiple <balloon> elements into separate panels,
+     * each containing a single <balloon>.
+     *
+     * @param doc the XML document whose panels are to be split
+     */
     public static void splitPanels(Document doc) {
         NodeList panelNodes = doc.getElementsByTagName("panel");
         List<Element> panelsToAdd = new ArrayList<>();
@@ -279,6 +339,13 @@ public class XmlWriter {
             }
         }
     }
+
+    /**
+     * Adds audio elements to the specified XML document by associating audio files with the text content
+     * of <balloon> elements within each panel.
+     *
+     * @param doc the XML document to which audio elements will be added
+     */
     public static void addAudioToDoc(Document doc) {
         //XmlWriter.splitPanels(doc);
         AudioManager audioManager = AudioManager.getInstance();
@@ -310,6 +377,10 @@ public class XmlWriter {
         }
     }
 
+    /**
+     * Creates a full comic lesson by assembling scenes based on a predefined schedule,
+     * adding audio elements, and writing the final output to an XML file.
+     */
     public void createComicFullLesson() throws ParserConfigurationException, IOException, SAXException, TransformerException {
         List<String> schedule = ConfigurationFile.getLessonSchedule();
         createEmptyComic();
@@ -368,6 +439,10 @@ public class XmlWriter {
         this.writeXML(outputFile);
     }
 
+    /**
+     * Creates a conjugation lesson by reading verb scenes from an input XML file,
+     * adding translated panels and audio elements, and writing the final output to an XML file.
+     */
     public static void createConjugationLesson() throws ParserConfigurationException, IOException, SAXException, TransformerException {
         String fileNameVerbs = "Sprint4verbs.xml";
         String inFolder = ConfigurationFile.get("XML_INPUT_PATH");
