@@ -402,6 +402,7 @@ public class XmlWriter {
         String verbFileName = "Sprint4verbs.xml";
         File verbsFile = FileParser.getFile(outFolder + "/" + verbFileName);
         XmlReader verbReader = new XmlReader(verbsFile);
+        // TODO - method generate Sprint6_FinalAudioFile.xml
         String storyFileName = "Sprint6_FinalAudioFile.xml";
         File storyFile = FileParser.getFile(outFolder + "/" + storyFileName);
         XmlReader storyReader = new XmlReader(storyFile);
@@ -527,7 +528,6 @@ public class XmlWriter {
             balloonNode.setTextContent(t.translate(toTranslate).trim());
         }
         String wholeOutputName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
-        // do doc to xml
         String path = inFolder + "/" + wholeOutputName;
         XML_Parser.docToXml(wholeReader.getDoc(), path);
 
@@ -535,7 +535,7 @@ public class XmlWriter {
         String wholeFileTranslatedName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
         File wholeFile = FileParser.getFile(outFolder + "/" + wholeFileTranslatedName);
         XmlWriter wholeWriter = new XmlWriter(wholeFile);
-        // wholeWriter.addAudio();
+        wholeWriter.addAudio();
     }
 
 
