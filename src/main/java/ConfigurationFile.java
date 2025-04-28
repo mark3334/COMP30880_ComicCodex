@@ -64,6 +64,7 @@ public class ConfigurationFile {
         } catch (IOException e) {
             System.out.println("Wrong: " + e.getMessage());
         }
+        TranslationFile.resetInstance();
     }
 
     public static synchronized ConfigurationFile getInstance() {

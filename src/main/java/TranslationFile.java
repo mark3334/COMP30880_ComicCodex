@@ -28,6 +28,10 @@ public class TranslationFile {
         this.loadTranslationsFile();
     }
 
+    public static synchronized void resetInstance() {
+        instance = null;
+    }
+
     public static synchronized TranslationFile getInstance() {
         if (instance == null) {
             File file = FileParser.getTranslationFile();
