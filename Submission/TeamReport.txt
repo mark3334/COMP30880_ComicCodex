@@ -1,7 +1,6 @@
 Team Report:
 Name: 	Mark Kirwan		Student Number: 22382686
-Percentage: 40%
-
+Percentage: 45%
 
 TranslationFile : Most
 ConfigurationFile : Most
@@ -11,16 +10,20 @@ XML_Parser : getting and printing figures from source XML, building Document fro
 Organised xml files into input / output folder and put the path into config.txt
 Fixed getDialogue, getNarrativeArc,
 XmlReader/writer : Organised XML_Parser functionality into reading from an xml file into DOM parser and extracting key elements and editing an xml file which involves editing a document and writing this document to a file.
-AudioManager : Refactored to use FileParser methods.
+AudioManager : Refactored to use FileParser methods, added error checking with the response status code
 
 Handled most of the planning of the project through WhatsApp and Google Docs.
 Handled error fixing throughout the project. (Fixing old translationFile functionality, and many others).
-
-
+Handled most of the planning of the project through WhatsApp and Google Docs.
+Handled the design of the final sprint (which was then not implemented correctly) and subsequent fixing of the faulty code which was clearly missing core components.
+Handled error fixing throughout the project. (Fixing old translationFile functionality, and many others). Fixing a huge portion of the code that was not meeting the sprint requirements and/or not maintainable/useful for future sprints. Such as when the translation file was only putting translations into a .tsv file instead of having a proper translation dictionary for every language.
+Also fixing the generateNarrativeArc, and getDialogue which weren’t at all working to begin with. Then in the final sprint the createComicFullLesson didn’t work for different target languages and getting the translated versions of left_scenes.xml and whole_scenes.xml took a huge amount of work to do which was a key requirement of sprint 7. The whole scenes translation structure was very different to what’s produced by addTranslatedPanels which caused more difficulties as outlined in my blogposts in Sprint7. All this planning, debugging and error correction was an incredibly frustrating process which I mainly had to handle on my own.
+I frequently pointed out issues with the code through WhatsApp and they still were not addressed, this includes not using FileParser.getFile() and various issues with code being submitted to GitHub such as the code for generating left_scenes.xml not existing even though I said it was necessary for changing the language of the comic lesson..
+Overall, this Group project has been an extremely frustrating experience for me.
 
 
 Name: Guanqiao Han  	Student Number: 21209757
-Percentage: 40%
+Percentage: 35%
 Done by me: Figure, SceneGenerator, SceneGeneratorInterface, SceneGeneratorManager, VignetteManager, VignetteSchema
 AudioManager: getOrAdd method.
 ConfigurationFile: Partial code

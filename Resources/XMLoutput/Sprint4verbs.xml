@@ -133,7 +133,7 @@
                     
         <setting>airport</setting>
                  
-        <audio>21.mp3</audio>
+        <audio>6.mp3</audio>
       </panel>
       <panel>
                     
@@ -183,7 +183,7 @@
                     
         <setting>airport</setting>
                  
-        <audio>22.mp3</audio>
+        <audio>7.mp3</audio>
       </panel>
                
       <panel>
@@ -238,7 +238,7 @@
                     
         <setting>airport</setting>
                  
-        <audio>23.mp3</audio>
+        <audio>8.mp3</audio>
       </panel>
       <panel>
                     
@@ -288,7 +288,7 @@
                     
         <setting>airport</setting>
                  
-        <audio>24.mp3</audio>
+        <audio>9.mp3</audio>
       </panel>
                
       <panel>
@@ -343,7 +343,7 @@
                     
         <setting>dungeon no bars</setting>
                  
-        <audio>25.mp3</audio>
+        <audio>10.mp3</audio>
       </panel>
       <panel>
                     
@@ -393,7 +393,7 @@
                     
         <setting>dungeon no bars</setting>
                  
-        <audio>26.mp3</audio>
+        <audio>11.mp3</audio>
       </panel>
                
       <panel>
@@ -448,7 +448,7 @@
                     
         <setting>checkpoint barricade</setting>
                  
-        <audio>27.mp3</audio>
+        <audio>12.mp3</audio>
       </panel>
       <panel>
                     
@@ -498,7 +498,7 @@
                     
         <setting>checkpoint barricade</setting>
                  
-        <audio>28.mp3</audio>
+        <audio>13.mp3</audio>
       </panel>
                
       <panel>
@@ -553,7 +553,7 @@
                     
         <setting>park bench</setting>
                  
-        <audio>29.mp3</audio>
+        <audio>14.mp3</audio>
       </panel>
       <panel>
                     
@@ -603,7 +603,7 @@
                     
         <setting>park bench</setting>
                  
-        <audio>30.mp3</audio>
+        <audio>15.mp3</audio>
       </panel>
                
       <panel>
@@ -658,7 +658,7 @@
                     
         <setting>school courtyard</setting>
                  
-        <audio>31.mp3</audio>
+        <audio>16.mp3</audio>
       </panel>
       <panel>
                     
@@ -708,7 +708,7 @@
                     
         <setting>school courtyard</setting>
                  
-        <audio>32.mp3</audio>
+        <audio>17.mp3</audio>
       </panel>
                
       <panel>
@@ -739,7 +739,7 @@
                     
         <setting>lunar lander ascending from the moon</setting>
                  
-        <audio>33.mp3</audio>
+        <audio>18.mp3</audio>
       </panel>
       <panel>
                     
@@ -765,7 +765,7 @@
                     
         <setting>lunar lander ascending from the moon</setting>
                  
-        <audio>34.mp3</audio>
+        <audio>19.mp3</audio>
       </panel>
             
     </scene>
@@ -832,7 +832,7 @@
                     
         <setting>kitchen</setting>
                  
-        <audio>35.mp3</audio>
+        <audio>20.mp3</audio>
       </panel>
       <panel>
                     
@@ -858,7 +858,7 @@
                     
         <setting>kitchen</setting>
                  
-        <audio>36.mp3</audio>
+        <audio>21.mp3</audio>
       </panel>
                
       <panel>
@@ -913,7 +913,7 @@
                     
         <setting>restaurant</setting>
                  
-        <audio>37.mp3</audio>
+        <audio>22.mp3</audio>
       </panel>
       <panel>
                     
@@ -963,7 +963,7 @@
                     
         <setting>restaurant</setting>
                  
-        <audio>38.mp3</audio>
+        <audio>23.mp3</audio>
       </panel>
                
       <panel>
@@ -1018,7 +1018,7 @@
                     
         <setting>food truck</setting>
                  
-        <audio>39.mp3</audio>
+        <audio>24.mp3</audio>
       </panel>
       <panel>
                     
@@ -1068,7 +1068,7 @@
                     
         <setting>food truck</setting>
                  
-        <audio>40.mp3</audio>
+        <audio>25.mp3</audio>
       </panel>
                
       <panel>
@@ -1123,7 +1123,7 @@
                     
         <setting>farm</setting>
                  
-        <audio>41.mp3</audio>
+        <audio>26.mp3</audio>
       </panel>
       <panel>
                     
@@ -1173,7 +1173,7 @@
                     
         <setting>farm</setting>
                  
-        <audio>42.mp3</audio>
+        <audio>27.mp3</audio>
       </panel>
                
       <panel>
@@ -1228,7 +1228,7 @@
                     
         <setting>cafeteria</setting>
                  
-        <audio>43.mp3</audio>
+        <audio>28.mp3</audio>
       </panel>
       <panel>
                     
@@ -1278,7 +1278,7 @@
                     
         <setting>cafeteria</setting>
                  
-        <audio>44.mp3</audio>
+        <audio>29.mp3</audio>
       </panel>
                
       <panel>
@@ -1361,7 +1361,7 @@
                     
         <setting>dining room</setting>
                  
-        <audio>45.mp3</audio>
+        <audio>30.mp3</audio>
       </panel>
       <panel>
                     
@@ -1439,7 +1439,7 @@
                     
         <setting>dining room</setting>
                  
-        <audio>46.mp3</audio>
+        <audio>31.mp3</audio>
       </panel>
                
       <panel>
@@ -1522,7 +1522,7 @@
                     
         <setting>barbecue</setting>
                  
-        <audio>47.mp3</audio>
+        <audio>32.mp3</audio>
       </panel>
       <panel>
                     
@@ -1600,7 +1600,7 @@
                     
         <setting>barbecue</setting>
                  
-        <audio>48.mp3</audio>
+        <audio>33.mp3</audio>
       </panel>
             
     </scene>
@@ -1661,7 +1661,7 @@
                     
         <setting>bar</setting>
                  
-        <audio>49.mp3</audio>
+        <audio>34.mp3</audio>
       </panel>
       <panel>
                     
@@ -1687,7 +1687,7 @@
                     
         <setting>bar</setting>
                  
-        <audio>50.mp3</audio>
+        <audio>35.mp3</audio>
       </panel>
                
       <panel>
@@ -1742,7 +1742,7 @@
                     
         <setting>charity event</setting>
                  
-        <audio>51.mp3</audio>
+        <audio>36.mp3</audio>
       </panel>
       <panel>
                     
@@ -1792,7 +1792,7 @@
                     
         <setting>charity event</setting>
                  
-        <audio>52.mp3</audio>
+        <audio>37.mp3</audio>
       </panel>
                
       <panel>
@@ -1847,7 +1847,7 @@
                     
         <setting>sports bar</setting>
                  
-        <audio>53.mp3</audio>
+        <audio>38.mp3</audio>
       </panel>
       <panel>
                     
@@ -1897,7 +1897,7 @@
                     
         <setting>sports bar</setting>
                  
-        <audio>54.mp3</audio>
+        <audio>39.mp3</audio>
       </panel>
                
       <panel>
@@ -1952,7 +1952,7 @@
                     
         <setting>living room</setting>
                  
-        <audio>55.mp3</audio>
+        <audio>40.mp3</audio>
       </panel>
       <panel>
                     
@@ -2002,7 +2002,7 @@
                     
         <setting>living room</setting>
                  
-        <audio>56.mp3</audio>
+        <audio>41.mp3</audio>
       </panel>
                
       <panel>
@@ -2057,7 +2057,7 @@
                     
         <setting>laboratory window</setting>
                  
-        <audio>57.mp3</audio>
+        <audio>42.mp3</audio>
       </panel>
       <panel>
                     
@@ -2107,7 +2107,7 @@
                     
         <setting>laboratory window</setting>
                  
-        <audio>58.mp3</audio>
+        <audio>43.mp3</audio>
       </panel>
                
       <panel>
@@ -2188,7 +2188,7 @@
                     
         <setting>bar</setting>
                  
-        <audio>59.mp3</audio>
+        <audio>44.mp3</audio>
       </panel>
       <panel>
                     
@@ -2264,7 +2264,7 @@
                     
         <setting>bar</setting>
                  
-        <audio>60.mp3</audio>
+        <audio>45.mp3</audio>
       </panel>
                
       <panel>
@@ -2347,7 +2347,7 @@
                     
         <setting>coffee shop</setting>
                  
-        <audio>61.mp3</audio>
+        <audio>46.mp3</audio>
       </panel>
       <panel>
                     
@@ -2425,7 +2425,7 @@
                     
         <setting>coffee shop</setting>
                  
-        <audio>62.mp3</audio>
+        <audio>47.mp3</audio>
       </panel>
             
     </scene>
@@ -2492,7 +2492,7 @@
                     
         <setting>library</setting>
                  
-        <audio>63.mp3</audio>
+        <audio>48.mp3</audio>
       </panel>
       <panel>
                     
@@ -2518,7 +2518,7 @@
                     
         <setting>library</setting>
                  
-        <audio>64.mp3</audio>
+        <audio>49.mp3</audio>
       </panel>
                
       <panel>
@@ -2573,7 +2573,7 @@
                     
         <setting>school courtyard</setting>
                  
-        <audio>65.mp3</audio>
+        <audio>50.mp3</audio>
       </panel>
       <panel>
                     
@@ -2623,7 +2623,7 @@
                     
         <setting>school courtyard</setting>
                  
-        <audio>66.mp3</audio>
+        <audio>51.mp3</audio>
       </panel>
                
       <panel>
@@ -2678,7 +2678,7 @@
                     
         <setting>office 2</setting>
                  
-        <audio>67.mp3</audio>
+        <audio>52.mp3</audio>
       </panel>
       <panel>
                     
@@ -2728,7 +2728,7 @@
                     
         <setting>office 2</setting>
                  
-        <audio>68.mp3</audio>
+        <audio>53.mp3</audio>
       </panel>
                
       <panel>
@@ -2783,7 +2783,7 @@
                     
         <setting>salon interior</setting>
                  
-        <audio>69.mp3</audio>
+        <audio>54.mp3</audio>
       </panel>
       <panel>
                     
@@ -2833,7 +2833,7 @@
                     
         <setting>salon interior</setting>
                  
-        <audio>70.mp3</audio>
+        <audio>55.mp3</audio>
       </panel>
                
       <panel>
@@ -2888,7 +2888,7 @@
                     
         <setting>map room</setting>
                  
-        <audio>71.mp3</audio>
+        <audio>56.mp3</audio>
       </panel>
       <panel>
                     
@@ -2938,7 +2938,7 @@
                     
         <setting>map room</setting>
                  
-        <audio>72.mp3</audio>
+        <audio>57.mp3</audio>
       </panel>
                
       <panel>
@@ -3021,7 +3021,7 @@
                     
         <setting>classroom</setting>
                  
-        <audio>73.mp3</audio>
+        <audio>58.mp3</audio>
       </panel>
       <panel>
                     
@@ -3099,7 +3099,7 @@
                     
         <setting>classroom</setting>
                  
-        <audio>74.mp3</audio>
+        <audio>59.mp3</audio>
       </panel>
                
       <panel>
@@ -3180,7 +3180,7 @@
                     
         <setting>park bench</setting>
                  
-        <audio>75.mp3</audio>
+        <audio>60.mp3</audio>
       </panel>
       <panel>
                     
@@ -3256,7 +3256,7 @@
                     
         <setting>park bench</setting>
                  
-        <audio>76.mp3</audio>
+        <audio>61.mp3</audio>
       </panel>
             
     </scene>
@@ -3317,7 +3317,7 @@
                     
         <setting>texas</setting>
                  
-        <audio>77.mp3</audio>
+        <audio>62.mp3</audio>
       </panel>
       <panel>
                     
@@ -3343,7 +3343,7 @@
                     
         <setting>texas</setting>
                  
-        <audio>78.mp3</audio>
+        <audio>63.mp3</audio>
       </panel>
                
       <panel>
@@ -3400,7 +3400,7 @@
                     
         <setting>gobi desert</setting>
                  
-        <audio>79.mp3</audio>
+        <audio>64.mp3</audio>
       </panel>
       <panel>
                     
@@ -3452,7 +3452,7 @@
                     
         <setting>gobi desert</setting>
                  
-        <audio>80.mp3</audio>
+        <audio>65.mp3</audio>
       </panel>
                
       <panel>
@@ -3509,7 +3509,7 @@
                     
         <setting>egypt</setting>
                  
-        <audio>81.mp3</audio>
+        <audio>66.mp3</audio>
       </panel>
       <panel>
                     
@@ -3561,7 +3561,7 @@
                     
         <setting>egypt</setting>
                  
-        <audio>82.mp3</audio>
+        <audio>67.mp3</audio>
       </panel>
                
       <panel>
@@ -3616,7 +3616,7 @@
                     
         <setting>ireland</setting>
                  
-        <audio>83.mp3</audio>
+        <audio>68.mp3</audio>
       </panel>
       <panel>
                     
@@ -3666,7 +3666,7 @@
                     
         <setting>ireland</setting>
                  
-        <audio>84.mp3</audio>
+        <audio>69.mp3</audio>
       </panel>
                
       <panel>
@@ -3721,7 +3721,7 @@
                     
         <setting>apocalypse closeup</setting>
                  
-        <audio>85.mp3</audio>
+        <audio>70.mp3</audio>
       </panel>
       <panel>
                     
@@ -3771,7 +3771,7 @@
                     
         <setting>apocalypse closeup</setting>
                  
-        <audio>86.mp3</audio>
+        <audio>71.mp3</audio>
       </panel>
                
       <panel>
@@ -3856,7 +3856,7 @@
                     
         <setting>marshlands with bodies</setting>
                  
-        <audio>87.mp3</audio>
+        <audio>72.mp3</audio>
       </panel>
       <panel>
                     
@@ -3936,7 +3936,7 @@
                     
         <setting>marshlands with bodies</setting>
                  
-        <audio>88.mp3</audio>
+        <audio>73.mp3</audio>
       </panel>
                
       <panel>
@@ -4019,7 +4019,7 @@
                     
         <setting>nebraska</setting>
                  
-        <audio>89.mp3</audio>
+        <audio>74.mp3</audio>
       </panel>
       <panel>
                     
@@ -4097,7 +4097,7 @@
                     
         <setting>nebraska</setting>
                  
-        <audio>90.mp3</audio>
+        <audio>75.mp3</audio>
       </panel>
             
     </scene>
@@ -4164,7 +4164,7 @@
                     
         <setting>tech office</setting>
                  
-        <audio>91.mp3</audio>
+        <audio>76.mp3</audio>
       </panel>
       <panel>
                     
@@ -4190,7 +4190,7 @@
                     
         <setting>tech office</setting>
                  
-        <audio>92.mp3</audio>
+        <audio>77.mp3</audio>
       </panel>
                
       <panel>
@@ -4245,7 +4245,7 @@
                     
         <setting>amazon</setting>
                  
-        <audio>93.mp3</audio>
+        <audio>78.mp3</audio>
       </panel>
       <panel>
                     
@@ -4295,7 +4295,7 @@
                     
         <setting>amazon</setting>
                  
-        <audio>94.mp3</audio>
+        <audio>79.mp3</audio>
       </panel>
                
       <panel>
@@ -4350,7 +4350,7 @@
                     
         <setting>office 2</setting>
                  
-        <audio>95.mp3</audio>
+        <audio>80.mp3</audio>
       </panel>
       <panel>
                     
@@ -4400,7 +4400,7 @@
                     
         <setting>office 2</setting>
                  
-        <audio>96.mp3</audio>
+        <audio>81.mp3</audio>
       </panel>
                
       <panel>
@@ -4455,7 +4455,7 @@
                     
         <setting>salon interior</setting>
                  
-        <audio>97.mp3</audio>
+        <audio>82.mp3</audio>
       </panel>
       <panel>
                     
@@ -4505,7 +4505,7 @@
                     
         <setting>salon interior</setting>
                  
-        <audio>98.mp3</audio>
+        <audio>83.mp3</audio>
       </panel>
                
       <panel>
@@ -4560,7 +4560,7 @@
                     
         <setting>building site</setting>
                  
-        <audio>99.mp3</audio>
+        <audio>84.mp3</audio>
       </panel>
       <panel>
                     
@@ -4610,7 +4610,7 @@
                     
         <setting>building site</setting>
                  
-        <audio>100.mp3</audio>
+        <audio>85.mp3</audio>
       </panel>
                
       <panel>
@@ -4691,7 +4691,7 @@
                     
         <setting>clean toilet</setting>
                  
-        <audio>101.mp3</audio>
+        <audio>86.mp3</audio>
       </panel>
       <panel>
                     
@@ -4767,7 +4767,7 @@
                     
         <setting>clean toilet</setting>
                  
-        <audio>102.mp3</audio>
+        <audio>87.mp3</audio>
       </panel>
                
       <panel>
@@ -4848,7 +4848,7 @@
                     
         <setting>art studio</setting>
                  
-        <audio>103.mp3</audio>
+        <audio>88.mp3</audio>
       </panel>
       <panel>
                     
@@ -4924,7 +4924,7 @@
                     
         <setting>art studio</setting>
                  
-        <audio>104.mp3</audio>
+        <audio>89.mp3</audio>
       </panel>
             
     </scene>
@@ -5009,7 +5009,7 @@
                     
         <setting>statue</setting>
                  
-        <audio>105.mp3</audio>
+        <audio>90.mp3</audio>
       </panel>
       <panel>
                     
@@ -5059,7 +5059,7 @@
                     
         <setting>statue</setting>
                  
-        <audio>106.mp3</audio>
+        <audio>91.mp3</audio>
       </panel>
                
       <panel>
@@ -5114,7 +5114,7 @@
                     
         <setting>red carpet event</setting>
                  
-        <audio>107.mp3</audio>
+        <audio>92.mp3</audio>
       </panel>
       <panel>
                     
@@ -5164,7 +5164,7 @@
                     
         <setting>red carpet event</setting>
                  
-        <audio>108.mp3</audio>
+        <audio>93.mp3</audio>
       </panel>
                
       <panel>
@@ -5219,7 +5219,7 @@
                     
         <setting>library</setting>
                  
-        <audio>109.mp3</audio>
+        <audio>94.mp3</audio>
       </panel>
       <panel>
                     
@@ -5269,7 +5269,7 @@
                     
         <setting>library</setting>
                  
-        <audio>110.mp3</audio>
+        <audio>95.mp3</audio>
       </panel>
                
       <panel>
@@ -5324,7 +5324,7 @@
                     
         <setting>jazz club</setting>
                  
-        <audio>111.mp3</audio>
+        <audio>96.mp3</audio>
       </panel>
       <panel>
                     
@@ -5374,7 +5374,7 @@
                     
         <setting>jazz club</setting>
                  
-        <audio>112.mp3</audio>
+        <audio>97.mp3</audio>
       </panel>
                
       <panel>
@@ -5429,7 +5429,7 @@
                     
         <setting>government</setting>
                  
-        <audio>113.mp3</audio>
+        <audio>98.mp3</audio>
       </panel>
       <panel>
                     
@@ -5479,7 +5479,7 @@
                     
         <setting>government</setting>
                  
-        <audio>114.mp3</audio>
+        <audio>99.mp3</audio>
       </panel>
                
       <panel>
@@ -5534,7 +5534,7 @@
                     
         <setting>boston</setting>
                  
-        <audio>115.mp3</audio>
+        <audio>100.mp3</audio>
       </panel>
       <panel>
                     
@@ -5584,7 +5584,7 @@
                     
         <setting>boston</setting>
                  
-        <audio>116.mp3</audio>
+        <audio>101.mp3</audio>
       </panel>
                
       <panel>
@@ -5667,7 +5667,7 @@
                     
         <setting>church</setting>
                  
-        <audio>117.mp3</audio>
+        <audio>102.mp3</audio>
       </panel>
       <panel>
                     
@@ -5745,7 +5745,7 @@
                     
         <setting>church</setting>
                  
-        <audio>118.mp3</audio>
+        <audio>103.mp3</audio>
       </panel>
             
     </scene>

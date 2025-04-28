@@ -54,349 +54,17 @@
                
       <panel>
                     
-        <left>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <pose>three</pose>
-                              
-            <facing>right</facing>
-                              
-            <horizontal>more</horizontal>
-                           
-          </figure>
-                      
-        </left>
-                    
-        <right>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>seven flipped</pose>
-                              
-            <facing>left</facing>
-                              
-            <horizontal>less</horizontal>
-                           
-          </figure>
-                      
-        </right>
-                    
-        <below>Scene 37</below>
-                    
-        <border>white</border>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <above>walled graveyard</above>
-                    
-        <left>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>sad</pose>
-                              
-            <facing>right</facing>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>I can't believe you're gone, Betty</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
-        <right>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <pose>dead in coffin</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>(quiet in the coffin)</content>
-                           
-          </balloon>
-                      
-        </right>
-                    
-        <setting>graveyard with walls</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <above>walled graveyard</above>
-                    
-        <left>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>miserable</pose>
-                              
-            <facing>right</facing>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>How can I ever move on?</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
-        <right>
-                         
-          <figure>
-                              
-            <appearance>default</appearance>
-                              
-            <skin>default</skin>
-                              
-            <hair>default</hair>
-                              
-            <pose>gravestone prop</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                      
-        </right>
-                    
-        <below>On the right is a gravestone</below>
-                    
-        <setting>graveyard with walls</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <above>walled graveyard</above>
-                    
-        <left>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>rejected</pose>
-                              
-            <facing>right</facing>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>This pain is unbearable..</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
-        <right>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <pose>dead</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>(silent)</content>
-                           
-          </balloon>
-                      
-        </right>
-                    
-        <setting>graveyard with walls</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <above>walled graveyard</above>
-                    
-        <left>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>exorcising</pose>
-                              
-            <facing>right</facing>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>I wish you could tell me it’s going to be okay</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
-        <right>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <pose>haunting</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>(still silent)</content>
-                           
-          </balloon>
-                      
-        </right>
-                    
-        <setting>graveyard with walls</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <above>walled graveyard</above>
-                    
-        <left>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>holding flower</pose>
-                              
-            <facing>right</facing>
-                              
-            <horizontal>little more</horizontal>
-                           
-          </figure>
-                         
-          <balloon status="speech">
-                              
-            <content>In the name of all that is holy, I command you!</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
         <middle>
                          
           <figure>
                               
-            <appearance>default</appearance>
+            <id>Betty</id>
                               
-            <skin>default</skin>
+            <name>Betty</name>
                               
-            <hair>default</hair>
+            <appearance>female</appearance>
                               
-            <pose>gravestone prop</pose>
+            <pose>five</pose>
                               
             <facing>right</facing>
                            
@@ -404,58 +72,15 @@
                       
         </middle>
                     
-        <right>
-                         
-          <figure>
-                              
-            <appearance>default</appearance>
-                              
-            <skin>default</skin>
-                              
-            <hair>default</hair>
-                              
-            <pose>grim reaper prop</pose>
-                              
-            <facing>left</facing>
-                              
-            <horizontal>little less</horizontal>
-                           
-          </figure>
-                      
-        </right>
+        <below>Scene 5</below>
                     
-        <below>In the middle is a fresh grave. On the right is the grim reaper</below>
-                    
-        <setting>graveyard with walls</setting>
+        <border>white</border>
                  
       </panel>
-            
-    </scene>
-    <scene>
                
       <panel>
                     
         <left>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <pose>one</pose>
-                              
-            <facing>right</facing>
-                              
-            <horizontal>more</horizontal>
-                           
-          </figure>
-                      
-        </left>
-                    
-        <right>
                          
           <figure>
                               
@@ -471,19 +96,21 @@
                               
             <lips>red</lips>
                               
-            <pose>three flipped</pose>
+            <pose>mixing</pose>
                               
-            <facing>left</facing>
-                              
-            <horizontal>less</horizontal>
+            <facing>right</facing>
                            
           </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>mixing ingredients</content>
+                           
+          </balloon>
                       
-        </right>
+        </left>
                     
-        <below>Scene 13</below>
-                    
-        <border>white</border>
+        <setting>kitchen</setting>
                  
       </panel>
                
@@ -513,41 +140,19 @@
                          
           <balloon status="speech">
                               
-            <content>I think I added too much of that chemical!</content>
+            <content>mixing chemicals</content>
                            
           </balloon>
                       
         </left>
                     
-        <right>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <pose>lighting cigar</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                         
-          <balloon status="thought">
-                              
-            <content>Whoa! That’s not supposed to happen!</content>
-                           
-          </balloon>
-                      
-        </right>
-                    
-        <setting>laboratory</setting>
+        <setting>kitchen</setting>
                  
       </panel>
                
       <panel>
+                    
+        <above>government plaza</above>
                     
         <left>
                          
@@ -565,7 +170,7 @@
                               
             <lips>red</lips>
                               
-            <pose>exploding</pose>
+            <pose>on soapbox</pose>
                               
             <facing>right</facing>
                            
@@ -573,7 +178,7 @@
                          
           <balloon status="speech">
                               
-            <content>Aah! I need help over here!</content>
+            <content>preaching revolution</content>
                            
           </balloon>
                       
@@ -589,7 +194,7 @@
                               
             <appearance>female</appearance>
                               
-            <pose>dropping cigar</pose>
+            <pose>plugging ears</pose>
                               
             <facing>left</facing>
                            
@@ -597,17 +202,19 @@
                          
           <balloon status="thought">
                               
-            <content>Oh no! What did I just do!?</content>
+            <content>plugging ears</content>
                            
           </balloon>
                       
         </right>
                     
-        <setting>laboratory</setting>
+        <setting>government</setting>
                  
       </panel>
                
       <panel>
+                    
+        <above>government plaza</above>
                     
         <left>
                          
@@ -625,67 +232,7 @@
                               
             <lips>red</lips>
                               
-            <pose>on fire</pose>
-                              
-            <facing>right</facing>
-                           
-          </figure>
-                         
-          <balloon status="thought">
-                              
-            <content>This is not how I planned my experiment to go!</content>
-                           
-          </balloon>
-                      
-        </left>
-                    
-        <right>
-                         
-          <figure>
-                              
-            <id>Betty</id>
-                              
-            <name>Betty</name>
-                              
-            <appearance>female</appearance>
-                              
-            <pose>throwing water</pose>
-                              
-            <facing>left</facing>
-                           
-          </figure>
-                         
-          <balloon status="thought">
-                              
-            <content>Quick, grab a fire extinguisher!</content>
-                           
-          </balloon>
-                      
-        </right>
-                    
-        <setting>laboratory</setting>
-                 
-      </panel>
-               
-      <panel>
-                    
-        <left>
-                         
-          <figure>
-                              
-            <id>Alfie</id>
-                              
-            <name>Alfie</name>
-                              
-            <appearance>male</appearance>
-                              
-            <skin>light brown</skin>
-                              
-            <hair>dark brown</hair>
-                              
-            <lips>red</lips>
-                              
-            <pose>burnt</pose>
+            <pose>rebellious</pose>
                               
             <facing>right</facing>
                            
@@ -693,7 +240,7 @@
                          
           <balloon status="speech">
                               
-            <content>I didn’t mean to throw that punch!</content>
+            <content>throwing a bomb</content>
                            
           </balloon>
                       
@@ -709,7 +256,7 @@
                               
             <appearance>female</appearance>
                               
-            <pose>smoking cigar</pose>
+            <pose>running away</pose>
                               
             <facing>left</facing>
                            
@@ -717,13 +264,70 @@
                          
           <balloon status="thought">
                               
-            <content>Oof! That wasn’t very nice, Alfie!</content>
+            <content>running away</content>
                            
           </balloon>
                       
         </right>
                     
-        <setting>laboratory</setting>
+        <setting>police state</setting>
+                 
+      </panel>
+            
+    </scene>
+    <scene>
+               
+      <panel>
+                    
+        <left>
+                         
+          <figure>
+                              
+            <id>Betty</id>
+                              
+            <name>Betty</name>
+                              
+            <appearance>female</appearance>
+                              
+            <pose>eight</pose>
+                              
+            <facing>right</facing>
+                              
+            <horizontal>more</horizontal>
+                           
+          </figure>
+                      
+        </left>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>one flipped</pose>
+                              
+            <facing>left</facing>
+                              
+            <horizontal>less</horizontal>
+                           
+          </figure>
+                      
+        </right>
+                    
+        <below>Scene 81</below>
+                    
+        <border>white</border>
                  
       </panel>
                
@@ -745,7 +349,67 @@
                               
             <lips>red</lips>
                               
-            <pose>punching</pose>
+            <pose>competing</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>kicking soccer ball</content>
+                           
+          </balloon>
+                      
+        </left>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <id>Betty</id>
+                              
+            <name>Betty</name>
+                              
+            <appearance>female</appearance>
+                              
+            <pose>competing with</pose>
+                              
+            <facing>left</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>tackling for ball</content>
+                           
+          </balloon>
+                      
+        </right>
+                    
+        <setting>sports field</setting>
+                 
+      </panel>
+               
+      <panel>
+                    
+        <left>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>defensive</pose>
                               
             <facing>right</facing>
                               
@@ -755,7 +419,7 @@
                          
           <balloon status="speech">
                               
-            <content>throwing a punch</content>
+            <content>bracing for tackle</content>
                            
           </balloon>
                       
@@ -771,7 +435,7 @@
                               
             <hair>default</hair>
                               
-            <pose>cigar prop</pose>
+            <pose>ball prop</pose>
                               
             <facing>right</facing>
                            
@@ -789,7 +453,91 @@
                               
             <appearance>female</appearance>
                               
-            <pose>fainting</pose>
+            <pose>charging</pose>
+                              
+            <facing>left</facing>
+                              
+            <horizontal>less</horizontal>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>charging like a bull</content>
+                           
+          </balloon>
+                      
+        </right>
+                    
+        <below>In the middle is the soccer ball</below>
+                    
+        <setting>sports field</setting>
+                 
+      </panel>
+               
+      <panel>
+                    
+        <left>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>falling</pose>
+                              
+            <facing>right</facing>
+                              
+            <horizontal>little more</horizontal>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>falling over</content>
+                           
+          </balloon>
+                      
+        </left>
+                    
+        <middle>
+                         
+          <figure>
+                              
+            <appearance>default</appearance>
+                              
+            <skin>default</skin>
+                              
+            <hair>default</hair>
+                              
+            <pose>bouncing ball prop</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                      
+        </middle>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <id>Betty</id>
+                              
+            <name>Betty</name>
+                              
+            <appearance>female</appearance>
+                              
+            <pose>bullying</pose>
                               
             <facing>left</facing>
                               
@@ -799,13 +547,197 @@
                          
           <balloon status="speech">
                               
-            <content>knocked out</content>
+            <content>body slamming</content>
                            
           </balloon>
                       
         </right>
                     
-        <setting>laboratory</setting>
+        <below>In the middle is a bouncing soccer ball</below>
+                    
+        <setting>sports field</setting>
+                 
+      </panel>
+               
+      <panel>
+                    
+        <left>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>regaining consciousness</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="thought">
+                              
+            <content>regaining consciousness</content>
+                           
+          </balloon>
+                      
+        </left>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <id>Betty</id>
+                              
+            <name>Betty</name>
+                              
+            <appearance>female</appearance>
+                              
+            <pose>running with ball</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>grabbing the ball and running away</content>
+                           
+          </balloon>
+                      
+        </right>
+                    
+        <setting>sports field</setting>
+                 
+      </panel>
+               
+      <panel>
+                    
+        <left>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>groggy</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>still groggy</content>
+                           
+          </balloon>
+                      
+        </left>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <id>Betty</id>
+                              
+            <name>Betty</name>
+                              
+            <appearance>female</appearance>
+                              
+            <pose>dunking</pose>
+                              
+            <facing>right</facing>
+                              
+            <vertical>less</vertical>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>dunking the ball</content>
+                           
+          </balloon>
+                      
+        </right>
+                    
+        <setting>sports field</setting>
+                 
+      </panel>
+               
+      <panel>
+                    
+        <left>
+                         
+          <figure>
+                              
+            <id>Alfie</id>
+                              
+            <name>Alfie</name>
+                              
+            <appearance>male</appearance>
+                              
+            <skin>light brown</skin>
+                              
+            <hair>dark brown</hair>
+                              
+            <lips>red</lips>
+                              
+            <pose>mocking clap</pose>
+                              
+            <facing>right</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>clapping sarcastically</content>
+                           
+          </balloon>
+                      
+        </left>
+                    
+        <right>
+                         
+          <figure>
+                              
+            <id>Betty</id>
+                              
+            <name>Betty</name>
+                              
+            <appearance>female</appearance>
+                              
+            <pose>bowing respectfully</pose>
+                              
+            <facing>left</facing>
+                           
+          </figure>
+                         
+          <balloon status="speech">
+                              
+            <content>taking a bow</content>
+                           
+          </balloon>
+                      
+        </right>
+                    
+        <setting>sports field</setting>
                  
       </panel>
             

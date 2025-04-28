@@ -1,0 +1,3104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<comic>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>serious</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>He has a serious attitude.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>opening can</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The can opener has a sharp blade.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>targeted</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>People often feel pressure in the spotlight.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>stalking</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>I will not get close to that person.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>bowing respectfully</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Greetings are fundamental in Korean culture.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>blowing balloon</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person uses their mouth to inflate it.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>experimenting</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>They are focused on their work.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>geeky</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Collecting is a popular pastime.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>slicing</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The sharp knife is for cutting.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>handshaking</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>A handshake is a common greeting.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>hitler</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Minorities often face discrimination.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>directing</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The scene will be filmed now.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>crucified</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>They are surrounded by onlookers.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>interrogating</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The room is dimly lit.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>charmed</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Their smile is magical.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>mugging</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>They are demanding money from the tourist.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>slouching</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>He is sitting lazily in the chair.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>looking in mirror</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The bathroom has good lighting.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>imprisoned</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>This place feels like a prison.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>stabbing</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Their eyes are wide open.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>breakfasting</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>They are using a spoon.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>manipulating</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Others look confused or uncertain.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>blind warrior</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The sword is shaking in his hand.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>apprehensive</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Their eyes are wide open.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>pitching</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The crowd is watching closely.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>gesturing wildly</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>They might be trying to emphasize a point.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>probing</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person wants to learn more.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>driving</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The driver looks focused.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>biting</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Their gaze is intense.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>farting</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Farting is a natural thing.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>smitten</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>I am lost in your eyes.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>dead</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>They look scared and anxious.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>recollecting</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Their expression shows contemplation.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>gagged</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person is being gagged.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>chewing carrots</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person is chewing.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>munching</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The bowl is full of cereal.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>condescending</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>She is treating me like a child.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>selling</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>This person is showing a sample.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>spraying paint</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>A paint can is in his hand.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>walking a dog</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The dog is a small breed.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>giving chocolate</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>He is giving a gift to his loved one.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>disinterested</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>They seem lost in thought.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>starving</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>He is controlling his meals.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>probing</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Exploring is fun and exciting!</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>shaking hands</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Shaking hands shows respect.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>chained</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The shackles are tight around their wrists.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>stacking</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person is a good helper in the kitchen.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>stroking cat</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The kitten is very cute.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>disagreeing</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>They are not convinced.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>blowing balloon</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The balloon is getting bigger.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>overshadowed</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Their eyes are wide open.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>holding globe</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Maps can be flat or 3D.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>gossipy</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Gossip can spread quickly.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>put out</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>I think this idea is good.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>disgusted</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>That�s not okay.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>stargazing</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person scans the night sky for movement.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>posing</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>This person is taking a photo.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>stepping down</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>This step shows determination.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>unprepared</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The background looks adventurous.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>recruiting</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person looks enthusiastic.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>optimistic</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>They enjoy every moment.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>lunging</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The body is leaning slightly forward.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>stalking</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person is in the bushes.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>holding club</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person is swinging a giant club.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>worried</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Her face looks anxious.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>playing video game</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Headphones are resting around their neck.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>loving twosome</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Their eyes are sparkling.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>introducing oneself</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>I am from Korea.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>attacking</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person is showing aggression.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>hoarding</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person wants to become rich.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>voting for</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person feels excited.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>farming</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person is proud of their pig.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>calculating</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>He seems to like math.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>blowing balloon</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The balloon might pop if it gets too big.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>hoarding</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person wants to become rich.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>timekeeping</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Patience is important in this moment.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>smug</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The expression is self-satisfied.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>hands on hips</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>This stance can indicate authority.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>sprinting</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Winning the race is their goal.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>minion</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>They are ready to follow instructions.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>critical</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>He is disappointed about something.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>probing</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person is holding a magnifying glass.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>aching</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>He is taking a painkiller.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>haunting</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person looks ghostly and pale.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>staking</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The demon is fierce.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>competing for</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The spectators are cheering.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>examining</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>They are examining the evidence closely.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>explaining</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>They are using hand gestures.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>voting against</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Their expression is serious.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>slurping</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The glass is full of beer.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>sighing</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>That person's expression looks sad.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>questioning</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>He is posing a riddle.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>tossing drink</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>Some beer is spilling on the ground.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>holding umbrella</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person is standing on the sidewalk.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>sitting</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The vase is made of porcelain.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>drinking coffee</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person is happy.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>drinking from bottle</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>He is drinking straight from the bottle.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>imitating</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person is wearing a mask.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>nocking</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The archer will shoot the arrow soon.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+      
+    <scene>
+            
+        <background/>
+            
+        <panel>
+                  
+            <left>
+                        
+                <figure>
+                              
+                    <id>A</id>
+                              
+                    <pose>arriving</pose>
+                              
+                    <facing>right</facing>
+                            
+                </figure>
+                      
+            </left>
+                  
+            <balloon status="speech">
+                        
+                <content>The person is arriving with a suitcase.</content>
+                      
+            </balloon>
+                
+        </panel>
+            
+  
+    </scene>
+    
+</comic>
