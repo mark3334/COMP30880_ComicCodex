@@ -522,7 +522,7 @@ public class XmlWriter {
         wholeReader.ensureTranslatedBalloonsWholeScenes();
         NodeList balloonNodes = wholeReader.getDoc().getElementsByTagName("balloon");
 
-        for (int i = 3; i < balloonNodes.getLength(); i += 3) {
+        for (int i = 2; i < balloonNodes.getLength(); i += 3) {
             Node balloonNode = balloonNodes.item(i);
             String toTranslate = balloonNodes.item(i - 1).getTextContent().trim();
             balloonNode.setTextContent(t.translate(toTranslate).trim());
