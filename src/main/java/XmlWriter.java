@@ -514,10 +514,18 @@ public class XmlWriter {
             System.err.println("Left scenes file not found: " + inPathLeft);
             return;
         }
-        XmlWriter leftWriter = new XmlWriter(leftScenesFile);
-        leftWriter.addTranslatedPanels();
-        leftWriter.addAudio();
-        leftWriter.writeXML(leftOutputName);
+        String leftScenesTranslatedPath = inFolder + "/"  + leftOutputName;
+        File leftScenesTranslatedFile = FileParser.getFile(leftScenesTranslatedPath);
+        if(leftScenesTranslatedFile.exists()) {
+            System.out.println("Translated scenes file already exists for language - " + ConfigurationFile.getTargetLanguage());
+        }
+        else{
+            XmlWriter leftWriter = new XmlWriter(leftScenesFile);
+            leftWriter.addTranslatedPanels();
+            leftWriter.addAudio();
+            leftWriter.writeXML(leftOutputName);
+        }
+
 
         TranslationFile t = TranslationFile.getInstance();
         // handle whole scenes separately as its translation structure is different.
