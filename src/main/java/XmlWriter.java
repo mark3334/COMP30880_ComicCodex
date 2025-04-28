@@ -285,7 +285,12 @@ public class XmlWriter {
      * Adds audio elements to the output XML document by associating audio files with the text content
      * of <balloon> elements within each panel.
      */
-    public void addAudio() { addAudioToDoc(outDoc); }
+    public void addAudio() {
+        if(outDoc == null) {
+            outDoc = inDoc;
+        }
+        addAudioToDoc(outDoc);
+    }
 
     /**
      * Splits panels in the provided XML document that contain multiple <balloon> elements into separate panels,
@@ -418,9 +423,7 @@ public class XmlWriter {
         for (Node scene : verbReader.getRandomScenes(typeCounts.get("conjugation"))) {
             sceneStacks.get("conjugation").push(scene);
         }
-
-        //for (Node scene : storyReader.getRandomScenes(typeCounts.get("story"))) {
-        for (Node scene : storyReader.getRandomScenes(1)){
+        for (Node scene : storyReader.getRandomScenes(typeCounts.get("story"))){
             sceneStacks.get("story").push(scene);
         }
         for (Node scene : leftReader.getRandomScenes(typeCounts.get("left"))) {
@@ -440,8 +443,6 @@ public class XmlWriter {
         }
 
         String outputFile = "FinalSprint.xml";
-        // this.addTranslatedPanels();
-        this.addAudio();
         this.writeXML(outputFile);
     }
 
@@ -529,13 +530,9 @@ public class XmlWriter {
         }
         String wholeOutputName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
         String path = inFolder + "/" + wholeOutputName;
+        XmlWriter.addAudioToDoc(wholeReader.getDoc());
         XML_Parser.docToXml(wholeReader.getDoc(), path);
 
-
-        String wholeFileTranslatedName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
-        File wholeFile = FileParser.getFile(outFolder + "/" + wholeFileTranslatedName);
-        XmlWriter wholeWriter = new XmlWriter(wholeFile);
-        wholeWriter.addAudio();
     }
 
 
