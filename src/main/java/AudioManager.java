@@ -142,7 +142,15 @@ public class AudioManager {
 
                 HttpClient client = HttpClient.newHttpClient();
                 HttpResponse<InputStream> response = client.send(request, HttpResponse.BodyHandlers.ofInputStream());
-
+                if (response.statusCode() != 200) {
+                    String errorBody = new String(response.body().readAllBytes());
+                    System.out.println("Failed to generate MP3. Status Code: " + response.statusCode());
+                    System.out.println("Error Response: " + errorBody);
+                    System.out.println("Trying again in 60 seconds.");
+                    nextIndex--;
+                    Thread.sleep(60000);
+                    return getOrAdd(text);
+                }
                 //Create the audio file
                 try (FileOutputStream out = new FileOutputStream(outputFile)) {
                     response.body().transferTo(out);
