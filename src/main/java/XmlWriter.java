@@ -523,8 +523,8 @@ public class XmlWriter {
 
         for (int i = 3; i < balloonNodes.getLength(); i += 3) {
             Node balloonNode = balloonNodes.item(i);
-            String toTranslate = balloonNodes.item(i - 1).getTextContent();
-            balloonNode.setTextContent(t.translate(toTranslate));
+            String toTranslate = balloonNodes.item(i - 1).getTextContent().trim();
+            balloonNode.setTextContent(t.translate(toTranslate).trim());
         }
         String wholeOutputName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
         // do doc to xml
