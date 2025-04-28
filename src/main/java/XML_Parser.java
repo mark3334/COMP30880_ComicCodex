@@ -427,7 +427,7 @@
          * @param path the relative file path (within the root directory) where the XML should be saved.
          * @throws TransformerException if an error occurs during XML transformation or saving.
          */
-        public void docToXml(Document document, String path) throws TransformerException {
+        public static void docToXml(Document document, String path) throws TransformerException {
             File root = FileParser.getRootDirectory();
             File outputFile =  new File(root, path);
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
@@ -584,7 +584,7 @@
                 Document newDoc1 = parser.scenesToDoc(newScenes);
 
                 String outpath = "Resources/XMLoutput/Sprint5_DialogueOutput.xml";
-                parser.docToXml(newDoc1, outpath);
+                XML_Parser.docToXml(newDoc1, outpath);
 
                 String fname = "Sprint5_InterwovenOutput.xml";
                 XML_Parser parser2 = new XML_Parser(new File(root, outpath));
