@@ -563,8 +563,8 @@
             try {
                 XML_Parser parser = new XML_Parser(f);
                 parser.addTranslatedPanels();
-                // parser.writeXML(outputFolder, "Verbs_" + ConfigurationFile.getTargetLanguage());
-                parser.writeXML(outputFolder, "Sprint4verbs.xml");
+                parser.writeXML(outputFolder, "Verbs_" + ConfigurationFile.getTargetLanguage());
+                // parser.writeXML(outputFolder, "Sprint4verbs.xml");
             }
             catch (Exception e){
                 System.out.println("Error: exception building DOM from XML");
