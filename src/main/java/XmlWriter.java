@@ -407,7 +407,6 @@ public class XmlWriter {
         String verbFileName = "Sprint4verbs.xml";
         File verbsFile = FileParser.getFile(outFolder + "/" + verbFileName);
         XmlReader verbReader = new XmlReader(verbsFile);
-        // TODO - method generate Sprint6_FinalAudioFile.xml
         String storyFileName = "Sprint6_FinalAudioFile.xml";
         File storyFile = FileParser.getFile(outFolder + "/" + storyFileName);
         XmlReader storyReader = new XmlReader(storyFile);

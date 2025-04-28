@@ -563,8 +563,8 @@
             try {
                 XML_Parser parser = new XML_Parser(f);
                 parser.addTranslatedPanels();
-                parser.writeXML(outputFolder, "Verbs_" + ConfigurationFile.getTargetLanguage());
-
+                // parser.writeXML(outputFolder, "Verbs_" + ConfigurationFile.getTargetLanguage());
+                parser.writeXML(outputFolder, "Sprint4verbs.xml");
             }
             catch (Exception e){
                 System.out.println("Error: exception building DOM from XML");
@@ -572,7 +572,7 @@
             }
             String path2 = "Resources/XMLinput/Sprint5scenes.xml";
             File file2 = new File(root, path2);
-            int numScenes = 1;
+            int numScenes = 2;
             try {
                 XML_Parser parser = new XML_Parser(file2);
                 parser.printInfo();
