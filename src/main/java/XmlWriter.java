@@ -385,7 +385,7 @@ public class XmlWriter {
     public void createComicFullLesson() throws ParserConfigurationException, IOException, SAXException, TransformerException {
         List<String> schedule = ConfigurationFile.getLessonSchedule();
         createEmptyComic();
-        // addFigures();
+        addFigures();
 
         Map<String, Integer> typeCounts = new HashMap<>();
         for(String type : schedule) {
@@ -489,7 +489,6 @@ public class XmlWriter {
 
     public static void writeTranslatedVignettes() throws ParserConfigurationException, IOException, SAXException, TransformerException {
         String leftScenesFilename = "left_scenes_untranslated.xml";
-        String leftOutputName = "left_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
         String inFolder = ConfigurationFile.get("XML_OUTPUT_PATH");
         String inPathLeft = inFolder + "/" + leftScenesFilename;
         File leftScenesFile = FileParser.getFile(inPathLeft);
@@ -497,6 +496,7 @@ public class XmlWriter {
             System.err.println("Left scenes file not found: " + inPathLeft);
             return;
         }
+        String leftOutputName = "left_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
         String leftScenesTranslatedPath = inFolder + "/"  + leftOutputName;
         File leftScenesTranslatedFile = FileParser.getFile(leftScenesTranslatedPath);
         if(leftScenesTranslatedFile.exists()) {
@@ -513,6 +513,7 @@ public class XmlWriter {
         TranslationFile t = TranslationFile.getInstance();
         // handle whole scenes separately as its translation structure is different.
 
+        System.out.println("Now translating whole scenes: ");
         String outFolder = ConfigurationFile.get("XML_OUTPUT_PATH");
         String pathwholeFileOriginal = outFolder + "/" + "whole_scenes.xml";
         File wholeFileOriginal = FileParser.getFile(pathwholeFileOriginal);

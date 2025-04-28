@@ -20,7 +20,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws Exception {
         String schedule = ConfigurationFile.getInstance().getValueByKey("LESSON_SCHEDULE");
-        System.out.println(schedule);
+        System.out.println("Lesson Schedule - " + schedule);
 
         ConfigurationFile cf = ConfigurationFile.getInstance();
         cf.updateLanguage();
