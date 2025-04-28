@@ -504,6 +504,7 @@ public class XmlWriter {
     }
 
     public static void writeTranslatedVignettes() throws ParserConfigurationException, IOException, SAXException, TransformerException {
+        System.out.println("Writing translated left, whole scenes : ");
         String leftScenesFilename = "left_scenes_untranslated.xml";
         String leftOutputName = "left_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
         String inFolder = ConfigurationFile.get("XML_OUTPUT_PATH");
@@ -520,10 +521,12 @@ public class XmlWriter {
 
         TranslationFile t = TranslationFile.getInstance();
         // handle whole scenes separately as its translation structure is different.
-        String wholeFileName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
+
         String outFolder = ConfigurationFile.get("XML_OUTPUT_PATH");
-        File wholeFile = FileParser.getFile(outFolder + "/" + wholeFileName);
-        XmlReader wholeReader = new XmlReader(wholeFile);
+        String pathwholeFileOriginal = outFolder + "/" + "whole_scenes.xml";
+        File wholeFileOriginal = FileParser.getFile(pathwholeFileOriginal);
+        XmlReader wholeReader = new XmlReader(wholeFileOriginal);
+        wholeReader.ensureTranslatedBalloons();
         NodeList balloonNodes = wholeReader.getDoc().getElementsByTagName("balloon");
 
         for (int i = 3; i < balloonNodes.getLength(); i += 3) {
@@ -533,6 +536,14 @@ public class XmlWriter {
         }
         String wholeOutputName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
         // do doc to xml
+        String path = inFolder + "/" + wholeOutputName;
+        XML_Parser.docToXml(wholeReader.getDoc(), path);
+
+
+        String wholeFileTranslatedName = "whole_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
+        File wholeFile = FileParser.getFile(outFolder + "/" + wholeFileTranslatedName);
+        XmlWriter wholeWriter = new XmlWriter(wholeFile);
+        // wholeWriter.addAudio();
     }
 
 
