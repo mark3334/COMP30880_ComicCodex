@@ -36,6 +36,9 @@ public class OpenAIClient {
 //        System.out.println("Language: " + language);
 //        System.out.println("API Key: " + apiKey);
     }
+    public static synchronized void resetInstance() {
+        instance = null;
+    }
 
     public static synchronized OpenAIClient getInstance() {
         if (instance == null) {

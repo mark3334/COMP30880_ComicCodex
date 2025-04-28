@@ -65,6 +65,7 @@ public class ConfigurationFile {
             System.out.println("Wrong: " + e.getMessage());
         }
         TranslationFile.resetInstance();
+        OpenAIClient.resetInstance();
     }
 
     public static synchronized ConfigurationFile getInstance() {
