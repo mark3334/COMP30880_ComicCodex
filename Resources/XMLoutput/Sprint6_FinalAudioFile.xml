@@ -132,7 +132,57 @@
         
         
         
-        <middle>
+        <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>four</pose>
+                                                                  
+            
+            
+            
+            <facing>right</facing>
+                                                                  
+            
+            
+            
+            <horizontal>more</horizontal>
+                                                               
+          
+          
+          
+          </figure>
+                                                    
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
                                                        
           
           
@@ -172,12 +222,17 @@
             
             
             
-            <pose>six</pose>
+            <pose>three flipped</pose>
                                                                   
             
             
             
-            <facing>right</facing>
+            <facing>left</facing>
+                                                                  
+            
+            
+            
+            <horizontal>less</horizontal>
                                                                
           
           
@@ -187,12 +242,12 @@
         
         
         
-        </middle>
+        </right>
                                             
         
         
         
-        <below>Scene 6</below>
+        <below>Scene 43</below>
                                             
         
         
@@ -249,546 +304,12 @@
             
             
             
-            <pose>motorcycling</pose>
+            <pose>walking a horse</pose>
                                                                   
             
             
             
             <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-          
-          <balloon status="speech">
-                                                                  
-            
-            
-            
-            <content>This bike really flies! Can't wait to get to the plant</content>
-                                                               
-          
-          
-          
-          </balloon>
-                                                    
-        
-        
-        
-        </left>
-                                            
-        
-        
-        
-        <right>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Betty</id>
-                                                                  
-            
-            
-            
-            <name>Betty</name>
-                                                                  
-            
-            
-            
-            <appearance>female</appearance>
-                                                                  
-            
-            
-            
-            <pose>cycling</pose>
-                                                                  
-            
-            
-            
-            <facing>left</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-                                
-        
-        
-        
-        </right>
-                                            
-        
-        
-        
-        <setting>chemical plant</setting>
-                                         
-      
-      
-      
-        <audio>1.mp3</audio>
-      </panel>
-            
-      <panel>
-                                            
-        
-        
-        
-        <left>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Alfie</id>
-                                                                  
-            
-            
-            
-            <name>Alfie</name>
-                                                                  
-            
-            
-            
-            <appearance>male</appearance>
-                                                                  
-            
-            
-            
-            <skin>light brown</skin>
-                                                                  
-            
-            
-            
-            <hair>dark brown</hair>
-                                                                  
-            
-            
-            
-            <lips>red</lips>
-                                                                  
-            
-            
-            
-            <pose>motorcycling</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-                                
-        
-        
-        
-        </left>
-                                            
-        
-        
-        
-        <right>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Betty</id>
-                                                                  
-            
-            
-            
-            <name>Betty</name>
-                                                                  
-            
-            
-            
-            <appearance>female</appearance>
-                                                                  
-            
-            
-            
-            <pose>cycling</pose>
-                                                                  
-            
-            
-            
-            <facing>left</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-          
-          <balloon status="speech">
-                                                                  
-            
-            
-            
-            <content>Wish I could keep up with you, Alfie!</content>
-                                                               
-          
-          
-          
-          </balloon>
-                                                    
-        
-        
-        
-        </right>
-                                            
-        
-        
-        
-        <setting>chemical plant</setting>
-                                         
-      
-      
-      
-        <audio>2.mp3</audio>
-      </panel>
-            
-      <panel>
-                                            
-        
-        
-        
-        <left>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Alfie</id>
-                                                                  
-            
-            
-            
-            <name>Alfie</name>
-                                                                  
-            
-            
-            
-            <appearance>male</appearance>
-                                                                  
-            
-            
-            
-            <skin>light brown</skin>
-                                                                  
-            
-            
-            
-            <hair>dark brown</hair>
-                                                                  
-            
-            
-            
-            <lips>red</lips>
-                                                                  
-            
-            
-            
-            <pose>motorcycling</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-          
-          <balloon status="speech">¡Esta bicicleta realmente vuela! No puedo esperar para llegar a la planta</balloon>
-                                                    
-        
-        
-        
-        </left>
-                                            
-        
-        
-        
-        <right>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Betty</id>
-                                                                  
-            
-            
-            
-            <name>Betty</name>
-                                                                  
-            
-            
-            
-            <appearance>female</appearance>
-                                                                  
-            
-            
-            
-            <pose>cycling</pose>
-                                                                  
-            
-            
-            
-            <facing>left</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-                                
-        
-        
-        
-        </right>
-                                            
-        
-        
-        
-        <setting>chemical plant</setting>
-                                         
-      
-      
-      
-        <audio>3.mp3</audio>
-      </panel>
-            
-      <panel>
-                                            
-        
-        
-        
-        <left>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Alfie</id>
-                                                                  
-            
-            
-            
-            <name>Alfie</name>
-                                                                  
-            
-            
-            
-            <appearance>male</appearance>
-                                                                  
-            
-            
-            
-            <skin>light brown</skin>
-                                                                  
-            
-            
-            
-            <hair>dark brown</hair>
-                                                                  
-            
-            
-            
-            <lips>red</lips>
-                                                                  
-            
-            
-            
-            <pose>motorcycling</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-                                
-        
-        
-        
-        </left>
-                                            
-        
-        
-        
-        <right>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Betty</id>
-                                                                  
-            
-            
-            
-            <name>Betty</name>
-                                                                  
-            
-            
-            
-            <appearance>female</appearance>
-                                                                  
-            
-            
-            
-            <pose>cycling</pose>
-                                                                  
-            
-            
-            
-            <facing>left</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-          
-          <balloon status="speech">¡Ojalá pudiera seguirte el ritmo, Alfie!</balloon>
-                                                    
-        
-        
-        
-        </right>
-                                            
-        
-        
-        
-        <setting>chemical plant</setting>
-                                         
-      
-      
-      
-        <audio>4.mp3</audio>
-      </panel>
-            
-      <panel>
-                                            
-        
-        
-        
-        <above>break room</above>
-                                            
-        
-        
-        
-        <left>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Alfie</id>
-                                                                  
-            
-            
-            
-            <name>Alfie</name>
-                                                                  
-            
-            
-            
-            <appearance>male</appearance>
-                                                                  
-            
-            
-            
-            <skin>light brown</skin>
-                                                                  
-            
-            
-            
-            <hair>dark brown</hair>
-                                                                  
-            
-            
-            
-            <lips>red</lips>
-                                                                  
-            
-            
-            
-            <pose>drinking coffee</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                                  
-            
-            
-            
-            <horizontal>little more</horizontal>
                                                                
           
           
@@ -803,7 +324,7 @@
             
             
             
-            <content>Ahh, nothing like a good cup of coffee to start the day!</content>
+            <content>Keep steady, we have to move quickly!</content>
                                                                
           
           
@@ -814,51 +335,6 @@
         
         
         </left>
-                                            
-        
-        
-        
-        <middle>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <appearance>default</appearance>
-                                                                  
-            
-            
-            
-            <skin>default</skin>
-                                                                  
-            
-            
-            
-            <hair>default</hair>
-                                                                  
-            
-            
-            
-            <pose>vending machine prop</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                    
-        
-        
-        
-        </middle>
                                             
         
         
@@ -888,7 +364,7 @@
             
             
             
-            <pose>lighting cigar</pose>
+            <pose>confrontational</pose>
                                                                   
             
             
@@ -898,7 +374,7 @@
             
             
             
-            <horizontal>little less</horizontal>
+            <vertical>little more</vertical>
                                                                
           
           
@@ -916,25 +392,15 @@
         
         
         
-        <below>In the middle is a vending machine</below>
-                                            
-        
-        
-        
-        <setting>school hallway</setting>
+        <setting>battlefield</setting>
                                          
       
       
       
-        <audio>5.mp3</audio>
+        <audio>1132.mp3</audio>
       </panel>
             
       <panel>
-                                            
-        
-        
-        
-        <above>break room</above>
                                             
         
         
@@ -979,17 +445,12 @@
             
             
             
-            <pose>drinking coffee</pose>
+            <pose>walking a horse</pose>
                                                                   
             
             
             
             <facing>right</facing>
-                                                                  
-            
-            
-            
-            <horizontal>little more</horizontal>
                                                                
           
           
@@ -1003,51 +464,6 @@
         
         
         </left>
-                                            
-        
-        
-        
-        <middle>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <appearance>default</appearance>
-                                                                  
-            
-            
-            
-            <skin>default</skin>
-                                                                  
-            
-            
-            
-            <hair>default</hair>
-                                                                  
-            
-            
-            
-            <pose>vending machine prop</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                    
-        
-        
-        
-        </middle>
                                             
         
         
@@ -1077,7 +493,7 @@
             
             
             
-            <pose>lighting cigar</pose>
+            <pose>confrontational</pose>
                                                                   
             
             
@@ -1087,7 +503,357 @@
             
             
             
-            <horizontal>little less</horizontal>
+            <vertical>little more</vertical>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+          
+          <balloon status="speech">
+                                                                  
+            
+            
+            
+            <content>Listen up, we need to take that position or we lose!</content>
+                                                               
+          
+          
+          
+          </balloon>
+                                                    
+        
+        
+        
+        </right>
+                                            
+        
+        
+        
+        <setting>battlefield</setting>
+                                         
+      
+      
+      
+        <audio>1133.mp3</audio>
+      </panel>
+            
+      <panel>
+                                            
+        
+        
+        
+        <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Alfie</id>
+                                                                  
+            
+            
+            
+            <name>Alfie</name>
+                                                                  
+            
+            
+            
+            <appearance>male</appearance>
+                                                                  
+            
+            
+            
+            <skin>light brown</skin>
+                                                                  
+            
+            
+            
+            <hair>dark brown</hair>
+                                                                  
+            
+            
+            
+            <lips>red</lips>
+                                                                  
+            
+            
+            
+            <pose>walking a horse</pose>
+                                                                  
+            
+            
+            
+            <facing>right</facing>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+          
+          <balloon status="thought">Restez concentrés, nous devons agir rapidement !</balloon>
+                                                    
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>confrontational</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                                  
+            
+            
+            
+            <vertical>little more</vertical>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+                                
+        
+        
+        
+        </right>
+                                            
+        
+        
+        
+        <setting>battlefield</setting>
+                                         
+      
+      
+      
+        <audio>1134.mp3</audio>
+      </panel>
+            
+      <panel>
+                                            
+        
+        
+        
+        <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Alfie</id>
+                                                                  
+            
+            
+            
+            <name>Alfie</name>
+                                                                  
+            
+            
+            
+            <appearance>male</appearance>
+                                                                  
+            
+            
+            
+            <skin>light brown</skin>
+                                                                  
+            
+            
+            
+            <hair>dark brown</hair>
+                                                                  
+            
+            
+            
+            <lips>red</lips>
+                                                                  
+            
+            
+            
+            <pose>walking a horse</pose>
+                                                                  
+            
+            
+            
+            <facing>right</facing>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+                                
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>confrontational</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                                  
+            
+            
+            
+            <vertical>little more</vertical>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+          
+          <balloon status="speech">Écoutez bien, nous devons prendre cette position ou nous perdons !</balloon>
+                                                    
+        
+        
+        
+        </right>
+                                            
+        
+        
+        
+        <setting>battlefield</setting>
+                                         
+      
+      
+      
+        <audio>1135.mp3</audio>
+      </panel>
+            
+      <panel>
+                                            
+        
+        
+        
+        <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Alfie</id>
+                                                                  
+            
+            
+            
+            <name>Alfie</name>
+                                                                  
+            
+            
+            
+            <appearance>male</appearance>
+                                                                  
+            
+            
+            
+            <skin>light brown</skin>
+                                                                  
+            
+            
+            
+            <hair>dark brown</hair>
+                                                                  
+            
+            
+            
+            <lips>red</lips>
+                                                                  
+            
+            
+            
+            <pose>riding with determination</pose>
+                                                                  
+            
+            
+            
+            <facing>right</facing>
                                                                
           
           
@@ -1102,7 +868,201 @@
             
             
             
-            <content>Who needs coffee when you’ve got a cigar?</content>
+            <content>For honor and glory, we ride!</content>
+                                                               
+          
+          
+          
+          </balloon>
+                                                    
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>bullying</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                                  
+            
+            
+            
+            <vertical>little more</vertical>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+                                
+        
+        
+        
+        </right>
+                                            
+        
+        
+        
+        <setting>battlefield</setting>
+                                         
+      
+      
+      
+        <audio>1136.mp3</audio>
+      </panel>
+            
+      <panel>
+                                            
+        
+        
+        
+        <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Alfie</id>
+                                                                  
+            
+            
+            
+            <name>Alfie</name>
+                                                                  
+            
+            
+            
+            <appearance>male</appearance>
+                                                                  
+            
+            
+            
+            <skin>light brown</skin>
+                                                                  
+            
+            
+            
+            <hair>dark brown</hair>
+                                                                  
+            
+            
+            
+            <lips>red</lips>
+                                                                  
+            
+            
+            
+            <pose>riding with determination</pose>
+                                                                  
+            
+            
+            
+            <facing>right</facing>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+                                
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>bullying</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                                  
+            
+            
+            
+            <vertical>little more</vertical>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+          
+          <balloon status="speech">
+                                                                  
+            
+            
+            
+            <content>Watch out, I’m coming through!</content>
                                                                
           
           
@@ -1117,25 +1077,15 @@
         
         
         
-        <below>In the middle is a vending machine</below>
-                                            
-        
-        
-        
-        <setting>school hallway</setting>
+        <setting>battlefield</setting>
                                          
       
       
       
-        <audio>6.mp3</audio>
+        <audio>1137.mp3</audio>
       </panel>
             
       <panel>
-                                            
-        
-        
-        
-        <above>break room</above>
                                             
         
         
@@ -1180,17 +1130,12 @@
             
             
             
-            <pose>drinking coffee</pose>
+            <pose>riding with determination</pose>
                                                                   
             
             
             
             <facing>right</facing>
-                                                                  
-            
-            
-            
-            <horizontal>little more</horizontal>
                                                                
           
           
@@ -1200,57 +1145,12 @@
           
           
           
-          <balloon status="thought">¡Ahh, nada como una buena taza de café para empezar el día!</balloon>
+          <balloon status="thought">Pour l'honneur et la gloire, nous montons !</balloon>
                                                     
         
         
         
         </left>
-                                            
-        
-        
-        
-        <middle>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <appearance>default</appearance>
-                                                                  
-            
-            
-            
-            <skin>default</skin>
-                                                                  
-            
-            
-            
-            <hair>default</hair>
-                                                                  
-            
-            
-            
-            <pose>vending machine prop</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                    
-        
-        
-        
-        </middle>
                                             
         
         
@@ -1280,7 +1180,7 @@
             
             
             
-            <pose>lighting cigar</pose>
+            <pose>bullying</pose>
                                                                   
             
             
@@ -1290,7 +1190,7 @@
             
             
             
-            <horizontal>little less</horizontal>
+            <vertical>little more</vertical>
                                                                
           
           
@@ -1308,25 +1208,15 @@
         
         
         
-        <below>In the middle is a vending machine</below>
-                                            
-        
-        
-        
-        <setting>school hallway</setting>
+        <setting>battlefield</setting>
                                          
       
       
       
-        <audio>7.mp3</audio>
+        <audio>1138.mp3</audio>
       </panel>
             
       <panel>
-                                            
-        
-        
-        
-        <above>break room</above>
                                             
         
         
@@ -1371,17 +1261,12 @@
             
             
             
-            <pose>drinking coffee</pose>
+            <pose>riding with determination</pose>
                                                                   
             
             
             
             <facing>right</facing>
-                                                                  
-            
-            
-            
-            <horizontal>little more</horizontal>
                                                                
           
           
@@ -1395,51 +1280,6 @@
         
         
         </left>
-                                            
-        
-        
-        
-        <middle>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <appearance>default</appearance>
-                                                                  
-            
-            
-            
-            <skin>default</skin>
-                                                                  
-            
-            
-            
-            <hair>default</hair>
-                                                                  
-            
-            
-            
-            <pose>vending machine prop</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                    
-        
-        
-        
-        </middle>
                                             
         
         
@@ -1469,7 +1309,7 @@
             
             
             
-            <pose>lighting cigar</pose>
+            <pose>bullying</pose>
                                                                   
             
             
@@ -1479,7 +1319,7 @@
             
             
             
-            <horizontal>little less</horizontal>
+            <vertical>little more</vertical>
                                                                
           
           
@@ -1489,7 +1329,7 @@
           
           
           
-          <balloon status="thought">¿Quién necesita café cuando tienes un cigarro?</balloon>
+          <balloon status="speech">Faites attention, j'arrive !</balloon>
                                                     
         
         
@@ -1499,17 +1339,12 @@
         
         
         
-        <below>In the middle is a vending machine</below>
-                                            
-        
-        
-        
-        <setting>school hallway</setting>
+        <setting>battlefield</setting>
                                          
       
       
       
-        <audio>8.mp3</audio>
+        <audio>1139.mp3</audio>
       </panel>
             
       <panel>
@@ -1557,7 +1392,551 @@
             
             
             
-            <pose>reacting</pose>
+            <pose>riding with sword drawn</pose>
+                                                                  
+            
+            
+            
+            <facing>right</facing>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+          
+          <balloon status="thought">
+                                                                  
+            
+            
+            
+            <content>I won't let anything stand in our way!</content>
+                                                               
+          
+          
+          
+          </balloon>
+                                                    
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>lunging</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                                  
+            
+            
+            
+            <vertical>little less</vertical>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+                                
+        
+        
+        
+        </right>
+                                            
+        
+        
+        
+        <setting>battlefield</setting>
+                                         
+      
+      
+      
+        <audio>1140.mp3</audio>
+      </panel>
+            
+      <panel>
+                                            
+        
+        
+        
+        <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Alfie</id>
+                                                                  
+            
+            
+            
+            <name>Alfie</name>
+                                                                  
+            
+            
+            
+            <appearance>male</appearance>
+                                                                  
+            
+            
+            
+            <skin>light brown</skin>
+                                                                  
+            
+            
+            
+            <hair>dark brown</hair>
+                                                                  
+            
+            
+            
+            <lips>red</lips>
+                                                                  
+            
+            
+            
+            <pose>riding with sword drawn</pose>
+                                                                  
+            
+            
+            
+            <facing>right</facing>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+                                
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>lunging</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                                  
+            
+            
+            
+            <vertical>little less</vertical>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+          
+          <balloon status="speech">
+                                                                  
+            
+            
+            
+            <content>Here goes nothing!</content>
+                                                               
+          
+          
+          
+          </balloon>
+                                                    
+        
+        
+        
+        </right>
+                                            
+        
+        
+        
+        <setting>battlefield</setting>
+                                         
+      
+      
+      
+        <audio>1141.mp3</audio>
+      </panel>
+            
+      <panel>
+                                            
+        
+        
+        
+        <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Alfie</id>
+                                                                  
+            
+            
+            
+            <name>Alfie</name>
+                                                                  
+            
+            
+            
+            <appearance>male</appearance>
+                                                                  
+            
+            
+            
+            <skin>light brown</skin>
+                                                                  
+            
+            
+            
+            <hair>dark brown</hair>
+                                                                  
+            
+            
+            
+            <lips>red</lips>
+                                                                  
+            
+            
+            
+            <pose>riding with sword drawn</pose>
+                                                                  
+            
+            
+            
+            <facing>right</facing>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+          
+          <balloon status="thought">Je ne laisserai rien se mettre en travers de notre chemin !</balloon>
+                                                    
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>lunging</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                                  
+            
+            
+            
+            <vertical>little less</vertical>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+                                
+        
+        
+        
+        </right>
+                                            
+        
+        
+        
+        <setting>battlefield</setting>
+                                         
+      
+      
+      
+        <audio>1142.mp3</audio>
+      </panel>
+            
+      <panel>
+                                            
+        
+        
+        
+        <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Alfie</id>
+                                                                  
+            
+            
+            
+            <name>Alfie</name>
+                                                                  
+            
+            
+            
+            <appearance>male</appearance>
+                                                                  
+            
+            
+            
+            <skin>light brown</skin>
+                                                                  
+            
+            
+            
+            <hair>dark brown</hair>
+                                                                  
+            
+            
+            
+            <lips>red</lips>
+                                                                  
+            
+            
+            
+            <pose>riding with sword drawn</pose>
+                                                                  
+            
+            
+            
+            <facing>right</facing>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+                                
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>lunging</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                                  
+            
+            
+            
+            <vertical>little less</vertical>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+          
+          <balloon status="speech">C'est parti pour rien !</balloon>
+                                                    
+        
+        
+        
+        </right>
+                                            
+        
+        
+        
+        <setting>battlefield</setting>
+                                         
+      
+      
+      
+        <audio>1143.mp3</audio>
+      </panel>
+            
+      <panel>
+                                            
+        
+        
+        
+        <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Alfie</id>
+                                                                  
+            
+            
+            
+            <name>Alfie</name>
+                                                                  
+            
+            
+            
+            <appearance>male</appearance>
+                                                                  
+            
+            
+            
+            <skin>light brown</skin>
+                                                                  
+            
+            
+            
+            <hair>dark brown</hair>
+                                                                  
+            
+            
+            
+            <lips>red</lips>
+                                                                  
+            
+            
+            
+            <pose>riding with sword drawn</pose>
                                                                   
             
             
@@ -1577,7 +1956,7 @@
             
             
             
-            <content>Just a hint of this and a dash of that, and..</content>
+            <content>It’s time to show them what we’re made of!</content>
                                                                
           
           
@@ -1617,12 +1996,17 @@
             
             
             
-            <pose>smoking cigar</pose>
+            <pose>leaping with sword</pose>
                                                                   
             
             
             
             <facing>left</facing>
+                                                                  
+            
+            
+            
+            <vertical>less</vertical>
                                                                
           
           
@@ -1640,12 +2024,12 @@
         
         
         
-        <setting>laboratory</setting>
+        <setting>battlefield</setting>
                                          
       
       
       
-        <audio>9.mp3</audio>
+        <audio>1144.mp3</audio>
       </panel>
             
       <panel>
@@ -1693,7 +2077,7 @@
             
             
             
-            <pose>reacting</pose>
+            <pose>riding with sword drawn</pose>
                                                                   
             
             
@@ -1741,7 +2125,347 @@
             
             
             
-            <pose>smoking cigar</pose>
+            <pose>leaping with sword</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                                  
+            
+            
+            
+            <vertical>less</vertical>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+          
+          <balloon status="thought">
+                                                                  
+            
+            
+            
+            <content>This is for our fallen comrades!</content>
+                                                               
+          
+          
+          
+          </balloon>
+                                                    
+        
+        
+        
+        </right>
+                                            
+        
+        
+        
+        <setting>battlefield</setting>
+                                         
+      
+      
+      
+        <audio>1145.mp3</audio>
+      </panel>
+            
+      <panel>
+                                            
+        
+        
+        
+        <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Alfie</id>
+                                                                  
+            
+            
+            
+            <name>Alfie</name>
+                                                                  
+            
+            
+            
+            <appearance>male</appearance>
+                                                                  
+            
+            
+            
+            <skin>light brown</skin>
+                                                                  
+            
+            
+            
+            <hair>dark brown</hair>
+                                                                  
+            
+            
+            
+            <lips>red</lips>
+                                                                  
+            
+            
+            
+            <pose>riding with sword drawn</pose>
+                                                                  
+            
+            
+            
+            <facing>right</facing>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+          
+          <balloon status="speech">Il est temps de leur montrer de quoi nous sommes faits !</balloon>
+                                                    
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>leaping with sword</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                                  
+            
+            
+            
+            <vertical>less</vertical>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+                                
+        
+        
+        
+        </right>
+                                            
+        
+        
+        
+        <setting>battlefield</setting>
+                                         
+      
+      
+      
+        <audio>1146.mp3</audio>
+      </panel>
+            
+      <panel>
+                                            
+        
+        
+        
+        <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Alfie</id>
+                                                                  
+            
+            
+            
+            <name>Alfie</name>
+                                                                  
+            
+            
+            
+            <appearance>male</appearance>
+                                                                  
+            
+            
+            
+            <skin>light brown</skin>
+                                                                  
+            
+            
+            
+            <hair>dark brown</hair>
+                                                                  
+            
+            
+            
+            <lips>red</lips>
+                                                                  
+            
+            
+            
+            <pose>riding with sword drawn</pose>
+                                                                  
+            
+            
+            
+            <facing>right</facing>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+                                
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>leaping with sword</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                                  
+            
+            
+            
+            <vertical>less</vertical>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+          
+          <balloon status="thought">C'est pour nos camarades tombés !</balloon>
+                                                    
+        
+        
+        
+        </right>
+                                            
+        
+        
+        
+        <setting>battlefield</setting>
+                                         
+      
+      
+      
+        <audio>1147.mp3</audio>
+      </panel>
+            
+      <panel>
+                                            
+        
+        
+        
+        <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>split in two</pose>
                                                                   
             
             
@@ -1761,347 +2485,7 @@
             
             
             
-            <content>You always did know how to mix things up, Alfie!</content>
-                                                               
-          
-          
-          
-          </balloon>
-                                                    
-        
-        
-        
-        </right>
-                                            
-        
-        
-        
-        <setting>laboratory</setting>
-                                         
-      
-      
-      
-        <audio>10.mp3</audio>
-      </panel>
-            
-      <panel>
-                                            
-        
-        
-        
-        <left>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Alfie</id>
-                                                                  
-            
-            
-            
-            <name>Alfie</name>
-                                                                  
-            
-            
-            
-            <appearance>male</appearance>
-                                                                  
-            
-            
-            
-            <skin>light brown</skin>
-                                                                  
-            
-            
-            
-            <hair>dark brown</hair>
-                                                                  
-            
-            
-            
-            <lips>red</lips>
-                                                                  
-            
-            
-            
-            <pose>reacting</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-          
-          <balloon status="speech">Solo un toque de esto y un toque de aquello, y...</balloon>
-                                                    
-        
-        
-        
-        </left>
-                                            
-        
-        
-        
-        <right>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Betty</id>
-                                                                  
-            
-            
-            
-            <name>Betty</name>
-                                                                  
-            
-            
-            
-            <appearance>female</appearance>
-                                                                  
-            
-            
-            
-            <pose>smoking cigar</pose>
-                                                                  
-            
-            
-            
-            <facing>left</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-                                
-        
-        
-        
-        </right>
-                                            
-        
-        
-        
-        <setting>laboratory</setting>
-                                         
-      
-      
-      
-        <audio>11.mp3</audio>
-      </panel>
-            
-      <panel>
-                                            
-        
-        
-        
-        <left>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Alfie</id>
-                                                                  
-            
-            
-            
-            <name>Alfie</name>
-                                                                  
-            
-            
-            
-            <appearance>male</appearance>
-                                                                  
-            
-            
-            
-            <skin>light brown</skin>
-                                                                  
-            
-            
-            
-            <hair>dark brown</hair>
-                                                                  
-            
-            
-            
-            <lips>red</lips>
-                                                                  
-            
-            
-            
-            <pose>reacting</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-                                
-        
-        
-        
-        </left>
-                                            
-        
-        
-        
-        <right>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Betty</id>
-                                                                  
-            
-            
-            
-            <name>Betty</name>
-                                                                  
-            
-            
-            
-            <appearance>female</appearance>
-                                                                  
-            
-            
-            
-            <pose>smoking cigar</pose>
-                                                                  
-            
-            
-            
-            <facing>left</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-          
-          <balloon status="thought">¡Siempre supiste cómo mezclar las cosas, Alfie!</balloon>
-                                                    
-        
-        
-        
-        </right>
-                                            
-        
-        
-        
-        <setting>laboratory</setting>
-                                         
-      
-      
-      
-        <audio>12.mp3</audio>
-      </panel>
-            
-      <panel>
-                                            
-        
-        
-        
-        <left>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Alfie</id>
-                                                                  
-            
-            
-            
-            <name>Alfie</name>
-                                                                  
-            
-            
-            
-            <appearance>male</appearance>
-                                                                  
-            
-            
-            
-            <skin>light brown</skin>
-                                                                  
-            
-            
-            
-            <hair>dark brown</hair>
-                                                                  
-            
-            
-            
-            <lips>red</lips>
-                                                                  
-            
-            
-            
-            <pose>exploding</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-          
-          <balloon status="speech">
-                                                                  
-            
-            
-            
-            <content>Whoa! That wasn’t supposed to happen!</content>
+            <content>split in two</content>
                                                                
           
           
@@ -2126,27 +2510,42 @@
             
             
             
-            <id>Betty</id>
+            <id>Alfie</id>
                                                                   
             
             
             
-            <name>Betty</name>
+            <name>Alfie</name>
                                                                   
             
             
             
-            <appearance>female</appearance>
+            <appearance>male</appearance>
                                                                   
             
             
             
-            <pose>on fire</pose>
+            <skin>light brown</skin>
                                                                   
             
             
             
-            <facing>left</facing>
+            <hair>dark brown</hair>
+                                                                  
+            
+            
+            
+            <lips>red</lips>
+                                                                  
+            
+            
+            
+            <pose>riding with sword drawn</pose>
+                                                                  
+            
+            
+            
+            <facing>right</facing>
                                                                
           
           
@@ -2164,12 +2563,12 @@
         
         
         
-        <setting>laboratory</setting>
+        <setting>battlefield</setting>
                                          
       
       
       
-        <audio>13.mp3</audio>
+        <audio>1148.mp3</audio>
       </panel>
             
       <panel>
@@ -2178,6 +2577,54 @@
         
         
         <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>split in two</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+                                
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
                                                        
           
           
@@ -2217,7 +2664,7 @@
             
             
             
-            <pose>exploding</pose>
+            <pose>riding with sword drawn</pose>
                                                                   
             
             
@@ -2231,61 +2678,13 @@
                                                        
           
           
-                                
-        
-        
-        
-        </left>
-                                            
-        
-        
-        
-        <right>
-                                                       
           
-          
-          
-          <figure>
+          <balloon status="thought">
                                                                   
             
             
             
-            <id>Betty</id>
-                                                                  
-            
-            
-            
-            <name>Betty</name>
-                                                                  
-            
-            
-            
-            <appearance>female</appearance>
-                                                                  
-            
-            
-            
-            <pose>on fire</pose>
-                                                                  
-            
-            
-            
-            <facing>left</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-          
-          <balloon status="speech">
-                                                                  
-            
-            
-            
-            <content>Alfie, are you okay?</content>
+            <content>Stay strong, we will prevail!</content>
                                                                
           
           
@@ -2300,12 +2699,12 @@
         
         
         
-        <setting>laboratory</setting>
+        <setting>battlefield</setting>
                                          
       
       
       
-        <audio>14.mp3</audio>
+        <audio>1149.mp3</audio>
       </panel>
             
       <panel>
@@ -2314,6 +2713,56 @@
         
         
         <left>
+                                                       
+          
+          
+          
+          <figure>
+                                                                  
+            
+            
+            
+            <id>Betty</id>
+                                                                  
+            
+            
+            
+            <name>Betty</name>
+                                                                  
+            
+            
+            
+            <appearance>female</appearance>
+                                                                  
+            
+            
+            
+            <pose>split in two</pose>
+                                                                  
+            
+            
+            
+            <facing>left</facing>
+                                                               
+          
+          
+          
+          </figure>
+                                                       
+          
+          
+          
+          <balloon status="thought">divisé en deux</balloon>
+                                                    
+        
+        
+        
+        </left>
+                                            
+        
+        
+        
+        <right>
                                                        
           
           
@@ -2353,7 +2802,7 @@
             
             
             
-            <pose>exploding</pose>
+            <pose>riding with sword drawn</pose>
                                                                   
             
             
@@ -2367,18 +2816,29 @@
                                                        
           
           
-          
-          <balloon status="speech">¡Vaya! ¡Eso no se suponía que debía pasar!</balloon>
-                                                    
+                                
         
         
         
-        </left>
+        </right>
                                             
         
         
         
-        <right>
+        <setting>battlefield</setting>
+                                         
+      
+      
+      
+        <audio>1150.mp3</audio>
+      </panel>
+            
+      <panel>
+                                            
+        
+        
+        
+        <left>
                                                        
           
           
@@ -2403,7 +2863,7 @@
             
             
             
-            <pose>on fire</pose>
+            <pose>split in two</pose>
                                                                   
             
             
@@ -2421,25 +2881,12 @@
         
         
         
-        </right>
+        </left>
                                             
         
         
         
-        <setting>laboratory</setting>
-                                         
-      
-      
-      
-        <audio>15.mp3</audio>
-      </panel>
-            
-      <panel>
-                                            
-        
-        
-        
-        <left>
+        <right>
                                                        
           
           
@@ -2479,133 +2926,7 @@
             
             
             
-            <pose>exploding</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-                                
-        
-        
-        
-        </left>
-                                            
-        
-        
-        
-        <right>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Betty</id>
-                                                                  
-            
-            
-            
-            <name>Betty</name>
-                                                                  
-            
-            
-            
-            <appearance>female</appearance>
-                                                                  
-            
-            
-            
-            <pose>on fire</pose>
-                                                                  
-            
-            
-            
-            <facing>left</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-          
-          <balloon status="speech">Alfie, ¿estás bien?</balloon>
-                                                    
-        
-        
-        
-        </right>
-                                            
-        
-        
-        
-        <setting>laboratory</setting>
-                                         
-      
-      
-      
-        <audio>16.mp3</audio>
-      </panel>
-            
-      <panel>
-                                            
-        
-        
-        
-        <left>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Alfie</id>
-                                                                  
-            
-            
-            
-            <name>Alfie</name>
-                                                                  
-            
-            
-            
-            <appearance>male</appearance>
-                                                                  
-            
-            
-            
-            <skin>light brown</skin>
-                                                                  
-            
-            
-            
-            <hair>dark brown</hair>
-                                                                  
-            
-            
-            
-            <lips>red</lips>
-                                                                  
-            
-            
-            
-            <pose>burnt</pose>
+            <pose>riding with sword drawn</pose>
                                                                   
             
             
@@ -2620,201 +2941,7 @@
           
           
           
-          <balloon status="speech">
-                                                                  
-            
-            
-            
-            <content>I guess I’ll need a new lab coat</content>
-                                                               
-          
-          
-          
-          </balloon>
-                                                    
-        
-        
-        
-        </left>
-                                            
-        
-        
-        
-        <right>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Betty</id>
-                                                                  
-            
-            
-            
-            <name>Betty</name>
-                                                                  
-            
-            
-            
-            <appearance>female</appearance>
-                                                                  
-            
-            
-            
-            <pose>burnt</pose>
-                                                                  
-            
-            
-            
-            <facing>left</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-                                
-        
-        
-        
-        </right>
-                                            
-        
-        
-        
-        <setting>chemical plant</setting>
-                                         
-      
-      
-      
-        <audio>17.mp3</audio>
-      </panel>
-            
-      <panel>
-                                            
-        
-        
-        
-        <left>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Alfie</id>
-                                                                  
-            
-            
-            
-            <name>Alfie</name>
-                                                                  
-            
-            
-            
-            <appearance>male</appearance>
-                                                                  
-            
-            
-            
-            <skin>light brown</skin>
-                                                                  
-            
-            
-            
-            <hair>dark brown</hair>
-                                                                  
-            
-            
-            
-            <lips>red</lips>
-                                                                  
-            
-            
-            
-            <pose>burnt</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-                                
-        
-        
-        
-        </left>
-                                            
-        
-        
-        
-        <right>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Betty</id>
-                                                                  
-            
-            
-            
-            <name>Betty</name>
-                                                                  
-            
-            
-            
-            <appearance>female</appearance>
-                                                                  
-            
-            
-            
-            <pose>burnt</pose>
-                                                                  
-            
-            
-            
-            <facing>left</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-          
-          <balloon status="speech">
-                                                                  
-            
-            
-            
-            <content>You look like you’ve been through a fireworks show!</content>
-                                                               
-          
-          
-          
-          </balloon>
+          <balloon status="thought">Restez forts, nous allons triompher !</balloon>
                                                     
         
         
@@ -2824,264 +2951,12 @@
         
         
         
-        <setting>chemical plant</setting>
+        <setting>battlefield</setting>
                                          
       
       
       
-        <audio>18.mp3</audio>
-      </panel>
-            
-      <panel>
-                                            
-        
-        
-        
-        <left>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Alfie</id>
-                                                                  
-            
-            
-            
-            <name>Alfie</name>
-                                                                  
-            
-            
-            
-            <appearance>male</appearance>
-                                                                  
-            
-            
-            
-            <skin>light brown</skin>
-                                                                  
-            
-            
-            
-            <hair>dark brown</hair>
-                                                                  
-            
-            
-            
-            <lips>red</lips>
-                                                                  
-            
-            
-            
-            <pose>burnt</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-          
-          <balloon status="speech">Supongo que necesitaré una bata de laboratorio nueva</balloon>
-                                                    
-        
-        
-        
-        </left>
-                                            
-        
-        
-        
-        <right>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Betty</id>
-                                                                  
-            
-            
-            
-            <name>Betty</name>
-                                                                  
-            
-            
-            
-            <appearance>female</appearance>
-                                                                  
-            
-            
-            
-            <pose>burnt</pose>
-                                                                  
-            
-            
-            
-            <facing>left</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-                                
-        
-        
-        
-        </right>
-                                            
-        
-        
-        
-        <setting>chemical plant</setting>
-                                         
-      
-      
-      
-        <audio>19.mp3</audio>
-      </panel>
-            
-      <panel>
-                                            
-        
-        
-        
-        <left>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Alfie</id>
-                                                                  
-            
-            
-            
-            <name>Alfie</name>
-                                                                  
-            
-            
-            
-            <appearance>male</appearance>
-                                                                  
-            
-            
-            
-            <skin>light brown</skin>
-                                                                  
-            
-            
-            
-            <hair>dark brown</hair>
-                                                                  
-            
-            
-            
-            <lips>red</lips>
-                                                                  
-            
-            
-            
-            <pose>burnt</pose>
-                                                                  
-            
-            
-            
-            <facing>right</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-                                
-        
-        
-        
-        </left>
-                                            
-        
-        
-        
-        <right>
-                                                       
-          
-          
-          
-          <figure>
-                                                                  
-            
-            
-            
-            <id>Betty</id>
-                                                                  
-            
-            
-            
-            <name>Betty</name>
-                                                                  
-            
-            
-            
-            <appearance>female</appearance>
-                                                                  
-            
-            
-            
-            <pose>burnt</pose>
-                                                                  
-            
-            
-            
-            <facing>left</facing>
-                                                               
-          
-          
-          
-          </figure>
-                                                       
-          
-          
-          
-          <balloon status="speech">¡Pareces haber pasado por un espectáculo de fuegos artificiales!</balloon>
-                                                    
-        
-        
-        
-        </right>
-                                            
-        
-        
-        
-        <setting>chemical plant</setting>
-                                         
-      
-      
-      
-        <audio>20.mp3</audio>
+        <audio>1151.mp3</audio>
       </panel>
           
     </scene>
