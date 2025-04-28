@@ -459,21 +459,7 @@ public class XmlWriter {
         writerVerbs.writeXML(fileNameVerbs);
     }
 
-    public static void removeAudio(Document doc){
-        NodeList audioNodes = doc.getElementsByTagName("audio");
-        List<Node> nodesToRemove = new ArrayList<>();
-        for (int i = 0; i < audioNodes.getLength(); i++) {
-            nodesToRemove.add(audioNodes.item(i));
-        }
-        for (Node audioNode : nodesToRemove) {
-            Node parent = audioNode.getParentNode();
-            if (parent == null) {
-                System.out.println("Error audio tag must have parent");
-                return;
-            }
-            parent.removeChild(audioNode);
-        }
-    }
+
 
     public static void removeTranslatedPanel(Document doc) {
         NodeList panelNodes = doc.getElementsByTagName("panel");
@@ -502,7 +488,6 @@ public class XmlWriter {
     }
 
     public static void writeTranslatedVignettes() throws ParserConfigurationException, IOException, SAXException, TransformerException {
-        System.out.println("Writing translated left, whole scenes : ");
         String leftScenesFilename = "left_scenes_untranslated.xml";
         String leftOutputName = "left_scenes_translated_" + ConfigurationFile.getTargetLanguage() + ".xml";
         String inFolder = ConfigurationFile.get("XML_OUTPUT_PATH");
