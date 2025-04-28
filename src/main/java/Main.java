@@ -24,6 +24,8 @@ public class Main {
 
         ConfigurationFile cf = ConfigurationFile.getInstance();
         cf.updateLanguage();
+        System.out.println("Creating conjugation lesson ... " + ConfigurationFile.getTargetLanguage());
+        XmlWriter.createConjugationLesson();
         System.out.println("Creating story, verbs lesson ... " + ConfigurationFile.getTargetLanguage());
         XML_Parser.main(args); // creates dialogue, interwoven output files and verbs
         createSprint6File();
