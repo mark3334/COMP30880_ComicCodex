@@ -144,6 +144,7 @@ public class TranslationFile {
     }
 
     public void addTranslation(String text, String translation){
+        if(this.translations.containsKey(text)) return;
         this.translations.put(text, translation);
         this.writeTranslationMapping(text, translation);
     }
