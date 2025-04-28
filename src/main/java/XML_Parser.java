@@ -555,17 +555,29 @@
         }
 
         public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
-            //generateConjugationScene(DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument());
-
+            // get verbs, story scenes translated
             File root = FileParser.getRootDirectory();
+            String path = "Resources/XMLinput/Sprint4Verbs.xml";
             String outputFolder = "Resources/XMLoutput/";
+            File f = new File(root, path);
+            try {
+                XML_Parser parser = new XML_Parser(f);
+                parser.addTranslatedPanels();
+                parser.writeXML(outputFolder, "Verbs_" + ConfigurationFile.getTargetLanguage());
+
+            }
+            catch (Exception e){
+                System.out.println("Error: exception building DOM from XML");
+                e.printStackTrace();
+            }
             String path2 = "Resources/XMLinput/Sprint5scenes.xml";
             File file2 = new File(root, path2);
+            int numScenes = 1;
             try {
                 XML_Parser parser = new XML_Parser(file2);
                 parser.printInfo();
                 List<Node> newScenes = new ArrayList<>();
-                List<Node> randomScenes = parser.getRandomScenes(1);
+                List<Node> randomScenes = parser.getRandomScenes(numScenes);
                 for (Node scene : randomScenes) {
                     Node scenecopy = scene.cloneNode(true);
                     String sceneDescription = parser.getNarrativeArc(scene);

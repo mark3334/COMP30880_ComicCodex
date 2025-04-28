@@ -130,6 +130,30 @@ public class XmlReader {
         return panelsToDuplicate;
     }
 
+    public void ensureTranslatedBalloonsWholeScenes() {
+        List<String> balloonContents = new ArrayList<>();
+        NodeList balloonNodes = this.doc.getElementsByTagName("balloon");
+
+        for (int i = 2; i < balloonNodes.getLength(); i+=3) {
+            Node n = balloonNodes.item(i);
+            if (n.getNodeType() == Node.ELEMENT_NODE) {
+                String content = n.getTextContent().trim();
+                if (!content.isEmpty()) {
+                    balloonContents.add(content);
+                }
+            }
+        }
+        if (t.allTranslated(balloonContents)){
+            System.out.println("All balloon text contents are already translated");
+            return;
+        }
+        else{
+            System.out.println("Now translating balloon contents : ...");
+            t.translateAllPhrases(balloonContents);
+            System.out.println("Balloon contents have been translated");
+        }
+        if (!t.allTranslated(balloonContents)) System.out.println("Error : Balloon text contents could not be translated");
+    }
     public void ensureTranslatedBalloons(){
         List<String> balloonContents = getBalloons();
         if (t.allTranslated(balloonContents)){

@@ -520,7 +520,7 @@ public class XmlWriter {
         String pathwholeFileOriginal = outFolder + "/" + "whole_scenes.xml";
         File wholeFileOriginal = FileParser.getFile(pathwholeFileOriginal);
         XmlReader wholeReader = new XmlReader(wholeFileOriginal);
-        wholeReader.ensureTranslatedBalloons();
+        wholeReader.ensureTranslatedBalloonsWholeScenes();
         NodeList balloonNodes = wholeReader.getDoc().getElementsByTagName("balloon");
 
         for (int i = 3; i < balloonNodes.getLength(); i += 3) {
